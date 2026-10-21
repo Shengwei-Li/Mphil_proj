@@ -98,6 +98,15 @@
 | MuJoCo 自带三维查看器 | `.venv\Scripts\python -m lac.view --native` |
 | 运行检查 | `.venv\Scripts\python -m pytest -q` |
 
+## 版本管理
+
+| 项 | 取值 |
+|---|---|
+| 远端仓库 | `git@github.com:Shengwei-Li/Mphil_proj.git`（私有），`main` 分支，仓库根目录就是本项目文件夹 |
+| 不入库 | `.venv/`、`cache/`（采集的数据和训练好的网络，可由 `reproduce.py` 重新生成）、LaTeX 中间文件 |
+| 提交署名 | 本机 git 配置的 Shengwei-Li；不加 AI 署名（对外材料不提 AI 的决定） |
+| 注意 | 本文件夹在 Windows 上属于另一个本机账户，已加入 git 全局可信列表（2026-10-22，你同意的） |
+
 ## 约定
 
 - **单位：** 长度米，质量千克，力矩牛·米，时间秒。代码内部角度用弧度，界面和命令行用度。
