@@ -1,0 +1,63 @@
+<mujoco model="two_link_arm">
+  <!-- Planar two-link arm moving in the vertical x-z plane. Gravity acts along -z.
+       Joint angles follow the textbook convention: q1 is measured from the +x axis,
+       q2 is the elbow angle relative to link 1, both positive counter-clockwise
+       when viewed from the fixed camera (looking along +y). -->
+  <compiler angle="radian" autolimits="true"/>
+  <option timestep="0.002" gravity="0 0 -9.81" integrator="implicitfast"/>
+  <!-- One user number per joint: the Coulomb friction (N·m) that lac.arm applies itself.
+       It is 0 unless a world with friction is selected (lac.arm.set_world). -->
+  <size nuser_jnt="1"/>
+
+  <visual>
+    <global offwidth="960" offheight="720"/>
+    <headlight ambient="0.5 0.5 0.5" diffuse="0.6 0.6 0.6"/>
+  </visual>
+
+  <default>
+    <!-- No contacts in the first version: the study is about payload, not collisions. -->
+    <geom contype="0" conaffinity="0"/>
+    <joint type="hinge" axis="0 -1 0" damping="0.1" user="0"/>
+  </default>
+
+  <worldbody>
+    <camera name="side" pos="0 -2.2 0" xyaxes="1 0 0 0 0 1" fovy="40"/>
+    <geom name="backdrop" type="plane" pos="0 0.2 0" zaxis="0 -1 0" size="1.2 1.2 0.01" rgba="0.96 0.96 0.96 1"/>
+    <!-- Reference axes through the shoulder: x is horizontal, z is up. -->
+    <geom name="x_axis" type="box" pos="0 0.15 0" size="0.75 0.001 0.0015" rgba="0.7 0.7 0.7 1"/>
+    <geom name="z_axis" type="box" pos="0 0.15 0" size="0.0015 0.001 0.75" rgba="0.7 0.7 0.7 1"/>
+    <geom name="base"type="cylinder" fromto="0 -0.03 0 0 0.03 0" size="0.04" rgba="0.25 0.25 0.25 1"/>
+
+    <body name="link1" pos="0 0 0">
+      <joint name="shoulder"/>
+      <!-- Each link is a uniform thin rod: 1 kg, centre of mass at the middle,
+           inertia about its centre m*l^2/12 = 0.0075 kg·m^2. Stated explicitly so the
+           hand-written model in lac.model can use the same textbook values. -->
+      <inertial pos="0.15 0 0" mass="1.0" diaginertia="0.0002 0.0075 0.0075"/>
+      <geom name="link1_geom" type="capsule" fromto="0 0 0 0.3 0 0" size="0.02" rgba="0.20 0.40 0.75 1"/>
+      <body name="link2" pos="0.3 0 0">
+        <joint name="elbow"/>
+        <inertial pos="0.15 0 0" mass="1.0" diaginertia="0.0002 0.0075 0.0075"/>
+        <geom name="link2_geom" type="capsule" fromto="0 0 0 0.3 0 0" size="0.018" rgba="0.30 0.60 0.85 1"/>
+        <site name="tip" pos="0.3 0 0" size="0.012" rgba="0.1 0.1 0.1 1"/>
+        <!-- Payload: a point mass rigidly attached at the tip (the sphere is only how it
+             is drawn). Its mass is set at runtime by lac.arm.set_payload; 0 means unloaded. -->
+        <body name="payload" pos="0.3 0 0">
+          <inertial pos="0 0 0" mass="0" diaginertia="0 0 0"/>
+          <geom name="payload_geom" type="sphere" size="0.001" mass="0" rgba="0.85 0.35 0.15 1"/>
+        </body>
+      </body>
+    </body>
+
+    <body name="target" mocap="true" pos="0.35 0 0.25">
+      <site name="target_site" type="sphere" size="0.02" rgba="0.1 0.7 0.2 0.8"/>
+    </body>
+  </worldbody>
+
+  <actuator>
+    <!-- Direct joint torques in N·m. The limits are a first choice and will be
+         revisited when the payload experiments are designed. -->
+    <motor name="shoulder_motor" joint="shoulder" ctrlrange="-20 20"/>
+    <motor name="elbow_motor" joint="elbow" ctrlrange="-10 10"/>
+  </actuator>
+</mujoco>

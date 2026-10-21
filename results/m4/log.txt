@@ -1,0 +1,36 @@
+gap check W1 done
+gap check W2 done
+gap check W3 done
+C1 W1 1.0 kg done
+C1 W1 0.5 kg done
+C1 W1 1.5 kg done
+C1 W2 1.0 kg done
+C1 W2 0.5 kg done
+C1 W2 1.5 kg done
+C1 W3 1.0 kg done
+C1 W3 0.5 kg done
+C1 W3 1.5 kg done
+gap W1 c0        median final error 7.408 cm (max 8.651)
+gap W1 reference median final error 0.034 cm (max 0.041)
+gap W2 c0        median final error 7.957 cm (max 9.087)
+gap W2 reference median final error 0.034 cm (max 0.046)
+gap W3 c0        median final error 5.992 cm (max 8.848)
+gap W3 reference median final error 0.062 cm (max 0.457)
+W1 1.0 kg    3 s: mass 1.000 (1.000-1.000) | c0 inside 29.989 | c0 outside 28.078 | c1 inside 0.000 | c1 outside 0.000 | reference inside 0.000 | reference outside 0.000
+W1 1.0 kg    9 s: mass 1.000 (1.000-1.000) | c0 inside 29.989 | c0 outside 28.078 | c1 inside 0.000 | c1 outside 0.000 | reference inside 0.000 | reference outside 0.000
+W1 1.0 kg   30 s: mass 1.000 (1.000-1.000) | c0 inside 29.989 | c0 outside 28.078 | c1 inside 0.000 | c1 outside 0.000 | reference inside 0.000 | reference outside 0.000
+W1 1.0 kg   90 s: mass 1.000 (1.000-1.000) | c0 inside 29.989 | c0 outside 28.078 | c1 inside 0.000 | c1 outside 0.000 | reference inside 0.000 | reference outside 0.000
+W1 0.5 kg   30 s: mass 0.500 (0.500-0.500) | c0 inside 17.533 | c0 outside 15.161 | c1 inside 0.000 | c1 outside 0.000 | reference inside 0.000 | reference outside 0.000
+W1 1.5 kg   30 s: mass 1.500 (1.500-1.500) | c0 inside 37.954 | c0 outside 37.198 | c1 inside 0.002 | c1 outside 0.002 | reference inside 0.000 | reference outside 0.000
+W2 1.0 kg    3 s: mass 1.186 (0.980-1.321) | c0 inside 31.060 | c0 outside 33.288 | c1 inside 2.859 | c1 outside 2.699 | reference inside 0.000 | reference outside 0.000
+W2 1.0 kg    9 s: mass 1.224 (1.059-1.411) | c0 inside 31.060 | c0 outside 33.288 | c1 inside 2.723 | c1 outside 2.728 | reference inside 0.000 | reference outside 0.000
+W2 1.0 kg   30 s: mass 1.239 (1.160-1.306) | c0 inside 31.060 | c0 outside 33.288 | c1 inside 2.702 | c1 outside 2.575 | reference inside 0.000 | reference outside 0.000
+W2 1.0 kg   90 s: mass 1.208 (1.188-1.227) | c0 inside 31.060 | c0 outside 33.288 | c1 inside 2.579 | c1 outside 2.407 | reference inside 0.000 | reference outside 0.000
+W2 0.5 kg   30 s: mass 0.628 (0.619-0.636) | c0 inside 20.022 | c0 outside 16.832 | c1 inside 1.962 | c1 outside 1.901 | reference inside 0.000 | reference outside 0.000
+W2 1.5 kg   30 s: mass 1.948 (1.865-2.076) | c0 inside 33.914 | c0 outside 37.777 | c1 inside 3.239 | c1 outside 3.019 | reference inside 0.000 | reference outside 0.000
+W3 1.0 kg    3 s: mass 1.109 (0.928-1.202) | c0 inside 30.995 | c0 outside 29.580 | c1 inside 3.849 | c1 outside 4.410 | reference inside 0.000 | reference outside 0.000
+W3 1.0 kg    9 s: mass 1.246 (1.176-1.316) | c0 inside 30.995 | c0 outside 29.580 | c1 inside 3.590 | c1 outside 4.062 | reference inside 0.000 | reference outside 0.000
+W3 1.0 kg   30 s: mass 1.278 (1.244-1.305) | c0 inside 30.995 | c0 outside 29.580 | c1 inside 3.624 | c1 outside 4.053 | reference inside 0.000 | reference outside 0.000
+W3 1.0 kg   90 s: mass 1.242 (1.210-1.272) | c0 inside 30.995 | c0 outside 29.580 | c1 inside 3.563 | c1 outside 4.030 | reference inside 0.000 | reference outside 0.000
+W3 0.5 kg   30 s: mass 0.666 (0.656-0.672) | c0 inside 19.267 | c0 outside 17.521 | c1 inside 4.213 | c1 outside 4.344 | reference inside 0.000 | reference outside 0.000
+W3 1.5 kg   30 s: mass 1.876 (1.716-1.965) | c0 inside 36.244 | c0 outside 33.642 | c1 inside 3.366 | c1 outside 3.922 | reference inside 0.000 | reference outside 0.000

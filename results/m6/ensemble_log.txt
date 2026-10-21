@@ -1,0 +1,130 @@
+{'region': 'inside', 'world': 'W1', 'method': 'C1', 'budget_s': 9.0, 'runs': 24, 'median_final_error_cm': 0.036, 'p90_final_error_cm': 0.088, 'worst_final_error_cm': 0.606, 'runs_not_settled': 0}
+{'region': 'inside', 'world': 'W1', 'method': 'C1', 'budget_s': 30.0, 'runs': 24, 'median_final_error_cm': 0.036, 'p90_final_error_cm': 0.118, 'worst_final_error_cm': 0.606, 'runs_not_settled': 0}
+{'region': 'inside', 'world': 'W1', 'method': 'C1', 'budget_s': 90.0, 'runs': 24, 'median_final_error_cm': 0.036, 'p90_final_error_cm': 0.088, 'worst_final_error_cm': 0.606, 'runs_not_settled': 0}
+{'region': 'inside', 'world': 'W1', 'method': 'C2', 'budget_s': 9.0, 'runs': 24, 'median_final_error_cm': 3.739, 'p90_final_error_cm': 21.462, 'worst_final_error_cm': 27.272, 'runs_not_settled': 20}
+{'region': 'inside', 'world': 'W1', 'method': 'C2', 'budget_s': 30.0, 'runs': 24, 'median_final_error_cm': 0.555, 'p90_final_error_cm': 1.711, 'worst_final_error_cm': 2.346, 'runs_not_settled': 8}
+{'region': 'inside', 'world': 'W1', 'method': 'C2', 'budget_s': 90.0, 'runs': 24, 'median_final_error_cm': 0.208, 'p90_final_error_cm': 1.076, 'worst_final_error_cm': 1.672, 'runs_not_settled': 3}
+{'region': 'inside', 'world': 'W1', 'method': 'C2-E avg', 'budget_s': 9.0, 'runs': 24, 'median_final_error_cm': 2.984, 'p90_final_error_cm': 16.77, 'worst_final_error_cm': 22.509, 'runs_not_settled': 19}
+{'region': 'inside', 'world': 'W1', 'method': 'C2-E avg', 'budget_s': 30.0, 'runs': 24, 'median_final_error_cm': 0.426, 'p90_final_error_cm': 1.767, 'worst_final_error_cm': 2.354, 'runs_not_settled': 5}
+{'region': 'inside', 'world': 'W1', 'method': 'C2-E avg', 'budget_s': 90.0, 'runs': 24, 'median_final_error_cm': 0.165, 'p90_final_error_cm': 0.636, 'worst_final_error_cm': 0.75, 'runs_not_settled': 0}
+{'region': 'inside', 'world': 'W1', 'method': 'C2-E pen', 'budget_s': 9.0, 'runs': 24, 'median_final_error_cm': 3.358, 'p90_final_error_cm': 19.351, 'worst_final_error_cm': 67.251, 'runs_not_settled': 19}
+{'region': 'inside', 'world': 'W1', 'method': 'C2-E pen', 'budget_s': 30.0, 'runs': 24, 'median_final_error_cm': 0.425, 'p90_final_error_cm': 1.74, 'worst_final_error_cm': 2.375, 'runs_not_settled': 5}
+{'region': 'inside', 'world': 'W1', 'method': 'C2-E pen', 'budget_s': 90.0, 'runs': 24, 'median_final_error_cm': 0.165, 'p90_final_error_cm': 0.601, 'worst_final_error_cm': 0.749, 'runs_not_settled': 0}
+{'region': 'inside', 'world': 'W1', 'method': 'C3', 'budget_s': 9.0, 'runs': 24, 'median_final_error_cm': 0.036, 'p90_final_error_cm': 0.07, 'worst_final_error_cm': 0.606, 'runs_not_settled': 0}
+{'region': 'inside', 'world': 'W1', 'method': 'C3', 'budget_s': 30.0, 'runs': 24, 'median_final_error_cm': 0.036, 'p90_final_error_cm': 0.091, 'worst_final_error_cm': 0.606, 'runs_not_settled': 0}
+{'region': 'inside', 'world': 'W1', 'method': 'C3', 'budget_s': 90.0, 'runs': 24, 'median_final_error_cm': 0.036, 'p90_final_error_cm': 0.088, 'worst_final_error_cm': 0.606, 'runs_not_settled': 0}
+{'region': 'inside', 'world': 'W1', 'method': 'C3-E avg', 'budget_s': 9.0, 'runs': 24, 'median_final_error_cm': 0.037, 'p90_final_error_cm': 0.076, 'worst_final_error_cm': 0.607, 'runs_not_settled': 0}
+{'region': 'inside', 'world': 'W1', 'method': 'C3-E avg', 'budget_s': 30.0, 'runs': 24, 'median_final_error_cm': 0.036, 'p90_final_error_cm': 0.072, 'worst_final_error_cm': 0.606, 'runs_not_settled': 0}
+{'region': 'inside', 'world': 'W1', 'method': 'C3-E avg', 'budget_s': 90.0, 'runs': 24, 'median_final_error_cm': 0.037, 'p90_final_error_cm': 0.088, 'worst_final_error_cm': 0.606, 'runs_not_settled': 0}
+{'region': 'inside', 'world': 'W1', 'method': 'C3-E pen', 'budget_s': 9.0, 'runs': 24, 'median_final_error_cm': 0.037, 'p90_final_error_cm': 0.076, 'worst_final_error_cm': 0.607, 'runs_not_settled': 0}
+{'region': 'inside', 'world': 'W1', 'method': 'C3-E pen', 'budget_s': 30.0, 'runs': 24, 'median_final_error_cm': 0.036, 'p90_final_error_cm': 0.072, 'worst_final_error_cm': 0.606, 'runs_not_settled': 0}
+{'region': 'inside', 'world': 'W1', 'method': 'C3-E pen', 'budget_s': 90.0, 'runs': 24, 'median_final_error_cm': 0.037, 'p90_final_error_cm': 0.088, 'worst_final_error_cm': 0.606, 'runs_not_settled': 0}
+{'region': 'inside', 'world': 'W2', 'method': 'C1', 'budget_s': 9.0, 'runs': 24, 'median_final_error_cm': 1.779, 'p90_final_error_cm': 2.287, 'worst_final_error_cm': 2.621, 'runs_not_settled': 20}
+{'region': 'inside', 'world': 'W2', 'method': 'C1', 'budget_s': 30.0, 'runs': 24, 'median_final_error_cm': 1.988, 'p90_final_error_cm': 2.688, 'worst_final_error_cm': 3.157, 'runs_not_settled': 24}
+{'region': 'inside', 'world': 'W2', 'method': 'C1', 'budget_s': 90.0, 'runs': 24, 'median_final_error_cm': 1.948, 'p90_final_error_cm': 2.697, 'worst_final_error_cm': 3.338, 'runs_not_settled': 22}
+{'region': 'inside', 'world': 'W2', 'method': 'C2', 'budget_s': 9.0, 'runs': 24, 'median_final_error_cm': 3.616, 'p90_final_error_cm': 48.479, 'worst_final_error_cm': 68.323, 'runs_not_settled': 24}
+{'region': 'inside', 'world': 'W2', 'method': 'C2', 'budget_s': 30.0, 'runs': 24, 'median_final_error_cm': 1.034, 'p90_final_error_cm': 2.013, 'worst_final_error_cm': 3.618, 'runs_not_settled': 11}
+{'region': 'inside', 'world': 'W2', 'method': 'C2', 'budget_s': 90.0, 'runs': 24, 'median_final_error_cm': 0.361, 'p90_final_error_cm': 1.459, 'worst_final_error_cm': 2.131, 'runs_not_settled': 4}
+{'region': 'inside', 'world': 'W2', 'method': 'C2-E avg', 'budget_s': 9.0, 'runs': 24, 'median_final_error_cm': 3.191, 'p90_final_error_cm': 19.253, 'worst_final_error_cm': 34.754, 'runs_not_settled': 21}
+{'region': 'inside', 'world': 'W2', 'method': 'C2-E avg', 'budget_s': 30.0, 'runs': 24, 'median_final_error_cm': 0.436, 'p90_final_error_cm': 1.447, 'worst_final_error_cm': 2.422, 'runs_not_settled': 3}
+{'region': 'inside', 'world': 'W2', 'method': 'C2-E avg', 'budget_s': 90.0, 'runs': 24, 'median_final_error_cm': 0.2, 'p90_final_error_cm': 0.982, 'worst_final_error_cm': 1.27, 'runs_not_settled': 2}
+{'region': 'inside', 'world': 'W2', 'method': 'C2-E pen', 'budget_s': 9.0, 'runs': 24, 'median_final_error_cm': 2.832, 'p90_final_error_cm': 23.726, 'worst_final_error_cm': 34.33, 'runs_not_settled': 20}
+{'region': 'inside', 'world': 'W2', 'method': 'C2-E pen', 'budget_s': 30.0, 'runs': 24, 'median_final_error_cm': 0.435, 'p90_final_error_cm': 1.617, 'worst_final_error_cm': 2.308, 'runs_not_settled': 5}
+{'region': 'inside', 'world': 'W2', 'method': 'C2-E pen', 'budget_s': 90.0, 'runs': 24, 'median_final_error_cm': 0.212, 'p90_final_error_cm': 1.04, 'worst_final_error_cm': 1.32, 'runs_not_settled': 2}
+{'region': 'inside', 'world': 'W2', 'method': 'C3', 'budget_s': 9.0, 'runs': 24, 'median_final_error_cm': 2.181, 'p90_final_error_cm': 4.099, 'worst_final_error_cm': 5.77, 'runs_not_settled': 17}
+{'region': 'inside', 'world': 'W2', 'method': 'C3', 'budget_s': 30.0, 'runs': 24, 'median_final_error_cm': 0.306, 'p90_final_error_cm': 1.328, 'worst_final_error_cm': 1.702, 'runs_not_settled': 4}
+{'region': 'inside', 'world': 'W2', 'method': 'C3', 'budget_s': 90.0, 'runs': 24, 'median_final_error_cm': 0.072, 'p90_final_error_cm': 0.438, 'worst_final_error_cm': 1.492, 'runs_not_settled': 1}
+{'region': 'inside', 'world': 'W2', 'method': 'C3-E avg', 'budget_s': 9.0, 'runs': 24, 'median_final_error_cm': 2.189, 'p90_final_error_cm': 3.977, 'worst_final_error_cm': 5.185, 'runs_not_settled': 18}
+{'region': 'inside', 'world': 'W2', 'method': 'C3-E avg', 'budget_s': 30.0, 'runs': 24, 'median_final_error_cm': 0.212, 'p90_final_error_cm': 0.834, 'worst_final_error_cm': 2.893, 'runs_not_settled': 2}
+{'region': 'inside', 'world': 'W2', 'method': 'C3-E avg', 'budget_s': 90.0, 'runs': 24, 'median_final_error_cm': 0.069, 'p90_final_error_cm': 0.234, 'worst_final_error_cm': 0.486, 'runs_not_settled': 0}
+{'region': 'inside', 'world': 'W2', 'method': 'C3-E pen', 'budget_s': 9.0, 'runs': 24, 'median_final_error_cm': 2.24, 'p90_final_error_cm': 3.271, 'worst_final_error_cm': 6.965, 'runs_not_settled': 18}
+{'region': 'inside', 'world': 'W2', 'method': 'C3-E pen', 'budget_s': 30.0, 'runs': 24, 'median_final_error_cm': 0.212, 'p90_final_error_cm': 0.845, 'worst_final_error_cm': 2.614, 'runs_not_settled': 2}
+{'region': 'inside', 'world': 'W2', 'method': 'C3-E pen', 'budget_s': 90.0, 'runs': 24, 'median_final_error_cm': 0.07, 'p90_final_error_cm': 0.231, 'worst_final_error_cm': 0.384, 'runs_not_settled': 0}
+{'region': 'inside', 'world': 'W3', 'method': 'C1', 'budget_s': 9.0, 'runs': 24, 'median_final_error_cm': 1.838, 'p90_final_error_cm': 2.44, 'worst_final_error_cm': 2.711, 'runs_not_settled': 23}
+{'region': 'inside', 'world': 'W3', 'method': 'C1', 'budget_s': 30.0, 'runs': 24, 'median_final_error_cm': 1.938, 'p90_final_error_cm': 2.832, 'worst_final_error_cm': 3.168, 'runs_not_settled': 24}
+{'region': 'inside', 'world': 'W3', 'method': 'C1', 'budget_s': 90.0, 'runs': 24, 'median_final_error_cm': 1.818, 'p90_final_error_cm': 2.371, 'worst_final_error_cm': 3.127, 'runs_not_settled': 22}
+{'region': 'inside', 'world': 'W3', 'method': 'C2', 'budget_s': 9.0, 'runs': 24, 'median_final_error_cm': 6.948, 'p90_final_error_cm': 24.036, 'worst_final_error_cm': 32.971, 'runs_not_settled': 23}
+{'region': 'inside', 'world': 'W3', 'method': 'C2', 'budget_s': 30.0, 'runs': 24, 'median_final_error_cm': 0.807, 'p90_final_error_cm': 2.144, 'worst_final_error_cm': 2.87, 'runs_not_settled': 9}
+{'region': 'inside', 'world': 'W3', 'method': 'C2', 'budget_s': 90.0, 'runs': 24, 'median_final_error_cm': 0.595, 'p90_final_error_cm': 1.819, 'worst_final_error_cm': 3.414, 'runs_not_settled': 6}
+{'region': 'inside', 'world': 'W3', 'method': 'C2-E avg', 'budget_s': 9.0, 'runs': 24, 'median_final_error_cm': 4.688, 'p90_final_error_cm': 16.677, 'worst_final_error_cm': 71.6, 'runs_not_settled': 23}
+{'region': 'inside', 'world': 'W3', 'method': 'C2-E avg', 'budget_s': 30.0, 'runs': 24, 'median_final_error_cm': 0.776, 'p90_final_error_cm': 2.156, 'worst_final_error_cm': 2.642, 'runs_not_settled': 8}
+{'region': 'inside', 'world': 'W3', 'method': 'C2-E avg', 'budget_s': 90.0, 'runs': 24, 'median_final_error_cm': 0.353, 'p90_final_error_cm': 0.968, 'worst_final_error_cm': 2.887, 'runs_not_settled': 3}
+{'region': 'inside', 'world': 'W3', 'method': 'C2-E pen', 'budget_s': 9.0, 'runs': 24, 'median_final_error_cm': 2.897, 'p90_final_error_cm': 15.412, 'worst_final_error_cm': 20.43, 'runs_not_settled': 23}
+{'region': 'inside', 'world': 'W3', 'method': 'C2-E pen', 'budget_s': 30.0, 'runs': 24, 'median_final_error_cm': 0.764, 'p90_final_error_cm': 2.426, 'worst_final_error_cm': 2.587, 'runs_not_settled': 10}
+{'region': 'inside', 'world': 'W3', 'method': 'C2-E pen', 'budget_s': 90.0, 'runs': 24, 'median_final_error_cm': 0.353, 'p90_final_error_cm': 1.188, 'worst_final_error_cm': 2.225, 'runs_not_settled': 3}
+{'region': 'inside', 'world': 'W3', 'method': 'C3', 'budget_s': 9.0, 'runs': 24, 'median_final_error_cm': 2.413, 'p90_final_error_cm': 8.301, 'worst_final_error_cm': 13.771, 'runs_not_settled': 20}
+{'region': 'inside', 'world': 'W3', 'method': 'C3', 'budget_s': 30.0, 'runs': 24, 'median_final_error_cm': 0.839, 'p90_final_error_cm': 1.776, 'worst_final_error_cm': 4.431, 'runs_not_settled': 8}
+{'region': 'inside', 'world': 'W3', 'method': 'C3', 'budget_s': 90.0, 'runs': 24, 'median_final_error_cm': 0.229, 'p90_final_error_cm': 1.438, 'worst_final_error_cm': 1.905, 'runs_not_settled': 4}
+{'region': 'inside', 'world': 'W3', 'method': 'C3-E avg', 'budget_s': 9.0, 'runs': 24, 'median_final_error_cm': 2.016, 'p90_final_error_cm': 3.22, 'worst_final_error_cm': 3.761, 'runs_not_settled': 16}
+{'region': 'inside', 'world': 'W3', 'method': 'C3-E avg', 'budget_s': 30.0, 'runs': 24, 'median_final_error_cm': 0.513, 'p90_final_error_cm': 1.843, 'worst_final_error_cm': 4.045, 'runs_not_settled': 6}
+{'region': 'inside', 'world': 'W3', 'method': 'C3-E avg', 'budget_s': 90.0, 'runs': 24, 'median_final_error_cm': 0.225, 'p90_final_error_cm': 0.994, 'worst_final_error_cm': 2.059, 'runs_not_settled': 3}
+{'region': 'inside', 'world': 'W3', 'method': 'C3-E pen', 'budget_s': 9.0, 'runs': 24, 'median_final_error_cm': 1.75, 'p90_final_error_cm': 3.034, 'worst_final_error_cm': 4.089, 'runs_not_settled': 15}
+{'region': 'inside', 'world': 'W3', 'method': 'C3-E pen', 'budget_s': 30.0, 'runs': 24, 'median_final_error_cm': 0.526, 'p90_final_error_cm': 2.747, 'worst_final_error_cm': 3.658, 'runs_not_settled': 6}
+{'region': 'inside', 'world': 'W3', 'method': 'C3-E pen', 'budget_s': 90.0, 'runs': 24, 'median_final_error_cm': 0.22, 'p90_final_error_cm': 0.907, 'worst_final_error_cm': 1.085, 'runs_not_settled': 1}
+{'region': 'outside', 'world': 'W1', 'method': 'C1', 'budget_s': 9.0, 'runs': 24, 'median_final_error_cm': 0.035, 'p90_final_error_cm': 0.057, 'worst_final_error_cm': 0.072, 'runs_not_settled': 0}
+{'region': 'outside', 'world': 'W1', 'method': 'C1', 'budget_s': 30.0, 'runs': 24, 'median_final_error_cm': 0.034, 'p90_final_error_cm': 0.047, 'worst_final_error_cm': 0.067, 'runs_not_settled': 0}
+{'region': 'outside', 'world': 'W1', 'method': 'C1', 'budget_s': 90.0, 'runs': 24, 'median_final_error_cm': 0.035, 'p90_final_error_cm': 0.057, 'worst_final_error_cm': 0.077, 'runs_not_settled': 0}
+{'region': 'outside', 'world': 'W1', 'method': 'C2', 'budget_s': 9.0, 'runs': 24, 'median_final_error_cm': 8.033, 'p90_final_error_cm': 30.855, 'worst_final_error_cm': 46.994, 'runs_not_settled': 24}
+{'region': 'outside', 'world': 'W1', 'method': 'C2', 'budget_s': 30.0, 'runs': 24, 'median_final_error_cm': 2.482, 'p90_final_error_cm': 6.597, 'worst_final_error_cm': 9.626, 'runs_not_settled': 23}
+{'region': 'outside', 'world': 'W1', 'method': 'C2', 'budget_s': 90.0, 'runs': 24, 'median_final_error_cm': 1.808, 'p90_final_error_cm': 3.013, 'worst_final_error_cm': 3.253, 'runs_not_settled': 20}
+{'region': 'outside', 'world': 'W1', 'method': 'C2-E avg', 'budget_s': 9.0, 'runs': 24, 'median_final_error_cm': 10.71, 'p90_final_error_cm': 26.779, 'worst_final_error_cm': 37.922, 'runs_not_settled': 24}
+{'region': 'outside', 'world': 'W1', 'method': 'C2-E avg', 'budget_s': 30.0, 'runs': 24, 'median_final_error_cm': 2.024, 'p90_final_error_cm': 3.532, 'worst_final_error_cm': 4.223, 'runs_not_settled': 22}
+{'region': 'outside', 'world': 'W1', 'method': 'C2-E avg', 'budget_s': 90.0, 'runs': 24, 'median_final_error_cm': 1.073, 'p90_final_error_cm': 1.799, 'worst_final_error_cm': 2.683, 'runs_not_settled': 13}
+{'region': 'outside', 'world': 'W1', 'method': 'C2-E pen', 'budget_s': 9.0, 'runs': 24, 'median_final_error_cm': 12.122, 'p90_final_error_cm': 26.084, 'worst_final_error_cm': 34.714, 'runs_not_settled': 24}
+{'region': 'outside', 'world': 'W1', 'method': 'C2-E pen', 'budget_s': 30.0, 'runs': 24, 'median_final_error_cm': 1.917, 'p90_final_error_cm': 3.243, 'worst_final_error_cm': 3.668, 'runs_not_settled': 21}
+{'region': 'outside', 'world': 'W1', 'method': 'C2-E pen', 'budget_s': 90.0, 'runs': 24, 'median_final_error_cm': 1.01, 'p90_final_error_cm': 1.614, 'worst_final_error_cm': 2.941, 'runs_not_settled': 13}
+{'region': 'outside', 'world': 'W1', 'method': 'C3', 'budget_s': 9.0, 'runs': 24, 'median_final_error_cm': 0.035, 'p90_final_error_cm': 0.057, 'worst_final_error_cm': 0.08, 'runs_not_settled': 0}
+{'region': 'outside', 'world': 'W1', 'method': 'C3', 'budget_s': 30.0, 'runs': 24, 'median_final_error_cm': 0.035, 'p90_final_error_cm': 0.057, 'worst_final_error_cm': 0.081, 'runs_not_settled': 0}
+{'region': 'outside', 'world': 'W1', 'method': 'C3', 'budget_s': 90.0, 'runs': 24, 'median_final_error_cm': 0.035, 'p90_final_error_cm': 0.057, 'worst_final_error_cm': 0.081, 'runs_not_settled': 0}
+{'region': 'outside', 'world': 'W1', 'method': 'C3-E avg', 'budget_s': 9.0, 'runs': 24, 'median_final_error_cm': 0.035, 'p90_final_error_cm': 0.057, 'worst_final_error_cm': 0.08, 'runs_not_settled': 0}
+{'region': 'outside', 'world': 'W1', 'method': 'C3-E avg', 'budget_s': 30.0, 'runs': 24, 'median_final_error_cm': 0.035, 'p90_final_error_cm': 0.057, 'worst_final_error_cm': 0.081, 'runs_not_settled': 0}
+{'region': 'outside', 'world': 'W1', 'method': 'C3-E avg', 'budget_s': 90.0, 'runs': 24, 'median_final_error_cm': 0.035, 'p90_final_error_cm': 0.057, 'worst_final_error_cm': 0.081, 'runs_not_settled': 0}
+{'region': 'outside', 'world': 'W1', 'method': 'C3-E pen', 'budget_s': 9.0, 'runs': 24, 'median_final_error_cm': 0.035, 'p90_final_error_cm': 0.057, 'worst_final_error_cm': 0.08, 'runs_not_settled': 0}
+{'region': 'outside', 'world': 'W1', 'method': 'C3-E pen', 'budget_s': 30.0, 'runs': 24, 'median_final_error_cm': 0.035, 'p90_final_error_cm': 0.057, 'worst_final_error_cm': 0.081, 'runs_not_settled': 0}
+{'region': 'outside', 'world': 'W1', 'method': 'C3-E pen', 'budget_s': 90.0, 'runs': 24, 'median_final_error_cm': 0.035, 'p90_final_error_cm': 0.057, 'worst_final_error_cm': 0.081, 'runs_not_settled': 0}
+{'region': 'outside', 'world': 'W2', 'method': 'C1', 'budget_s': 9.0, 'runs': 24, 'median_final_error_cm': 1.867, 'p90_final_error_cm': 2.216, 'worst_final_error_cm': 2.704, 'runs_not_settled': 21}
+{'region': 'outside', 'world': 'W2', 'method': 'C1', 'budget_s': 30.0, 'runs': 24, 'median_final_error_cm': 1.795, 'p90_final_error_cm': 2.622, 'worst_final_error_cm': 2.887, 'runs_not_settled': 20}
+{'region': 'outside', 'world': 'W2', 'method': 'C1', 'budget_s': 90.0, 'runs': 24, 'median_final_error_cm': 1.692, 'p90_final_error_cm': 2.507, 'worst_final_error_cm': 2.639, 'runs_not_settled': 19}
+{'region': 'outside', 'world': 'W2', 'method': 'C2', 'budget_s': 9.0, 'runs': 24, 'median_final_error_cm': 16.773, 'p90_final_error_cm': 35.891, 'worst_final_error_cm': 49.323, 'runs_not_settled': 24}
+{'region': 'outside', 'world': 'W2', 'method': 'C2', 'budget_s': 30.0, 'runs': 24, 'median_final_error_cm': 3.626, 'p90_final_error_cm': 7.713, 'worst_final_error_cm': 18.447, 'runs_not_settled': 22}
+{'region': 'outside', 'world': 'W2', 'method': 'C2', 'budget_s': 90.0, 'runs': 24, 'median_final_error_cm': 1.781, 'p90_final_error_cm': 3.038, 'worst_final_error_cm': 3.619, 'runs_not_settled': 18}
+{'region': 'outside', 'world': 'W2', 'method': 'C2-E avg', 'budget_s': 9.0, 'runs': 24, 'median_final_error_cm': 15.01, 'p90_final_error_cm': 36.846, 'worst_final_error_cm': 40.068, 'runs_not_settled': 24}
+{'region': 'outside', 'world': 'W2', 'method': 'C2-E avg', 'budget_s': 30.0, 'runs': 24, 'median_final_error_cm': 2.728, 'p90_final_error_cm': 5.963, 'worst_final_error_cm': 10.313, 'runs_not_settled': 22}
+{'region': 'outside', 'world': 'W2', 'method': 'C2-E avg', 'budget_s': 90.0, 'runs': 24, 'median_final_error_cm': 1.401, 'p90_final_error_cm': 1.973, 'worst_final_error_cm': 2.323, 'runs_not_settled': 15}
+{'region': 'outside', 'world': 'W2', 'method': 'C2-E pen', 'budget_s': 9.0, 'runs': 24, 'median_final_error_cm': 12.806, 'p90_final_error_cm': 37.507, 'worst_final_error_cm': 47.224, 'runs_not_settled': 24}
+{'region': 'outside', 'world': 'W2', 'method': 'C2-E pen', 'budget_s': 30.0, 'runs': 24, 'median_final_error_cm': 2.919, 'p90_final_error_cm': 5.876, 'worst_final_error_cm': 9.471, 'runs_not_settled': 22}
+{'region': 'outside', 'world': 'W2', 'method': 'C2-E pen', 'budget_s': 90.0, 'runs': 24, 'median_final_error_cm': 1.194, 'p90_final_error_cm': 1.731, 'worst_final_error_cm': 1.98, 'runs_not_settled': 12}
+{'region': 'outside', 'world': 'W2', 'method': 'C3', 'budget_s': 9.0, 'runs': 24, 'median_final_error_cm': 2.516, 'p90_final_error_cm': 4.42, 'worst_final_error_cm': 5.117, 'runs_not_settled': 24}
+{'region': 'outside', 'world': 'W2', 'method': 'C3', 'budget_s': 30.0, 'runs': 24, 'median_final_error_cm': 2.216, 'p90_final_error_cm': 3.103, 'worst_final_error_cm': 4.145, 'runs_not_settled': 21}
+{'region': 'outside', 'world': 'W2', 'method': 'C3', 'budget_s': 90.0, 'runs': 24, 'median_final_error_cm': 0.559, 'p90_final_error_cm': 1.632, 'worst_final_error_cm': 2.169, 'runs_not_settled': 6}
+{'region': 'outside', 'world': 'W2', 'method': 'C3-E avg', 'budget_s': 9.0, 'runs': 24, 'median_final_error_cm': 2.645, 'p90_final_error_cm': 3.748, 'worst_final_error_cm': 6.29, 'runs_not_settled': 23}
+{'region': 'outside', 'world': 'W2', 'method': 'C3-E avg', 'budget_s': 30.0, 'runs': 24, 'median_final_error_cm': 1.629, 'p90_final_error_cm': 2.411, 'worst_final_error_cm': 3.11, 'runs_not_settled': 17}
+{'region': 'outside', 'world': 'W2', 'method': 'C3-E avg', 'budget_s': 90.0, 'runs': 24, 'median_final_error_cm': 0.422, 'p90_final_error_cm': 0.784, 'worst_final_error_cm': 1.159, 'runs_not_settled': 2}
+{'region': 'outside', 'world': 'W2', 'method': 'C3-E pen', 'budget_s': 9.0, 'runs': 24, 'median_final_error_cm': 2.865, 'p90_final_error_cm': 4.113, 'worst_final_error_cm': 4.47, 'runs_not_settled': 24}
+{'region': 'outside', 'world': 'W2', 'method': 'C3-E pen', 'budget_s': 30.0, 'runs': 24, 'median_final_error_cm': 1.811, 'p90_final_error_cm': 2.792, 'worst_final_error_cm': 3.024, 'runs_not_settled': 21}
+{'region': 'outside', 'world': 'W2', 'method': 'C3-E pen', 'budget_s': 90.0, 'runs': 24, 'median_final_error_cm': 0.423, 'p90_final_error_cm': 0.729, 'worst_final_error_cm': 1.159, 'runs_not_settled': 2}
+{'region': 'outside', 'world': 'W3', 'method': 'C1', 'budget_s': 9.0, 'runs': 24, 'median_final_error_cm': 1.776, 'p90_final_error_cm': 2.367, 'worst_final_error_cm': 2.549, 'runs_not_settled': 18}
+{'region': 'outside', 'world': 'W3', 'method': 'C1', 'budget_s': 30.0, 'runs': 24, 'median_final_error_cm': 1.702, 'p90_final_error_cm': 2.296, 'worst_final_error_cm': 2.65, 'runs_not_settled': 18}
+{'region': 'outside', 'world': 'W3', 'method': 'C1', 'budget_s': 90.0, 'runs': 24, 'median_final_error_cm': 1.61, 'p90_final_error_cm': 2.251, 'worst_final_error_cm': 2.622, 'runs_not_settled': 17}
+{'region': 'outside', 'world': 'W3', 'method': 'C2', 'budget_s': 9.0, 'runs': 24, 'median_final_error_cm': 10.711, 'p90_final_error_cm': 40.701, 'worst_final_error_cm': 66.358, 'runs_not_settled': 24}
+{'region': 'outside', 'world': 'W3', 'method': 'C2', 'budget_s': 30.0, 'runs': 24, 'median_final_error_cm': 5.91, 'p90_final_error_cm': 17.906, 'worst_final_error_cm': 64.543, 'runs_not_settled': 24}
+{'region': 'outside', 'world': 'W3', 'method': 'C2', 'budget_s': 90.0, 'runs': 24, 'median_final_error_cm': 1.853, 'p90_final_error_cm': 3.434, 'worst_final_error_cm': 5.153, 'runs_not_settled': 21}
+{'region': 'outside', 'world': 'W3', 'method': 'C2-E avg', 'budget_s': 9.0, 'runs': 24, 'median_final_error_cm': 13.563, 'p90_final_error_cm': 27.087, 'worst_final_error_cm': 61.136, 'runs_not_settled': 24}
+{'region': 'outside', 'world': 'W3', 'method': 'C2-E avg', 'budget_s': 30.0, 'runs': 24, 'median_final_error_cm': 5.793, 'p90_final_error_cm': 13.829, 'worst_final_error_cm': 21.617, 'runs_not_settled': 22}
+{'region': 'outside', 'world': 'W3', 'method': 'C2-E avg', 'budget_s': 90.0, 'runs': 24, 'median_final_error_cm': 1.379, 'p90_final_error_cm': 2.109, 'worst_final_error_cm': 2.563, 'runs_not_settled': 17}
+{'region': 'outside', 'world': 'W3', 'method': 'C2-E pen', 'budget_s': 9.0, 'runs': 24, 'median_final_error_cm': 13.196, 'p90_final_error_cm': 27.231, 'worst_final_error_cm': 48.645, 'runs_not_settled': 24}
+{'region': 'outside', 'world': 'W3', 'method': 'C2-E pen', 'budget_s': 30.0, 'runs': 24, 'median_final_error_cm': 5.742, 'p90_final_error_cm': 13.232, 'worst_final_error_cm': 20.751, 'runs_not_settled': 23}
+{'region': 'outside', 'world': 'W3', 'method': 'C2-E pen', 'budget_s': 90.0, 'runs': 24, 'median_final_error_cm': 1.377, 'p90_final_error_cm': 2.191, 'worst_final_error_cm': 2.643, 'runs_not_settled': 17}
+{'region': 'outside', 'world': 'W3', 'method': 'C3', 'budget_s': 9.0, 'runs': 24, 'median_final_error_cm': 3.03, 'p90_final_error_cm': 5.435, 'worst_final_error_cm': 14.818, 'runs_not_settled': 23}
+{'region': 'outside', 'world': 'W3', 'method': 'C3', 'budget_s': 30.0, 'runs': 24, 'median_final_error_cm': 1.844, 'p90_final_error_cm': 3.286, 'worst_final_error_cm': 3.597, 'runs_not_settled': 18}
+{'region': 'outside', 'world': 'W3', 'method': 'C3', 'budget_s': 90.0, 'runs': 24, 'median_final_error_cm': 1.228, 'p90_final_error_cm': 1.875, 'worst_final_error_cm': 2.091, 'runs_not_settled': 15}
+{'region': 'outside', 'world': 'W3', 'method': 'C3-E avg', 'budget_s': 9.0, 'runs': 24, 'median_final_error_cm': 2.579, 'p90_final_error_cm': 3.101, 'worst_final_error_cm': 4.556, 'runs_not_settled': 24}
+{'region': 'outside', 'world': 'W3', 'method': 'C3-E avg', 'budget_s': 30.0, 'runs': 24, 'median_final_error_cm': 1.727, 'p90_final_error_cm': 2.44, 'worst_final_error_cm': 2.641, 'runs_not_settled': 20}
+{'region': 'outside', 'world': 'W3', 'method': 'C3-E avg', 'budget_s': 90.0, 'runs': 24, 'median_final_error_cm': 0.902, 'p90_final_error_cm': 1.455, 'worst_final_error_cm': 2.273, 'runs_not_settled': 10}
+{'region': 'outside', 'world': 'W3', 'method': 'C3-E pen', 'budget_s': 9.0, 'runs': 24, 'median_final_error_cm': 2.525, 'p90_final_error_cm': 3.069, 'worst_final_error_cm': 6.396, 'runs_not_settled': 24}
+{'region': 'outside', 'world': 'W3', 'method': 'C3-E pen', 'budget_s': 30.0, 'runs': 24, 'median_final_error_cm': 1.72, 'p90_final_error_cm': 2.364, 'worst_final_error_cm': 2.719, 'runs_not_settled': 20}
+{'region': 'outside', 'world': 'W3', 'method': 'C3-E pen', 'budget_s': 90.0, 'runs': 24, 'median_final_error_cm': 0.864, 'p90_final_error_cm': 1.453, 'worst_final_error_cm': 2.276, 'runs_not_settled': 11}
+{'method': 'C1', 'rounds': 100, 'median_solve_ms': 6.29, 'p95_solve_ms': 7.08, 'period_ms': 20}
+{'method': 'C3', 'rounds': 100, 'median_solve_ms': 10.62, 'p95_solve_ms': 12.43, 'period_ms': 20}
+{'method': 'C3-E', 'rounds': 100, 'median_solve_ms': 28.3, 'p95_solve_ms': 30.62, 'period_ms': 20}
+{'method': 'C3-E pen', 'rounds': 100, 'median_solve_ms': 28.62, 'p95_solve_ms': 31.44, 'period_ms': 20}

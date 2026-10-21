@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lac"
+version = "0.1.0"
+description = "Learning-assisted control of a two-link arm under payload changes: parameter estimation vs residual dynamics learning."
+requires-python = ">=3.10"
+dependencies = [
+    "numpy>=1.26",
+    "mujoco>=3.1",
+    "matplotlib>=3.8",
+    "torch>=2.4",  # CPU build is enough; see docs/TECHSTACK.md for the install command
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+report = ["imageio>=2.31", "imageio-ffmpeg>=0.5"]  # demo video
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+lac = ["assets/*.xml"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

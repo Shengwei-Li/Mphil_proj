@@ -1,0 +1,21 @@
+controller,setting,tasks,runs,median_final_error_cm,worst_final_error_cm,median_settle_time_s,runs_not_settled,median_solve_ms
+pd_gc,default,A (tuned on),1,0.0,0.0,0.322,0,
+pd_gc,default,B-F (not tuned on),5,0.0,0.0,0.336,0,
+mpc,default,A (tuned on),5,0.07,0.09,0.686,0,11.05
+mpc,default,B-F (not tuned on),25,0.071,0.153,0.646,0,11.14
+mpc,horizon=0.1,A (tuned on),3,0.073,0.155,0.976,0,5.65
+mpc,horizon=0.1,B-F (not tuned on),15,0.139,0.68,0.876,0,5.67
+mpc,horizon=0.2,A (tuned on),3,0.07,0.085,0.686,0,11.16
+mpc,horizon=0.2,B-F (not tuned on),15,0.071,0.153,0.606,0,11.15
+mpc,horizon=0.3,A (tuned on),3,0.073,0.151,0.544,0,16.39
+mpc,horizon=0.3,B-F (not tuned on),15,0.083,0.199,0.62,0,16.78
+mpc,horizon=0.5,A (tuned on),3,0.153,0.195,0.698,0,19.07
+mpc,horizon=0.5,B-F (not tuned on),15,0.157,0.355,0.726,0,19.16
+mpc,samples=32,A (tuned on),3,0.165,0.212,0.744,0,6.35
+mpc,samples=32,B-F (not tuned on),15,0.189,3.794,0.978,1,6.35
+mpc,samples=64,A (tuned on),3,0.104,0.138,0.928,0,9.54
+mpc,samples=64,B-F (not tuned on),15,0.117,0.191,0.784,0,9.54
+mpc,samples=256,A (tuned on),3,0.07,0.085,0.686,0,10.98
+mpc,samples=256,B-F (not tuned on),15,0.071,0.153,0.606,0,11.08
+mpc,samples=1024,A (tuned on),3,0.024,0.028,0.384,0,15.68
+mpc,samples=1024,B-F (not tuned on),15,0.025,0.04,0.53,0,15.9

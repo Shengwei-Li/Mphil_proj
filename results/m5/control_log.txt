@@ -1,0 +1,38 @@
+{'world': 'W1', 'method': 'C0', 'budget_s': '', 'runs': 24, 'median_final_error_cm': 9.442, 'p90_final_error_cm': 16.317, 'worst_final_error_cm': 17.552, 'runs_not_settled': 24, 'median_settle_time_s': 3.0}
+{'world': 'W1', 'method': 'reference', 'budget_s': '', 'runs': 24, 'median_final_error_cm': 0.041, 'p90_final_error_cm': 0.059, 'worst_final_error_cm': 0.606, 'runs_not_settled': 0, 'median_settle_time_s': 0.534}
+{'world': 'W2', 'method': 'C0', 'budget_s': '', 'runs': 24, 'median_final_error_cm': 9.38, 'p90_final_error_cm': 19.345, 'worst_final_error_cm': 21.338, 'runs_not_settled': 24, 'median_settle_time_s': 3.0}
+{'world': 'W2', 'method': 'reference', 'budget_s': '', 'runs': 24, 'median_final_error_cm': 0.042, 'p90_final_error_cm': 0.065, 'worst_final_error_cm': 0.572, 'runs_not_settled': 0, 'median_settle_time_s': 0.488}
+{'world': 'W3', 'method': 'C0', 'budget_s': '', 'runs': 24, 'median_final_error_cm': 8.462, 'p90_final_error_cm': 19.288, 'worst_final_error_cm': 20.663, 'runs_not_settled': 24, 'median_settle_time_s': 3.0}
+{'world': 'W3', 'method': 'reference', 'budget_s': '', 'runs': 24, 'median_final_error_cm': 0.057, 'p90_final_error_cm': 0.137, 'worst_final_error_cm': 0.692, 'runs_not_settled': 0, 'median_settle_time_s': 0.475}
+{'world': 'W1', 'method': 'C1', 'budget_s': 9.0, 'runs': 24, 'median_final_error_cm': 0.036, 'p90_final_error_cm': 0.088, 'worst_final_error_cm': 0.606, 'runs_not_settled': 0, 'median_settle_time_s': 0.552}
+{'world': 'W1', 'method': 'C1', 'budget_s': 30.0, 'runs': 24, 'median_final_error_cm': 0.036, 'p90_final_error_cm': 0.118, 'worst_final_error_cm': 0.606, 'runs_not_settled': 0, 'median_settle_time_s': 0.552}
+{'world': 'W1', 'method': 'C1', 'budget_s': 90.0, 'runs': 24, 'median_final_error_cm': 0.036, 'p90_final_error_cm': 0.088, 'worst_final_error_cm': 0.606, 'runs_not_settled': 0, 'median_settle_time_s': 0.552}
+{'world': 'W1', 'method': 'C2', 'budget_s': 9.0, 'runs': 24, 'median_final_error_cm': 3.739, 'p90_final_error_cm': 21.462, 'worst_final_error_cm': 27.272, 'runs_not_settled': 20, 'median_settle_time_s': 3.0}
+{'world': 'W1', 'method': 'C2', 'budget_s': 30.0, 'runs': 24, 'median_final_error_cm': 0.555, 'p90_final_error_cm': 1.711, 'worst_final_error_cm': 2.346, 'runs_not_settled': 8, 'median_settle_time_s': 0.659}
+{'world': 'W1', 'method': 'C2', 'budget_s': 90.0, 'runs': 24, 'median_final_error_cm': 0.208, 'p90_final_error_cm': 1.076, 'worst_final_error_cm': 1.672, 'runs_not_settled': 3, 'median_settle_time_s': 0.561}
+{'world': 'W1', 'method': 'C3', 'budget_s': 9.0, 'runs': 24, 'median_final_error_cm': 0.036, 'p90_final_error_cm': 0.07, 'worst_final_error_cm': 0.606, 'runs_not_settled': 0, 'median_settle_time_s': 0.536}
+{'world': 'W1', 'method': 'C3', 'budget_s': 30.0, 'runs': 24, 'median_final_error_cm': 0.036, 'p90_final_error_cm': 0.091, 'worst_final_error_cm': 0.606, 'runs_not_settled': 0, 'median_settle_time_s': 0.55}
+{'world': 'W1', 'method': 'C3', 'budget_s': 90.0, 'runs': 24, 'median_final_error_cm': 0.036, 'p90_final_error_cm': 0.088, 'worst_final_error_cm': 0.606, 'runs_not_settled': 0, 'median_settle_time_s': 0.543}
+{'world': 'W2', 'method': 'C1', 'budget_s': 9.0, 'runs': 24, 'median_final_error_cm': 1.779, 'p90_final_error_cm': 2.287, 'worst_final_error_cm': 2.621, 'runs_not_settled': 20, 'median_settle_time_s': 3.0}
+{'world': 'W2', 'method': 'C1', 'budget_s': 30.0, 'runs': 24, 'median_final_error_cm': 1.988, 'p90_final_error_cm': 2.688, 'worst_final_error_cm': 3.157, 'runs_not_settled': 24, 'median_settle_time_s': 3.0}
+{'world': 'W2', 'method': 'C1', 'budget_s': 90.0, 'runs': 24, 'median_final_error_cm': 1.948, 'p90_final_error_cm': 2.697, 'worst_final_error_cm': 3.338, 'runs_not_settled': 22, 'median_settle_time_s': 3.0}
+{'world': 'W2', 'method': 'C2', 'budget_s': 9.0, 'runs': 24, 'median_final_error_cm': 3.616, 'p90_final_error_cm': 48.479, 'worst_final_error_cm': 68.323, 'runs_not_settled': 24, 'median_settle_time_s': 3.0}
+{'world': 'W2', 'method': 'C2', 'budget_s': 30.0, 'runs': 24, 'median_final_error_cm': 1.034, 'p90_final_error_cm': 2.013, 'worst_final_error_cm': 3.618, 'runs_not_settled': 11, 'median_settle_time_s': 2.089}
+{'world': 'W2', 'method': 'C2', 'budget_s': 90.0, 'runs': 24, 'median_final_error_cm': 0.361, 'p90_final_error_cm': 1.459, 'worst_final_error_cm': 2.131, 'runs_not_settled': 4, 'median_settle_time_s': 0.466}
+{'world': 'W2', 'method': 'C3', 'budget_s': 9.0, 'runs': 24, 'median_final_error_cm': 2.181, 'p90_final_error_cm': 4.099, 'worst_final_error_cm': 5.77, 'runs_not_settled': 17, 'median_settle_time_s': 3.0}
+{'world': 'W2', 'method': 'C3', 'budget_s': 30.0, 'runs': 24, 'median_final_error_cm': 0.306, 'p90_final_error_cm': 1.328, 'worst_final_error_cm': 1.702, 'runs_not_settled': 4, 'median_settle_time_s': 0.523}
+{'world': 'W2', 'method': 'C3', 'budget_s': 90.0, 'runs': 24, 'median_final_error_cm': 0.072, 'p90_final_error_cm': 0.438, 'worst_final_error_cm': 1.492, 'runs_not_settled': 1, 'median_settle_time_s': 0.486}
+{'world': 'W3', 'method': 'C1', 'budget_s': 9.0, 'runs': 24, 'median_final_error_cm': 1.838, 'p90_final_error_cm': 2.44, 'worst_final_error_cm': 2.711, 'runs_not_settled': 23, 'median_settle_time_s': 3.0}
+{'world': 'W3', 'method': 'C1', 'budget_s': 30.0, 'runs': 24, 'median_final_error_cm': 1.938, 'p90_final_error_cm': 2.832, 'worst_final_error_cm': 3.168, 'runs_not_settled': 24, 'median_settle_time_s': 3.0}
+{'world': 'W3', 'method': 'C1', 'budget_s': 90.0, 'runs': 24, 'median_final_error_cm': 1.818, 'p90_final_error_cm': 2.371, 'worst_final_error_cm': 3.127, 'runs_not_settled': 22, 'median_settle_time_s': 3.0}
+{'world': 'W3', 'method': 'C2', 'budget_s': 9.0, 'runs': 24, 'median_final_error_cm': 6.948, 'p90_final_error_cm': 24.036, 'worst_final_error_cm': 32.971, 'runs_not_settled': 23, 'median_settle_time_s': 3.0}
+{'world': 'W3', 'method': 'C2', 'budget_s': 30.0, 'runs': 24, 'median_final_error_cm': 0.807, 'p90_final_error_cm': 2.144, 'worst_final_error_cm': 2.87, 'runs_not_settled': 9, 'median_settle_time_s': 0.708}
+{'world': 'W3', 'method': 'C2', 'budget_s': 90.0, 'runs': 24, 'median_final_error_cm': 0.595, 'p90_final_error_cm': 1.819, 'worst_final_error_cm': 3.414, 'runs_not_settled': 6, 'median_settle_time_s': 0.611}
+{'world': 'W3', 'method': 'C3', 'budget_s': 9.0, 'runs': 24, 'median_final_error_cm': 2.413, 'p90_final_error_cm': 8.301, 'worst_final_error_cm': 13.771, 'runs_not_settled': 20, 'median_settle_time_s': 3.0}
+{'world': 'W3', 'method': 'C3', 'budget_s': 30.0, 'runs': 24, 'median_final_error_cm': 0.839, 'p90_final_error_cm': 1.776, 'worst_final_error_cm': 4.431, 'runs_not_settled': 8, 'median_settle_time_s': 1.247}
+{'world': 'W3', 'method': 'C3', 'budget_s': 90.0, 'runs': 24, 'median_final_error_cm': 0.229, 'p90_final_error_cm': 1.438, 'worst_final_error_cm': 1.905, 'runs_not_settled': 4, 'median_settle_time_s': 0.541}
+{'method': 'C0', 'rounds': 100, 'median_solve_ms': 11.03, 'p95_solve_ms': 12.03, 'period_ms': 20}
+{'method': 'C1', 'rounds': 100, 'median_solve_ms': 11.02, 'p95_solve_ms': 12.67, 'period_ms': 20}
+{'method': 'C2', 'rounds': 100, 'median_solve_ms': 19.55, 'p95_solve_ms': 21.02, 'period_ms': 20}
+{'method': 'C3', 'rounds': 100, 'median_solve_ms': 19.83, 'p95_solve_ms': 20.9, 'period_ms': 20}
+{'method': 'reference', 'rounds': 100, 'median_solve_ms': 11.06, 'p95_solve_ms': 11.59, 'period_ms': 20}

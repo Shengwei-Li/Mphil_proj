@@ -1,0 +1,13 @@
+controller,payload_kg,final_error_m,peak_shoulder_torque_Nm,peak_elbow_torque_Nm,time_at_torque_limit_s
+pd,0.0,0.03501,20.0,10.0,0.06
+pd,0.5,0.05046,20.0,10.0,0.102
+pd,1.0,0.06714,20.0,10.0,0.17
+pd,1.5,0.08517,20.0,10.0,0.266
+pd_gc_empty,0.0,0.0,20.0,10.0,0.064
+pd_gc_empty,0.5,0.01379,20.0,10.0,0.108
+pd_gc_empty,1.0,0.02869,20.0,10.0,0.186
+pd_gc_empty,1.5,0.04484,20.0,10.0,0.288
+pd_gc_true,0.0,0.0,20.0,10.0,0.064
+pd_gc_true,0.5,0.0,20.0,10.0,0.114
+pd_gc_true,1.0,0.0,20.0,10.0,0.204
+pd_gc_true,1.5,0.0,20.0,10.0,0.32

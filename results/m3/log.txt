@@ -1,0 +1,19 @@
+holding any target with 1.5 kg needs at most 59% of a torque limit
+task A done
+task B done
+task C done
+task D done
+task E done
+task F done
+{'controller': 'c0', 'payload_kg': 0.0, 'runs': 30, 'median_final_error_cm': 0.071, 'min_final_error_cm': 0.028, 'max_final_error_cm': 0.153, 'median_height_offset_cm': -0.005, 'runs_not_settled': 0, 'median_time_at_torque_limit_s': 0.0, 'median_one_period_prediction_error_cm': 0.0}
+{'controller': 'c0', 'payload_kg': 0.5, 'runs': 30, 'median_final_error_cm': 7.23, 'min_final_error_cm': 2.51, 'max_final_error_cm': 10.934, 'median_height_offset_cm': -6.932, 'runs_not_settled': 30, 'median_time_at_torque_limit_s': 0.0, 'median_one_period_prediction_error_cm': 0.2509}
+{'controller': 'c0', 'payload_kg': 1.0, 'runs': 30, 'median_final_error_cm': 12.726, 'min_final_error_cm': 3.81, 'max_final_error_cm': 20.091, 'median_height_offset_cm': -10.874, 'runs_not_settled': 30, 'median_time_at_torque_limit_s': 0.04, 'median_one_period_prediction_error_cm': 0.5145}
+{'controller': 'c0', 'payload_kg': 1.5, 'runs': 30, 'median_final_error_cm': 17.334, 'min_final_error_cm': 7.578, 'max_final_error_cm': 28.678, 'median_height_offset_cm': -14.166, 'runs_not_settled': 30, 'median_time_at_torque_limit_s': 0.11, 'median_one_period_prediction_error_cm': 0.7872}
+{'controller': 'oracle', 'payload_kg': 0.0, 'runs': 30, 'median_final_error_cm': 0.071, 'min_final_error_cm': 0.028, 'max_final_error_cm': 0.153, 'median_height_offset_cm': -0.005, 'runs_not_settled': 0, 'median_time_at_torque_limit_s': 0.0, 'median_one_period_prediction_error_cm': 0.0}
+{'controller': 'oracle', 'payload_kg': 0.5, 'runs': 30, 'median_final_error_cm': 0.042, 'min_final_error_cm': 0.019, 'max_final_error_cm': 0.06, 'median_height_offset_cm': -0.007, 'runs_not_settled': 0, 'median_time_at_torque_limit_s': 0.02, 'median_one_period_prediction_error_cm': 0.0}
+{'controller': 'oracle', 'payload_kg': 1.0, 'runs': 30, 'median_final_error_cm': 0.035, 'min_final_error_cm': 0.024, 'max_final_error_cm': 0.081, 'median_height_offset_cm': -0.0, 'runs_not_settled': 0, 'median_time_at_torque_limit_s': 0.07, 'median_one_period_prediction_error_cm': 0.0}
+{'controller': 'oracle', 'payload_kg': 1.5, 'runs': 30, 'median_final_error_cm': 0.05, 'min_final_error_cm': 0.024, 'max_final_error_cm': 0.529, 'median_height_offset_cm': 0.003, 'runs_not_settled': 0, 'median_time_at_torque_limit_s': 0.12, 'median_one_period_prediction_error_cm': 0.0}
+{'controller': 'pd_gc_empty', 'payload_kg': 0.0, 'runs': 6, 'median_final_error_cm': 0.0, 'min_final_error_cm': 0.0, 'max_final_error_cm': 0.0, 'median_height_offset_cm': 0.0, 'runs_not_settled': 0, 'median_time_at_torque_limit_s': 0.07, 'median_one_period_prediction_error_cm': ''}
+{'controller': 'pd_gc_empty', 'payload_kg': 0.5, 'runs': 6, 'median_final_error_cm': 1.369, 'min_final_error_cm': 0.929, 'max_final_error_cm': 2.259, 'median_height_offset_cm': -1.035, 'runs_not_settled': 5, 'median_time_at_torque_limit_s': 0.136, 'median_one_period_prediction_error_cm': ''}
+{'controller': 'pd_gc_empty', 'payload_kg': 1.0, 'runs': 6, 'median_final_error_cm': 2.812, 'min_final_error_cm': 1.953, 'max_final_error_cm': 4.549, 'median_height_offset_cm': -2.158, 'runs_not_settled': 6, 'median_time_at_torque_limit_s': 0.252, 'median_one_period_prediction_error_cm': ''}
+{'controller': 'pd_gc_empty', 'payload_kg': 1.5, 'runs': 6, 'median_final_error_cm': 4.227, 'min_final_error_cm': 3.084, 'max_final_error_cm': 6.851, 'median_height_offset_cm': -3.377, 'runs_not_settled': 6, 'median_time_at_torque_limit_s': 0.34, 'median_one_period_prediction_error_cm': ''}

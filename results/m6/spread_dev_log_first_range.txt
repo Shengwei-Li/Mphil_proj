@@ -1,0 +1,6 @@
+weight      0: mean log10 of cell medians +0.197 | median inside 1.225 cm, outside 2.189 cm
+weight    0.3: mean log10 of cell medians +0.195 | median inside 1.113 cm, outside 2.112 cm
+weight      3: mean log10 of cell medians +0.195 | median inside 1.091 cm, outside 1.954 cm
+weight     30: mean log10 of cell medians +0.195 | median inside 0.924 cm, outside 1.961 cm
+weight    300: mean log10 of cell medians +0.181 | median inside 0.948 cm, outside 2.173 cm
+chosen spread weight: 300.0
