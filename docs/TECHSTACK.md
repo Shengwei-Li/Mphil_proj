@@ -1,6 +1,6 @@
 # Project C 技术栈
 
-更新：2026-10-20（M7 引入 imageio 和 imageio-ffmpeg，用本机 TeX Live）。记录项目实际用到的工具、版本和选择理由。新增依赖时先在这里登记，再写进 `pyproject.toml`。
+更新：2026-10-22（M8 没有新依赖；CFDP 和最近邻只用 NumPy）。记录项目实际用到的工具、版本和选择理由。新增依赖时先在这里登记，再写进 `pyproject.toml`。
 
 ## 运行环境
 
@@ -32,6 +32,7 @@
 | MPC | `mpc.py` | 采样式，按分数加权合成（MPPI）；256 个候选、0.2 秒预测。模型每轮 10 小步积分时约 11 毫秒，2 小步时约 2.5 毫秒（M4 起默认 10 小步）；加上残差网络后约 19.7 毫秒，95% 分位数约 21 毫秒，超过 20 毫秒的控制周期（M5b 实测） |
 | 负载估计 | `estimate.py` | 一维高斯-牛顿最小二乘，只用 NumPy |
 | 集成推理 | `learned.py` 的 `EnsemblePredictor` | 5 个网络的权重叠成三维数组，一次批量矩阵乘法算完；单独测每轮约 28 毫秒（C3-E），超出 20 毫秒周期 |
+| 模仿策略 | `policy.py` | CFDP 和最近邻从 B 移植，只用 NumPy：近邻用 `argpartition` 全量查找（约 4.5 万条，不需要 scipy 的 KD 树），局部马氏距离，反向常微分方程 20 步。生成一个动作块 NN 约 3 毫秒，CFDP 约 34 毫秒，都在 80 毫秒的预算内 |
 | 网络推理 | `learned.py` 的 `ResidualNet` | 训练用 PyTorch，训练完权重复制成 NumPy 数组，MPC 里用矩阵乘法算。MPC 每轮调用 10 次、每次 256 条，这么小的调用 PyTorch 的固定开销比计算本身还大。有检查保证两者输出一致 |
 
 ## 计划使用，尚未引入
@@ -41,6 +42,7 @@
 | 里程碑 | 候选 | 用途 | 待定的事 |
 |---|---|---|---|
 | M5 | pandas | 逐回合结果表 | 结果量不大时可以只用 CSV 加 NumPy |
+| M9b | 自己写的小型 Diffusion Policy（PyTorch）；参考 Chi 等的官方实现和 LeRobot | 第二个模仿策略 | 状态只有 8 维，网络很小，先试 CPU；不够快再决定是否装 GPU 版 PyTorch（约 2–3 GB，需你同意）。不直接装 LeRobot，依赖太多，也不利于讲清每一步 |
 
 ## GPU（M6 时评估过，不用）
 
@@ -85,6 +87,7 @@
 | M6a 区域内外对比（并行，约 5 分钟） | `.venv\Scripts\python experiments\m6a_outside.py` |
 | M6b 选惩罚力度（并行，约 10 分钟） | `.venv\Scripts\python experiments\m6b_dev_spread.py` |
 | M6b 集成对比（并行，约 25 分钟，含训练 216 个网络） | `.venv\Scripts\python experiments\m6b_ensemble.py` |
+| M8 策略对比（并行，约 3 分钟，首次含录示范约 1.5 分钟） | `.venv\Scripts\python experiments\m8_policy.py`（`--plot-only` 只重画图） |
 | 重画报告图（约 1 分钟） | `.venv\Scripts\python reportigures.py` |
 | 生成报告结果表 | `.venv\Scripts\python report	ables.py` |
 | 编译报告 | `latexmk -pdf -cd report\main.tex` |
