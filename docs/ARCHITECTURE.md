@@ -1,6 +1,6 @@
 # Project C 结构说明
 
-更新：2026-10-22（M8）。每新增一个文件，就在这里补上它的职责。
+更新：2026-10-25（M9）。每新增一个文件，就在这里补上它的职责。
 
 ## 目录树
 
@@ -32,6 +32,7 @@ projectC_learning_assisted_control/
 │   ├── methods.py               五种方法和集成的组装（读缓存的网络）、测试任务生成
 │   ├── demos.py                 M8：空载手臂上录专家示范（到达和纠偏两种回合）
 │   ├── policy.py                M8：模仿策略（CFDP、最近邻）和把它们接到机械臂上的策略控制器
+│   ├── monitor.py               M9：监测器的信号（残差、动作块一致性）、CUSUM、conformal 阈值、测量噪声
 │   ├── simulate.py              把控制器接到机械臂上跑一次并记录
 │   └── view.py                  交互面板入口
 ├── experiments/
@@ -46,7 +47,8 @@ projectC_learning_assisted_control/
 │   ├── m6a_outside.py           M6a 实验：训练区域内外的控制对比、预测误差和乐观程度、最差轨迹
 │   ├── m6b_dev_spread.py        M6b 开发：只用开发材料选分歧惩罚力度，结果冻结
 │   ├── m6b_ensemble.py          M6b 实验：五网络集成（只取平均、加惩罚）对比单个网络
-│   └── m8_policy.py             M8 实验：空载上学的策略在负载下、区域内外的表现，对照 M6a 的 MPC
+│   ├── m8_policy.py             M8 实验：空载上学的策略在负载下、区域内外的表现，对照 M6a 的 MPC
+│   └── m9_monitors.py           M9 实验：四种监测器在同一误报率下的检出率和报警时间
 ├── tests/
 │   ├── test_arm.py              仿真模型的几何和静力检查
 │   ├── test_model.py            手写模型逐项对仿真器
@@ -55,7 +57,8 @@ projectC_learning_assisted_control/
 │   ├── test_data.py             数据采集、按段划分、C1 估计
 │   ├── test_learned.py          网络输入、NumPy 与 PyTorch 一致、训练有效、保存读取
 │   ├── test_methods.py          测试任务的区域和可重复性、缺网络时报错
-│   └── test_policy.py           训练样本、目标加权、两个策略、策略控制器、示范录制
+│   ├── test_policy.py           训练样本、目标加权、两个策略、策略控制器、示范录制
+│   └── test_monitor.py          残差、一致性、CUSUM、阈值、测量噪声
 ├── results/
 │   ├── m0/                      M0 面板截图
 │   ├── m1/                      M1 结果表、误差曲线、面板截图
@@ -65,7 +68,8 @@ projectC_learning_assisted_control/
 │   ├── m4/                      M4 差距检查、估计值、预测误差表和图
 │   ├── m5/                      M5 设置选择记录、选中的设置、预测和控制对比表和图、计算耗时
 │   ├── m6/                      M6 区域内外对比、最差轨迹、惩罚力度选择、集成对比、计算耗时
-│   └── m8/                      M8 逐次运行表、汇总表（含 M6a 的 MPC 对照）、对比图
+│   ├── m8/                      M8 逐次运行表、汇总表（含 M6a 的 MPC 对照）、对比图
+│   └── m9/                      M9 逐次报警表、汇总表、检出率图（含噪声放大 3 倍的版本）
 ├── report/
 │   ├── main.tex, main.pdf       技术报告（IEEE 双栏，5 页）
 │   ├── references.bib           参考文献（逐篇核对过）
@@ -77,7 +81,8 @@ projectC_learning_assisted_control/
 │   └── demo.mp4                 演示视频（55 秒）
 ├── cache/                       采过的数据和训练好的网络（可重新生成，不入库）
 │   ├── nets/                    M5a 的 54 个网络，M6b 的 216 个集成成员，以及开发用的 60 个
-│   └── demos_v3_*.npz           M8 的示范，每个世界一份
+│   ├── demos_v3_*.npz           M8 的示范，每个世界一份
+│   └── m9_runs.pkl              M9 的全部运行（每周期的状态、力矩、动作块），供重新分析
 └── .venv/                       虚拟环境，不入库
 ```
 
@@ -99,6 +104,9 @@ projectC_learning_assisted_control/
 | `policy.py` | 观测是每周期 8 个数（角度的正弦余弦、角速度、目标减末端，后两个乘 `target_weight`），动作是未来 8 个周期相对当前的关节位置。`NearestNeighborPolicy` 抄最近示范的动作块；`CFDP` 用示范直接算去噪方向，积分反向常微分方程。`PolicyController` 接口同 MPC：每 `n_exec` 个周期生成一块，底层 PD 加重力补偿（按 `assumed_payload`，默认 0）跟踪；记录每块（`chunks`、`chunk_periods`）和每周期的命令位置（`setpoints`） | `frame`、`training_pairs`、`Normalizer`、`ChunkIndex`、`local_mahalanobis_metric`、`NearestNeighborPolicy`、`CFDP`、`PolicyController` |
 | `experiments/m8_policy.py` | 每个世界录（或读缓存）示范；NN 1 次、CFDP 3 个种子，在 M6a 的区域内外任务上、空载和 1 kg 下运行；记录最终误差、稳定时间、命令与实际的差、生成耗时；把 M6a 的 C0、C3（90 秒）、参考上界抄进汇总表。`--plot-only` 只重画图 | 并行运行，写入 `results/m8/` |
 | `tests/test_policy.py` | 训练样本里动作块是未来位置减当前；目标加权只改后两维；NN 对示范的观测返回该示范的动作块；CFDP 同种子结果相同、噪声小时接近示范；空载时控制器能稳住；按空载补偿时 1 kg 会下垂，补偿对了就不会；示范的两种回合长度和起点距离 | 命令 `python -m pytest` |
+| `monitor.py` | 监测器只看机器人自己有的东西：关节角、角速度、发出的力矩、策略生成的动作块。`periods` 把一次运行切成控制周期；`measured` 加测量噪声；`predict_period_speeds` 从实测的周期起点按逐步力矩积分（残差网络的修正用周期平均力矩）；`residual_signal`、`chunk_disagreement` 每次检查一个数；`Cusum` 是 B 的累积方式；`conformal_threshold`、`episode_max`、`first_alarm` 是 B 的校准和报警 | `Periods`、`periods`、`measured`、`predict_period_speeds`、`period_residuals`、`residual_signal`、`chunk_disagreement`、`Cusum`、`conformal_threshold`、`episode_max`、`first_alarm` |
+| `experiments/m9_monitors.py` | 先仿真（开发、校准、区域内、区域外四组）并存进缓存；再加噪声、算信号、在开发组上拟合标准化、在校准组上定阈值、评估测试组；还算「残差或一致性」各占 α/2 的合用。`--analyse-only`、`--noise-scale k` | 并行运行，写入 `results/m9/` |
+| `tests/test_monitor.py` | 模型说对时残差为零、不知道摩擦时不为零；负载在残差里可见；网络输出为零时等于物理残差；检查之间取平均；噪声大小和可复现；一致性只比重叠部分；CUSUM 在变化后增长；阈值的分位数和数据不够时为无穷；首次报警 | 命令 `python -m pytest` |
 | `simulate.py` | 设置负载和起始姿势，每个仿真步向控制器要力矩，记录全过程。PD 和 MPC 都能接 | `run_reach`、`Rollout` |
 | `view.py` | 交互面板：摆姿势、选控制方法（无、PD、PD＋重力补偿、MPC）、调增益、运行中改负载和目标；MPC 时画出预测轨迹；也能存截图或打开自带查看器 | 命令 `python -m lac.view` |
 | `experiments/m2b_mpc_unloaded.py` | 6 个任务 × 5 个种子的空载对比，加预测时长和候选数量两组对比。任务 A 是调参用的，其余没参与调参 | 写入 `results/m2b/` |
@@ -176,6 +184,7 @@ MPC 接在同一个回路里，替换掉 PD 那一格。它每 10 个仿真步�
 - **仿真器走完一步后，缓存的末端位置还是上一步的。** 记录或显示末端位置时，用 `arm.forward_kinematics(当前关节角)`，或先调用 `mj_forward`。
 - **真实负载只通过实验脚本和 `run_reach` 的 `payload` 参数进入仿真。** 把它传给控制器的 `assumed_payload` 只允许用于标明为「参考上界」的方法，目前有三处：`m1_pd_reach.py` 里的 `pd_gc_true`、`m3_c0_baseline.py` 里的 `oracle`、面板里的「MPC（告知真实负载，参考）」。
 - **测试任务只用于最终对比。** M5b 的 8 个任务（种子 5000）和 M6a 的 8 个区域外任务（种子 6000）不能拿来调任何设置；调设置只能用开发任务（A、B，种子 5500、6500）和开发数据（种子 4、500）。M8 的策略设置也只在开发任务（种子 5500）上选。
+- **监测器不读负载和世界设置。** 物理上界（oracle）监测器的模型知道摩擦，只作上界，和参考上界同理。监测器的模型都按空载构造。开发组（种子 5500）拟合标准化，校准组（种子 7100）定阈值，测试组只用于评估。
 - **示范的专家可以读 `arm.WORLDS`。** 它就是参考上界那个 MPC，只在空载手臂上录示范。策略本身和策略控制器不读世界设置，也不知道负载。
 - **网络设置只在开发数据上选，选完冻结。** 开发数据是数据种子 4 和验证种子 500；报告用的是数据种子 1 到 3 和验证种子 1000。两者不能混用。
 - **所有方法共用同一个 MPC 和同一组设置，只有模型里的负载不同。** 设置只能在任务 A 上、用告知真实负载的模型来选，不能看着 C0、C1、C2 的结果去调。

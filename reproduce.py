@@ -39,6 +39,7 @@ STEPS = [
     ("m6dev", "choose the ensemble penalty on development data", "10 min", [PY, "experiments/m6b_dev_spread.py"]),
     ("m6b", "train ensembles, compare", "25 min", [PY, "experiments/m6b_ensemble.py"]),
     ("m8", "imitation policies taught on the empty arm, under payload", "5 min", [PY, "experiments/m8_policy.py"]),
+    ("m9", "monitors for the policy: residuals against consistency", "12 min", [PY, "experiments/m9_monitors.py"]),
     ("figures", "report figures", "1 min", [PY, "report/figures.py"]),
     ("tables", "report tables", "<1 min", [PY, "report/tables.py"]),
     ("report", "compile the report (needs a LaTeX installation with latexmk)", "<1 min",

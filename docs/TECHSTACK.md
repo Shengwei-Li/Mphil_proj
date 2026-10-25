@@ -1,6 +1,6 @@
 # Project C 技术栈
 
-更新：2026-10-22（M8 没有新依赖；CFDP 和最近邻只用 NumPy）。记录项目实际用到的工具、版本和选择理由。新增依赖时先在这里登记，再写进 `pyproject.toml`。
+更新：2026-10-25（M8、M9 没有新依赖；CFDP、最近邻和监测器只用 NumPy）。记录项目实际用到的工具、版本和选择理由。新增依赖时先在这里登记，再写进 `pyproject.toml`。
 
 ## 运行环境
 
@@ -88,6 +88,7 @@
 | M6b 选惩罚力度（并行，约 10 分钟） | `.venv\Scripts\python experiments\m6b_dev_spread.py` |
 | M6b 集成对比（并行，约 25 分钟，含训练 216 个网络） | `.venv\Scripts\python experiments\m6b_ensemble.py` |
 | M8 策略对比（并行，约 3 分钟，首次含录示范约 1.5 分钟） | `.venv\Scripts\python experiments\m8_policy.py`（`--plot-only` 只重画图） |
+| M9 监测器对比（并行，约 10 分钟，首次含训练 3 个空载残差网络） | `.venv\Scripts\python experiments\m9_monitors.py`（`--analyse-only` 只重新分析；`--analyse-only --noise-scale 3` 噪声放大 3 倍） |
 | 重画报告图（约 1 分钟） | `.venv\Scripts\python reportigures.py` |
 | 生成报告结果表 | `.venv\Scripts\python report	ables.py` |
 | 编译报告 | `latexmk -pdf -cd report\main.tex` |
