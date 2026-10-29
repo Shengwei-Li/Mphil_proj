@@ -1,6 +1,6 @@
 # Project C 结构说明
 
-更新：2026-10-29（M11c）。每新增一个文件，就在这里补上它的职责。
+更新：2026-10-29（M9b）。每新增一个文件，就在这里补上它的职责。
 
 ## 目录树
 
@@ -32,6 +32,7 @@ projectC_learning_assisted_control/
 │   ├── methods.py               五种方法和集成的组装（读缓存的网络）、测试任务生成
 │   ├── demos.py                 M8：空载手臂上录专家示范（到达和纠偏两种回合）
 │   ├── policy.py                M8：模仿策略（CFDP、最近邻）和把它们接到机械臂上的策略控制器
+│   ├── diffusion.py             M9b：标准 Diffusion Policy（一维卷积 U-Net、DDIM 采样），接口同 CFDP
 │   ├── monitor.py               M9：监测器的信号（残差、动作块一致性）、CUSUM、conformal 阈值、测量噪声
 │   ├── handover.py              M10：在线检测器、报警后交给自适应 MPC 的接管控制器
 │   ├── panda.py                 M11：Panda 平台（真实机器人、控制器的 MuJoCo 模型、三种世界、到达任务）
@@ -53,6 +54,8 @@ projectC_learning_assisted_control/
 │   ├── m6b_ensemble.py          M6b 实验：五网络集成（只取平均、加惩罚）对比单个网络
 │   ├── m8_policy.py             M8 实验：空载上学的策略在负载下、区域内外的表现，对照 M6a 的 MPC
 │   ├── m9_monitors.py           M9 实验：四种监测器在同一误报率下的检出率和报警时间
+│   ├── m9b_train.py             M9b：在 M8 的示范上训练 Diffusion Policy（每个世界一个）
+│   ├── m9b_diffusion.py         M9b 实验：开发检查；用 M9 的分析代码重跑整套监测对比
 │   ├── m10_handover.py          M10 实验：策略、自适应 MPC、参考上界和五种触发的接管
 │   ├── m11a_platform.py         M11a 测量：Panda 的下垂、预测是否精确、推演速度、场景截图
 │   └── m11c_compare.py          M11c 实验：Panda 上 C0、C1、参考上界，区域内外、三种世界、三档负载
@@ -66,6 +69,7 @@ projectC_learning_assisted_control/
 │   ├── test_methods.py          测试任务的区域和可重复性、缺网络时报错
 │   ├── test_policy.py           训练样本、目标加权、两个策略、策略控制器、示范录制
 │   ├── test_monitor.py          残差、一致性、CUSUM、阈值、测量噪声
+│   ├── test_diffusion.py        噪声表、缩放、网络形状、训练和缓存、输出范围、接进策略控制器
 │   ├── test_handover.py         在线与离线分数一致、接管、自适应 MPC、在线负载估计
 │   ├── test_panda.py            两连杆上 gravcomp 等于手写重力、告知真实时预测精确、下垂、批量与多线程一致、任务
 │   └── test_panda_control.py    Panda 上的 C0/C1/参考上界、负载估计精确、目标位置不超关节范围、可重复
@@ -80,6 +84,7 @@ projectC_learning_assisted_control/
 │   ├── m6/                      M6 区域内外对比、最差轨迹、惩罚力度选择、集成对比、计算耗时
 │   ├── m8/                      M8 逐次运行表、汇总表（含 M6a 的 MPC 对照）、对比图
 │   ├── m9/                      M9 逐次报警表、汇总表、检出率图（含噪声放大 3 倍的版本）
+│   ├── m9b/                     M9b 训练损失、开发检查、逐次报警表、汇总表、DP 与 CFDP 对比图
 │   ├── m10/                     M10 逐次运行表、汇总表、接管对比图
 │   └── m11/                     M11 平台测量表、场景截图、C0/C1 对比图、对比实验的逐次运行表、汇总表和图
 ├── report/
@@ -97,6 +102,8 @@ projectC_learning_assisted_control/
 │   ├── nets/                    M5a 的 54 个网络，M6b 的 216 个集成成员，以及开发用的 60 个
 │   ├── demos_v3_*.npz           M8 的示范，每个世界一份
 │   ├── m9_runs.pkl              M9 的全部运行（每周期的状态、力矩、动作块），供重新分析
+│   ├── dp/                      M9b 训练好的 Diffusion Policy 网络
+│   ├── m9b_runs.pkl             M9b 的全部运行
 │   └── m10_clean.pkl            M10 拟合检测器用的空载策略运行
 └── .venv/                       虚拟环境，不入库
 ```
@@ -117,6 +124,8 @@ projectC_learning_assisted_control/
 | `learned.py` | `EnsemblePredictor`：多个残差网络叠成一次批量计算，预测取平均，每步后在 `last_spread` 里记下末端位置的分歧。残差网络：输入角度的正弦余弦、角速度、力矩，输出物理模型对 0.02 秒后状态的预测偏差。PyTorch 训练（提前停止），NumPy 推理。`ResidualPredictor` 把物理预测部件和网络合成一个新的预测部件 | `features`、`residual_targets`、`train_residual`、`ResidualNet`（`save`、`load`）、`ResidualPredictor` |
 | `demos.py` | 专家是知道真实世界的参考 MPC，手臂空载。到达回合（3 秒）和纠偏回合（1.5 秒，起点在目标 0.5–8 厘米外），每周期记录关节角、角速度、目标、力矩；并行录制并缓存 | `Demos`、`record`、`load_or_record`、`EPISODE_SECONDS`、`SETTLE_OFFSET` |
 | `policy.py` | 观测是每周期 8 个数（角度的正弦余弦、角速度、目标减末端，后两个乘 `target_weight`），动作是未来 8 个周期相对当前的关节位置。`NearestNeighborPolicy` 抄最近示范的动作块；`CFDP` 用示范直接算去噪方向，积分反向常微分方程。`PolicyController` 接口同 MPC：每 `n_exec` 个周期生成一块，底层 PD 加重力补偿（按 `assumed_payload`，默认 0）跟踪；记录每块（`chunks`、`chunk_periods`）和每周期的命令位置（`setpoints`） | `frame`、`training_pairs`、`Normalizer`、`ChunkIndex`、`local_mahalanobis_metric`、`NearestNeighborPolicy`、`CFDP`、`PolicyController` |
+| `diffusion.py` | Chi 等 2023 的 CNN 版 Diffusion Policy：`ConditionalUNet1D`（FiLM 条件的残差块）、平方余弦噪声表、`Scaler`（缩放到 [−1, 1]）、`DiffusionPolicy`（`fit` 训练或读缓存，`predict` 10 步 DDIM）。观测和动作复用 `policy.training_pairs` | `DiffusionPolicy`、`ConditionalUNet1D`、`Scaler`、`cosine_alpha_bar`、`CACHE` |
+| `experiments/m9b_diffusion.py` | 导入 `m9_monitors` 的任务、分析和汇总代码；自己的 `run_group` 按世界、组别、负载分任务并行（每进程 PyTorch 单线程）；CFDP 的数字从 `results/m9/summary.csv` 读。`--dev` 开发检查，`--analyse-only` 只重新分析 | 写入 `results/m9b/` |
 | `experiments/m8_policy.py` | 每个世界录（或读缓存）示范；NN 1 次、CFDP 3 个种子，在 M6a 的区域内外任务上、空载和 1 kg 下运行；记录最终误差、稳定时间、命令与实际的差、生成耗时；把 M6a 的 C0、C3（90 秒）、参考上界抄进汇总表。`--plot-only` 只重画图 | 并行运行，写入 `results/m8/` |
 | `tests/test_policy.py` | 训练样本里动作块是未来位置减当前；目标加权只改后两维；NN 对示范的观测返回该示范的动作块；CFDP 同种子结果相同、噪声小时接近示范；空载时控制器能稳住；按空载补偿时 1 kg 会下垂，补偿对了就不会；示范的两种回合长度和起点距离 | 命令 `python -m pytest` |
 | `monitor.py` | 监测器只看机器人自己有的东西：关节角、角速度、发出的力矩、策略生成的动作块。`periods` 把一次运行切成控制周期；`measured` 加测量噪声；`predict_period_speeds` 从实测的周期起点按逐步力矩积分（残差网络的修正用周期平均力矩）；`residual_signal`、`chunk_disagreement` 每次检查一个数；`Cusum` 是 B 的累积方式；`conformal_threshold`、`episode_max`、`first_alarm` 是 B 的校准和报警 | `Periods`、`periods`、`measured`、`predict_period_speeds`、`period_residuals`、`residual_signal`、`chunk_disagreement`、`Cusum`、`conformal_threshold`、`episode_max`、`first_alarm` |

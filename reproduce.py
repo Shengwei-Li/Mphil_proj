@@ -40,6 +40,8 @@ STEPS = [
     ("m6b", "train ensembles, compare", "25 min", [PY, "experiments/m6b_ensemble.py"]),
     ("m8", "imitation policies taught on the empty arm, under payload", "5 min", [PY, "experiments/m8_policy.py"]),
     ("m9", "monitors for the policy: residuals against consistency", "12 min", [PY, "experiments/m9_monitors.py"]),
+    ("m9btrain", "train the Diffusion Policy (CPU)", "55 min", [PY, "experiments/m9b_train.py"]),
+    ("m9b", "monitors watching the Diffusion Policy", "6 min", [PY, "experiments/m9b_diffusion.py"]),
     ("m10", "hand the policy over to the adaptive MPC on an alarm", "15 min", [PY, "experiments/m10_handover.py"]),
     ("m11a", "Panda platform: sag, exactness, speed", "<1 min", [PY, "experiments/m11a_platform.py"]),
     ("m11c", "Panda: C0, C1 and the reference", "15 min", [PY, "experiments/m11c_compare.py"]),

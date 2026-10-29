@@ -1,6 +1,6 @@
 # Project C 技术栈
 
-更新：2026-10-29（M8–M10 没有新依赖；M11a 加了第三方模型文件 Menagerie Panda，不是 Python 依赖）。记录项目实际用到的工具、版本和选择理由。新增依赖时先在这里登记，再写进 `pyproject.toml`。
+更新：2026-10-29（M8–M10 没有新依赖；M9b 的 Diffusion Policy 用已有的 PyTorch CPU 版，没有装 GPU 版；M11a 加了第三方模型文件 Menagerie Panda，不是 Python 依赖）。记录项目实际用到的工具、版本和选择理由。新增依赖时先在这里登记，再写进 `pyproject.toml`。
 
 ## 运行环境
 
@@ -91,6 +91,8 @@
 | M6b 集成对比（并行，约 25 分钟，含训练 216 个网络） | `.venv\Scripts\python experiments\m6b_ensemble.py` |
 | M8 策略对比（并行，约 3 分钟，首次含录示范约 1.5 分钟） | `.venv\Scripts\python experiments\m8_policy.py`（`--plot-only` 只重画图） |
 | M10 接管对比（并行，约 15 分钟） | `.venv\Scripts\python experiments\m10_handover.py`（`--plot-only` 只重画图） |
+| M9b 训练 Diffusion Policy（三个世界并行，约 51 分钟，16 核 CPU） | `.venv\Scripts\python experiments\m9b_train.py` |
+| M9b 实验（开发检查约 2 分钟；测试约 4 分钟） | `.venv\Scripts\python experiments\m9b_diffusion.py --dev`，然后不带参数运行（`--analyse-only` 只重新分析） |
 | M11a Panda 平台测量（约 15 秒） | `.venv\Scripts\python experiments\m11a_platform.py` |
 | M11c Panda 对比（并行，约 15 分钟） | `.venv\Scripts\python experiments\m11c_compare.py`（`--plot-only` 只重画图） |
 | Panda 3D 查看器 | `.venv\Scripts\python -m lac.panda_view`（`--method C0/C1/reference`、`--world`、`--payload`、`--region outside`；`--snapshot 路径` 不开窗口存对比图） |
