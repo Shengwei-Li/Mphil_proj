@@ -1,6 +1,6 @@
 # Project C 结构说明
 
-更新：2026-10-29（M11a）。每新增一个文件，就在这里补上它的职责。
+更新：2026-10-29（M11b）。每新增一个文件，就在这里补上它的职责。
 
 ## 目录树
 
@@ -35,6 +35,8 @@ projectC_learning_assisted_control/
 │   ├── monitor.py               M9：监测器的信号（残差、动作块一致性）、CUSUM、conformal 阈值、测量噪声
 │   ├── handover.py              M10：在线检测器、报警后交给自适应 MPC 的接管控制器
 │   ├── panda.py                 M11：Panda 平台（真实机器人、控制器的 MuJoCo 模型、三种世界、到达任务）
+│   ├── panda_control.py         M11：Panda 上规划目标位置的 MPC、在线负载估计、C0/C1/参考上界
+│   ├── panda_view.py            M11：Panda 的 3D 交互查看器和 C0/C1 对比图
 │   ├── simulate.py              把控制器接到机械臂上跑一次并记录
 │   └── view.py                  交互面板入口
 ├── experiments/
@@ -64,7 +66,8 @@ projectC_learning_assisted_control/
 │   ├── test_policy.py           训练样本、目标加权、两个策略、策略控制器、示范录制
 │   ├── test_monitor.py          残差、一致性、CUSUM、阈值、测量噪声
 │   ├── test_handover.py         在线与离线分数一致、接管、自适应 MPC、在线负载估计
-│   └── test_panda.py            两连杆上 gravcomp 等于手写重力、告知真实时预测精确、下垂、批量与多线程一致、任务
+│   ├── test_panda.py            两连杆上 gravcomp 等于手写重力、告知真实时预测精确、下垂、批量与多线程一致、任务
+│   └── test_panda_control.py    Panda 上的 C0/C1/参考上界、负载估计精确、目标位置不超关节范围、可重复
 ├── results/
 │   ├── m0/                      M0 面板截图
 │   ├── m1/                      M1 结果表、误差曲线、面板截图
@@ -77,7 +80,7 @@ projectC_learning_assisted_control/
 │   ├── m8/                      M8 逐次运行表、汇总表（含 M6a 的 MPC 对照）、对比图
 │   ├── m9/                      M9 逐次报警表、汇总表、检出率图（含噪声放大 3 倍的版本）
 │   ├── m10/                     M10 逐次运行表、汇总表、接管对比图
-│   └── m11/                     M11 平台测量表、场景截图
+│   └── m11/                     M11 平台测量表、场景截图、C0/C1 对比图
 ├── report/
 │   ├── main.tex, main.pdf       技术报告（IEEE 双栏，5 页）
 │   ├── references.bib           参考文献（逐篇核对过）
@@ -120,6 +123,8 @@ projectC_learning_assisted_control/
 | `tests/test_monitor.py` | 模型说对时残差为零、不知道摩擦时不为零；负载在残差里可见；网络输出为零时等于物理残差；检查之间取平均；噪声大小和可复现；一致性只比重叠部分；CUSUM 在变化后增长；阈值的分位数和数据不够时为无穷；首次报警 | 命令 `python -m pytest` |
 | `handover.py` | `Detector` 是拟合、校准好的监测器，`alarms` 只看最近一次检查；`fit_detector` 按 M9 的做法拟合；`HandoverController` 接口同 MPC：策略阶段记录带噪声的测量和每步力矩，每次策略生成动作块时问检测器，第一次报警就建一个 MPC，负载按已测到的周期估计并每 10 个周期更新。不给策略时就是自适应 MPC | `Detector`、`fit_detector`、`residual`、`consistency`、`HandoverController`（属性 `handover_period`、`alarmed_by`、`mass_estimates`） |
 | `panda.py` | Panda 平台。`Robot` 是真实机器人：关节阻抗（Franka 示例增益，弹簧部分受力矩上限）加按配置负载（`configure_load`，即控制器的认识）算的重力补偿；`step` 返回实际加的力矩。`Predictor` 是控制器的模型：同一 MuJoCo 模型的第二份，负载和摩擦按 `Belief`，用 `gravcomp` 自己补偿重力，`rollout` 用 MuJoCo 多线程批量推演目标位置序列，返回每周期末的末端和关节速度。两边都用 Euler 积分，告知真实时逐步一致。`run_reach` 每步向控制器要目标位置（`setpoint`）并按控制器的 `load` 配置机器人 | `Robot`、`Predictor`、`Belief`、`WORLDS`、`world_belief`、`build`、`set_payload`、`Rollout`、`run_reach`、`HoldController`、`make_tasks`、`REGIONS`、常量 `STIFFNESS`、`DAMPING`、`TORQUE_LIMITS`、`HOME`、`PERIOD`、`HOLD` |
+| `panda_control.py` | `PandaMPC`：两连杆 MPC 的做法，规划每周期的关节目标位置（不超关节范围），用 `panda.Predictor` 批量推演；机器人配置的负载就是它的认识（`load`）。`PayloadEstimator`：逆动力学（开 `invdiscrete`）对负载质量线性，逐步累加最小二乘。`AdaptiveMPC`：每次到达从 0 kg 开始，每 10 个周期重新估计；通过 `observe` 接收机器人报告的力矩 | `PandaMPC`（`start`、`retarget`、`setpoint`、`set_belief`、`load`、`solve_seconds`）、`PayloadEstimator`（`add`、`mass`、`reset`）、`AdaptiveMPC`（`observe`、`mass_estimates`）、`make_controller` |
+| `panda_view.py` | MuJoCo 自带的 3D 窗口（`launch_passive`），自己推进仿真并按实时节奏显示；按键换方法、负载、任务；左上角读数；末端轨迹点。`--snapshot` 渲染 C0 和 C1 在同一任务 2 秒时的并排图 | `python -m lac.panda_view` |
 | `experiments/m11a_platform.py` | 20 个起点姿态上测配置负载为 0 时的下垂（三种世界、0/1/2.5 kg）、告知真实时的预测误差、1 和 16 线程的推演耗时；渲染场景截图 | 写入 `results/m11/` |
 | `experiments/m10_handover.py` | 先跑空载策略运行（开发 20、校准 100）存进缓存；每个工作进程按世界拟合检测器；8 种控制方式在 M9 的测试任务上运行。`--plot-only` 只重画图 | 并行运行，写入 `results/m10/` |
 | `tests/test_handover.py` | 零噪声时在线分数与离线逐位相同；报警后接管并估对负载；没有策略时第 0、10、20 周期估计；从策略的周期估负载；校准数据不够时阈值为无穷 | 命令 `python -m pytest` |

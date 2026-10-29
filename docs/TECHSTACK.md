@@ -92,6 +92,7 @@
 | M8 策略对比（并行，约 3 分钟，首次含录示范约 1.5 分钟） | `.venv\Scripts\python experiments\m8_policy.py`（`--plot-only` 只重画图） |
 | M10 接管对比（并行，约 15 分钟） | `.venv\Scripts\python experiments\m10_handover.py`（`--plot-only` 只重画图） |
 | M11a Panda 平台测量（约 15 秒） | `.venv\Scripts\python experiments\m11a_platform.py` |
+| Panda 3D 查看器 | `.venv\Scripts\python -m lac.panda_view`（`--method C0/C1/reference`、`--world`、`--payload`、`--region outside`；`--snapshot 路径` 不开窗口存对比图） |
 | M9 监测器对比（并行，约 10 分钟，首次含训练 3 个空载残差网络） | `.venv\Scripts\python experiments\m9_monitors.py`（`--analyse-only` 只重新分析；`--analyse-only --noise-scale 3` 噪声放大 3 倍） |
 | 重画报告图（约 1 分钟） | `.venv\Scripts\python reportigures.py` |
 | 生成报告结果表 | `.venv\Scripts\python report	ables.py` |

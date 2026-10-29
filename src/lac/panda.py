@@ -109,7 +109,7 @@ def _compiled(offset, extra_damping, frictionloss, gravcomp: bool) -> mujoco.MjM
     # A point mass; its mass is set at runtime (set_payload), 0 means unloaded.
     payload = flange.add_body(name="payload", pos=np.r_[0.0, 0.0, TOOL_LENGTH] + offset)
     payload.add_geom(name="payload_geom", type=mujoco.mjtGeom.mjGEOM_SPHERE, size=[0.001] * 3,
-                     rgba=[0.85, 0.35, 0.15, 1], contype=0, conaffinity=0, mass=0.0)
+                     rgba=[0.85, 0.35, 0.15, 0.45], contype=0, conaffinity=0, mass=0.0)
     if gravcomp:
         for body in spec.bodies[1:]:
             body.gravcomp = 1.0
@@ -127,7 +127,7 @@ def _compiled(offset, extra_damping, frictionloss, gravcomp: bool) -> mujoco.MjM
     spec.worldbody.add_light(pos=[0.5, -0.5, 2.0], dir=[-0.2, 0.2, -1.0], diffuse=[0.6, 0.6, 0.6])
     spec.worldbody.add_light(pos=[-0.5, 0.8, 1.5], dir=[0.3, -0.5, -1.0], diffuse=[0.3, 0.3, 0.3], castshadow=False)
     target = spec.worldbody.add_body(name="target", mocap=True, pos=[0.5, 0.0, 0.4])
-    target.add_site(name="target_site", type=mujoco.mjtGeom.mjGEOM_SPHERE, size=[0.02] * 3, rgba=[0.1, 0.7, 0.2, 0.6])
+    target.add_site(name="target_site", type=mujoco.mjtGeom.mjGEOM_SPHERE, size=[0.012] * 3, rgba=[0.1, 0.75, 0.2, 1])
     spec.visual.global_.offwidth, spec.visual.global_.offheight = 1280, 720
     return spec.compile()
 
@@ -282,8 +282,9 @@ def run_reach(controller, payload: float, q_start: np.ndarray, target: np.ndarra
     """Start at rest at ``q_start`` carrying ``payload`` kg and reach for ``target`` (x, y, z in m).
 
     Every simulator step the controller is asked for a setpoint (``setpoint(q, dq)``)
-    and the robot is configured with the controller's ``load``. The controller
-    is never told ``payload`` or ``world``.
+    and the robot is configured with the controller's ``load``; afterwards a
+    controller with an ``observe`` method is told the torque the robot applied.
+    The controller is never told ``payload`` or ``world``.
     """
     robot = Robot(payload, world, controller.load)
     robot.place(q_start)
@@ -300,7 +301,10 @@ def run_reach(controller, payload: float, q_start: np.ndarray, target: np.ndarra
         log["setpoint"].append(setpoint)
         log["tip"].append(tip)
         log["error"].append(np.linalg.norm(tip - target))
-        log["torque"].append(robot.step(setpoint))
+        tau = robot.step(setpoint)
+        log["torque"].append(tau)
+        if hasattr(controller, "observe"):
+            controller.observe(tau)  # the robot reports the torque it applied
     return Rollout(**{k: np.array(v) for k, v in log.items()})
 
 

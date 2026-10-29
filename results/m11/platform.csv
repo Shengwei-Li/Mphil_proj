@@ -11,5 +11,5 @@ sag_cm,W3,2.5,1.701,3.012,largest gravity compensation with the true load: 33.8 
 prediction_error_m,W1,1.5,,4.1e-16,"model told the truth, 0.5 s of jittered setpoints"
 prediction_error_m,W2,1.5,,4.0e-16,"model told the truth, 0.5 s of jittered setpoints"
 prediction_error_m,W3,1.5,,4.8e-16,"model told the truth, 0.5 s of jittered setpoints"
-rollout_ms,W1,0.0,96.4,,"128 sequences x 0.3 s, 1 thread(s)"
-rollout_ms,W1,0.0,9.64,,"128 sequences x 0.3 s, 16 thread(s)"
+rollout_ms,W1,0.0,66.83,,"128 sequences x 0.3 s, 1 thread(s)"
+rollout_ms,W1,0.0,9.34,,"128 sequences x 0.3 s, 16 thread(s)"
