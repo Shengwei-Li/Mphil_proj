@@ -1,0 +1,7 @@
+world,policy,median_final_error_cm,worst_final_error_cm,runs_above_1cm
+W1,DP,0.304,1.112,1
+W1,CFDP,0.428,2.508,3
+W2,DP,0.304,1.112,1
+W2,CFDP,0.428,2.508,3
+W3,DP,0.404,1.66,1
+W3,CFDP,0.606,1.836,7
