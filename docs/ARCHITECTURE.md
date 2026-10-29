@@ -1,6 +1,6 @@
 # Project C 结构说明
 
-更新：2026-10-29（M11b）。每新增一个文件，就在这里补上它的职责。
+更新：2026-10-29（M11c）。每新增一个文件，就在这里补上它的职责。
 
 ## 目录树
 
@@ -54,7 +54,8 @@ projectC_learning_assisted_control/
 │   ├── m8_policy.py             M8 实验：空载上学的策略在负载下、区域内外的表现，对照 M6a 的 MPC
 │   ├── m9_monitors.py           M9 实验：四种监测器在同一误报率下的检出率和报警时间
 │   ├── m10_handover.py          M10 实验：策略、自适应 MPC、参考上界和五种触发的接管
-│   └── m11a_platform.py         M11a 测量：Panda 的下垂、预测是否精确、推演速度、场景截图
+│   ├── m11a_platform.py         M11a 测量：Panda 的下垂、预测是否精确、推演速度、场景截图
+│   └── m11c_compare.py          M11c 实验：Panda 上 C0、C1、参考上界，区域内外、三种世界、三档负载
 ├── tests/
 │   ├── test_arm.py              仿真模型的几何和静力检查
 │   ├── test_model.py            手写模型逐项对仿真器
@@ -80,7 +81,7 @@ projectC_learning_assisted_control/
 │   ├── m8/                      M8 逐次运行表、汇总表（含 M6a 的 MPC 对照）、对比图
 │   ├── m9/                      M9 逐次报警表、汇总表、检出率图（含噪声放大 3 倍的版本）
 │   ├── m10/                     M10 逐次运行表、汇总表、接管对比图
-│   └── m11/                     M11 平台测量表、场景截图、C0/C1 对比图
+│   └── m11/                     M11 平台测量表、场景截图、C0/C1 对比图、对比实验的逐次运行表、汇总表和图
 ├── report/
 │   ├── main.tex, main.pdf       技术报告（IEEE 双栏，5 页）
 │   ├── references.bib           参考文献（逐篇核对过）
@@ -125,6 +126,7 @@ projectC_learning_assisted_control/
 | `panda.py` | Panda 平台。`Robot` 是真实机器人：关节阻抗（Franka 示例增益，弹簧部分受力矩上限）加按配置负载（`configure_load`，即控制器的认识）算的重力补偿；`step` 返回实际加的力矩。`Predictor` 是控制器的模型：同一 MuJoCo 模型的第二份，负载和摩擦按 `Belief`，用 `gravcomp` 自己补偿重力，`rollout` 用 MuJoCo 多线程批量推演目标位置序列，返回每周期末的末端和关节速度。两边都用 Euler 积分，告知真实时逐步一致。`run_reach` 每步向控制器要目标位置（`setpoint`）并按控制器的 `load` 配置机器人 | `Robot`、`Predictor`、`Belief`、`WORLDS`、`world_belief`、`build`、`set_payload`、`Rollout`、`run_reach`、`HoldController`、`make_tasks`、`REGIONS`、常量 `STIFFNESS`、`DAMPING`、`TORQUE_LIMITS`、`HOME`、`PERIOD`、`HOLD` |
 | `panda_control.py` | `PandaMPC`：两连杆 MPC 的做法，规划每周期的关节目标位置（不超关节范围），用 `panda.Predictor` 批量推演；机器人配置的负载就是它的认识（`load`）。`PayloadEstimator`：逆动力学（开 `invdiscrete`）对负载质量线性，逐步累加最小二乘。`AdaptiveMPC`：每次到达从 0 kg 开始，每 10 个周期重新估计；通过 `observe` 接收机器人报告的力矩 | `PandaMPC`（`start`、`retarget`、`setpoint`、`set_belief`、`load`、`solve_seconds`）、`PayloadEstimator`（`add`、`mass`、`reset`）、`AdaptiveMPC`（`observe`、`mass_estimates`）、`make_controller` |
 | `panda_view.py` | MuJoCo 自带的 3D 窗口（`launch_passive`），自己推进仿真并按实时节奏显示；按键换方法、负载、任务；左上角读数；末端轨迹点。`--snapshot` 渲染 C0 和 C1 在同一任务 2 秒时的并排图 | `python -m lac.panda_view` |
+| `experiments/m11c_compare.py` | 864 次运行，每进程单线程、全部核并行；记录最终误差、稳定时间、C1 最后的质量估计、每轮规划耗时；`--plot-only` 只重画图 | 写入 `results/m11/` |
 | `experiments/m11a_platform.py` | 20 个起点姿态上测配置负载为 0 时的下垂（三种世界、0/1/2.5 kg）、告知真实时的预测误差、1 和 16 线程的推演耗时；渲染场景截图 | 写入 `results/m11/` |
 | `experiments/m10_handover.py` | 先跑空载策略运行（开发 20、校准 100）存进缓存；每个工作进程按世界拟合检测器；8 种控制方式在 M9 的测试任务上运行。`--plot-only` 只重画图 | 并行运行，写入 `results/m10/` |
 | `tests/test_handover.py` | 零噪声时在线分数与离线逐位相同；报警后接管并估对负载；没有策略时第 0、10、20 周期估计；从策略的周期估负载；校准数据不够时阈值为无穷 | 命令 `python -m pytest` |

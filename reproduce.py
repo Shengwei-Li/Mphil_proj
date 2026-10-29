@@ -42,6 +42,7 @@ STEPS = [
     ("m9", "monitors for the policy: residuals against consistency", "12 min", [PY, "experiments/m9_monitors.py"]),
     ("m10", "hand the policy over to the adaptive MPC on an alarm", "15 min", [PY, "experiments/m10_handover.py"]),
     ("m11a", "Panda platform: sag, exactness, speed", "<1 min", [PY, "experiments/m11a_platform.py"]),
+    ("m11c", "Panda: C0, C1 and the reference", "15 min", [PY, "experiments/m11c_compare.py"]),
     ("figures", "report figures", "1 min", [PY, "report/figures.py"]),
     ("tables", "report tables", "<1 min", [PY, "report/tables.py"]),
     ("report", "compile the report (needs a LaTeX installation with latexmk)", "<1 min",
