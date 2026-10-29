@@ -17,6 +17,7 @@ from __future__ import annotations
 import numpy as np
 
 from lac.data import PERIOD, Transitions
+from lac.monitor import Periods, predict_period_speeds
 from lac.predictors import PhysicsPredictor
 
 MASS_RANGE = (0.0, 5.0)  # kg; estimates are kept inside this physically sensible range
@@ -34,5 +35,22 @@ def payload_mass(data: Transitions, iterations: int = 5, initial: float = 0.0) -
     for _ in range(iterations):
         r = _mismatch(mass, data)
         slope = (_mismatch(mass + h, data) - r) / h  # how the mismatch changes per kg
+        mass = float(np.clip(mass - slope @ r / (slope @ slope), *MASS_RANGE))
+    return mass
+
+
+def payload_mass_from_periods(p: Periods, iterations: int = 5, initial: float = 0.0) -> float:
+    """The same estimate from a run's own control periods (lac.monitor.Periods, M10).
+
+    Unlike recorded MPC data, the torque may change within a period (a policy's PD
+    controller); the prediction uses the torque of every simulator step.
+    """
+    def mismatch(mass: float) -> np.ndarray:
+        return (predict_period_speeds(PhysicsPredictor(mass), p) - p.dq[1:]).ravel()
+
+    mass, h = initial, 1e-3
+    for _ in range(iterations):
+        r = mismatch(mass)
+        slope = (mismatch(mass + h) - r) / h
         mass = float(np.clip(mass - slope @ r / (slope @ slope), *MASS_RANGE))
     return mass
