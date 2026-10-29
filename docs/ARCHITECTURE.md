@@ -1,6 +1,6 @@
 # Project C 结构说明
 
-更新：2026-10-29（M10）。每新增一个文件，就在这里补上它的职责。
+更新：2026-10-29（M11a）。每新增一个文件，就在这里补上它的职责。
 
 ## 目录树
 
@@ -34,6 +34,7 @@ projectC_learning_assisted_control/
 │   ├── policy.py                M8：模仿策略（CFDP、最近邻）和把它们接到机械臂上的策略控制器
 │   ├── monitor.py               M9：监测器的信号（残差、动作块一致性）、CUSUM、conformal 阈值、测量噪声
 │   ├── handover.py              M10：在线检测器、报警后交给自适应 MPC 的接管控制器
+│   ├── panda.py                 M11：Panda 平台（真实机器人、控制器的 MuJoCo 模型、三种世界、到达任务）
 │   ├── simulate.py              把控制器接到机械臂上跑一次并记录
 │   └── view.py                  交互面板入口
 ├── experiments/
@@ -50,7 +51,8 @@ projectC_learning_assisted_control/
 │   ├── m6b_ensemble.py          M6b 实验：五网络集成（只取平均、加惩罚）对比单个网络
 │   ├── m8_policy.py             M8 实验：空载上学的策略在负载下、区域内外的表现，对照 M6a 的 MPC
 │   ├── m9_monitors.py           M9 实验：四种监测器在同一误报率下的检出率和报警时间
-│   └── m10_handover.py          M10 实验：策略、自适应 MPC、参考上界和五种触发的接管
+│   ├── m10_handover.py          M10 实验：策略、自适应 MPC、参考上界和五种触发的接管
+│   └── m11a_platform.py         M11a 测量：Panda 的下垂、预测是否精确、推演速度、场景截图
 ├── tests/
 │   ├── test_arm.py              仿真模型的几何和静力检查
 │   ├── test_model.py            手写模型逐项对仿真器
@@ -61,7 +63,8 @@ projectC_learning_assisted_control/
 │   ├── test_methods.py          测试任务的区域和可重复性、缺网络时报错
 │   ├── test_policy.py           训练样本、目标加权、两个策略、策略控制器、示范录制
 │   ├── test_monitor.py          残差、一致性、CUSUM、阈值、测量噪声
-│   └── test_handover.py         在线与离线分数一致、接管、自适应 MPC、在线负载估计
+│   ├── test_handover.py         在线与离线分数一致、接管、自适应 MPC、在线负载估计
+│   └── test_panda.py            两连杆上 gravcomp 等于手写重力、告知真实时预测精确、下垂、批量与多线程一致、任务
 ├── results/
 │   ├── m0/                      M0 面板截图
 │   ├── m1/                      M1 结果表、误差曲线、面板截图
@@ -73,7 +76,8 @@ projectC_learning_assisted_control/
 │   ├── m6/                      M6 区域内外对比、最差轨迹、惩罚力度选择、集成对比、计算耗时
 │   ├── m8/                      M8 逐次运行表、汇总表（含 M6a 的 MPC 对照）、对比图
 │   ├── m9/                      M9 逐次报警表、汇总表、检出率图（含噪声放大 3 倍的版本）
-│   └── m10/                     M10 逐次运行表、汇总表、接管对比图
+│   ├── m10/                     M10 逐次运行表、汇总表、接管对比图
+│   └── m11/                     M11 平台测量表、场景截图
 ├── report/
 │   ├── main.tex, main.pdf       技术报告（IEEE 双栏，5 页）
 │   ├── references.bib           参考文献（逐篇核对过）
@@ -83,6 +87,8 @@ projectC_learning_assisted_control/
 │   ├── generated/               生成的 LaTeX 表
 │   ├── video.py                 重放真实运行并渲染演示视频
 │   └── demo.mp4                 演示视频（55 秒）
+├── third_party/
+│   └── franka_emika_panda/      MuJoCo Menagerie 的 Panda（不带夹爪的 XML、网格、LICENSE、README、MENAGERIE_COMMIT）
 ├── cache/                       采过的数据和训练好的网络（可重新生成，不入库）
 │   ├── nets/                    M5a 的 54 个网络，M6b 的 216 个集成成员，以及开发用的 60 个
 │   ├── demos_v3_*.npz           M8 的示范，每个世界一份
@@ -113,6 +119,8 @@ projectC_learning_assisted_control/
 | `experiments/m9_monitors.py` | 先仿真（开发、校准、区域内、区域外四组）并存进缓存；再加噪声、算信号、在开发组上拟合标准化、在校准组上定阈值、评估测试组；还算「残差或一致性」各占 α/2 的合用。`--analyse-only`、`--noise-scale k` | 并行运行，写入 `results/m9/` |
 | `tests/test_monitor.py` | 模型说对时残差为零、不知道摩擦时不为零；负载在残差里可见；网络输出为零时等于物理残差；检查之间取平均；噪声大小和可复现；一致性只比重叠部分；CUSUM 在变化后增长；阈值的分位数和数据不够时为无穷；首次报警 | 命令 `python -m pytest` |
 | `handover.py` | `Detector` 是拟合、校准好的监测器，`alarms` 只看最近一次检查；`fit_detector` 按 M9 的做法拟合；`HandoverController` 接口同 MPC：策略阶段记录带噪声的测量和每步力矩，每次策略生成动作块时问检测器，第一次报警就建一个 MPC，负载按已测到的周期估计并每 10 个周期更新。不给策略时就是自适应 MPC | `Detector`、`fit_detector`、`residual`、`consistency`、`HandoverController`（属性 `handover_period`、`alarmed_by`、`mass_estimates`） |
+| `panda.py` | Panda 平台。`Robot` 是真实机器人：关节阻抗（Franka 示例增益，弹簧部分受力矩上限）加按配置负载（`configure_load`，即控制器的认识）算的重力补偿；`step` 返回实际加的力矩。`Predictor` 是控制器的模型：同一 MuJoCo 模型的第二份，负载和摩擦按 `Belief`，用 `gravcomp` 自己补偿重力，`rollout` 用 MuJoCo 多线程批量推演目标位置序列，返回每周期末的末端和关节速度。两边都用 Euler 积分，告知真实时逐步一致。`run_reach` 每步向控制器要目标位置（`setpoint`）并按控制器的 `load` 配置机器人 | `Robot`、`Predictor`、`Belief`、`WORLDS`、`world_belief`、`build`、`set_payload`、`Rollout`、`run_reach`、`HoldController`、`make_tasks`、`REGIONS`、常量 `STIFFNESS`、`DAMPING`、`TORQUE_LIMITS`、`HOME`、`PERIOD`、`HOLD` |
+| `experiments/m11a_platform.py` | 20 个起点姿态上测配置负载为 0 时的下垂（三种世界、0/1/2.5 kg）、告知真实时的预测误差、1 和 16 线程的推演耗时；渲染场景截图 | 写入 `results/m11/` |
 | `experiments/m10_handover.py` | 先跑空载策略运行（开发 20、校准 100）存进缓存；每个工作进程按世界拟合检测器；8 种控制方式在 M9 的测试任务上运行。`--plot-only` 只重画图 | 并行运行，写入 `results/m10/` |
 | `tests/test_handover.py` | 零噪声时在线分数与离线逐位相同；报警后接管并估对负载；没有策略时第 0、10、20 周期估计；从策略的周期估负载；校准数据不够时阈值为无穷 | 命令 `python -m pytest` |
 | `simulate.py` | 设置负载和起始姿势，每个仿真步向控制器要力矩，记录全过程。PD 和 MPC 都能接 | `run_reach`、`Rollout` |

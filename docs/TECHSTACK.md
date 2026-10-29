@@ -1,6 +1,6 @@
 # Project C 技术栈
 
-更新：2026-10-29（M8–M10 没有新依赖；CFDP、最近邻、监测器和接管只用 NumPy）。记录项目实际用到的工具、版本和选择理由。新增依赖时先在这里登记，再写进 `pyproject.toml`。
+更新：2026-10-29（M8–M10 没有新依赖；M11a 加了第三方模型文件 Menagerie Panda，不是 Python 依赖）。记录项目实际用到的工具、版本和选择理由。新增依赖时先在这里登记，再写进 `pyproject.toml`。
 
 ## 运行环境
 
@@ -19,6 +19,8 @@
 | NumPy | 2.4.6 | 数组和数值计算 | 基础依赖 |
 | Matplotlib | 3.11.2 | 交互面板（滑块、按钮、读数）和后续结果图 | 已是依赖，能显示中文读数；避免为 M0 引入额外界面库 |
 | PyTorch（CPU 版） | 2.14.1 | 训练 C2、C3 的残差网络（M5a 起） | 具身智能和机器人学习行业的标准工具；能自动求导；小网络在 CPU 上训练很快。不用 GPU：网络和数据都很小，搬数据到显卡的开销比计算还大 |
+| MuJoCo Menagerie 的 Franka Panda | 提交 `71f066a` | M11 起的七关节机器人模型（不带夹爪），放在 `third_party/franka_emika_panda/`，随项目入库 | DeepMind 维护的标准模型库，研究里用 Panda 时默认的来源；Apache-2.0 允许再分发。只下了需要的文件（31 MB） |
+| MuJoCo 的 `rollout` 模块 | 随 MuJoCo 3.14 | M11 起控制器的模型批量多线程推演候选序列 | MuJoCo 自带，不需要新库；Panda 一步约 4 微秒，16 线程下 MPC 一轮约 10 毫秒 |
 | imageio、imageio-ffmpeg | 2.38.1、0.6.0 | 把渲染的帧写成 MP4（M7c 起，可选依赖组 `report`） | imageio-ffmpeg 自带 ffmpeg，不用另外安装 |
 | TeX Live 2026（本机已有） | pdfTeX 1.40.29 | 编译报告：`IEEEtran`、`newtx`（Times 字体）、`latexmk` | 本机已安装，不需要再装 Tectonic |
 | pytest | 9.1.1 | 自动检查 | 和项目 A、B 一致 |
@@ -89,6 +91,7 @@
 | M6b 集成对比（并行，约 25 分钟，含训练 216 个网络） | `.venv\Scripts\python experiments\m6b_ensemble.py` |
 | M8 策略对比（并行，约 3 分钟，首次含录示范约 1.5 分钟） | `.venv\Scripts\python experiments\m8_policy.py`（`--plot-only` 只重画图） |
 | M10 接管对比（并行，约 15 分钟） | `.venv\Scripts\python experiments\m10_handover.py`（`--plot-only` 只重画图） |
+| M11a Panda 平台测量（约 15 秒） | `.venv\Scripts\python experiments\m11a_platform.py` |
 | M9 监测器对比（并行，约 10 分钟，首次含训练 3 个空载残差网络） | `.venv\Scripts\python experiments\m9_monitors.py`（`--analyse-only` 只重新分析；`--analyse-only --noise-scale 3` 噪声放大 3 倍） |
 | 重画报告图（约 1 分钟） | `.venv\Scripts\python reportigures.py` |
 | 生成报告结果表 | `.venv\Scripts\python report	ables.py` |
