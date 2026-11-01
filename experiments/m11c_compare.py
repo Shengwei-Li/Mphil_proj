@@ -2,6 +2,7 @@
 
 Run:  python experiments/m11c_compare.py              (all CPU cores, about 15 minutes)
       python experiments/m11c_compare.py --plot-only  (redraw the figure from the saved tables)
+      python experiments/m11c_compare.py --gains soft (M12a: the same at a quarter of the joint stiffness)
 
 Methods (lac.panda_control.make_controller), settings frozen in M11b:
 
@@ -14,7 +15,8 @@ Test tasks (lac.panda.make_tasks): 16 inside the training region (seed 5000),
 MPC seed = task index. One run per process with one thread, all cores busy.
 The expectations H9-H12 were written in docs/PROGRESS.md before this script.
 
-Writes results/m11/runs.csv, summary.csv and compare.png.
+Writes results/m11/runs.csv, summary.csv and compare.png; with --gains soft the
+same files go to results/m12a/ (expectations H17-H19, written before that run).
 """
 
 from __future__ import annotations
@@ -41,7 +43,8 @@ TASKS = {"inside": panda.make_tasks(16, seed=5000, region="train"),
 DURATION = 3.0
 SETTLED = 0.01  # m
 ROOT = Path(__file__).resolve().parents[1]
-OUT = ROOT / "results" / "m11"
+GAINS = sys.argv[sys.argv.index("--gains") + 1] if "--gains" in sys.argv else "stiff"
+OUT = ROOT / "results" / ("m11" if GAINS == "stiff" else "m12a")
 
 
 def settle_time(r: panda.Rollout) -> float:
@@ -52,9 +55,9 @@ def settle_time(r: panda.Rollout) -> float:
 
 
 def run_one(job) -> dict:
-    split, world, method, payload, task = job
+    split, world, method, payload, task, gains = job
     q_start, target = TASKS[split][task]
-    c = make_controller(method, world, payload, seed=task)
+    c = make_controller(method, world, payload, seed=task, gains=gains)
     r = panda.run_reach(c, payload, q_start, target, DURATION, world)
     masses = getattr(c, "mass_estimates", [])
     return {"split": split, "world": world, "method": method, "payload_kg": payload, "task": task,
@@ -66,7 +69,7 @@ def run_one(job) -> dict:
 def main() -> None:
     OUT.mkdir(parents=True, exist_ok=True)
     if "--plot-only" not in sys.argv:
-        jobs = [(s, w, m, p, t) for s in TASKS for w in WORLDS for m in METHODS for p in PAYLOADS
+        jobs = [(s, w, m, p, t, GAINS) for s in TASKS for w in WORLDS for m in METHODS for p in PAYLOADS
                 for t in range(len(TASKS[s]))]
         with ProcessPoolExecutor() as pool:
             rows = list(pool.map(run_one, jobs, chunksize=4))
@@ -133,8 +136,8 @@ def plot(summary: list[dict]) -> None:
             if j == 0:
                 ax.set_ylabel("median final tip error (cm)")
     axes[0, 0].legend(fontsize=8)
-    fig.suptitle("Franka Panda: MPC believing no payload (C0), estimating it online (C1), told the truth (reference)",
-                 fontsize=10)
+    fig.suptitle("Franka Panda, joint stiffness " + GAINS + ": MPC believing no payload (C0), estimating it online (C1), "
+                 "told the truth (reference)", fontsize=10)
     fig.tight_layout()
     fig.savefig(OUT / "compare.png", dpi=130)
 

@@ -56,8 +56,10 @@ class PandaMPC:
         final_weight: float = 10.0,  # extra weight on the last predicted period
         seed: int = 0,
         threads: int = 1,
+        gains: str = "stiff",  # the joint impedance it sets on the robot (lac.panda.GAINS)
     ):
-        self.predictor = panda.Predictor(belief, threads)
+        self.gains = gains
+        self.predictor = panda.Predictor(belief, threads, gains)
         self.steps = round(horizon / panda.PERIOD)
         self.samples = samples
         self.noise = noise
@@ -191,12 +193,12 @@ class AdaptiveMPC(PandaMPC):
         self._last = (self._q, self._dq, np.asarray(tau, dtype=float))
 
 
-def make_controller(method: str, world: str, payload: float, seed: int = 0, threads: int = 1):
+def make_controller(method: str, world: str, payload: float, seed: int = 0, threads: int = 1, gains: str = "stiff"):
     """C0 (believes no payload), C1 (online estimate) or reference (told the truth about payload and world)."""
     if method == "C0":
-        return PandaMPC(panda.Belief(0.0), seed=seed, threads=threads)
+        return PandaMPC(panda.Belief(0.0), seed=seed, threads=threads, gains=gains)
     if method == "C1":
-        return AdaptiveMPC(seed=seed, threads=threads)
+        return AdaptiveMPC(seed=seed, threads=threads, gains=gains)
     if method == "reference":
-        return PandaMPC(panda.world_belief(world, payload), seed=seed, threads=threads)
+        return PandaMPC(panda.world_belief(world, payload), seed=seed, threads=threads, gains=gains)
     raise ValueError(f"unknown method {method}")

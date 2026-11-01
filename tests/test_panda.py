@@ -109,3 +109,28 @@ def test_tip_is_tool_length_beyond_the_flange():
     axis = d.site_xmat[flange.id].reshape(3, 3)[:, 2]
     np.testing.assert_allclose(robot.tip(), flange.xpos + panda.TOOL_LENGTH * axis, atol=1e-12)
     assert robot.model.opt.integrator == mujoco.mjtIntegrator.mjINT_EULER
+
+
+def test_soft_gains_quarter_the_stiffness_and_the_model_still_predicts_exactly():
+    soft = panda.build(panda.Belief(), gravcomp=False, gains="soft")
+    np.testing.assert_allclose(soft.actuator_gainprm[:, 0], panda.STIFFNESS / 4)
+    np.testing.assert_allclose(-soft.actuator_biasprm[:, 2], panda.DAMPING / 2)
+    truth = panda.world_belief("W3", 1.5)
+    robot = panda.Robot(1.5, "W3", truth, gains="soft")
+    robot.place(panda.HOME)
+    setpoints = panda.HOME + RNG_SETPOINTS
+    q_real = drive(robot, setpoints)
+    tips, _ = panda.Predictor(truth, gains="soft").rollout(panda.HOME, np.zeros(7), setpoints[None])
+    robot.place(q_real[-1])
+    np.testing.assert_allclose(tips[0, -1], robot.tip(), atol=1e-12)
+
+
+def test_soft_gains_sag_about_four_times_more():
+    sag = {}
+    for gains in ("stiff", "soft"):
+        robot = panda.Robot(1.0, "W1", panda.Belief(0.0), gains=gains)
+        robot.place(panda.HOME)
+        tip = robot.tip()
+        drive(robot, np.tile(panda.HOME, (150, 1)))
+        sag[gains] = tip[2] - robot.tip()[2]
+    assert 3.0 < sag["soft"] / sag["stiff"] < 5.0

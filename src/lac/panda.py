@@ -49,6 +49,10 @@ MODEL_FILE = Path(__file__).resolve().parents[2] / "third_party" / "franka_emika
 JOINTS = 7
 STIFFNESS = np.array([600.0, 600.0, 600.0, 600.0, 250.0, 150.0, 50.0])  # N·m/rad
 DAMPING = np.array([50.0, 50.0, 50.0, 20.0, 20.0, 20.0, 10.0])  # N·m·s/rad
+# Joint impedance settings (M12): the controller chooses them, as a Panda's user does, so
+# both the robot and the controller's model use the same one. "soft" is a quarter of the
+# stiffness, with damping scaled by the square root so that the damping ratio stays the same.
+GAINS = {"stiff": 1.0, "soft": 0.25}
 TORQUE_LIMITS = np.array([87.0, 87.0, 87.0, 87.0, 12.0, 12.0, 12.0])  # N·m
 TOOL_LENGTH = 0.1  # m from the flange to the tip
 TIMESTEP = 0.002  # s, Menagerie's
@@ -132,12 +136,21 @@ def _compiled(offset, extra_damping, frictionloss, gravcomp: bool) -> mujoco.MjM
     return spec.compile()
 
 
-def build(belief: Belief, gravcomp: bool) -> mujoco.MjModel:
+def build(belief: Belief, gravcomp: bool, gains: str = "stiff") -> mujoco.MjModel:
     """A fresh model of the robot with this payload and friction; ``gravcomp`` makes it compensate its own gravity."""
     model = copy.deepcopy(_compiled(tuple(belief.payload_offset), tuple(belief.extra_damping),
                                     tuple(belief.frictionloss), gravcomp))
     set_payload(model, belief.payload_mass)
+    set_gains(model, gains)
     return model
+
+
+def set_gains(model: mujoco.MjModel, gains: str) -> None:
+    """Joint impedance: STIFFNESS times GAINS[gains], DAMPING times its square root."""
+    scale = GAINS[gains]
+    k, d = STIFFNESS * scale, DAMPING * np.sqrt(scale)
+    model.actuator_gainprm[:, 0] = k
+    model.actuator_biasprm[:, 1], model.actuator_biasprm[:, 2] = -k, -d
 
 
 def set_payload(model: mujoco.MjModel, mass: float) -> None:
@@ -155,8 +168,9 @@ def _same_structure(a: Belief, b: Belief) -> bool:
 class Robot:
     """The simulated real Panda. Controllers must not read its payload or world from here."""
 
-    def __init__(self, payload: float = 0.0, world: str = "W1", load: Belief = Belief()):
-        self.model = build(world_belief(world, payload), gravcomp=False)
+    def __init__(self, payload: float = 0.0, world: str = "W1", load: Belief = Belief(), gains: str = "stiff"):
+        self.gains = gains
+        self.model = build(world_belief(world, payload), gravcomp=False, gains=gains)
         self.data = mujoco.MjData(self.model)
         self.configure_load(load)
 
@@ -215,9 +229,10 @@ class Predictor:
     setpoints predicts the closed loop, exactly as the robot runs it.
     """
 
-    def __init__(self, belief: Belief = Belief(), threads: int = 1):
+    def __init__(self, belief: Belief = Belief(), threads: int = 1, gains: str = "stiff"):
         self.belief = belief
-        self.model = build(belief, gravcomp=True)
+        self.gains = gains
+        self.model = build(belief, gravcomp=True, gains=gains)
         self._datas = [mujoco.MjData(self.model) for _ in range(threads)]
         self._state = np.zeros(mujoco.mj_stateSize(self.model, _FULL))
 
@@ -226,7 +241,7 @@ class Predictor:
             set_payload(self.model, belief.payload_mass)
             self.belief = belief
         else:
-            self.__init__(belief, len(self._datas))
+            self.__init__(belief, len(self._datas), self.gains)
 
     def rollout(self, q: np.ndarray, dq: np.ndarray, setpoints: np.ndarray):
         """Predict from state (q, dq) under setpoint sequences of shape (n, periods, 7).
@@ -281,12 +296,13 @@ def run_reach(controller, payload: float, q_start: np.ndarray, target: np.ndarra
               world: str = "W1") -> Rollout:
     """Start at rest at ``q_start`` carrying ``payload`` kg and reach for ``target`` (x, y, z in m).
 
+    The robot's joint impedance is the controller's ``gains`` ("stiff" if it has none).
     Every simulator step the controller is asked for a setpoint (``setpoint(q, dq)``)
     and the robot is configured with the controller's ``load``; afterwards a
     controller with an ``observe`` method is told the torque the robot applied.
     The controller is never told ``payload`` or ``world``.
     """
-    robot = Robot(payload, world, controller.load)
+    robot = Robot(payload, world, controller.load, getattr(controller, "gains", "stiff"))
     robot.place(q_start)
     robot.set_target(target)
     controller.start(np.asarray(target, dtype=float), robot.q)
