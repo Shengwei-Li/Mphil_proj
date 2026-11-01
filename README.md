@@ -34,12 +34,11 @@ A robot arm picks up something of unknown weight. Its controller's model is now 
 
 ```mermaid
 flowchart LR
-    T([target]) --> P
-    P["Diffusion policy<br/><sub>imitates an expert, trained on the empty arm</sub>"] -- joint setpoints --> R
-    R["Robot arm<br/><sub>unknown payload, unmodelled friction</sub>"] -- measured motion --> M
-    M{"Monitors<br/><sub>physics residual · learned residual<br/>action consistency</sub>"} -- alarm --> H
-    H["Sampling-based MPC<br/><sub>payload estimated online</sub>"] -- joint setpoints --> R
+    P["<b>Diffusion policy</b><br/>trained on the empty arm"] -- setpoints --> R["<b>Robot arm</b><br/>unknown payload"]
+    R -- measured motion --> M(["<b>Monitors</b><br/>physics · learned · consistency"])
     P -. action chunks .-> M
+    M -- alarm --> H["<b>Sampling-based MPC</b><br/>payload estimated online"]
+    H -- setpoints --> R
 ```
 
 Each monitor turns one signal into a score with CUSUM accumulation and sets its threshold by split-conformal calibration on clean runs, for a 5% false-alarm rate. The residual monitors ask whether the arm still moves the way a model of the *empty* arm predicts; the consistency monitor asks whether the policy agrees with itself from one action chunk to the next.
