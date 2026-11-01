@@ -294,9 +294,87 @@ def figure_ensemble() -> None:
     save(fig, "ensemble")
 
 
+# --- Parts II and III: monitors and handover -----------------------------------
+
+MONITOR_STYLE = {"physics": ("#3b6ea8", "o", "physics"), "learned": ("#2f9e73", "s", "learned"),
+                 "oracle": ("black", "x", "oracle"), "consistency": ("#e0703a", "^", "consistency")}
+
+
+def figure_detection() -> None:
+    """M9: alarm rate against payload on the two-link arm, CFDP inside the training region."""
+    rows = read(ROOT / "results" / "m9" / "summary.csv")
+    fig, axes = plt.subplots(1, 2, figsize=(COLUMN, 1.9), sharey=True)
+    for ax, world in zip(axes, ("W1", "W3")):
+        g = sorted((r for r in rows if (r["split"], r["world"], r["policy"], r["alpha"]) == ("inside", world, "CFDP", 0.05)),
+                   key=lambda r: r["payload_kg"])
+        for monitor, (colour, marker, label) in MONITOR_STYLE.items():
+            ax.plot(range(len(g)), [r[f"alarm_rate_{monitor}"] for r in g], color=colour,
+                    marker=marker, label=label, linestyle=":" if monitor == "oracle" else "-", markersize=3)
+        ax.axhline(0.05, color="0.5", linewidth=0.6, linestyle="--")
+        ax.set_xticks(range(len(g)), [f"{r['payload_kg']:g}" for r in g])
+        ax.set_xlim(-0.3, len(g) - 0.7)
+        ax.set_title(f"{world}" + (" (model exact without payload)" if world == "W1" else " (friction unknown)"),
+                     fontsize=7)
+        ax.set_xlabel("payload (kg)")
+    axes[0].set_ylabel("alarm rate")
+    axes[0].set_ylim(-0.03, 1.05)
+    handles, labels = axes[1].get_legend_handles_labels()
+    fig.legend(handles, labels, loc="upper center", ncol=4, frameon=False, bbox_to_anchor=(0.5, 1.1))
+    save(fig, "detection")
+
+
+def figure_panda_handover() -> None:
+    """M12c: share of Panda runs not settled, pooled over worlds and stiffnesses (96 runs a bar)."""
+    rows = read(ROOT / "results" / "m12c" / "handover_runs.csv")
+    scenarios = (("inside", 2.5, "2.5 kg, inside"), ("inside", 1.0, "1 kg, inside"), ("outside", 0.0, "0 kg, outside"))
+    controllers = (("policy", "policy alone", "#8d99a6"), ("handover-physics", "+ physics", "#3b6ea8"),
+                   ("handover-learned", "+ learned", "#2f9e73"), ("handover-consistency", "+ consistency", "#e0703a"))
+    fig, ax = plt.subplots(figsize=(COLUMN, 1.9))
+    width = 0.2
+    for k, (name, label, colour) in enumerate(controllers):
+        shares = []
+        for split, payload, _ in scenarios:
+            g = [r for r in rows if (r["split"], r["payload_kg"], r["controller"]) == (split, payload, name)]
+            shares.append(sum(1 - r["settled"] for r in g) / len(g))
+        x = np.arange(len(scenarios)) + (k - 1.5) * width
+        ax.bar(x, shares, width * 0.92, color=colour, label=label)
+    ax.set_xticks(range(len(scenarios)), [s[2] for s in scenarios])
+    ax.set_ylabel("runs not settled")
+    ax.set_ylim(0, 1.05)
+    ax.grid(axis="x", visible=False)
+    ax.legend(loc="upper center", ncol=4, frameon=False, bbox_to_anchor=(0.5, 1.22), fontsize=6.5,
+              handlelength=1.2, columnspacing=0.8)
+    save(fig, "panda_handover")
+
+
+def figure_panda_runs() -> None:
+    """Last frame of the 2.5 kg replay of the README: the policy alone, and with the physics monitor."""
+    import mujoco
+    sys.path.insert(0, str(ROOT / "report"))
+    import readme_figures as rf
+
+    (gains, world, split, payload, task, monitor), view = rf.REPLAYS["payload"]
+    _, target, runs, handed = rf.simulate(gains, world, split, payload, task, monitor)
+    robot = rf.scene_model(payload, world, gains, target)
+    fig, axes = plt.subplots(1, 2, figsize=(COLUMN, 1.55))
+    titles = (f"policy alone: {runs[0].final_error() * 100:.1f} cm",
+              f"physics monitor, MPC from {handed * 0.02:.2f} s: {runs[1].final_error() * 100:.1f} cm")
+    with mujoco.Renderer(robot.model, 360, 420) as renderer:
+        for ax, run, title in zip(axes, runs, titles):
+            robot.data.qpos[:] = run.q[-1]
+            mujoco.mj_forward(robot.model, robot.data)
+            renderer.update_scene(robot.data, rf.camera(*view))
+            rf.add_path(renderer.scene, run.tip[:: rf.FRAME_EVERY])
+            ax.imshow(renderer.render())
+            ax.set_title(title, fontsize=6.5)
+            ax.set_axis_off()
+    save(fig, "panda_runs")
+
+
 def main() -> None:
     OUT.mkdir(parents=True, exist_ok=True)
-    for make in (figure_setup, figure_prediction, figure_control, figure_optimism, figure_worst, figure_ensemble):
+    for make in (figure_setup, figure_prediction, figure_control, figure_optimism, figure_worst, figure_ensemble,
+                 figure_detection, figure_panda_handover, figure_panda_runs):
         make()
         print("drew", make.__name__)
 

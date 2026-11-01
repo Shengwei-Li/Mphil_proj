@@ -17,228 +17,226 @@
 
 \begin{document}
 
-\title{Physics, Learning, or Both?\\ Correcting a Sampling-Based MPC after an Unknown Payload Change}
+\title{Learning-Assisted Control under Unknown Payloads\\[4pt] {\Large Correcting the Model, Monitoring the Policy, and Handing Over}}
 
 \author{\IEEEauthorblockN{Shengwei Li}
 \IEEEauthorblockA{The University of Sydney, NSW, Australia\\
-Project technical report, October 2026}}
+Project technical report, second version, November 2026}}
 
 \maketitle
 
 \begin{abstract}
-A robot arm that picks up an unknown payload makes the model inside its model-based controller wrong.
-The model can be corrected from a little motion data, either by estimating a physical parameter or by learning the residual with a neural network, or both.
-We compare these options in a deliberately small and fully controlled simulation study: a planar two-link arm driven by a sampling-based model predictive controller, three levels of model mismatch, an exact reference model, and a strict separation between development and test material.
-Three observations stand out.
-First, the amount of data decides the winner: with \SI{9}{s} of motion, estimating the payload mass is more accurate than learning; with \SI{30}{s} or more, learning wins inside the region where data was collected, and physics plus learning is best.
-Second, outside that region the controller exploits the learned model's errors; its one-step prediction error grows by an order of magnitude and most of the learned advantage disappears, with occasional failures of more than \SI{50}{cm}.
-Third, averaging an ensemble of five networks removes many of these failures, but not when data is scarce, and at a computational cost beyond real time on the laptop used.
+When a robot arm holds a payload of unknown mass, the model inside its controller is wrong, and an imitation policy that was trained on the empty arm no longer reaches its targets.
+This report studies three questions in controlled simulation.
+First, how should the controller's model be corrected: by estimating the payload mass, by learning the model error with a neural network, or both?
+On a two-link arm with a sampling-based model predictive controller (MPC), the amount of data decides: with \SI{9}{s} of motion the mass estimate is better, with \SI{30}{s} or more physics plus a learned residual is best, but outside the region of its data the MPC exploits the learned model's errors.
+Second, when a diffusion policy controls the arm, which model should a monitor use to detect its failure, and when should it hand control to the MPC?
+Residuals of a model of the empty arm detect the payload, and a learned residual does so where the physics model has a structural error; only the consistency of the policy's own actions detects that the policy has left its training region.
+Third, the same experiments on a Franka Panda with joint impedance control at two stiffnesses confirm the monitoring results, while the impedance loop makes a learned model almost useless for control: its value moves from control to monitoring.
+For Parts II and III, all 26 expected outcomes were written down before the test runs; 16 held, 8 held in part, and 2 failed.
 \end{abstract}
 
 \section{Introduction}
 
-Model predictive control (MPC) chooses each action by predicting where candidate actions lead.
-Its decisions are only as good as its model.
-When a manipulator grasps an object of unknown mass, the model changes in a way the controller cannot see, and reaching accuracy drops.
+A model predictive controller (MPC) selects each action by predicting where candidate actions lead, so its decisions are only as good as its model.
+An imitation policy has no explicit model; it copies the actions of an expert on the states it was shown.
+When a manipulator holds an object of unknown mass, both fail: the MPC's predictions are wrong, and the policy acts on an arm that no longer responds as in its demonstrations.
 
-There are two common ways to repair the model from data recorded after the change.
-One keeps the physics and estimates the unknown parameter, here the payload mass \cite{atkeson1986estimation}.
-The other keeps the physics as a base and trains a neural network to predict what the base model gets wrong \cite{shi2019neural,carron2019data}.
-Learned models are flexible, but they are only trustworthy where they have seen data, and an MPC actively searches for actions that its model rates highly.
-This report asks a narrow question: \emph{in this setting, when does a learned correction help a sampling-based MPC, and when does it hurt?}
+This report follows the problem through three parts, each building on the one before:
+\begin{itemize}
+\item \textbf{Part I, correct the model.} A sampling-based MPC on a planar two-link arm. The model is corrected from recorded motion by estimating the payload mass \cite{atkeson1986estimation}, by training a neural network on the residual of the physics model \cite{shi2019neural,carron2019data}, or both. The question is when a learned correction helps and when it hurts.
+\item \textbf{Part II, monitor the policy.} A closed-form diffusion policy (CFDP) \cite{mishra2026cfdp} controls the same arm. Monitors look for its failure; on an alarm, the MPC with an online mass estimate takes over, as in a Simplex architecture \cite{sha2001simplex}. The question is which model a monitor should use: a coarse physics model of the empty arm or an accurate learned one.
+\item \textbf{Part III, change the platform.} The same experiments on a 7-joint Franka Panda with joint impedance control, at two joint stiffnesses.
+\end{itemize}
 
-We answer it in a setting chosen for control over every source of error, not for realism (Sec.~\ref{sec:setup}).
-The arm is simple enough that the controller's model can be written by hand and verified against the simulator term by term, so that an exact reference model exists and every remaining error can be attributed.
-Within this setting we observe:
+The setting is chosen for control over every source of error, not for realism.
+In each platform, the controller's model reproduces the simulator step for step when it is told the truth, so an exact reference exists and every remaining error comes from a mismatch that we set.
+The main observations are:
 \begin{enumerate}
-\item With little data, estimating the payload mass beats learning; with \SI{30}{s} or more, learning wins inside the training region, and physics plus learning is best.
-\item Outside the training region, the controller exploits learned-model errors: one-step prediction errors along the executed path grow 8--13 times, and the learned advantage largely disappears.
-\item Every wrong model is exploited in the same way: the controller's expected outcome is optimistic by half to all of the model's prediction error. Learned models outside their data simply give it more error to exploit.
-\item Averaging five networks reduces failures and makes physics plus learning the most robust option outside the training region given enough data; a penalty on ensemble disagreement added nothing measurable.
+\item The amount of data decides the best correction. With little data, the mass estimate is better; with \SI{30}{s} or more, physics plus learning is best inside the training region.
+\item Outside the training region, the MPC exploits learned-model errors. Its expected outcome is optimistic by half to all of the model's error, for every wrong model; learned models outside their data have larger errors to exploit. An ensemble of five networks reduces the worst failures.
+\item Monitors that use a model detect the payload; the consistency of the policy's actions detects that the policy has left its region. A learned residual helps a monitor where the physics model has a structural error (unmodelled friction).
+\item On the Panda, the joint impedance loop absorbs most model error. A learned model can improve the final error by at most \SI{3.5}{mm}, but it brings the alarm forward from about \SI{1.6}{s} to \SI{0.2}{s} when friction hides a payload.
 \end{enumerate}
+No new method is proposed. The contribution is a controlled comparison of known ingredients, with the expected results fixed before the tests.
 
 \section{Related Work}
 
-Rigid-body dynamics are linear in the inertial parameters, so payload and link parameters can be estimated by least squares from joint motion and torque \cite{atkeson1986estimation}.
-Learning a residual on top of a nominal physical model has been used for drone landing \cite{shi2019neural} and, with a Gaussian-process error model inside MPC, for trajectory tracking with a robot arm \cite{carron2019data}; \cite{hewing2020learning} reviews learning-based MPC.
-In model-based reinforcement learning, neural-network dynamics are combined with sampling-based MPC \cite{nagabandi2018neural}, and ensembles of probabilistic models are used to represent and propagate uncertainty \cite{chua2018deep}.
-Path-integral control \cite{williams2017model} has been extended to account for uncertain physical parameters \cite{abraham2020model}.
-This report does not propose a new method; it compares these ingredients in one controlled setting and looks at how they fail.
+\textbf{Model correction.} Rigid-body dynamics are linear in the inertial parameters, so a payload can be estimated by least squares \cite{atkeson1986estimation}. A learned residual on a nominal model has been used for drone landing \cite{shi2019neural} and, as a Gaussian process inside MPC, for a robot arm \cite{carron2019data}; \cite{hewing2020learning} reviews learning-based MPC. Neural dynamics are combined with sampling-based MPC in \cite{nagabandi2018neural}, and ensembles represent model uncertainty in \cite{chua2018deep}. Path-integral control \cite{williams2017model} has been extended to uncertain physical parameters \cite{abraham2020model}.
+
+\textbf{Diffusion policies.} Diffusion Policy \cite{chi2023diffusion} generates chunks of future actions by denoising; CFDP \cite{mishra2026cfdp} computes the score in closed form from the demonstrations and needs no training. We use CFDP throughout and Diffusion Policy as a second policy in Part II.
+
+\textbf{Runtime monitoring.} Sentinel \cite{agia2024sentinel} monitors the temporal consistency of a generative policy's actions and its task progress. FIPER \cite{romer2025fiper} and FAIL-Detect \cite{xu2025faildetect} combine policy-derived uncertainty scores with conformal calibration \cite{angelopoulos2021gentle} on successful runs. Model-based monitors predict outcomes with a learned dynamics model, in a latent space \cite{liu2023momo} or with latent innovations conditioned on action chunks \cite{zhou2026patch}. We accumulate signals with CUSUM \cite{page1954cusum}.
+
+\textbf{Fallback.} The Simplex architecture \cite{sha2001simplex} lets a monitor switch from a high-performance controller to a simple, trusted one. Here the learned policy is the first and an MPC with an online mass estimate is the second.
+
+Each of these ingredients exists. We did not find a study of diffusion policies under payload changes, or one that compares which model a monitor should use, but our search was not exhaustive.
 
 \section{Setup}
 \label{sec:setup}
 
-\subsection{Arm and worlds}
+\subsection{Platforms and model errors}
 
-The simulated arm (MuJoCo \cite{todorov2012mujoco}, \SI{2}{ms} step) has two \SI{0.3}{m} links of \SI{1}{kg}, modelled as uniform rods, moving in a vertical plane under gravity, with torque limits of \SI{20}{} and \SI{10}{N.m} at shoulder and elbow (Fig.~\ref{fig:setup}).
-All experiments use a \SI{1}{kg} payload.
-The real arm can differ from the controller's model in three ways, called worlds:
-\begin{itemize}
-\item \textbf{W1}: only the payload mass is unknown; the payload is a point mass at the tip.
-\item \textbf{W2}: the payload's centre of mass is offset from the tip by \SI{4}{cm} along and \SI{6}{cm} across the second link.
-\item \textbf{W3}: as W2, plus joint friction that the model lacks: extra viscous friction (0.3 and \SI{0.15}{N.m.s/rad}) and Coulomb friction (0.6 and \SI{0.3}{N.m}, smoothed below \SI{0.2}{rad/s}).
-\end{itemize}
-In W1 a correct payload mass makes the model exact; in W2 and W3 no single mass does.
+\textbf{Two-link arm} (Parts I and II). MuJoCo \cite{todorov2012mujoco}, \SI{2}{ms} step; two \SI{0.3}{m}, \SI{1}{kg} links in a vertical plane under gravity; torque limits of 20 and \SI{10}{N.m} (Fig.~\ref{fig:setup}). The controller's model is written by hand and checked against the simulator's inertia matrix and bias forces. The payload is \SI{1}{kg}.
+
+\textbf{Franka Panda} (Part III). The Menagerie model \cite{menagerie2022} with a \SI{0.1}{m} tool. The arm is driven as the real robot is: a joint impedance loop with the gains of the manufacturer's examples tracks joint setpoints, with gravity compensation for the load that the controller \emph{believes} the arm holds. The controller's model is a second MuJoCo copy; with the true load it matches the simulator to \num{4e-16}. A soft setting uses a quarter of the stiffness (damping halved, same damping ratio). Payloads are 0, 1 and \SI{2.5}{kg}.
+
+\textbf{Model errors.} On each platform, three worlds differ from the model of the empty arm in increasing ways: the payload mass only (W1); its centre of mass offset by a few centimetres (W2); and W2 plus joint friction that the model lacks (W3). In W1 a correct mass makes the model exact; in W2 and W3 no single mass does.
 
 \begin{figure}[t]
 \centering
 \includegraphics[width=0.9\columnwidth]{setup}
-\caption{The arm with its payload, the region where training data was collected (right, $x \ge \SI{0.05}{m}$) and the region it never aimed at (left, $x \le \SI{-0.1}{m}$), with the targets of the 8 test tasks in each.}
+\caption{The two-link arm with its payload, the region where training data was collected (right) and the region it never aimed at (left), with the targets of the 8 test tasks in each.}
 \label{fig:setup}
 \end{figure}
 
-\subsection{Controller}
+\subsection{Controllers}
 
-All methods share one sampling-based MPC with path-integral weighting \cite{williams2017model}.
-Every \SI{20}{ms} it perturbs its current torque plan to form 256 candidates over a \SI{0.2}{s} horizon, predicts each candidate with the method's model, scores it by the squared tip-to-target distance plus a joint-speed penalty, and blends the candidates with weights that decrease exponentially with cost.
-Only the first torque of the blended plan is applied.
-The settings were tuned once, on development tasks, and then fixed for every method; only the predictor changes.
+All model-based methods share one sampling-based MPC with path-integral weighting \cite{williams2017model}; only the predictor changes. On the two-link arm, every \SI{20}{ms} it blends 256 perturbed torque plans over \SI{0.2}{s}; on the Panda, 128 plans of joint setpoints over \SI{0.3}{s}. The cost is the squared tip-to-target distance plus a speed penalty. The settings were tuned once on development tasks and then fixed.
 
-\subsection{Methods}
-
-Table~\ref{tab:methods} lists the predictors.
-The hand-written model of the arm, including the offset payload and friction terms needed by the reference, was checked against the simulator's inertia matrix and bias forces and reproduces the simulator step for step when given the true parameters.
-\Co{} fits the payload mass by Gauss--Newton least squares on the one-period velocity prediction error.
-The networks in \Ct{} and \Cr{} take the sines and cosines of the joint angles, the joint speeds and the torques, and predict the base model's error in angles and speeds after one \SI{20}{ms} period.
-They have two hidden layers of 64 tanh units and are trained with Adam and early stopping on held-out episodes.
-The ensembles add four networks that differ only in their random initialisation.
+Table~\ref{tab:methods} lists the predictors. \Co{} fits the payload mass by least squares; the online version used for handover re-estimates it every 10 periods from the run so far. The residual networks (two hidden layers of 64 tanh units, Adam, early stopping on held-out episodes) predict the physics model's one-period error from joint angles, speeds and commands.
 
 \begin{table}[t]
 \centering
-\caption{Methods. All use the same MPC; only the predictor differs.}
+\caption{Methods. All model-based methods use the same MPC.}
 \label{tab:methods}
 \footnotesize
-\begin{tabular}{@{}lp{6.2cm}@{}}
+\begin{tabular}{@{}lp{6.1cm}@{}}
 \toprule
-\Cz & physics model assuming no payload\\
+\Cz & physics model of the empty arm\\
 \Co & physics model with the payload mass estimated from data\\
-\Ct & \Cz's model plus a residual network\\
-\Cr & \Co's model plus a residual network\\
-\Ct-E, \Cr-E & as \Ct, \Cr, with the average of five networks; optionally the MPC is penalised for the networks' disagreement\\
-Reference & physics model told the true payload and world (an upper bound, not a method)\\
+\Ct, \Cr & \Cz's or \Co's model plus a residual network\\
+\Ct-E, \Cr-E & as \Ct, \Cr, averaging five networks\\
+Reference & physics told the true payload and world (a limit, not a method)\\
+\midrule
+Policy & CFDP imitating the reference MPC on the empty arm\\
+Monitors & physics, learned or oracle residual; action consistency\\
+Handover & policy until the first alarm, then MPC with online \Co\\
 \bottomrule
 \end{tabular}
 \end{table}
 
-\subsection{Data and protocol}
+\subsection{Policy, monitors and handover}
 
-Data is recorded by running \Cz{} with random torque perturbations towards random targets in the training region, in \SI{3}{s} episodes, and is measured in seconds of motion: budgets of 9, 30 and \SI{90}{s}, with smaller budgets being the first episodes of the largest.
-Data is always split by whole episodes.
+\textbf{Policy.} For each world, the expert (the reference MPC on the empty arm) records 200 reaching and 200 corrective episodes in the training region. CFDP observes joint angles, speeds and the target relative to the tip, and outputs a chunk of 8 future periods, of which 4 are executed. On the two-link arm the chunk is joint angles tracked by a PD loop; on the Panda it is the expert's joint setpoints, because the impedance loop lags its setpoint and a policy that sent the demonstrated angles stopped short (\SI{1.5}{cm} instead of \SI{0.19}{cm}, unloaded). Gravity compensation always assumes no load, as on a real robot whose load is unknown.
 
-Every choice (MPC settings, network size and training, penalty weight) was made on development material only: a separate data seed, a separate validation set and separate development tasks.
-The test material consists of three further data seeds and 8 reaching tasks inside and 8 outside the training region (Fig.~\ref{fig:setup}), giving 24 runs per method, world and budget.
-A run lasts \SI{3}{s}; its final error is the mean tip error over the last \SI{0.5}{s}, and it counts as not settled if the error at the end exceeds \SI{1}{cm}.
-Re-running the inside tasks in a later experiment reproduced all 792 earlier runs exactly.
+\textbf{Monitors.} A residual monitor predicts each period's end speeds from the measured start state and the command, with a model of the empty arm, and uses the mean prediction error since the last check. The \emph{physics} monitor uses the model without friction; the \emph{learned} monitor adds a residual network trained on the unloaded demonstrations; the \emph{oracle} knows the friction (a limit). The \emph{consistency} monitor needs no model: it compares the overlapping parts of consecutive action chunks \cite{agia2024sentinel}. Monitors read measurements with noise (\SI{1e-4}{rad}, \SI{0.01}{rad/s}). Each signal is standardised on 20 unloaded development runs and accumulated by CUSUM; the alarm threshold is the split-conformal quantile of the per-run maximum on 40 (two-link, monitoring) or 100 (handover, Panda) unloaded calibration runs, for a 5\% false-alarm rate.
 
-\section{Results}
+\textbf{Handover.} The policy acts; at each new chunk the monitor checks the run so far. On the first alarm, the MPC takes control with the payload mass estimated from every step of the run.
 
-\subsection{Prediction}
+\subsection{Protocol}
 
-Fig.~\ref{fig:prediction} shows how far each model's prediction of the tip drifts in \SI{0.2}{s}, the MPC's horizon.
-\Co{} is exact in W1 with any amount of data, but in W2 and W3 it leaves an error of about 2.5--\SI{4}{cm} that more data does not reduce: it can only explain the offset payload and friction by overestimating the mass (about \SI{1.2}{kg}).
-\Ct{} needs data: with \SI{9}{s} it is far worse than \Co{}, with \SI{90}{s} far better.
-\Cr{} is the most accurate throughout, because its network only has to learn what \Co{} leaves.
-Outside the training region the learned models degrade by roughly an order of magnitude, while \Co{} does not.
+Every setting was chosen on development material (separate data seeds, validation episodes and tasks) and then frozen. Test tasks have their own seeds, inside and outside the training region. Data is split by whole episodes. A run lasts \SI{3}{s}; it is \emph{not settled} if the tip is more than \SI{1}{cm} from the target at the end. For Parts II and III, the expected outcome of every test was written and committed before the run.
 
-\begin{figure*}[t]
-\centering
-\includegraphics[width=\textwidth]{prediction}
-\caption{Tip prediction error after \SI{0.2}{s} against the amount of training data (mean of three data seeds), on validation episodes inside (filled, solid) and outside (open, dashed) the training region. The reference model is exact everywhere.}
-\label{fig:prediction}
-\end{figure*}
+\section{Part I: Correcting the Model}
+\label{sec:part1}
 
-\subsection{Control inside the training region}
+Data is recorded by running \Cz{} with random torque perturbations in the training region, in budgets of 9, 30 and \SI{90}{s} of motion. There are 8 test tasks inside and 8 outside the region and three data seeds: 24 runs per method, world and budget.
 
-Fig.~\ref{fig:control} (solid lines) and Table~\ref{tab:key} show control results.
-\Cz{} stops 8--\SI{10}{cm} from the target.
-\Co{} settles about \SI{2}{cm} away in W2 and W3, consistently, with almost no spread.
-With \SI{30}{s} of data or more, the learned methods do better; with \SI{90}{s}, \Cr{} reaches \SI{0.07}{cm} in W2, close to the reference (\SI{0.04}{cm}).
-With \SI{9}{s} the picture reverses: \Ct{} is worse than \Co{}, and in W2 one run ends \SI{68}{cm} from the target.
-The two kinds of method fail differently: \Co{} is consistently a little off, the learned methods are usually precise but occasionally far off.
+\textbf{Prediction.} \Co{} is exact in W1, but in W2 and W3 it leaves a \SI{0.2}{s} tip prediction error of 2.5--\SI{4}{cm} that more data does not reduce: it explains the offset and friction by overestimating the mass. \Ct{} is far worse than \Co{} with \SI{9}{s} and far better with \SI{90}{s}. \Cr{} is the most accurate throughout. Outside the training region the learned models degrade by about an order of magnitude; \Co{} does not.
+
+\textbf{Control inside the region.} \Cz{} stops 8--\SI{10}{cm} from the target and \Co{} about \SI{2}{cm} in W2 and W3 (Fig.~\ref{fig:control}, Table~\ref{tab:key}). With \SI{30}{s} or more, learning does better; with \SI{90}{s}, \Cr{} reaches \SI{0.07}{cm} in W2 against \SI{0.04}{cm} for the reference. With \SI{9}{s}, \Ct{} is worse than \Co{}. \Co{} is consistently a little off; the learned methods are usually precise but occasionally far off.
 
 \begin{figure*}[t]
 \centering
 \includegraphics[width=\textwidth]{control}
-\caption{Median final tip error over 24 runs (8 tasks, 3 data seeds) against the amount of training data, for test tasks inside (solid) and outside (dashed) the training region. Dotted lines: \Cz{} and the reference.}
+\caption{Part I. Median final tip error over 24 runs against the amount of training data, for test tasks inside (solid) and outside (dashed) the training region. Dotted: \Cz{} and the reference.}
 \label{fig:control}
 \end{figure*}
 
 \begin{table}[t]
 \centering
-\caption{Median final tip error in cm (runs not settled, of 24). \Cr-E averages five networks without penalty.}
+\caption{Part I. Median final tip error in cm (runs not settled, of 24). \Cr-E averages five networks.}
 \label{tab:key}
 \footnotesize
-\setlength{\tabcolsep}{3pt}
+\setlength{\tabcolsep}{2.5pt}
 \input{generated/key_results.tex}
 \end{table}
 
-\subsection{Control outside the training region}
+\textbf{Control outside the region.} \Co{} performs as inside, but the learned methods lose most of their advantage. In W2 with \SI{90}{s}, \Ct{} goes from 0.36 to \SI{1.78}{cm}, no better than \Co{}; \Cr{} stays ahead (0.56 against \SI{1.69}{cm}) but falls behind with \SI{30}{s}. The worst \Ct{} runs swing the arm through large loops and end 49--\SI{66}{cm} from targets that \Co{} reaches directly.
 
-Outside the training region (dashed lines in Fig.~\ref{fig:control}), \Co{} performs as it does inside, but the learned methods lose most of their advantage.
-In W2 with \SI{90}{s} of data, \Ct{} goes from \SI{0.36}{cm} inside to \SI{1.78}{cm} outside, no better than \Co{}; with \SI{30}{s} it is twice as bad as \Co{}.
-\Cr{} holds up better, staying ahead of \Co{} with \SI{90}{s} (\SI{0.56}{cm} against \SI{1.69}{cm}) but falling behind it with \SI{30}{s}.
-Fig.~\ref{fig:worst} shows the three worst runs: on tasks that \Co{} solves directly, \Ct{} swings the arm through large loops and ends 49--\SI{66}{cm} away.
-
-\begin{figure*}[t]
-\centering
-\includegraphics[width=\textwidth]{worst}
-\caption{Tip paths of the three worst \Ct{} runs outside the training region (shaded), next to \Co{} on the same task, data seed and MPC seed.}
-\label{fig:worst}
-\end{figure*}
-
-\subsection{Why: the controller's expectations are optimistic}
-
-Every control round, the MPC predicts where the tip will be one period later under the torque it applies.
-Comparing that prediction with where the tip actually goes measures the model's error along the path the controller chose.
-For the learned models it grows 8--13 times outside the training region (\Ct{}, W2, \SI{30}{s}: from 0.0095 to \SI{0.079}{cm} per period), while for \Co{} it stays at \SI{0.03}{cm}.
-
-The error is not random in direction.
-We define optimism as how much closer to the target the model expected the tip to be than it actually was.
-Random errors would average out near zero; instead, for every wrong model, physical or learned, inside or outside, optimism amounts to half to all of the prediction error (Fig.~\ref{fig:optimism}).
-This is a selection effect: by picking the action its model rates best, the MPC systematically picks actions whose outcome the model overestimates.
-What sets the learned models apart outside their data is not this mechanism but the size of the errors it acts on.
+\textbf{Why: optimism.} Along the path the MPC chose, the learned models' one-period prediction error grows 8--13 times outside the region; \Co{}'s does not. The error has a direction. We define optimism as how much closer to the target the model expected the tip to be than it was. For every wrong model, physical or learned, inside or outside, optimism is half to all of the prediction error (Fig.~\ref{fig:optimism}). This is a selection effect: by choosing the action its model rates best, the MPC chooses actions whose outcome the model overestimates. Learned models outside their data differ only in the size of the error.
 
 \begin{figure}[t]
 \centering
 \includegraphics[width=\columnwidth]{optimism}
-\caption{Median optimism against median one-period prediction error along the executed path, one point per method, world, data budget and task region (exact models omitted). All points lie between half and all of the error.}
+\caption{Part I. Median optimism against median one-period prediction error along the executed path, one point per method, world, data budget and region (exact models omitted).}
 \label{fig:optimism}
 \end{figure}
 
-\subsection{Ensembles}
+\textbf{Ensembles.} Averaging five networks mainly cuts the tails: outside the region in W2 with \SI{90}{s}, unsettled \Cr{} runs drop from 6 to 2, and with \SI{30}{s} \Cr-E is no longer worse than \Co{}. With \SI{9}{s} it does not help. A penalty on network disagreement changed nothing measurable, probably because it was measured one step ahead, where disagreement is small. The ensemble needs about \SI{28}{ms} per \SI{20}{ms} period on the laptop CPU used.
 
-Averaging five networks helps mostly with the tails (Fig.~\ref{fig:ensemble}, Table~\ref{tab:key}).
-Outside the training region in W2 with \SI{90}{s} of data, the number of unsettled runs of physics plus learning drops from 6 to 2; with \SI{30}{s}, \Cr-E (\SI{1.63}{cm}) is no longer worse than \Co{} (\SI{1.79}{cm}), unlike the single-network \Cr{}.
-With \SI{9}{s} of data, the ensemble does not help: all five networks are poor, and \Ct-E remains far worse than \Co{} outside the training region.
+\section{Part II: Monitoring the Policy}
+\label{sec:part2}
 
-Penalising disagreement between the networks was meant to keep the MPC away from states the data did not cover.
-On development tasks, penalty weights from 0.3 to 3000 changed the error by little, and on test tasks the penalised ensembles were neither consistently better nor worse than plain averaging.
-A likely reason is that disagreement was measured one step ahead from the averaged state, where it is small, whereas errors build up over the horizon; propagating each network separately, as in \cite{chua2018deep}, would capture this at a higher cost.
+\textbf{The policy under load.} Trained on the empty arm, CFDP settles within \SI{0.4}{cm} unloaded but stops 2.7--\SI{3.1}{cm} from the target with \SI{1}{kg} (32 inside tasks per world; Table~\ref{tab:twolink}): gravity compensation assumes no load, and the arm sags. Outside the training region it fails completely (26--\SI{28}{cm}). A standard Diffusion Policy \cite{chi2023diffusion} gives the same picture (2.8--\SI{3.0}{cm} with \SI{1}{kg}, 19--\SI{25}{cm} outside), so these failures do not depend on how the policy is built.
 
-Cost is the other limit.
-Planning one round took about \SI{6}{ms} for \Co{}, \SI{11}{ms} for \Cr{} and \SI{28}{ms} for \Cr-E on the laptop CPU used, so the ensemble exceeds the \SI{20}{ms} control period.
-The simulation waits for the controller, so this does not affect the results above, but the ensemble controller could not run in real time as implemented.
+\textbf{Which model should a monitor use?} Fig.~\ref{fig:detection} shows the alarm rate against payload. When the model of the empty arm is exact (W1), every residual monitor detects every run from \SI{0.05}{kg}. When it lacks the friction (W3), the threshold must rise to hold the false-alarm rate, and the physics monitor detects only 13\% of runs at \SI{0.05}{kg}; the learned monitor, whose network learned the friction from the unloaded demonstrations, detects 63\%. The consistency monitor hardly sees the payload (at most 44\% at \SI{1}{kg}), because the policy's chunks stay consistent while the arm sags. Outside the training region it is the reverse: the consistency monitor alarms in 94--97\% of runs, the residual monitors in W1 and W2 in at most 9\%. The two kinds of monitor see two kinds of failure: of the execution and of the policy. In W1, the false-alarm rate on unloaded test runs was 16\% against the 5\% target, with 40 calibration runs; the handover experiment used 100.
 
 \begin{figure}[t]
 \centering
-\includegraphics[width=\columnwidth]{ensemble}
-\caption{Runs not settled (of 24) outside the training region: single networks (dark) against five-network averages (light), with \Co{} for reference.}
-\label{fig:ensemble}
+\includegraphics[width=\columnwidth]{detection}
+\caption{Part II. Alarm rate of each monitor on the two-link arm, CFDP, 32 tasks inside the training region. At 0~kg the rate is the false-alarm rate (target 5\%, dashed).}
+\label{fig:detection}
 \end{figure}
+
+\textbf{Handover.} Table~\ref{tab:twolink} gives the result. In W1 with \SI{1}{kg}, a residual-triggered handover reduces the error from \SI{3.1}{cm} to \SI{0.04}{cm}, equal to the MPC alone. In W2 and W3 it only reaches 1.3--\SI{1.8}{cm}: the MPC that takes over estimates only a mass, and on this torque-driven arm the remaining model error matters, as in Part I. Outside the region, only the consistency trigger recovers the policy (W1: \SI{0.07}{cm}, 4 of 32 unsettled). Combining the two triggers at half the false-alarm budget each did not work: the consistency signal outside the region exceeds its threshold only by a small margin, and at the stricter threshold most alarms disappeared. Finally, a detected failure does not always justify a handover: in W3 at \SI{0.1}{kg}, the learned monitor alarms in 97\% of runs, but the MPC that takes over, which does not know the friction, is slightly worse than the policy, whose demonstrations came from an expert that knew it.
+
+\begin{table}[t]
+\centering
+\caption{Part II, two-link arm. Median final error in cm (runs not settled, of 32): CFDP alone, the adaptive MPC alone, and handover triggered by the physics, learned or consistency monitor.}
+\label{tab:twolink}
+\footnotesize
+\setlength{\tabcolsep}{2.5pt}
+\input{generated/two_link_handover.tex}
+\end{table}
+
+\section{Part III: The Franka Panda}
+\label{sec:part3}
+
+\textbf{The platform changes the role of the model.} Table~\ref{tab:stiffness} compares \Cz, \Co{} and the reference on the Panda. With stiff joints, \Co{} is within \SI{0.04}{cm} of the reference in every world, although it underestimates the mass by 12--15\%: the impedance loop absorbs most of the model error. With soft joints, \Cz's error roughly doubles and \Co's excess over the reference rises to 0.05--\SI{0.35}{cm}, about four times its stiff value, in proportion to the stiffness. This excess is the most that any learned correction could gain for control here. In W3 without payload and with soft joints, \Co{} also takes friction for mass (up to \SI{0.24}{kg}) and is slightly worse than \Cz.
+
+\begin{table}[t]
+\centering
+\caption{Part III. Median final error in cm on the Panda, 16 tasks inside the training region, stiff and soft joints.}
+\label{tab:stiffness}
+\footnotesize
+\setlength{\tabcolsep}{3.5pt}
+\input{generated/panda_stiffness.tex}
+\end{table}
+
+\textbf{Policy and monitors.} CFDP settles within 0.16--\SI{0.51}{cm} unloaded and fails outside the region (11--\SI{25}{cm}). Under load it is about twice as bad as \Cz{} (stiff, \SI{2.5}{kg}: 3.1--3.7 against 1.7--\SI{1.9}{cm}), unlike on the two-link arm, where \Cz{} drives torques without a joint loop. The policy copies setpoint patterns from an unloaded arm and never raises its setpoints to compensate a sag; the MPC replans them. The monitoring results of Part II hold: in W1 and W2 the residual monitors detect 88--100\% of runs from \SI{0.1}{kg} at false-alarm rates of 0--6\%; in W3 the physics monitor detects nothing below \SI{0.25}{kg}, the learned monitor 69--100\% at \SI{0.25}{kg}. The learned monitor stays well below the oracle at \SI{0.1}{kg} (19--25\% against 88--100\%). One difference: on the Panda the consistency monitor also detects large payloads inside the region (100\% at \SI{2.5}{kg}), because the loaded arm stops in states that the demonstrations rarely contain, where the policy is uncertain.
+
+\textbf{Handover.} Fig.~\ref{fig:panda} and Table~\ref{tab:panda} show the result. With \SI{2.5}{kg}, every handover recovers every run, within \SI{0.04}{cm} of the adaptive MPC; the residual triggers mostly alarm at the first possible check (\SI{0.08}{s}). Outside the region without payload, the consistency trigger recovers the policy (3 of 48 unsettled at each stiffness); the residual triggers do so only in W3, where friction outside the calibrated motion makes them alarm. The learned model matters where the physics model is blind: in W3 with \SI{1}{kg}, the physics trigger alarms after 1.6--\SI{1.8}{s} and leaves 2--3 of 16 runs unsettled; the learned trigger alarms after 0.16--\SI{0.24}{s} and recovers all. False-alarm handovers on unloaded runs were 6\% overall but 4 of 16 in one cell (W2, soft); they did no harm, because the MPC that took over was more accurate than the policy.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\columnwidth]{panda_runs}\\[2pt]
+\includegraphics[width=\columnwidth]{panda_handover}
+\caption{Part III. Top: one typical test run with \SI{2.5}{kg} (soft joints, W1), end of the run; dots show the tip path, the green sphere the target. Bottom: share of runs not settled within \SI{1}{cm}, 96 runs per bar (16 tasks, 3 worlds, 2 stiffnesses).}
+\label{fig:panda}
+\end{figure}
+
+\begin{table}[t]
+\centering
+\caption{Part III. Median final error in cm on the Panda (runs not settled), pooled over the three worlds (48 runs) or W3 only (16 runs).}
+\label{tab:panda}
+\footnotesize
+\setlength{\tabcolsep}{2pt}
+\input{generated/panda_handover.tex}
+\end{table}
 
 \section{Discussion and Limitations}
 
-Read practically, the results suggest: with little data, estimate the physical parameter; with more, add a learned residual on top of the physics and average several networks; and judge a learned controller by its worst runs and by where it will be used, not only by its median error inside the data it was trained on.
+\textbf{Expectations against results.} Of the 26 written expectations, 16 held, 8 held in part and 2 failed. The failures were informative. Combined triggers at half the false-alarm budget lost most consistency alarms (Part II). And Diffusion Policy was \emph{not} more consistent than CFDP outside the region: the consistency signal measures the policy's uncertainty about its current observation, not a property of CFDP. The largest partial miss was that, on the Panda, CFDP under load is worse than \Cz{} rather than similar.
 
-The study is deliberately narrow.
-It is simulation only, with a planar two-link arm and one payload mass; ``outside'' is one region of the workspace; the ensemble members differ only in initialisation; and the model mismatches in W2 and W3 were chosen by hand to be large enough to matter.
-The disagreement penalty was a simple one-step version and should not be read as evidence against uncertainty-aware planning in general.
+\textbf{Practical reading.} With little data, estimate the physical parameter; with more, add a learned residual and average several networks, and judge the result by its worst runs and where it will be used. To monitor a policy, use a model of the empty arm for execution faults, learned where the physics model has structural errors, and the consistency of the policy's own actions for unfamiliar situations; neither covers the other. A policy can also be confidently wrong: in one Panda run outside the region, the policy stopped \SI{20}{cm} from the target with consistent chunks, and no monitor saw it.
+
+\textbf{Limitations.} All results are from simulation. The tasks are reaches, for which a hand-written cost works, so the adaptive MPC alone is everywhere as good as the best handover: the policy is not needed here, and the study only asks whether monitoring and handover can recover one. The payload is present from the start rather than picked up. ``Outside'' is one region of the workspace, and W2 and W3 were chosen by hand. The ensemble MPC and CFDP do not run in real time as implemented (about 28 and \SI{140}{ms} against 20 and \SI{80}{ms}).
 
 \section{Conclusion}
 
-In a controlled setting where every source of model error is known, a learned correction made a sampling-based MPC markedly more accurate when enough data was available and the task stayed where the data was collected, and markedly less reliable when either condition failed.
-The mechanism is that the controller exploits whatever errors its model has, and learned models outside their data have large ones.
-Physics plus an averaged ensemble was the most robust combination we tested, at a computational cost that needs to be addressed before it can run in real time.
+In controlled simulation where every model error is known, a learned correction made the MPC markedly more accurate when data was sufficient and the task stayed near the data, and less reliable otherwise, because the controller exploits whatever errors its model has. When a learned policy acts instead, model-based monitors and the policy's own consistency detect different failures, and a handover to the MPC recovers both. On an impedance-controlled arm, the learned model's value moves from control to monitoring: it barely improves the final error but brings the alarm forward by more than a second where friction hides the payload.
 
 \bibliographystyle{IEEEtran}
 \bibliography{references}

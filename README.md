@@ -144,7 +144,7 @@ To make all results, figures, the report and the video again, run the command be
 .venv\Scripts\python reproduce.py
 ```
 
-The [report](report/main.pdf) (5 pages) and the [demo video](report/demo.mp4) cover Part I.
+The [report](report/main.pdf) (6 pages) covers all three parts. The [demo video](report/demo.mp4) covers Part I.
 
 ## Limitations
 
