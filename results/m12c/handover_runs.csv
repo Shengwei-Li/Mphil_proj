@@ -1,0 +1,2881 @@
+gains,world,split,controller,payload_kg,task,final_error_cm,settled,handover_s,final_mass_estimate_kg
+stiff,W1,inside,adaptive MPC,0.0,0,0.0948,1,,0.0
+stiff,W1,inside,adaptive MPC,0.0,1,0.1265,1,,0.0
+stiff,W1,inside,adaptive MPC,0.0,2,0.1268,1,,0.0
+stiff,W1,inside,adaptive MPC,0.0,3,0.0802,1,,0.0
+stiff,W1,inside,adaptive MPC,0.0,4,0.107,1,,0.0
+stiff,W1,inside,adaptive MPC,0.0,5,0.1183,1,,0.0
+stiff,W1,inside,adaptive MPC,0.0,6,0.084,1,,0.0
+stiff,W1,inside,adaptive MPC,0.0,7,0.1081,1,,0.0
+stiff,W1,inside,adaptive MPC,0.0,8,0.147,1,,0.0
+stiff,W1,inside,adaptive MPC,0.0,9,0.1323,1,,0.0
+stiff,W1,inside,adaptive MPC,0.0,10,0.0931,1,,0.0
+stiff,W1,inside,adaptive MPC,0.0,11,0.112,1,,0.0
+stiff,W1,inside,adaptive MPC,0.0,12,0.0818,1,,0.0
+stiff,W1,inside,adaptive MPC,0.0,13,0.089,1,,0.0
+stiff,W1,inside,adaptive MPC,0.0,14,0.0989,1,,0.0
+stiff,W1,inside,adaptive MPC,0.0,15,0.0675,1,,0.0
+stiff,W1,inside,adaptive MPC,1.0,0,0.0861,1,,1.0
+stiff,W1,inside,adaptive MPC,1.0,1,0.1161,1,,1.0
+stiff,W1,inside,adaptive MPC,1.0,2,0.122,1,,1.0
+stiff,W1,inside,adaptive MPC,1.0,3,0.0809,1,,1.0
+stiff,W1,inside,adaptive MPC,1.0,4,0.1049,1,,1.0
+stiff,W1,inside,adaptive MPC,1.0,5,0.1178,1,,1.0
+stiff,W1,inside,adaptive MPC,1.0,6,0.0776,1,,1.0
+stiff,W1,inside,adaptive MPC,1.0,7,0.1046,1,,1.0
+stiff,W1,inside,adaptive MPC,1.0,8,0.1383,1,,1.0
+stiff,W1,inside,adaptive MPC,1.0,9,0.1214,1,,1.0
+stiff,W1,inside,adaptive MPC,1.0,10,0.091,1,,1.0
+stiff,W1,inside,adaptive MPC,1.0,11,0.1109,1,,1.0
+stiff,W1,inside,adaptive MPC,1.0,12,0.0818,1,,1.0
+stiff,W1,inside,adaptive MPC,1.0,13,0.0837,1,,1.0
+stiff,W1,inside,adaptive MPC,1.0,14,0.1083,1,,1.0
+stiff,W1,inside,adaptive MPC,1.0,15,0.0652,1,,1.0
+stiff,W1,inside,adaptive MPC,2.5,0,0.0721,1,,2.5
+stiff,W1,inside,adaptive MPC,2.5,1,0.0986,1,,2.5
+stiff,W1,inside,adaptive MPC,2.5,2,0.1116,1,,2.5
+stiff,W1,inside,adaptive MPC,2.5,3,0.0746,1,,2.5
+stiff,W1,inside,adaptive MPC,2.5,4,0.1009,1,,2.5
+stiff,W1,inside,adaptive MPC,2.5,5,0.117,1,,2.5
+stiff,W1,inside,adaptive MPC,2.5,6,0.0745,1,,2.5
+stiff,W1,inside,adaptive MPC,2.5,7,0.1007,1,,2.5
+stiff,W1,inside,adaptive MPC,2.5,8,0.1243,1,,2.5
+stiff,W1,inside,adaptive MPC,2.5,9,0.1124,1,,2.5
+stiff,W1,inside,adaptive MPC,2.5,10,0.0943,1,,2.5
+stiff,W1,inside,adaptive MPC,2.5,11,0.1116,1,,2.5
+stiff,W1,inside,adaptive MPC,2.5,12,0.0837,1,,2.5
+stiff,W1,inside,adaptive MPC,2.5,13,0.084,1,,2.5
+stiff,W1,inside,adaptive MPC,2.5,14,0.1103,1,,2.5
+stiff,W1,inside,adaptive MPC,2.5,15,0.0586,1,,2.5
+stiff,W1,outside,adaptive MPC,0.0,0,0.0792,1,,0.0
+stiff,W1,outside,adaptive MPC,0.0,1,0.0929,1,,0.0
+stiff,W1,outside,adaptive MPC,0.0,2,0.1278,1,,0.0
+stiff,W1,outside,adaptive MPC,0.0,3,0.0837,1,,0.0
+stiff,W1,outside,adaptive MPC,0.0,4,0.1104,1,,0.0
+stiff,W1,outside,adaptive MPC,0.0,5,0.1324,1,,0.0
+stiff,W1,outside,adaptive MPC,0.0,6,0.0804,1,,0.0
+stiff,W1,outside,adaptive MPC,0.0,7,0.1142,1,,0.0
+stiff,W1,outside,adaptive MPC,0.0,8,0.1051,1,,0.0
+stiff,W1,outside,adaptive MPC,0.0,9,0.1137,1,,0.0
+stiff,W1,outside,adaptive MPC,0.0,10,0.0903,1,,0.0
+stiff,W1,outside,adaptive MPC,0.0,11,0.125,1,,0.0
+stiff,W1,outside,adaptive MPC,0.0,12,0.082,1,,0.0
+stiff,W1,outside,adaptive MPC,0.0,13,0.0912,1,,0.0
+stiff,W1,outside,adaptive MPC,0.0,14,0.1239,1,,0.0
+stiff,W1,outside,adaptive MPC,0.0,15,0.0646,1,,0.0
+stiff,W1,outside,adaptive MPC,2.5,0,0.0737,1,,2.5
+stiff,W1,outside,adaptive MPC,2.5,1,0.0899,1,,2.5
+stiff,W1,outside,adaptive MPC,2.5,2,0.1126,1,,2.5
+stiff,W1,outside,adaptive MPC,2.5,3,0.0822,1,,2.5
+stiff,W1,outside,adaptive MPC,2.5,4,0.0929,1,,2.5
+stiff,W1,outside,adaptive MPC,2.5,5,0.1288,1,,2.5
+stiff,W1,outside,adaptive MPC,2.5,6,0.078,1,,2.5
+stiff,W1,outside,adaptive MPC,2.5,7,0.1146,1,,2.5
+stiff,W1,outside,adaptive MPC,2.5,8,0.1056,1,,2.5
+stiff,W1,outside,adaptive MPC,2.5,9,0.1026,1,,2.5
+stiff,W1,outside,adaptive MPC,2.5,10,0.0838,1,,2.5
+stiff,W1,outside,adaptive MPC,2.5,11,0.1267,1,,2.5
+stiff,W1,outside,adaptive MPC,2.5,12,0.0874,1,,2.5
+stiff,W1,outside,adaptive MPC,2.5,13,0.1009,1,,2.5
+stiff,W1,outside,adaptive MPC,2.5,14,0.1144,1,,2.5
+stiff,W1,outside,adaptive MPC,2.5,15,0.0563,1,,2.5
+stiff,W1,inside,reference,0.0,0,0.0948,1,,
+stiff,W1,inside,reference,0.0,1,0.1265,1,,
+stiff,W1,inside,reference,0.0,2,0.1268,1,,
+stiff,W1,inside,reference,0.0,3,0.0802,1,,
+stiff,W1,inside,reference,0.0,4,0.107,1,,
+stiff,W1,inside,reference,0.0,5,0.1183,1,,
+stiff,W1,inside,reference,0.0,6,0.084,1,,
+stiff,W1,inside,reference,0.0,7,0.1081,1,,
+stiff,W1,inside,reference,0.0,8,0.147,1,,
+stiff,W1,inside,reference,0.0,9,0.1323,1,,
+stiff,W1,inside,reference,0.0,10,0.0931,1,,
+stiff,W1,inside,reference,0.0,11,0.112,1,,
+stiff,W1,inside,reference,0.0,12,0.0818,1,,
+stiff,W1,inside,reference,0.0,13,0.089,1,,
+stiff,W1,inside,reference,0.0,14,0.0989,1,,
+stiff,W1,inside,reference,0.0,15,0.0675,1,,
+stiff,W1,inside,reference,1.0,0,0.0849,1,,
+stiff,W1,inside,reference,1.0,1,0.0986,1,,
+stiff,W1,inside,reference,1.0,2,0.122,1,,
+stiff,W1,inside,reference,1.0,3,0.081,1,,
+stiff,W1,inside,reference,1.0,4,0.1051,1,,
+stiff,W1,inside,reference,1.0,5,0.1182,1,,
+stiff,W1,inside,reference,1.0,6,0.0767,1,,
+stiff,W1,inside,reference,1.0,7,0.106,1,,
+stiff,W1,inside,reference,1.0,8,0.1381,1,,
+stiff,W1,inside,reference,1.0,9,0.1206,1,,
+stiff,W1,inside,reference,1.0,10,0.0908,1,,
+stiff,W1,inside,reference,1.0,11,0.1111,1,,
+stiff,W1,inside,reference,1.0,12,0.0819,1,,
+stiff,W1,inside,reference,1.0,13,0.0846,1,,
+stiff,W1,inside,reference,1.0,14,0.1067,1,,
+stiff,W1,inside,reference,1.0,15,0.0652,1,,
+stiff,W1,inside,reference,2.5,0,0.0713,1,,
+stiff,W1,inside,reference,2.5,1,0.0976,1,,
+stiff,W1,inside,reference,2.5,2,0.1097,1,,
+stiff,W1,inside,reference,2.5,3,0.0754,1,,
+stiff,W1,inside,reference,2.5,4,0.0961,1,,
+stiff,W1,inside,reference,2.5,5,0.1166,1,,
+stiff,W1,inside,reference,2.5,6,0.0744,1,,
+stiff,W1,inside,reference,2.5,7,0.0991,1,,
+stiff,W1,inside,reference,2.5,8,0.1232,1,,
+stiff,W1,inside,reference,2.5,9,0.112,1,,
+stiff,W1,inside,reference,2.5,10,0.0939,1,,
+stiff,W1,inside,reference,2.5,11,0.1105,1,,
+stiff,W1,inside,reference,2.5,12,0.0859,1,,
+stiff,W1,inside,reference,2.5,13,0.0838,1,,
+stiff,W1,inside,reference,2.5,14,0.1094,1,,
+stiff,W1,inside,reference,2.5,15,0.0585,1,,
+stiff,W1,outside,reference,0.0,0,0.0792,1,,
+stiff,W1,outside,reference,0.0,1,0.0929,1,,
+stiff,W1,outside,reference,0.0,2,0.1278,1,,
+stiff,W1,outside,reference,0.0,3,0.0837,1,,
+stiff,W1,outside,reference,0.0,4,0.1104,1,,
+stiff,W1,outside,reference,0.0,5,0.1324,1,,
+stiff,W1,outside,reference,0.0,6,0.0804,1,,
+stiff,W1,outside,reference,0.0,7,0.1142,1,,
+stiff,W1,outside,reference,0.0,8,0.1051,1,,
+stiff,W1,outside,reference,0.0,9,0.1137,1,,
+stiff,W1,outside,reference,0.0,10,0.0903,1,,
+stiff,W1,outside,reference,0.0,11,0.125,1,,
+stiff,W1,outside,reference,0.0,12,0.082,1,,
+stiff,W1,outside,reference,0.0,13,0.0912,1,,
+stiff,W1,outside,reference,0.0,14,0.1239,1,,
+stiff,W1,outside,reference,0.0,15,0.0646,1,,
+stiff,W1,outside,reference,2.5,0,0.0721,1,,
+stiff,W1,outside,reference,2.5,1,0.1032,1,,
+stiff,W1,outside,reference,2.5,2,0.1152,1,,
+stiff,W1,outside,reference,2.5,3,0.0766,1,,
+stiff,W1,outside,reference,2.5,4,0.0839,1,,
+stiff,W1,outside,reference,2.5,5,0.1358,1,,
+stiff,W1,outside,reference,2.5,6,0.0807,1,,
+stiff,W1,outside,reference,2.5,7,0.116,1,,
+stiff,W1,outside,reference,2.5,8,0.1046,1,,
+stiff,W1,outside,reference,2.5,9,0.1012,1,,
+stiff,W1,outside,reference,2.5,10,0.0837,1,,
+stiff,W1,outside,reference,2.5,11,0.123,1,,
+stiff,W1,outside,reference,2.5,12,0.088,1,,
+stiff,W1,outside,reference,2.5,13,0.0964,1,,
+stiff,W1,outside,reference,2.5,14,0.1203,1,,
+stiff,W1,outside,reference,2.5,15,0.0658,1,,
+stiff,W1,inside,handover-physics,0.0,0,0.2053,1,,
+stiff,W1,inside,handover-physics,0.0,1,0.3126,1,,
+stiff,W1,inside,handover-physics,0.0,2,0.179,1,,
+stiff,W1,inside,handover-physics,0.0,3,0.5806,1,,
+stiff,W1,inside,handover-physics,0.0,4,0.1448,1,,
+stiff,W1,inside,handover-physics,0.0,5,0.2141,1,,
+stiff,W1,inside,handover-physics,0.0,6,0.1507,1,,
+stiff,W1,inside,handover-physics,0.0,7,0.4526,1,,
+stiff,W1,inside,handover-physics,0.0,8,5.971,0,,
+stiff,W1,inside,handover-physics,0.0,9,0.2234,1,,
+stiff,W1,inside,handover-physics,0.0,10,0.2822,1,,
+stiff,W1,inside,handover-physics,0.0,11,0.2016,1,,
+stiff,W1,inside,handover-physics,0.0,12,0.2646,1,,
+stiff,W1,inside,handover-physics,0.0,13,0.1908,1,,
+stiff,W1,inside,handover-physics,0.0,14,0.2697,1,,
+stiff,W1,inside,handover-physics,0.0,15,0.1758,1,,
+stiff,W1,inside,handover-physics,1.0,0,0.0979,1,0.08,1.0
+stiff,W1,inside,handover-physics,1.0,1,0.1128,1,0.08,1.0
+stiff,W1,inside,handover-physics,1.0,2,0.1106,1,0.08,1.0
+stiff,W1,inside,handover-physics,1.0,3,0.0783,1,0.08,1.0
+stiff,W1,inside,handover-physics,1.0,4,0.0911,1,0.08,1.0
+stiff,W1,inside,handover-physics,1.0,5,0.1052,1,0.08,1.0
+stiff,W1,inside,handover-physics,1.0,6,0.0897,1,0.08,1.0
+stiff,W1,inside,handover-physics,1.0,7,0.1021,1,0.08,1.0
+stiff,W1,inside,handover-physics,1.0,8,0.1416,1,0.08,1.0
+stiff,W1,inside,handover-physics,1.0,9,0.1339,1,0.08,1.0
+stiff,W1,inside,handover-physics,1.0,10,0.0844,1,0.08,1.0
+stiff,W1,inside,handover-physics,1.0,11,0.1173,1,0.08,1.0
+stiff,W1,inside,handover-physics,1.0,12,0.0788,1,0.08,1.0
+stiff,W1,inside,handover-physics,1.0,13,0.0893,1,0.08,1.0
+stiff,W1,inside,handover-physics,1.0,14,0.1013,1,0.08,1.0
+stiff,W1,inside,handover-physics,1.0,15,0.057,1,0.08,1.0
+stiff,W1,inside,handover-physics,2.5,0,0.0842,1,0.08,2.5
+stiff,W1,inside,handover-physics,2.5,1,0.1031,1,0.08,2.5
+stiff,W1,inside,handover-physics,2.5,2,0.1044,1,0.08,2.5
+stiff,W1,inside,handover-physics,2.5,3,0.0751,1,0.08,2.5
+stiff,W1,inside,handover-physics,2.5,4,0.0861,1,0.08,2.5
+stiff,W1,inside,handover-physics,2.5,5,0.104,1,0.08,2.5
+stiff,W1,inside,handover-physics,2.5,6,0.0893,1,0.08,2.5
+stiff,W1,inside,handover-physics,2.5,7,0.0981,1,0.08,2.5
+stiff,W1,inside,handover-physics,2.5,8,0.126,1,0.08,2.5
+stiff,W1,inside,handover-physics,2.5,9,0.1246,1,0.08,2.5
+stiff,W1,inside,handover-physics,2.5,10,0.0899,1,0.08,2.5
+stiff,W1,inside,handover-physics,2.5,11,0.1182,1,0.08,2.5
+stiff,W1,inside,handover-physics,2.5,12,0.0828,1,0.08,2.5
+stiff,W1,inside,handover-physics,2.5,13,0.0885,1,0.08,2.5
+stiff,W1,inside,handover-physics,2.5,14,0.112,1,0.08,2.5
+stiff,W1,inside,handover-physics,2.5,15,0.0493,1,0.08,2.5
+stiff,W1,outside,handover-physics,0.0,0,29.8686,0,,
+stiff,W1,outside,handover-physics,0.0,1,1.639,0,,
+stiff,W1,outside,handover-physics,0.0,2,0.1054,1,0.96,0.0
+stiff,W1,outside,handover-physics,0.0,3,29.0327,0,,
+stiff,W1,outside,handover-physics,0.0,4,5.9917,0,,
+stiff,W1,outside,handover-physics,0.0,5,1.0246,0,,
+stiff,W1,outside,handover-physics,0.0,6,3.7401,0,,
+stiff,W1,outside,handover-physics,0.0,7,20.6931,0,,
+stiff,W1,outside,handover-physics,0.0,8,3.1291,0,,
+stiff,W1,outside,handover-physics,0.0,9,0.0855,1,1.28,0.0
+stiff,W1,outside,handover-physics,0.0,10,29.0282,0,,
+stiff,W1,outside,handover-physics,0.0,11,0.691,1,,
+stiff,W1,outside,handover-physics,0.0,12,20.9561,0,,
+stiff,W1,outside,handover-physics,0.0,13,0.2092,1,,
+stiff,W1,outside,handover-physics,0.0,14,26.1866,0,,
+stiff,W1,outside,handover-physics,0.0,15,19.0649,0,,
+stiff,W1,outside,handover-physics,2.5,0,0.0771,1,0.08,2.5
+stiff,W1,outside,handover-physics,2.5,1,0.098,1,0.08,2.5
+stiff,W1,outside,handover-physics,2.5,2,0.116,1,0.08,2.5
+stiff,W1,outside,handover-physics,2.5,3,0.0744,1,0.08,2.5
+stiff,W1,outside,handover-physics,2.5,4,0.0916,1,0.08,2.5
+stiff,W1,outside,handover-physics,2.5,5,0.107,1,0.08,2.5
+stiff,W1,outside,handover-physics,2.5,6,0.0921,1,0.08,2.5
+stiff,W1,outside,handover-physics,2.5,7,0.11,1,0.08,2.5
+stiff,W1,outside,handover-physics,2.5,8,0.1093,1,0.08,2.5
+stiff,W1,outside,handover-physics,2.5,9,0.1085,1,0.08,2.5
+stiff,W1,outside,handover-physics,2.5,10,0.0909,1,0.08,2.5
+stiff,W1,outside,handover-physics,2.5,11,0.1339,1,0.08,2.5
+stiff,W1,outside,handover-physics,2.5,12,0.0803,1,0.08,2.5
+stiff,W1,outside,handover-physics,2.5,13,0.099,1,0.08,2.5
+stiff,W1,outside,handover-physics,2.5,14,0.1222,1,0.08,2.5
+stiff,W1,outside,handover-physics,2.5,15,0.058,1,0.08,2.5
+stiff,W1,inside,handover-learned,0.0,0,0.2053,1,,
+stiff,W1,inside,handover-learned,0.0,1,0.3126,1,,
+stiff,W1,inside,handover-learned,0.0,2,0.179,1,,
+stiff,W1,inside,handover-learned,0.0,3,0.5806,1,,
+stiff,W1,inside,handover-learned,0.0,4,0.1448,1,,
+stiff,W1,inside,handover-learned,0.0,5,0.2141,1,,
+stiff,W1,inside,handover-learned,0.0,6,0.1507,1,,
+stiff,W1,inside,handover-learned,0.0,7,0.4526,1,,
+stiff,W1,inside,handover-learned,0.0,8,5.971,0,,
+stiff,W1,inside,handover-learned,0.0,9,0.2234,1,,
+stiff,W1,inside,handover-learned,0.0,10,0.2822,1,,
+stiff,W1,inside,handover-learned,0.0,11,0.2016,1,,
+stiff,W1,inside,handover-learned,0.0,12,0.2646,1,,
+stiff,W1,inside,handover-learned,0.0,13,0.1908,1,,
+stiff,W1,inside,handover-learned,0.0,14,0.2697,1,,
+stiff,W1,inside,handover-learned,0.0,15,0.1758,1,,
+stiff,W1,inside,handover-learned,1.0,0,0.0979,1,0.08,1.0
+stiff,W1,inside,handover-learned,1.0,1,0.1128,1,0.08,1.0
+stiff,W1,inside,handover-learned,1.0,2,0.1106,1,0.08,1.0
+stiff,W1,inside,handover-learned,1.0,3,0.0783,1,0.08,1.0
+stiff,W1,inside,handover-learned,1.0,4,0.0911,1,0.08,1.0
+stiff,W1,inside,handover-learned,1.0,5,0.1052,1,0.08,1.0
+stiff,W1,inside,handover-learned,1.0,6,0.0897,1,0.08,1.0
+stiff,W1,inside,handover-learned,1.0,7,0.1021,1,0.08,1.0
+stiff,W1,inside,handover-learned,1.0,8,0.1416,1,0.08,1.0
+stiff,W1,inside,handover-learned,1.0,9,0.1339,1,0.08,1.0
+stiff,W1,inside,handover-learned,1.0,10,0.0844,1,0.08,1.0
+stiff,W1,inside,handover-learned,1.0,11,0.1173,1,0.08,1.0
+stiff,W1,inside,handover-learned,1.0,12,0.0788,1,0.08,1.0
+stiff,W1,inside,handover-learned,1.0,13,0.0893,1,0.08,1.0
+stiff,W1,inside,handover-learned,1.0,14,0.1013,1,0.08,1.0
+stiff,W1,inside,handover-learned,1.0,15,0.057,1,0.08,1.0
+stiff,W1,inside,handover-learned,2.5,0,0.0842,1,0.08,2.5
+stiff,W1,inside,handover-learned,2.5,1,0.1031,1,0.08,2.5
+stiff,W1,inside,handover-learned,2.5,2,0.1044,1,0.08,2.5
+stiff,W1,inside,handover-learned,2.5,3,0.0751,1,0.08,2.5
+stiff,W1,inside,handover-learned,2.5,4,0.0861,1,0.08,2.5
+stiff,W1,inside,handover-learned,2.5,5,0.104,1,0.08,2.5
+stiff,W1,inside,handover-learned,2.5,6,0.0893,1,0.08,2.5
+stiff,W1,inside,handover-learned,2.5,7,0.0981,1,0.08,2.5
+stiff,W1,inside,handover-learned,2.5,8,0.126,1,0.08,2.5
+stiff,W1,inside,handover-learned,2.5,9,0.1246,1,0.08,2.5
+stiff,W1,inside,handover-learned,2.5,10,0.0899,1,0.08,2.5
+stiff,W1,inside,handover-learned,2.5,11,0.1182,1,0.08,2.5
+stiff,W1,inside,handover-learned,2.5,12,0.0828,1,0.08,2.5
+stiff,W1,inside,handover-learned,2.5,13,0.0885,1,0.08,2.5
+stiff,W1,inside,handover-learned,2.5,14,0.112,1,0.08,2.5
+stiff,W1,inside,handover-learned,2.5,15,0.0493,1,0.08,2.5
+stiff,W1,outside,handover-learned,0.0,0,29.8686,0,,
+stiff,W1,outside,handover-learned,0.0,1,1.639,0,,
+stiff,W1,outside,handover-learned,0.0,2,0.1054,1,0.96,0.0
+stiff,W1,outside,handover-learned,0.0,3,29.0327,0,,
+stiff,W1,outside,handover-learned,0.0,4,5.9917,0,,
+stiff,W1,outside,handover-learned,0.0,5,1.0246,0,,
+stiff,W1,outside,handover-learned,0.0,6,3.7401,0,,
+stiff,W1,outside,handover-learned,0.0,7,20.6931,0,,
+stiff,W1,outside,handover-learned,0.0,8,3.1291,0,,
+stiff,W1,outside,handover-learned,0.0,9,0.0855,1,1.28,0.0
+stiff,W1,outside,handover-learned,0.0,10,29.0282,0,,
+stiff,W1,outside,handover-learned,0.0,11,0.691,1,,
+stiff,W1,outside,handover-learned,0.0,12,20.9561,0,,
+stiff,W1,outside,handover-learned,0.0,13,0.2092,1,,
+stiff,W1,outside,handover-learned,0.0,14,26.1866,0,,
+stiff,W1,outside,handover-learned,0.0,15,19.0649,0,,
+stiff,W1,outside,handover-learned,2.5,0,0.0771,1,0.08,2.5
+stiff,W1,outside,handover-learned,2.5,1,0.098,1,0.08,2.5
+stiff,W1,outside,handover-learned,2.5,2,0.116,1,0.08,2.5
+stiff,W1,outside,handover-learned,2.5,3,0.0744,1,0.08,2.5
+stiff,W1,outside,handover-learned,2.5,4,0.0916,1,0.08,2.5
+stiff,W1,outside,handover-learned,2.5,5,0.107,1,0.08,2.5
+stiff,W1,outside,handover-learned,2.5,6,0.0921,1,0.08,2.5
+stiff,W1,outside,handover-learned,2.5,7,0.11,1,0.08,2.5
+stiff,W1,outside,handover-learned,2.5,8,0.1093,1,0.08,2.5
+stiff,W1,outside,handover-learned,2.5,9,0.1085,1,0.08,2.5
+stiff,W1,outside,handover-learned,2.5,10,0.0909,1,0.08,2.5
+stiff,W1,outside,handover-learned,2.5,11,0.1339,1,0.08,2.5
+stiff,W1,outside,handover-learned,2.5,12,0.0803,1,0.08,2.5
+stiff,W1,outside,handover-learned,2.5,13,0.099,1,0.08,2.5
+stiff,W1,outside,handover-learned,2.5,14,0.1222,1,0.08,2.5
+stiff,W1,outside,handover-learned,2.5,15,0.058,1,0.08,2.5
+stiff,W1,inside,handover-consistency,0.0,0,0.2053,1,,
+stiff,W1,inside,handover-consistency,0.0,1,0.3126,1,,
+stiff,W1,inside,handover-consistency,0.0,2,0.179,1,,
+stiff,W1,inside,handover-consistency,0.0,3,0.5806,1,,
+stiff,W1,inside,handover-consistency,0.0,4,0.1448,1,,
+stiff,W1,inside,handover-consistency,0.0,5,0.2141,1,,
+stiff,W1,inside,handover-consistency,0.0,6,0.1507,1,,
+stiff,W1,inside,handover-consistency,0.0,7,0.4526,1,,
+stiff,W1,inside,handover-consistency,0.0,8,5.971,0,,
+stiff,W1,inside,handover-consistency,0.0,9,0.2234,1,,
+stiff,W1,inside,handover-consistency,0.0,10,0.2822,1,,
+stiff,W1,inside,handover-consistency,0.0,11,0.2016,1,,
+stiff,W1,inside,handover-consistency,0.0,12,0.2646,1,,
+stiff,W1,inside,handover-consistency,0.0,13,0.1908,1,,
+stiff,W1,inside,handover-consistency,0.0,14,0.2697,1,,
+stiff,W1,inside,handover-consistency,0.0,15,0.1758,1,,
+stiff,W1,inside,handover-consistency,1.0,0,0.1364,1,0.48,1.0
+stiff,W1,inside,handover-consistency,1.0,1,0.0914,1,0.4,1.0
+stiff,W1,inside,handover-consistency,1.0,2,1.0127,0,,
+stiff,W1,inside,handover-consistency,1.0,3,1.8141,0,,
+stiff,W1,inside,handover-consistency,1.0,4,0.1324,1,1.04,1.0
+stiff,W1,inside,handover-consistency,1.0,5,1.9725,0,,
+stiff,W1,inside,handover-consistency,1.0,6,0.15,1,1.04,1.0
+stiff,W1,inside,handover-consistency,1.0,7,0.1157,1,1.04,1.0
+stiff,W1,inside,handover-consistency,1.0,8,8.7734,1,2.64,1.0
+stiff,W1,inside,handover-consistency,1.0,9,0.1091,1,1.6,1.0
+stiff,W1,inside,handover-consistency,1.0,10,2.3131,0,,
+stiff,W1,inside,handover-consistency,1.0,11,2.6809,1,2.88,1.0
+stiff,W1,inside,handover-consistency,1.0,12,0.1029,1,1.2,1.0
+stiff,W1,inside,handover-consistency,1.0,13,1.9335,1,,
+stiff,W1,inside,handover-consistency,1.0,14,1.4903,0,,
+stiff,W1,inside,handover-consistency,1.0,15,1.8619,0,,
+stiff,W1,inside,handover-consistency,2.5,0,0.1106,1,0.4,2.5
+stiff,W1,inside,handover-consistency,2.5,1,0.0961,1,0.32,2.5
+stiff,W1,inside,handover-consistency,2.5,2,0.1018,1,0.72,2.5
+stiff,W1,inside,handover-consistency,2.5,3,0.118,1,0.8,2.5
+stiff,W1,inside,handover-consistency,2.5,4,0.1399,1,0.88,2.5
+stiff,W1,inside,handover-consistency,2.5,5,0.0958,1,1.6,2.5
+stiff,W1,inside,handover-consistency,2.5,6,0.1384,1,0.64,2.5
+stiff,W1,inside,handover-consistency,2.5,7,0.0639,1,0.72,2.5
+stiff,W1,inside,handover-consistency,2.5,8,0.1381,1,0.56,2.5
+stiff,W1,inside,handover-consistency,2.5,9,0.0788,1,0.64,2.5
+stiff,W1,inside,handover-consistency,2.5,10,0.1389,1,1.2,2.5
+stiff,W1,inside,handover-consistency,2.5,11,0.1039,1,0.64,2.5
+stiff,W1,inside,handover-consistency,2.5,12,0.1025,1,0.48,2.5
+stiff,W1,inside,handover-consistency,2.5,13,0.0934,1,0.88,2.5
+stiff,W1,inside,handover-consistency,2.5,14,0.123,1,0.96,2.5
+stiff,W1,inside,handover-consistency,2.5,15,0.0856,1,0.4,2.5
+stiff,W1,outside,handover-consistency,0.0,0,0.1325,1,0.32,0.0
+stiff,W1,outside,handover-consistency,0.0,1,0.0986,1,0.32,0.0
+stiff,W1,outside,handover-consistency,0.0,2,0.7939,1,2.48,0.0
+stiff,W1,outside,handover-consistency,0.0,3,0.1591,1,0.8,0.0
+stiff,W1,outside,handover-consistency,0.0,4,0.0853,1,0.4,0.0
+stiff,W1,outside,handover-consistency,0.0,5,0.103,1,0.32,0.0
+stiff,W1,outside,handover-consistency,0.0,6,0.1262,1,0.32,0.0
+stiff,W1,outside,handover-consistency,0.0,7,0.0943,1,0.4,0.0
+stiff,W1,outside,handover-consistency,0.0,8,0.1162,1,0.32,0.0
+stiff,W1,outside,handover-consistency,0.0,9,0.0837,1,0.48,0.0
+stiff,W1,outside,handover-consistency,0.0,10,0.061,1,0.32,0.0
+stiff,W1,outside,handover-consistency,0.0,11,0.1272,1,0.4,0.0
+stiff,W1,outside,handover-consistency,0.0,12,20.9561,0,,
+stiff,W1,outside,handover-consistency,0.0,13,0.1361,1,0.96,0.0
+stiff,W1,outside,handover-consistency,0.0,14,0.1709,1,0.32,0.0
+stiff,W1,outside,handover-consistency,0.0,15,0.0846,1,0.32,0.0
+stiff,W1,outside,handover-consistency,2.5,0,0.0997,1,0.32,2.5
+stiff,W1,outside,handover-consistency,2.5,1,0.0836,1,0.32,2.5
+stiff,W1,outside,handover-consistency,2.5,2,0.1188,1,0.4,2.5
+stiff,W1,outside,handover-consistency,2.5,3,0.0932,1,0.32,2.5
+stiff,W1,outside,handover-consistency,2.5,4,0.0679,1,0.32,2.5
+stiff,W1,outside,handover-consistency,2.5,5,0.1006,1,0.32,2.5
+stiff,W1,outside,handover-consistency,2.5,6,0.1223,1,0.32,2.5
+stiff,W1,outside,handover-consistency,2.5,7,0.1015,1,0.4,2.5
+stiff,W1,outside,handover-consistency,2.5,8,0.1087,1,0.32,2.5
+stiff,W1,outside,handover-consistency,2.5,9,0.1119,1,0.32,2.5
+stiff,W1,outside,handover-consistency,2.5,10,0.0809,1,0.32,2.5
+stiff,W1,outside,handover-consistency,2.5,11,0.1157,1,0.4,2.5
+stiff,W1,outside,handover-consistency,2.5,12,0.1043,1,0.56,2.5
+stiff,W1,outside,handover-consistency,2.5,13,0.0885,1,0.32,2.5
+stiff,W1,outside,handover-consistency,2.5,14,0.1257,1,0.32,2.5
+stiff,W1,outside,handover-consistency,2.5,15,0.0709,1,0.32,2.5
+stiff,W2,inside,adaptive MPC,0.0,0,0.0948,1,,0.0
+stiff,W2,inside,adaptive MPC,0.0,1,0.1265,1,,0.0
+stiff,W2,inside,adaptive MPC,0.0,2,0.1268,1,,0.0
+stiff,W2,inside,adaptive MPC,0.0,3,0.0802,1,,0.0
+stiff,W2,inside,adaptive MPC,0.0,4,0.107,1,,0.0
+stiff,W2,inside,adaptive MPC,0.0,5,0.1183,1,,0.0
+stiff,W2,inside,adaptive MPC,0.0,6,0.084,1,,0.0
+stiff,W2,inside,adaptive MPC,0.0,7,0.1081,1,,0.0
+stiff,W2,inside,adaptive MPC,0.0,8,0.147,1,,0.0
+stiff,W2,inside,adaptive MPC,0.0,9,0.1323,1,,0.0
+stiff,W2,inside,adaptive MPC,0.0,10,0.0931,1,,0.0
+stiff,W2,inside,adaptive MPC,0.0,11,0.112,1,,0.0
+stiff,W2,inside,adaptive MPC,0.0,12,0.0818,1,,0.0
+stiff,W2,inside,adaptive MPC,0.0,13,0.089,1,,0.0
+stiff,W2,inside,adaptive MPC,0.0,14,0.0989,1,,0.0
+stiff,W2,inside,adaptive MPC,0.0,15,0.0675,1,,0.0
+stiff,W2,inside,adaptive MPC,1.0,0,0.0804,1,,0.95
+stiff,W2,inside,adaptive MPC,1.0,1,0.1508,1,,0.955
+stiff,W2,inside,adaptive MPC,1.0,2,0.1149,1,,0.885
+stiff,W2,inside,adaptive MPC,1.0,3,0.074,1,,0.914
+stiff,W2,inside,adaptive MPC,1.0,4,0.1007,1,,0.912
+stiff,W2,inside,adaptive MPC,1.0,5,0.2188,1,,0.906
+stiff,W2,inside,adaptive MPC,1.0,6,0.0906,1,,0.96
+stiff,W2,inside,adaptive MPC,1.0,7,0.1054,1,,0.921
+stiff,W2,inside,adaptive MPC,1.0,8,0.1464,1,,0.942
+stiff,W2,inside,adaptive MPC,1.0,9,0.1279,1,,0.928
+stiff,W2,inside,adaptive MPC,1.0,10,0.1075,1,,0.87
+stiff,W2,inside,adaptive MPC,1.0,11,0.1095,1,,0.926
+stiff,W2,inside,adaptive MPC,1.0,12,0.1163,1,,0.864
+stiff,W2,inside,adaptive MPC,1.0,13,0.0827,1,,0.884
+stiff,W2,inside,adaptive MPC,1.0,14,0.1113,1,,0.911
+stiff,W2,inside,adaptive MPC,1.0,15,0.0738,1,,0.909
+stiff,W2,inside,adaptive MPC,2.5,0,0.0765,1,,2.316
+stiff,W2,inside,adaptive MPC,2.5,1,0.1509,1,,2.321
+stiff,W2,inside,adaptive MPC,2.5,2,0.1506,1,,2.157
+stiff,W2,inside,adaptive MPC,2.5,3,0.0781,1,,2.239
+stiff,W2,inside,adaptive MPC,2.5,4,0.1319,1,,2.165
+stiff,W2,inside,adaptive MPC,2.5,5,0.377,1,,2.044
+stiff,W2,inside,adaptive MPC,2.5,6,0.0903,1,,2.324
+stiff,W2,inside,adaptive MPC,2.5,7,0.1337,1,,2.227
+stiff,W2,inside,adaptive MPC,2.5,8,0.0986,1,,2.143
+stiff,W2,inside,adaptive MPC,2.5,9,0.1458,1,,2.275
+stiff,W2,inside,adaptive MPC,2.5,10,0.1707,1,,2.091
+stiff,W2,inside,adaptive MPC,2.5,11,0.1292,1,,2.286
+stiff,W2,inside,adaptive MPC,2.5,12,0.1894,1,,2.079
+stiff,W2,inside,adaptive MPC,2.5,13,0.1103,1,,2.104
+stiff,W2,inside,adaptive MPC,2.5,14,0.1727,1,,2.081
+stiff,W2,inside,adaptive MPC,2.5,15,0.0865,1,,2.265
+stiff,W2,outside,adaptive MPC,0.0,0,0.0792,1,,0.0
+stiff,W2,outside,adaptive MPC,0.0,1,0.0929,1,,0.0
+stiff,W2,outside,adaptive MPC,0.0,2,0.1278,1,,0.0
+stiff,W2,outside,adaptive MPC,0.0,3,0.0837,1,,0.0
+stiff,W2,outside,adaptive MPC,0.0,4,0.1104,1,,0.0
+stiff,W2,outside,adaptive MPC,0.0,5,0.1324,1,,0.0
+stiff,W2,outside,adaptive MPC,0.0,6,0.0804,1,,0.0
+stiff,W2,outside,adaptive MPC,0.0,7,0.1142,1,,0.0
+stiff,W2,outside,adaptive MPC,0.0,8,0.1051,1,,0.0
+stiff,W2,outside,adaptive MPC,0.0,9,0.1137,1,,0.0
+stiff,W2,outside,adaptive MPC,0.0,10,0.0903,1,,0.0
+stiff,W2,outside,adaptive MPC,0.0,11,0.125,1,,0.0
+stiff,W2,outside,adaptive MPC,0.0,12,0.082,1,,0.0
+stiff,W2,outside,adaptive MPC,0.0,13,0.0912,1,,0.0
+stiff,W2,outside,adaptive MPC,0.0,14,0.1239,1,,0.0
+stiff,W2,outside,adaptive MPC,0.0,15,0.0646,1,,0.0
+stiff,W2,outside,adaptive MPC,2.5,0,0.0924,1,,1.977
+stiff,W2,outside,adaptive MPC,2.5,1,0.0942,1,,2.097
+stiff,W2,outside,adaptive MPC,2.5,2,0.2005,1,,2.345
+stiff,W2,outside,adaptive MPC,2.5,3,0.1777,1,,1.956
+stiff,W2,outside,adaptive MPC,2.5,4,0.1278,1,,2.28
+stiff,W2,outside,adaptive MPC,2.5,5,0.1527,1,,2.29
+stiff,W2,outside,adaptive MPC,2.5,6,0.1951,1,,2.11
+stiff,W2,outside,adaptive MPC,2.5,7,0.1846,1,,2.022
+stiff,W2,outside,adaptive MPC,2.5,8,0.109,1,,2.194
+stiff,W2,outside,adaptive MPC,2.5,9,0.3775,1,,2.044
+stiff,W2,outside,adaptive MPC,2.5,10,0.2593,1,,2.085
+stiff,W2,outside,adaptive MPC,2.5,11,0.1192,1,,2.271
+stiff,W2,outside,adaptive MPC,2.5,12,0.1235,1,,2.272
+stiff,W2,outside,adaptive MPC,2.5,13,0.1828,1,,1.997
+stiff,W2,outside,adaptive MPC,2.5,14,0.1475,1,,2.134
+stiff,W2,outside,adaptive MPC,2.5,15,0.199,1,,2.359
+stiff,W2,inside,reference,0.0,0,0.0948,1,,
+stiff,W2,inside,reference,0.0,1,0.1265,1,,
+stiff,W2,inside,reference,0.0,2,0.1268,1,,
+stiff,W2,inside,reference,0.0,3,0.0802,1,,
+stiff,W2,inside,reference,0.0,4,0.107,1,,
+stiff,W2,inside,reference,0.0,5,0.1183,1,,
+stiff,W2,inside,reference,0.0,6,0.084,1,,
+stiff,W2,inside,reference,0.0,7,0.1081,1,,
+stiff,W2,inside,reference,0.0,8,0.147,1,,
+stiff,W2,inside,reference,0.0,9,0.1323,1,,
+stiff,W2,inside,reference,0.0,10,0.0931,1,,
+stiff,W2,inside,reference,0.0,11,0.112,1,,
+stiff,W2,inside,reference,0.0,12,0.0818,1,,
+stiff,W2,inside,reference,0.0,13,0.089,1,,
+stiff,W2,inside,reference,0.0,14,0.0989,1,,
+stiff,W2,inside,reference,0.0,15,0.0675,1,,
+stiff,W2,inside,reference,1.0,0,0.0832,1,,
+stiff,W2,inside,reference,1.0,1,0.098,1,,
+stiff,W2,inside,reference,1.0,2,0.121,1,,
+stiff,W2,inside,reference,1.0,3,0.0798,1,,
+stiff,W2,inside,reference,1.0,4,0.1066,1,,
+stiff,W2,inside,reference,1.0,5,0.1184,1,,
+stiff,W2,inside,reference,1.0,6,0.0771,1,,
+stiff,W2,inside,reference,1.0,7,0.1059,1,,
+stiff,W2,inside,reference,1.0,8,0.1359,1,,
+stiff,W2,inside,reference,1.0,9,0.1207,1,,
+stiff,W2,inside,reference,1.0,10,0.0898,1,,
+stiff,W2,inside,reference,1.0,11,0.1109,1,,
+stiff,W2,inside,reference,1.0,12,0.0837,1,,
+stiff,W2,inside,reference,1.0,13,0.0839,1,,
+stiff,W2,inside,reference,1.0,14,0.1067,1,,
+stiff,W2,inside,reference,1.0,15,0.0658,1,,
+stiff,W2,inside,reference,2.5,0,0.0717,1,,
+stiff,W2,inside,reference,2.5,1,0.0955,1,,
+stiff,W2,inside,reference,2.5,2,0.1064,1,,
+stiff,W2,inside,reference,2.5,3,0.0687,1,,
+stiff,W2,inside,reference,2.5,4,0.0979,1,,
+stiff,W2,inside,reference,2.5,5,0.1144,1,,
+stiff,W2,inside,reference,2.5,6,0.0774,1,,
+stiff,W2,inside,reference,2.5,7,0.1006,1,,
+stiff,W2,inside,reference,2.5,8,0.1263,1,,
+stiff,W2,inside,reference,2.5,9,0.1139,1,,
+stiff,W2,inside,reference,2.5,10,0.0906,1,,
+stiff,W2,inside,reference,2.5,11,0.1108,1,,
+stiff,W2,inside,reference,2.5,12,0.0903,1,,
+stiff,W2,inside,reference,2.5,13,0.0834,1,,
+stiff,W2,inside,reference,2.5,14,0.1064,1,,
+stiff,W2,inside,reference,2.5,15,0.059,1,,
+stiff,W2,outside,reference,0.0,0,0.0792,1,,
+stiff,W2,outside,reference,0.0,1,0.0929,1,,
+stiff,W2,outside,reference,0.0,2,0.1278,1,,
+stiff,W2,outside,reference,0.0,3,0.0837,1,,
+stiff,W2,outside,reference,0.0,4,0.1104,1,,
+stiff,W2,outside,reference,0.0,5,0.1324,1,,
+stiff,W2,outside,reference,0.0,6,0.0804,1,,
+stiff,W2,outside,reference,0.0,7,0.1142,1,,
+stiff,W2,outside,reference,0.0,8,0.1051,1,,
+stiff,W2,outside,reference,0.0,9,0.1137,1,,
+stiff,W2,outside,reference,0.0,10,0.0903,1,,
+stiff,W2,outside,reference,0.0,11,0.125,1,,
+stiff,W2,outside,reference,0.0,12,0.082,1,,
+stiff,W2,outside,reference,0.0,13,0.0912,1,,
+stiff,W2,outside,reference,0.0,14,0.1239,1,,
+stiff,W2,outside,reference,0.0,15,0.0646,1,,
+stiff,W2,outside,reference,2.5,0,0.0674,1,,
+stiff,W2,outside,reference,2.5,1,0.1011,1,,
+stiff,W2,outside,reference,2.5,2,0.1098,1,,
+stiff,W2,outside,reference,2.5,3,0.0783,1,,
+stiff,W2,outside,reference,2.5,4,0.0959,1,,
+stiff,W2,outside,reference,2.5,5,0.1284,1,,
+stiff,W2,outside,reference,2.5,6,0.0816,1,,
+stiff,W2,outside,reference,2.5,7,0.1127,1,,
+stiff,W2,outside,reference,2.5,8,0.104,1,,
+stiff,W2,outside,reference,2.5,9,0.1022,1,,
+stiff,W2,outside,reference,2.5,10,0.084,1,,
+stiff,W2,outside,reference,2.5,11,0.1268,1,,
+stiff,W2,outside,reference,2.5,12,0.0961,1,,
+stiff,W2,outside,reference,2.5,13,0.0994,1,,
+stiff,W2,outside,reference,2.5,14,0.1205,1,,
+stiff,W2,outside,reference,2.5,15,0.0651,1,,
+stiff,W2,inside,handover-physics,0.0,0,0.2053,1,,
+stiff,W2,inside,handover-physics,0.0,1,0.3126,1,,
+stiff,W2,inside,handover-physics,0.0,2,0.179,1,,
+stiff,W2,inside,handover-physics,0.0,3,0.5806,1,,
+stiff,W2,inside,handover-physics,0.0,4,0.1448,1,,
+stiff,W2,inside,handover-physics,0.0,5,0.0801,1,0.8,0.0
+stiff,W2,inside,handover-physics,0.0,6,0.1507,1,,
+stiff,W2,inside,handover-physics,0.0,7,0.4526,1,,
+stiff,W2,inside,handover-physics,0.0,8,5.971,0,,
+stiff,W2,inside,handover-physics,0.0,9,0.2234,1,,
+stiff,W2,inside,handover-physics,0.0,10,0.2822,1,,
+stiff,W2,inside,handover-physics,0.0,11,0.2016,1,,
+stiff,W2,inside,handover-physics,0.0,12,0.1009,1,0.8,0.0
+stiff,W2,inside,handover-physics,0.0,13,0.1908,1,,
+stiff,W2,inside,handover-physics,0.0,14,0.2697,1,,
+stiff,W2,inside,handover-physics,0.0,15,0.1758,1,,
+stiff,W2,inside,handover-physics,1.0,0,0.0831,1,0.08,0.919
+stiff,W2,inside,handover-physics,1.0,1,0.1333,1,0.08,0.911
+stiff,W2,inside,handover-physics,1.0,2,0.171,1,0.08,0.902
+stiff,W2,inside,handover-physics,1.0,3,0.0721,1,0.08,0.919
+stiff,W2,inside,handover-physics,1.0,4,0.1016,1,0.08,0.902
+stiff,W2,inside,handover-physics,1.0,5,0.1695,1,0.08,0.928
+stiff,W2,inside,handover-physics,1.0,6,0.0986,1,0.08,0.89
+stiff,W2,inside,handover-physics,1.0,7,0.1038,1,0.08,0.92
+stiff,W2,inside,handover-physics,1.0,8,0.151,1,0.08,0.955
+stiff,W2,inside,handover-physics,1.0,9,0.1496,1,0.08,0.926
+stiff,W2,inside,handover-physics,1.0,10,0.0996,1,0.08,0.858
+stiff,W2,inside,handover-physics,1.0,11,0.1261,1,0.08,0.947
+stiff,W2,inside,handover-physics,1.0,12,0.1002,1,0.08,0.883
+stiff,W2,inside,handover-physics,1.0,13,0.124,1,0.08,0.904
+stiff,W2,inside,handover-physics,1.0,14,0.107,1,0.08,0.937
+stiff,W2,inside,handover-physics,1.0,15,0.0587,1,0.08,0.923
+stiff,W2,inside,handover-physics,2.5,0,0.1147,1,0.08,2.207
+stiff,W2,inside,handover-physics,2.5,1,0.2369,1,0.08,2.127
+stiff,W2,inside,handover-physics,2.5,2,0.1731,1,0.08,2.202
+stiff,W2,inside,handover-physics,2.5,3,0.0736,1,0.08,2.229
+stiff,W2,inside,handover-physics,2.5,4,0.1351,1,0.08,2.137
+stiff,W2,inside,handover-physics,2.5,5,0.2333,1,0.08,2.103
+stiff,W2,inside,handover-physics,2.5,6,0.1533,1,0.08,2.203
+stiff,W2,inside,handover-physics,2.5,7,0.1518,1,0.08,2.219
+stiff,W2,inside,handover-physics,2.5,8,0.1126,1,0.08,2.282
+stiff,W2,inside,handover-physics,2.5,9,0.1909,1,0.08,2.259
+stiff,W2,inside,handover-physics,2.5,10,0.1597,1,0.08,2.086
+stiff,W2,inside,handover-physics,2.5,11,0.1366,1,0.08,2.293
+stiff,W2,inside,handover-physics,2.5,12,0.1418,1,0.08,2.162
+stiff,W2,inside,handover-physics,2.5,13,0.1846,1,0.08,2.064
+stiff,W2,inside,handover-physics,2.5,14,0.0859,1,0.08,2.175
+stiff,W2,inside,handover-physics,2.5,15,0.0725,1,0.08,2.27
+stiff,W2,outside,handover-physics,0.0,0,29.8686,0,,
+stiff,W2,outside,handover-physics,0.0,1,1.639,0,,
+stiff,W2,outside,handover-physics,0.0,2,0.1191,1,1.52,0.0
+stiff,W2,outside,handover-physics,0.0,3,29.0327,0,,
+stiff,W2,outside,handover-physics,0.0,4,5.9917,0,,
+stiff,W2,outside,handover-physics,0.0,5,0.1352,1,1.36,0.0
+stiff,W2,outside,handover-physics,0.0,6,3.7401,0,,
+stiff,W2,outside,handover-physics,0.0,7,20.6931,0,,
+stiff,W2,outside,handover-physics,0.0,8,3.1291,0,,
+stiff,W2,outside,handover-physics,0.0,9,0.0897,1,1.52,0.0
+stiff,W2,outside,handover-physics,0.0,10,29.0282,0,,
+stiff,W2,outside,handover-physics,0.0,11,0.691,1,,
+stiff,W2,outside,handover-physics,0.0,12,20.9561,0,,
+stiff,W2,outside,handover-physics,0.0,13,0.2092,1,,
+stiff,W2,outside,handover-physics,0.0,14,26.1866,0,,
+stiff,W2,outside,handover-physics,0.0,15,19.0649,0,,
+stiff,W2,outside,handover-physics,2.5,0,0.1076,1,0.08,1.962
+stiff,W2,outside,handover-physics,2.5,1,0.075,1,0.08,2.028
+stiff,W2,outside,handover-physics,2.5,2,0.1558,1,0.08,2.327
+stiff,W2,outside,handover-physics,2.5,3,0.2132,1,0.08,1.985
+stiff,W2,outside,handover-physics,2.5,4,0.0805,1,0.08,2.244
+stiff,W2,outside,handover-physics,2.5,5,0.1534,1,0.08,2.29
+stiff,W2,outside,handover-physics,2.5,6,0.1909,1,0.08,2.02
+stiff,W2,outside,handover-physics,2.5,7,0.1724,1,0.08,1.868
+stiff,W2,outside,handover-physics,2.5,8,0.1953,1,0.08,2.217
+stiff,W2,outside,handover-physics,2.5,9,0.3027,1,0.08,2.056
+stiff,W2,outside,handover-physics,2.5,10,0.2429,1,0.08,2.051
+stiff,W2,outside,handover-physics,2.5,11,0.1261,1,0.08,2.223
+stiff,W2,outside,handover-physics,2.5,12,0.1608,1,0.08,2.328
+stiff,W2,outside,handover-physics,2.5,13,0.208,1,0.08,1.877
+stiff,W2,outside,handover-physics,2.5,14,0.3208,1,0.08,2.212
+stiff,W2,outside,handover-physics,2.5,15,0.1666,1,0.08,2.356
+stiff,W2,inside,handover-learned,0.0,0,0.2053,1,,
+stiff,W2,inside,handover-learned,0.0,1,0.3126,1,,
+stiff,W2,inside,handover-learned,0.0,2,0.179,1,,
+stiff,W2,inside,handover-learned,0.0,3,0.5806,1,,
+stiff,W2,inside,handover-learned,0.0,4,0.1448,1,,
+stiff,W2,inside,handover-learned,0.0,5,0.0801,1,0.8,0.0
+stiff,W2,inside,handover-learned,0.0,6,0.1507,1,,
+stiff,W2,inside,handover-learned,0.0,7,0.4526,1,,
+stiff,W2,inside,handover-learned,0.0,8,5.971,0,,
+stiff,W2,inside,handover-learned,0.0,9,0.2234,1,,
+stiff,W2,inside,handover-learned,0.0,10,0.2822,1,,
+stiff,W2,inside,handover-learned,0.0,11,0.2016,1,,
+stiff,W2,inside,handover-learned,0.0,12,0.1009,1,0.8,0.0
+stiff,W2,inside,handover-learned,0.0,13,0.1908,1,,
+stiff,W2,inside,handover-learned,0.0,14,0.2697,1,,
+stiff,W2,inside,handover-learned,0.0,15,0.1758,1,,
+stiff,W2,inside,handover-learned,1.0,0,0.0831,1,0.08,0.919
+stiff,W2,inside,handover-learned,1.0,1,0.1333,1,0.08,0.911
+stiff,W2,inside,handover-learned,1.0,2,0.171,1,0.08,0.902
+stiff,W2,inside,handover-learned,1.0,3,0.0721,1,0.08,0.919
+stiff,W2,inside,handover-learned,1.0,4,0.1016,1,0.08,0.902
+stiff,W2,inside,handover-learned,1.0,5,0.1695,1,0.08,0.928
+stiff,W2,inside,handover-learned,1.0,6,0.0986,1,0.08,0.89
+stiff,W2,inside,handover-learned,1.0,7,0.1038,1,0.08,0.92
+stiff,W2,inside,handover-learned,1.0,8,0.151,1,0.08,0.955
+stiff,W2,inside,handover-learned,1.0,9,0.1496,1,0.08,0.926
+stiff,W2,inside,handover-learned,1.0,10,0.0996,1,0.08,0.858
+stiff,W2,inside,handover-learned,1.0,11,0.1261,1,0.08,0.947
+stiff,W2,inside,handover-learned,1.0,12,0.1002,1,0.08,0.883
+stiff,W2,inside,handover-learned,1.0,13,0.124,1,0.08,0.904
+stiff,W2,inside,handover-learned,1.0,14,0.107,1,0.08,0.937
+stiff,W2,inside,handover-learned,1.0,15,0.0587,1,0.08,0.923
+stiff,W2,inside,handover-learned,2.5,0,0.1147,1,0.08,2.207
+stiff,W2,inside,handover-learned,2.5,1,0.2369,1,0.08,2.127
+stiff,W2,inside,handover-learned,2.5,2,0.1731,1,0.08,2.202
+stiff,W2,inside,handover-learned,2.5,3,0.0736,1,0.08,2.229
+stiff,W2,inside,handover-learned,2.5,4,0.1351,1,0.08,2.137
+stiff,W2,inside,handover-learned,2.5,5,0.2333,1,0.08,2.103
+stiff,W2,inside,handover-learned,2.5,6,0.1533,1,0.08,2.203
+stiff,W2,inside,handover-learned,2.5,7,0.1518,1,0.08,2.219
+stiff,W2,inside,handover-learned,2.5,8,0.1126,1,0.08,2.282
+stiff,W2,inside,handover-learned,2.5,9,0.1909,1,0.08,2.259
+stiff,W2,inside,handover-learned,2.5,10,0.1597,1,0.08,2.086
+stiff,W2,inside,handover-learned,2.5,11,0.1366,1,0.08,2.293
+stiff,W2,inside,handover-learned,2.5,12,0.1418,1,0.08,2.162
+stiff,W2,inside,handover-learned,2.5,13,0.1846,1,0.08,2.064
+stiff,W2,inside,handover-learned,2.5,14,0.0859,1,0.08,2.175
+stiff,W2,inside,handover-learned,2.5,15,0.0725,1,0.08,2.27
+stiff,W2,outside,handover-learned,0.0,0,29.8686,0,,
+stiff,W2,outside,handover-learned,0.0,1,1.639,0,,
+stiff,W2,outside,handover-learned,0.0,2,0.1191,1,1.52,0.0
+stiff,W2,outside,handover-learned,0.0,3,29.0327,0,,
+stiff,W2,outside,handover-learned,0.0,4,5.9917,0,,
+stiff,W2,outside,handover-learned,0.0,5,0.1352,1,1.36,0.0
+stiff,W2,outside,handover-learned,0.0,6,3.7401,0,,
+stiff,W2,outside,handover-learned,0.0,7,20.6931,0,,
+stiff,W2,outside,handover-learned,0.0,8,3.1291,0,,
+stiff,W2,outside,handover-learned,0.0,9,0.0897,1,1.52,0.0
+stiff,W2,outside,handover-learned,0.0,10,29.0282,0,,
+stiff,W2,outside,handover-learned,0.0,11,0.691,1,,
+stiff,W2,outside,handover-learned,0.0,12,20.9561,0,,
+stiff,W2,outside,handover-learned,0.0,13,0.2092,1,,
+stiff,W2,outside,handover-learned,0.0,14,26.1866,0,,
+stiff,W2,outside,handover-learned,0.0,15,19.0649,0,,
+stiff,W2,outside,handover-learned,2.5,0,0.1076,1,0.08,1.962
+stiff,W2,outside,handover-learned,2.5,1,0.075,1,0.08,2.028
+stiff,W2,outside,handover-learned,2.5,2,0.1558,1,0.08,2.327
+stiff,W2,outside,handover-learned,2.5,3,0.2132,1,0.08,1.985
+stiff,W2,outside,handover-learned,2.5,4,0.0805,1,0.08,2.244
+stiff,W2,outside,handover-learned,2.5,5,0.1534,1,0.08,2.29
+stiff,W2,outside,handover-learned,2.5,6,0.1909,1,0.08,2.02
+stiff,W2,outside,handover-learned,2.5,7,0.1724,1,0.08,1.868
+stiff,W2,outside,handover-learned,2.5,8,0.1953,1,0.08,2.217
+stiff,W2,outside,handover-learned,2.5,9,0.3027,1,0.08,2.056
+stiff,W2,outside,handover-learned,2.5,10,0.2429,1,0.08,2.051
+stiff,W2,outside,handover-learned,2.5,11,0.1261,1,0.08,2.223
+stiff,W2,outside,handover-learned,2.5,12,0.1608,1,0.08,2.328
+stiff,W2,outside,handover-learned,2.5,13,0.208,1,0.08,1.877
+stiff,W2,outside,handover-learned,2.5,14,0.3208,1,0.08,2.212
+stiff,W2,outside,handover-learned,2.5,15,0.1666,1,0.08,2.356
+stiff,W2,inside,handover-consistency,0.0,0,0.2053,1,,
+stiff,W2,inside,handover-consistency,0.0,1,0.3126,1,,
+stiff,W2,inside,handover-consistency,0.0,2,0.179,1,,
+stiff,W2,inside,handover-consistency,0.0,3,0.5806,1,,
+stiff,W2,inside,handover-consistency,0.0,4,0.1448,1,,
+stiff,W2,inside,handover-consistency,0.0,5,0.2141,1,,
+stiff,W2,inside,handover-consistency,0.0,6,0.1507,1,,
+stiff,W2,inside,handover-consistency,0.0,7,0.4526,1,,
+stiff,W2,inside,handover-consistency,0.0,8,5.971,0,,
+stiff,W2,inside,handover-consistency,0.0,9,0.2234,1,,
+stiff,W2,inside,handover-consistency,0.0,10,0.2822,1,,
+stiff,W2,inside,handover-consistency,0.0,11,0.2016,1,,
+stiff,W2,inside,handover-consistency,0.0,12,0.2646,1,,
+stiff,W2,inside,handover-consistency,0.0,13,0.1908,1,,
+stiff,W2,inside,handover-consistency,0.0,14,0.2697,1,,
+stiff,W2,inside,handover-consistency,0.0,15,0.1758,1,,
+stiff,W2,inside,handover-consistency,1.0,0,0.1398,1,0.8,0.968
+stiff,W2,inside,handover-consistency,1.0,1,0.1256,1,0.4,0.927
+stiff,W2,inside,handover-consistency,1.0,2,1.928,0,,
+stiff,W2,inside,handover-consistency,1.0,3,1.8486,0,,
+stiff,W2,inside,handover-consistency,1.0,4,0.1684,1,0.88,0.899
+stiff,W2,inside,handover-consistency,1.0,5,1.6871,0,,
+stiff,W2,inside,handover-consistency,1.0,6,0.1416,1,1.44,0.92
+stiff,W2,inside,handover-consistency,1.0,7,0.1271,1,1.36,0.928
+stiff,W2,inside,handover-consistency,1.0,8,17.9347,0,,
+stiff,W2,inside,handover-consistency,1.0,9,0.1482,1,2.08,0.905
+stiff,W2,inside,handover-consistency,1.0,10,1.0822,0,,
+stiff,W2,inside,handover-consistency,1.0,11,1.8808,0,,
+stiff,W2,inside,handover-consistency,1.0,12,0.1159,1,1.28,0.908
+stiff,W2,inside,handover-consistency,1.0,13,2.2048,0,,
+stiff,W2,inside,handover-consistency,1.0,14,1.4656,0,,
+stiff,W2,inside,handover-consistency,1.0,15,2.4134,0,,
+stiff,W2,inside,handover-consistency,2.5,0,0.1552,1,0.64,2.238
+stiff,W2,inside,handover-consistency,2.5,1,0.1785,1,0.32,2.228
+stiff,W2,inside,handover-consistency,2.5,2,0.1894,1,1.36,2.132
+stiff,W2,inside,handover-consistency,2.5,3,0.1506,1,0.48,2.24
+stiff,W2,inside,handover-consistency,2.5,4,0.1596,1,0.72,2.194
+stiff,W2,inside,handover-consistency,2.5,5,0.207,1,0.72,1.98
+stiff,W2,inside,handover-consistency,2.5,6,0.187,1,0.64,2.16
+stiff,W2,inside,handover-consistency,2.5,7,0.119,1,0.8,2.225
+stiff,W2,inside,handover-consistency,2.5,8,0.1357,1,0.72,2.295
+stiff,W2,inside,handover-consistency,2.5,9,0.1802,1,0.64,2.221
+stiff,W2,inside,handover-consistency,2.5,10,0.1945,1,1.76,2.1
+stiff,W2,inside,handover-consistency,2.5,11,0.1266,1,0.8,2.238
+stiff,W2,inside,handover-consistency,2.5,12,0.1612,1,0.56,2.169
+stiff,W2,inside,handover-consistency,2.5,13,0.138,1,0.88,1.992
+stiff,W2,inside,handover-consistency,2.5,14,0.125,1,0.4,2.041
+stiff,W2,inside,handover-consistency,2.5,15,0.1129,1,0.56,2.287
+stiff,W2,outside,handover-consistency,0.0,0,0.1325,1,0.32,0.0
+stiff,W2,outside,handover-consistency,0.0,1,0.0986,1,0.32,0.0
+stiff,W2,outside,handover-consistency,0.0,2,0.7939,1,2.48,0.0
+stiff,W2,outside,handover-consistency,0.0,3,0.1591,1,0.8,0.0
+stiff,W2,outside,handover-consistency,0.0,4,0.0853,1,0.4,0.0
+stiff,W2,outside,handover-consistency,0.0,5,0.103,1,0.32,0.0
+stiff,W2,outside,handover-consistency,0.0,6,0.1262,1,0.32,0.0
+stiff,W2,outside,handover-consistency,0.0,7,0.0943,1,0.4,0.0
+stiff,W2,outside,handover-consistency,0.0,8,0.1162,1,0.32,0.0
+stiff,W2,outside,handover-consistency,0.0,9,0.0837,1,0.48,0.0
+stiff,W2,outside,handover-consistency,0.0,10,0.061,1,0.32,0.0
+stiff,W2,outside,handover-consistency,0.0,11,0.1272,1,0.4,0.0
+stiff,W2,outside,handover-consistency,0.0,12,20.9561,0,,
+stiff,W2,outside,handover-consistency,0.0,13,0.1361,1,0.96,0.0
+stiff,W2,outside,handover-consistency,0.0,14,0.1709,1,0.32,0.0
+stiff,W2,outside,handover-consistency,0.0,15,0.0846,1,0.32,0.0
+stiff,W2,outside,handover-consistency,2.5,0,0.1132,1,0.32,2.15
+stiff,W2,outside,handover-consistency,2.5,1,0.1292,1,0.32,2.305
+stiff,W2,outside,handover-consistency,2.5,2,0.1048,1,0.4,2.289
+stiff,W2,outside,handover-consistency,2.5,3,0.1396,1,0.32,2.12
+stiff,W2,outside,handover-consistency,2.5,4,0.1193,1,0.32,2.231
+stiff,W2,outside,handover-consistency,2.5,5,0.1785,1,0.32,2.365
+stiff,W2,outside,handover-consistency,2.5,6,0.2301,1,0.32,2.125
+stiff,W2,outside,handover-consistency,2.5,7,0.1492,1,0.32,1.939
+stiff,W2,outside,handover-consistency,2.5,8,0.2191,1,0.32,2.213
+stiff,W2,outside,handover-consistency,2.5,9,0.3569,1,0.32,2.146
+stiff,W2,outside,handover-consistency,2.5,10,0.0875,1,0.32,2.125
+stiff,W2,outside,handover-consistency,2.5,11,0.1411,1,0.32,2.076
+stiff,W2,outside,handover-consistency,2.5,12,0.138,1,0.32,2.148
+stiff,W2,outside,handover-consistency,2.5,13,0.168,1,0.32,1.99
+stiff,W2,outside,handover-consistency,2.5,14,0.3174,1,0.32,2.199
+stiff,W2,outside,handover-consistency,2.5,15,0.2837,1,0.32,2.292
+stiff,W3,inside,adaptive MPC,0.0,0,0.1035,1,,0.031
+stiff,W3,inside,adaptive MPC,0.0,1,0.1182,1,,0.0
+stiff,W3,inside,adaptive MPC,0.0,2,0.0994,1,,0.0
+stiff,W3,inside,adaptive MPC,0.0,3,0.0502,1,,0.028
+stiff,W3,inside,adaptive MPC,0.0,4,0.0538,1,,0.013
+stiff,W3,inside,adaptive MPC,0.0,5,0.0878,1,,0.0
+stiff,W3,inside,adaptive MPC,0.0,6,0.0804,1,,0.0
+stiff,W3,inside,adaptive MPC,0.0,7,0.0762,1,,0.0
+stiff,W3,inside,adaptive MPC,0.0,8,0.1286,1,,0.0
+stiff,W3,inside,adaptive MPC,0.0,9,0.0913,1,,0.0
+stiff,W3,inside,adaptive MPC,0.0,10,0.0601,1,,0.0
+stiff,W3,inside,adaptive MPC,0.0,11,0.1041,1,,0.05
+stiff,W3,inside,adaptive MPC,0.0,12,0.0575,1,,0.0
+stiff,W3,inside,adaptive MPC,0.0,13,0.074,1,,0.0
+stiff,W3,inside,adaptive MPC,0.0,14,0.1058,1,,0.0
+stiff,W3,inside,adaptive MPC,0.0,15,0.0454,1,,0.002
+stiff,W3,inside,adaptive MPC,1.0,0,0.0902,1,,0.981
+stiff,W3,inside,adaptive MPC,1.0,1,0.08,1,,0.792
+stiff,W3,inside,adaptive MPC,1.0,2,0.0887,1,,0.806
+stiff,W3,inside,adaptive MPC,1.0,3,0.0454,1,,0.948
+stiff,W3,inside,adaptive MPC,1.0,4,0.0767,1,,0.931
+stiff,W3,inside,adaptive MPC,1.0,5,0.1984,1,,0.883
+stiff,W3,inside,adaptive MPC,1.0,6,0.0994,1,,0.834
+stiff,W3,inside,adaptive MPC,1.0,7,0.0844,1,,0.895
+stiff,W3,inside,adaptive MPC,1.0,8,0.0743,1,,0.87
+stiff,W3,inside,adaptive MPC,1.0,9,0.1042,1,,0.87
+stiff,W3,inside,adaptive MPC,1.0,10,0.0684,1,,0.745
+stiff,W3,inside,adaptive MPC,1.0,11,0.1023,1,,0.981
+stiff,W3,inside,adaptive MPC,1.0,12,0.1039,1,,0.821
+stiff,W3,inside,adaptive MPC,1.0,13,0.0758,1,,0.873
+stiff,W3,inside,adaptive MPC,1.0,14,0.0607,1,,0.77
+stiff,W3,inside,adaptive MPC,1.0,15,0.0507,1,,0.912
+stiff,W3,inside,adaptive MPC,2.5,0,0.0575,1,,2.356
+stiff,W3,inside,adaptive MPC,2.5,1,0.1009,1,,2.096
+stiff,W3,inside,adaptive MPC,2.5,2,0.1414,1,,2.091
+stiff,W3,inside,adaptive MPC,2.5,3,0.0509,1,,2.284
+stiff,W3,inside,adaptive MPC,2.5,4,0.113,1,,2.212
+stiff,W3,inside,adaptive MPC,2.5,5,0.3731,1,,2.017
+stiff,W3,inside,adaptive MPC,2.5,6,0.1336,1,,2.193
+stiff,W3,inside,adaptive MPC,2.5,7,0.1269,1,,2.258
+stiff,W3,inside,adaptive MPC,2.5,8,0.0831,1,,2.241
+stiff,W3,inside,adaptive MPC,2.5,9,0.1286,1,,2.216
+stiff,W3,inside,adaptive MPC,2.5,10,0.1522,1,,1.962
+stiff,W3,inside,adaptive MPC,2.5,11,0.1202,1,,2.344
+stiff,W3,inside,adaptive MPC,2.5,12,0.1974,1,,2.038
+stiff,W3,inside,adaptive MPC,2.5,13,0.1067,1,,2.093
+stiff,W3,inside,adaptive MPC,2.5,14,0.0984,1,,1.97
+stiff,W3,inside,adaptive MPC,2.5,15,0.0729,1,,2.271
+stiff,W3,outside,adaptive MPC,0.0,0,0.0784,1,,0.041
+stiff,W3,outside,adaptive MPC,0.0,1,0.1976,1,,0.162
+stiff,W3,outside,adaptive MPC,0.0,2,0.1252,1,,0.048
+stiff,W3,outside,adaptive MPC,0.0,3,0.0792,1,,0.082
+stiff,W3,outside,adaptive MPC,0.0,4,0.0693,1,,0.0
+stiff,W3,outside,adaptive MPC,0.0,5,0.131,1,,0.088
+stiff,W3,outside,adaptive MPC,0.0,6,0.0785,1,,0.0
+stiff,W3,outside,adaptive MPC,0.0,7,0.0826,1,,0.0
+stiff,W3,outside,adaptive MPC,0.0,8,0.0708,1,,0.0
+stiff,W3,outside,adaptive MPC,0.0,9,0.0755,1,,0.0
+stiff,W3,outside,adaptive MPC,0.0,10,0.0561,1,,0.0
+stiff,W3,outside,adaptive MPC,0.0,11,0.0954,1,,0.0
+stiff,W3,outside,adaptive MPC,0.0,12,0.056,1,,0.0
+stiff,W3,outside,adaptive MPC,0.0,13,0.0658,1,,0.033
+stiff,W3,outside,adaptive MPC,0.0,14,0.1403,1,,0.0
+stiff,W3,outside,adaptive MPC,0.0,15,0.0799,1,,0.095
+stiff,W3,outside,adaptive MPC,2.5,0,0.128,1,,2.064
+stiff,W3,outside,adaptive MPC,2.5,1,0.2606,1,,2.376
+stiff,W3,outside,adaptive MPC,2.5,2,0.1085,1,,2.53
+stiff,W3,outside,adaptive MPC,2.5,3,0.2818,1,,2.057
+stiff,W3,outside,adaptive MPC,2.5,4,0.0601,1,,2.413
+stiff,W3,outside,adaptive MPC,2.5,5,0.1762,1,,2.5
+stiff,W3,outside,adaptive MPC,2.5,6,0.2315,1,,1.856
+stiff,W3,outside,adaptive MPC,2.5,7,0.1194,1,,2.144
+stiff,W3,outside,adaptive MPC,2.5,8,0.1699,1,,2.405
+stiff,W3,outside,adaptive MPC,2.5,9,0.4288,1,,2.02
+stiff,W3,outside,adaptive MPC,2.5,10,0.2476,1,,2.063
+stiff,W3,outside,adaptive MPC,2.5,11,0.0945,1,,2.131
+stiff,W3,outside,adaptive MPC,2.5,12,0.1487,1,,2.222
+stiff,W3,outside,adaptive MPC,2.5,13,0.1984,1,,2.172
+stiff,W3,outside,adaptive MPC,2.5,14,0.1797,1,,2.186
+stiff,W3,outside,adaptive MPC,2.5,15,0.0802,1,,2.641
+stiff,W3,inside,reference,0.0,0,0.0813,1,,
+stiff,W3,inside,reference,0.0,1,0.1138,1,,
+stiff,W3,inside,reference,0.0,2,0.0986,1,,
+stiff,W3,inside,reference,0.0,3,0.0474,1,,
+stiff,W3,inside,reference,0.0,4,0.0623,1,,
+stiff,W3,inside,reference,0.0,5,0.0896,1,,
+stiff,W3,inside,reference,0.0,6,0.0768,1,,
+stiff,W3,inside,reference,0.0,7,0.0814,1,,
+stiff,W3,inside,reference,0.0,8,0.1212,1,,
+stiff,W3,inside,reference,0.0,9,0.0891,1,,
+stiff,W3,inside,reference,0.0,10,0.083,1,,
+stiff,W3,inside,reference,0.0,11,0.0881,1,,
+stiff,W3,inside,reference,0.0,12,0.0534,1,,
+stiff,W3,inside,reference,0.0,13,0.0856,1,,
+stiff,W3,inside,reference,0.0,14,0.1006,1,,
+stiff,W3,inside,reference,0.0,15,0.0569,1,,
+stiff,W3,inside,reference,1.0,0,0.0742,1,,
+stiff,W3,inside,reference,1.0,1,0.1035,1,,
+stiff,W3,inside,reference,1.0,2,0.0984,1,,
+stiff,W3,inside,reference,1.0,3,0.047,1,,
+stiff,W3,inside,reference,1.0,4,0.0614,1,,
+stiff,W3,inside,reference,1.0,5,0.0901,1,,
+stiff,W3,inside,reference,1.0,6,0.07,1,,
+stiff,W3,inside,reference,1.0,7,0.0758,1,,
+stiff,W3,inside,reference,1.0,8,0.1112,1,,
+stiff,W3,inside,reference,1.0,9,0.0831,1,,
+stiff,W3,inside,reference,1.0,10,0.0782,1,,
+stiff,W3,inside,reference,1.0,11,0.0864,1,,
+stiff,W3,inside,reference,1.0,12,0.0552,1,,
+stiff,W3,inside,reference,1.0,13,0.0869,1,,
+stiff,W3,inside,reference,1.0,14,0.1057,1,,
+stiff,W3,inside,reference,1.0,15,0.0549,1,,
+stiff,W3,inside,reference,2.5,0,0.0644,1,,
+stiff,W3,inside,reference,2.5,1,0.0908,1,,
+stiff,W3,inside,reference,2.5,2,0.0891,1,,
+stiff,W3,inside,reference,2.5,3,0.046,1,,
+stiff,W3,inside,reference,2.5,4,0.0655,1,,
+stiff,W3,inside,reference,2.5,5,0.0836,1,,
+stiff,W3,inside,reference,2.5,6,0.0761,1,,
+stiff,W3,inside,reference,2.5,7,0.0706,1,,
+stiff,W3,inside,reference,2.5,8,0.0974,1,,
+stiff,W3,inside,reference,2.5,9,0.0813,1,,
+stiff,W3,inside,reference,2.5,10,0.0746,1,,
+stiff,W3,inside,reference,2.5,11,0.088,1,,
+stiff,W3,inside,reference,2.5,12,0.0601,1,,
+stiff,W3,inside,reference,2.5,13,0.0886,1,,
+stiff,W3,inside,reference,2.5,14,0.0987,1,,
+stiff,W3,inside,reference,2.5,15,0.0554,1,,
+stiff,W3,outside,reference,0.0,0,0.0568,1,,
+stiff,W3,outside,reference,0.0,1,0.0985,1,,
+stiff,W3,outside,reference,0.0,2,0.1005,1,,
+stiff,W3,outside,reference,0.0,3,0.057,1,,
+stiff,W3,outside,reference,0.0,4,0.0646,1,,
+stiff,W3,outside,reference,0.0,5,0.0941,1,,
+stiff,W3,outside,reference,0.0,6,0.0784,1,,
+stiff,W3,outside,reference,0.0,7,0.0904,1,,
+stiff,W3,outside,reference,0.0,8,0.0731,1,,
+stiff,W3,outside,reference,0.0,9,0.0708,1,,
+stiff,W3,outside,reference,0.0,10,0.0679,1,,
+stiff,W3,outside,reference,0.0,11,0.1053,1,,
+stiff,W3,outside,reference,0.0,12,0.0489,1,,
+stiff,W3,outside,reference,0.0,13,0.0925,1,,
+stiff,W3,outside,reference,0.0,14,0.1259,1,,
+stiff,W3,outside,reference,0.0,15,0.0581,1,,
+stiff,W3,outside,reference,2.5,0,0.0541,1,,
+stiff,W3,outside,reference,2.5,1,0.1009,1,,
+stiff,W3,outside,reference,2.5,2,0.0901,1,,
+stiff,W3,outside,reference,2.5,3,0.0697,1,,
+stiff,W3,outside,reference,2.5,4,0.0768,1,,
+stiff,W3,outside,reference,2.5,5,0.0885,1,,
+stiff,W3,outside,reference,2.5,6,0.0848,1,,
+stiff,W3,outside,reference,2.5,7,0.0816,1,,
+stiff,W3,outside,reference,2.5,8,0.0693,1,,
+stiff,W3,outside,reference,2.5,9,0.0672,1,,
+stiff,W3,outside,reference,2.5,10,0.0714,1,,
+stiff,W3,outside,reference,2.5,11,0.1125,1,,
+stiff,W3,outside,reference,2.5,12,0.056,1,,
+stiff,W3,outside,reference,2.5,13,0.1057,1,,
+stiff,W3,outside,reference,2.5,14,0.1258,1,,
+stiff,W3,outside,reference,2.5,15,0.0536,1,,
+stiff,W3,inside,handover-physics,0.0,0,0.1377,1,,
+stiff,W3,inside,handover-physics,0.0,1,0.1041,1,,
+stiff,W3,inside,handover-physics,0.0,2,0.3519,1,,
+stiff,W3,inside,handover-physics,0.0,3,0.0981,1,,
+stiff,W3,inside,handover-physics,0.0,4,0.3773,1,,
+stiff,W3,inside,handover-physics,0.0,5,0.0831,1,,
+stiff,W3,inside,handover-physics,0.0,6,0.1087,1,,
+stiff,W3,inside,handover-physics,0.0,7,0.899,1,,
+stiff,W3,inside,handover-physics,0.0,8,0.143,1,,
+stiff,W3,inside,handover-physics,0.0,9,0.0733,1,,
+stiff,W3,inside,handover-physics,0.0,10,0.2527,1,,
+stiff,W3,inside,handover-physics,0.0,11,0.101,1,,
+stiff,W3,inside,handover-physics,0.0,12,0.3978,1,,
+stiff,W3,inside,handover-physics,0.0,13,0.2898,1,,
+stiff,W3,inside,handover-physics,0.0,14,0.1753,1,,
+stiff,W3,inside,handover-physics,0.0,15,0.2407,1,,
+stiff,W3,inside,handover-physics,1.0,0,0.1055,1,1.92,0.961
+stiff,W3,inside,handover-physics,1.0,1,1.3926,0,2.96,0.548
+stiff,W3,inside,handover-physics,1.0,2,0.8161,1,2.56,0.896
+stiff,W3,inside,handover-physics,1.0,3,0.0692,1,1.6,0.957
+stiff,W3,inside,handover-physics,1.0,4,0.1636,1,1.76,0.986
+stiff,W3,inside,handover-physics,1.0,5,0.1638,1,1.84,0.729
+stiff,W3,inside,handover-physics,1.0,6,0.1196,1,0.88,0.878
+stiff,W3,inside,handover-physics,1.0,7,0.0874,1,1.28,1.023
+stiff,W3,inside,handover-physics,1.0,8,0.1365,1,0.64,1.009
+stiff,W3,inside,handover-physics,1.0,9,0.09,1,0.96,0.824
+stiff,W3,inside,handover-physics,1.0,10,0.2443,1,2.24,0.579
+stiff,W3,inside,handover-physics,1.0,11,0.149,1,1.76,0.926
+stiff,W3,inside,handover-physics,1.0,12,0.1225,1,1.68,0.879
+stiff,W3,inside,handover-physics,1.0,13,1.528,0,,
+stiff,W3,inside,handover-physics,1.0,14,0.1669,1,1.2,0.772
+stiff,W3,inside,handover-physics,1.0,15,0.2218,1,2.24,0.937
+stiff,W3,inside,handover-physics,2.5,0,0.1287,1,0.72,2.287
+stiff,W3,inside,handover-physics,2.5,1,0.217,1,0.64,1.821
+stiff,W3,inside,handover-physics,2.5,2,0.1692,1,0.96,2.142
+stiff,W3,inside,handover-physics,2.5,3,0.1539,1,0.96,2.255
+stiff,W3,inside,handover-physics,2.5,4,0.1668,1,0.64,2.268
+stiff,W3,inside,handover-physics,2.5,5,0.2861,1,0.64,1.839
+stiff,W3,inside,handover-physics,2.5,6,0.1635,1,0.64,2.117
+stiff,W3,inside,handover-physics,2.5,7,0.1221,1,0.8,2.231
+stiff,W3,inside,handover-physics,2.5,8,0.1197,1,0.56,2.256
+stiff,W3,inside,handover-physics,2.5,9,0.1612,1,0.56,2.053
+stiff,W3,inside,handover-physics,2.5,10,0.1867,1,0.56,1.824
+stiff,W3,inside,handover-physics,2.5,11,0.1296,1,0.8,2.192
+stiff,W3,inside,handover-physics,2.5,12,0.0968,1,0.96,2.183
+stiff,W3,inside,handover-physics,2.5,13,0.1641,1,0.72,1.905
+stiff,W3,inside,handover-physics,2.5,14,0.1528,1,0.48,1.994
+stiff,W3,inside,handover-physics,2.5,15,0.1678,1,0.8,2.299
+stiff,W3,outside,handover-physics,0.0,0,0.1394,1,0.96,0.049
+stiff,W3,outside,handover-physics,0.0,1,0.1519,1,0.56,0.118
+stiff,W3,outside,handover-physics,0.0,2,0.1513,1,0.64,0.091
+stiff,W3,outside,handover-physics,0.0,3,0.1285,1,0.56,0.0
+stiff,W3,outside,handover-physics,0.0,4,21.1993,0,,
+stiff,W3,outside,handover-physics,0.0,5,0.0798,1,0.88,0.006
+stiff,W3,outside,handover-physics,0.0,6,0.0904,1,0.64,0.0
+stiff,W3,outside,handover-physics,0.0,7,0.0539,1,0.64,0.0
+stiff,W3,outside,handover-physics,0.0,8,0.1149,1,0.96,0.091
+stiff,W3,outside,handover-physics,0.0,9,0.0579,1,0.64,0.0
+stiff,W3,outside,handover-physics,0.0,10,0.0702,1,0.64,0.06
+stiff,W3,outside,handover-physics,0.0,11,0.0845,1,0.56,0.0
+stiff,W3,outside,handover-physics,0.0,12,0.0981,1,0.56,0.0
+stiff,W3,outside,handover-physics,0.0,13,0.0863,1,0.56,0.0
+stiff,W3,outside,handover-physics,0.0,14,24.7456,0,,
+stiff,W3,outside,handover-physics,0.0,15,0.1016,1,0.72,0.076
+stiff,W3,outside,handover-physics,2.5,0,0.1177,1,0.72,2.197
+stiff,W3,outside,handover-physics,2.5,1,0.1491,1,0.48,2.297
+stiff,W3,outside,handover-physics,2.5,2,0.0729,1,0.48,2.263
+stiff,W3,outside,handover-physics,2.5,3,0.1524,1,0.56,1.976
+stiff,W3,outside,handover-physics,2.5,4,0.1988,1,0.56,2.119
+stiff,W3,outside,handover-physics,2.5,5,0.1645,1,0.56,2.283
+stiff,W3,outside,handover-physics,2.5,6,0.1707,1,0.56,2.046
+stiff,W3,outside,handover-physics,2.5,7,0.1417,1,0.48,2.021
+stiff,W3,outside,handover-physics,2.5,8,0.1162,1,0.56,2.339
+stiff,W3,outside,handover-physics,2.5,9,0.2588,1,0.48,2.062
+stiff,W3,outside,handover-physics,2.5,10,0.1397,1,0.8,2.25
+stiff,W3,outside,handover-physics,2.5,11,0.2017,1,0.48,1.969
+stiff,W3,outside,handover-physics,2.5,12,0.137,1,0.56,2.247
+stiff,W3,outside,handover-physics,2.5,13,0.1798,1,0.48,2.055
+stiff,W3,outside,handover-physics,2.5,14,0.2861,1,0.48,2.073
+stiff,W3,outside,handover-physics,2.5,15,0.1194,1,0.64,2.394
+stiff,W3,inside,handover-learned,0.0,0,0.1377,1,,
+stiff,W3,inside,handover-learned,0.0,1,0.1041,1,,
+stiff,W3,inside,handover-learned,0.0,2,0.3519,1,,
+stiff,W3,inside,handover-learned,0.0,3,0.0981,1,,
+stiff,W3,inside,handover-learned,0.0,4,0.3773,1,,
+stiff,W3,inside,handover-learned,0.0,5,0.0831,1,,
+stiff,W3,inside,handover-learned,0.0,6,0.1087,1,,
+stiff,W3,inside,handover-learned,0.0,7,0.899,1,,
+stiff,W3,inside,handover-learned,0.0,8,0.143,1,,
+stiff,W3,inside,handover-learned,0.0,9,0.0733,1,,
+stiff,W3,inside,handover-learned,0.0,10,0.2527,1,,
+stiff,W3,inside,handover-learned,0.0,11,0.101,1,,
+stiff,W3,inside,handover-learned,0.0,12,0.3978,1,,
+stiff,W3,inside,handover-learned,0.0,13,0.2898,1,,
+stiff,W3,inside,handover-learned,0.0,14,0.1753,1,,
+stiff,W3,inside,handover-learned,0.0,15,0.2407,1,,
+stiff,W3,inside,handover-learned,1.0,0,0.0923,1,0.24,0.966
+stiff,W3,inside,handover-learned,1.0,1,0.1329,1,0.24,0.566
+stiff,W3,inside,handover-learned,1.0,2,0.1543,1,0.24,0.891
+stiff,W3,inside,handover-learned,1.0,3,0.077,1,0.24,0.939
+stiff,W3,inside,handover-learned,1.0,4,0.1198,1,0.24,0.988
+stiff,W3,inside,handover-learned,1.0,5,0.1906,1,0.24,0.616
+stiff,W3,inside,handover-learned,1.0,6,0.1122,1,0.24,0.841
+stiff,W3,inside,handover-learned,1.0,7,0.0975,1,0.24,1.005
+stiff,W3,inside,handover-learned,1.0,8,0.1057,1,0.24,0.991
+stiff,W3,inside,handover-learned,1.0,9,0.1143,1,0.24,0.8
+stiff,W3,inside,handover-learned,1.0,10,0.1287,1,0.16,0.598
+stiff,W3,inside,handover-learned,1.0,11,0.1135,1,0.24,0.927
+stiff,W3,inside,handover-learned,1.0,12,0.0782,1,0.24,0.875
+stiff,W3,inside,handover-learned,1.0,13,0.0931,1,0.24,0.816
+stiff,W3,inside,handover-learned,1.0,14,0.05,1,0.16,0.85
+stiff,W3,inside,handover-learned,1.0,15,0.0609,1,0.16,0.97
+stiff,W3,inside,handover-learned,2.5,0,0.0666,1,0.16,2.256
+stiff,W3,inside,handover-learned,2.5,1,0.1337,1,0.16,1.999
+stiff,W3,inside,handover-learned,2.5,2,0.1673,1,0.16,2.162
+stiff,W3,inside,handover-learned,2.5,3,0.0746,1,0.16,2.273
+stiff,W3,inside,handover-learned,2.5,4,0.1207,1,0.16,2.268
+stiff,W3,inside,handover-learned,2.5,5,0.279,1,0.16,1.834
+stiff,W3,inside,handover-learned,2.5,6,0.1248,1,0.16,2.179
+stiff,W3,inside,handover-learned,2.5,7,0.0932,1,0.16,2.329
+stiff,W3,inside,handover-learned,2.5,8,0.0887,1,0.16,2.354
+stiff,W3,inside,handover-learned,2.5,9,0.1471,1,0.16,2.168
+stiff,W3,inside,handover-learned,2.5,10,0.1762,1,0.16,1.825
+stiff,W3,inside,handover-learned,2.5,11,0.1172,1,0.16,2.21
+stiff,W3,inside,handover-learned,2.5,12,0.1356,1,0.16,2.166
+stiff,W3,inside,handover-learned,2.5,13,0.1938,1,0.16,1.978
+stiff,W3,inside,handover-learned,2.5,14,0.1474,1,0.16,2.022
+stiff,W3,inside,handover-learned,2.5,15,0.0754,1,0.16,2.326
+stiff,W3,outside,handover-learned,0.0,0,0.104,1,0.32,0.063
+stiff,W3,outside,handover-learned,0.0,1,0.1322,1,0.24,0.05
+stiff,W3,outside,handover-learned,0.0,2,0.1413,1,0.24,0.081
+stiff,W3,outside,handover-learned,0.0,3,0.0945,1,0.24,0.0
+stiff,W3,outside,handover-learned,0.0,4,0.0633,1,0.4,0.0
+stiff,W3,outside,handover-learned,0.0,5,0.0725,1,0.4,0.008
+stiff,W3,outside,handover-learned,0.0,6,0.1037,1,0.32,0.0
+stiff,W3,outside,handover-learned,0.0,7,0.0884,1,0.24,0.0
+stiff,W3,outside,handover-learned,0.0,8,0.086,1,0.4,0.065
+stiff,W3,outside,handover-learned,0.0,9,0.0671,1,0.32,0.0
+stiff,W3,outside,handover-learned,0.0,10,0.0653,1,0.56,0.054
+stiff,W3,outside,handover-learned,0.0,11,0.0951,1,0.32,0.0
+stiff,W3,outside,handover-learned,0.0,12,0.0688,1,0.24,0.0
+stiff,W3,outside,handover-learned,0.0,13,0.067,1,0.24,0.0
+stiff,W3,outside,handover-learned,0.0,14,0.1023,1,0.32,0.0
+stiff,W3,outside,handover-learned,0.0,15,0.0815,1,0.48,0.071
+stiff,W3,outside,handover-learned,2.5,0,0.154,1,0.16,2.269
+stiff,W3,outside,handover-learned,2.5,1,0.1422,1,0.16,2.309
+stiff,W3,outside,handover-learned,2.5,2,0.233,1,0.16,2.499
+stiff,W3,outside,handover-learned,2.5,3,0.1735,1,0.16,2.045
+stiff,W3,outside,handover-learned,2.5,4,0.1591,1,0.16,2.194
+stiff,W3,outside,handover-learned,2.5,5,0.2092,1,0.24,2.358
+stiff,W3,outside,handover-learned,2.5,6,0.2224,1,0.16,1.886
+stiff,W3,outside,handover-learned,2.5,7,0.1281,1,0.16,2.047
+stiff,W3,outside,handover-learned,2.5,8,0.1395,1,0.24,2.347
+stiff,W3,outside,handover-learned,2.5,9,0.2558,1,0.16,2.07
+stiff,W3,outside,handover-learned,2.5,10,0.2203,1,0.24,1.975
+stiff,W3,outside,handover-learned,2.5,11,0.1286,1,0.16,2.104
+stiff,W3,outside,handover-learned,2.5,12,0.1341,1,0.16,2.348
+stiff,W3,outside,handover-learned,2.5,13,0.2083,1,0.16,2.136
+stiff,W3,outside,handover-learned,2.5,14,0.1914,1,0.16,2.22
+stiff,W3,outside,handover-learned,2.5,15,0.1812,1,0.24,2.323
+stiff,W3,inside,handover-consistency,0.0,0,0.1377,1,,
+stiff,W3,inside,handover-consistency,0.0,1,0.0973,1,0.64,0.0
+stiff,W3,inside,handover-consistency,0.0,2,0.3519,1,,
+stiff,W3,inside,handover-consistency,0.0,3,0.0981,1,,
+stiff,W3,inside,handover-consistency,0.0,4,0.3773,1,,
+stiff,W3,inside,handover-consistency,0.0,5,0.0831,1,,
+stiff,W3,inside,handover-consistency,0.0,6,0.1087,1,,
+stiff,W3,inside,handover-consistency,0.0,7,0.899,1,,
+stiff,W3,inside,handover-consistency,0.0,8,0.143,1,,
+stiff,W3,inside,handover-consistency,0.0,9,0.0733,1,,
+stiff,W3,inside,handover-consistency,0.0,10,0.2527,1,,
+stiff,W3,inside,handover-consistency,0.0,11,0.101,1,,
+stiff,W3,inside,handover-consistency,0.0,12,0.3978,1,,
+stiff,W3,inside,handover-consistency,0.0,13,0.2898,1,,
+stiff,W3,inside,handover-consistency,0.0,14,0.1753,1,,
+stiff,W3,inside,handover-consistency,0.0,15,0.2407,1,,
+stiff,W3,inside,handover-consistency,1.0,0,2.9793,0,,
+stiff,W3,inside,handover-consistency,1.0,1,1.3955,0,,
+stiff,W3,inside,handover-consistency,1.0,2,1.8251,0,,
+stiff,W3,inside,handover-consistency,1.0,3,1.4385,0,,
+stiff,W3,inside,handover-consistency,1.0,4,1.641,0,,
+stiff,W3,inside,handover-consistency,1.0,5,1.0082,0,,
+stiff,W3,inside,handover-consistency,1.0,6,1.4187,0,,
+stiff,W3,inside,handover-consistency,1.0,7,2.1496,0,,
+stiff,W3,inside,handover-consistency,1.0,8,0.1258,1,0.56,1.003
+stiff,W3,inside,handover-consistency,1.0,9,1.017,0,,
+stiff,W3,inside,handover-consistency,1.0,10,1.2392,0,,
+stiff,W3,inside,handover-consistency,1.0,11,1.5525,0,,
+stiff,W3,inside,handover-consistency,1.0,12,1.6193,0,,
+stiff,W3,inside,handover-consistency,1.0,13,1.528,0,,
+stiff,W3,inside,handover-consistency,1.0,14,1.2017,0,,
+stiff,W3,inside,handover-consistency,1.0,15,0.4853,1,2.4,0.931
+stiff,W3,inside,handover-consistency,2.5,0,0.1153,1,0.64,2.29
+stiff,W3,inside,handover-consistency,2.5,1,0.229,1,0.8,1.818
+stiff,W3,inside,handover-consistency,2.5,2,0.1589,1,0.88,2.147
+stiff,W3,inside,handover-consistency,2.5,3,0.1236,1,1.12,2.266
+stiff,W3,inside,handover-consistency,2.5,4,0.1298,1,1.36,2.263
+stiff,W3,inside,handover-consistency,2.5,5,0.2745,1,1.36,1.841
+stiff,W3,inside,handover-consistency,2.5,6,0.1497,1,0.48,2.107
+stiff,W3,inside,handover-consistency,2.5,7,0.1187,1,0.48,2.246
+stiff,W3,inside,handover-consistency,2.5,8,0.1197,1,0.56,2.256
+stiff,W3,inside,handover-consistency,2.5,9,0.1605,1,0.64,2.049
+stiff,W3,inside,handover-consistency,2.5,10,0.1906,1,0.4,1.783
+stiff,W3,inside,handover-consistency,2.5,11,0.1141,1,1.52,2.158
+stiff,W3,inside,handover-consistency,2.5,12,0.1028,1,1.04,2.189
+stiff,W3,inside,handover-consistency,2.5,13,0.1766,1,0.96,1.896
+stiff,W3,inside,handover-consistency,2.5,14,0.1193,1,0.32,1.968
+stiff,W3,inside,handover-consistency,2.5,15,0.0953,1,0.4,2.29
+stiff,W3,outside,handover-consistency,0.0,0,0.104,1,0.32,0.063
+stiff,W3,outside,handover-consistency,0.0,1,0.1521,1,0.32,0.081
+stiff,W3,outside,handover-consistency,0.0,2,0.1342,1,1.68,0.084
+stiff,W3,outside,handover-consistency,0.0,3,0.1163,1,0.48,0.0
+stiff,W3,outside,handover-consistency,0.0,4,0.0617,1,0.32,0.0
+stiff,W3,outside,handover-consistency,0.0,5,0.0911,1,0.32,0.037
+stiff,W3,outside,handover-consistency,0.0,6,0.0877,1,0.4,0.0
+stiff,W3,outside,handover-consistency,0.0,7,0.094,1,0.56,0.0
+stiff,W3,outside,handover-consistency,0.0,8,0.0704,1,0.32,0.038
+stiff,W3,outside,handover-consistency,0.0,9,0.0534,1,0.56,0.0
+stiff,W3,outside,handover-consistency,0.0,10,0.0613,1,0.32,0.044
+stiff,W3,outside,handover-consistency,0.0,11,0.0951,1,0.32,0.0
+stiff,W3,outside,handover-consistency,0.0,12,0.0973,1,0.48,0.0
+stiff,W3,outside,handover-consistency,0.0,13,0.0732,1,0.4,0.0
+stiff,W3,outside,handover-consistency,0.0,14,23.1568,0,2.8,0.0
+stiff,W3,outside,handover-consistency,0.0,15,0.0434,1,0.32,0.031
+stiff,W3,outside,handover-consistency,2.5,0,0.0926,1,0.32,2.335
+stiff,W3,outside,handover-consistency,2.5,1,0.1348,1,0.4,2.237
+stiff,W3,outside,handover-consistency,2.5,2,0.0612,1,0.56,2.263
+stiff,W3,outside,handover-consistency,2.5,3,0.1599,1,0.32,2.006
+stiff,W3,outside,handover-consistency,2.5,4,0.1552,1,0.32,2.199
+stiff,W3,outside,handover-consistency,2.5,5,0.1916,1,0.32,2.329
+stiff,W3,outside,handover-consistency,2.5,6,0.2001,1,0.32,1.944
+stiff,W3,outside,handover-consistency,2.5,7,20.7882,0,,
+stiff,W3,outside,handover-consistency,2.5,8,0.1259,1,0.32,2.38
+stiff,W3,outside,handover-consistency,2.5,9,0.3572,1,0.32,2.105
+stiff,W3,outside,handover-consistency,2.5,10,0.1346,1,0.32,2.147
+stiff,W3,outside,handover-consistency,2.5,11,0.255,1,0.32,1.995
+stiff,W3,outside,handover-consistency,2.5,12,0.1366,1,0.32,2.377
+stiff,W3,outside,handover-consistency,2.5,13,0.0996,1,0.32,2.195
+stiff,W3,outside,handover-consistency,2.5,14,0.2137,1,0.32,2.199
+stiff,W3,outside,handover-consistency,2.5,15,0.1237,1,0.32,2.429
+soft,W1,inside,adaptive MPC,0.0,0,0.0554,1,,0.0
+soft,W1,inside,adaptive MPC,0.0,1,0.0915,1,,0.0
+soft,W1,inside,adaptive MPC,0.0,2,0.1011,1,,0.0
+soft,W1,inside,adaptive MPC,0.0,3,0.0515,1,,0.0
+soft,W1,inside,adaptive MPC,0.0,4,0.0725,1,,0.0
+soft,W1,inside,adaptive MPC,0.0,5,0.0825,1,,0.0
+soft,W1,inside,adaptive MPC,0.0,6,0.0682,1,,0.0
+soft,W1,inside,adaptive MPC,0.0,7,0.0771,1,,0.0
+soft,W1,inside,adaptive MPC,0.0,8,0.0971,1,,0.0
+soft,W1,inside,adaptive MPC,0.0,9,0.0773,1,,0.0
+soft,W1,inside,adaptive MPC,0.0,10,0.1165,1,,0.0
+soft,W1,inside,adaptive MPC,0.0,11,0.1087,1,,0.0
+soft,W1,inside,adaptive MPC,0.0,12,0.1052,1,,0.0
+soft,W1,inside,adaptive MPC,0.0,13,0.0724,1,,0.0
+soft,W1,inside,adaptive MPC,0.0,14,0.0744,1,,0.0
+soft,W1,inside,adaptive MPC,0.0,15,0.086,1,,0.0
+soft,W1,inside,adaptive MPC,1.0,0,0.0568,1,,1.0
+soft,W1,inside,adaptive MPC,1.0,1,0.0962,1,,1.0
+soft,W1,inside,adaptive MPC,1.0,2,0.1039,1,,1.0
+soft,W1,inside,adaptive MPC,1.0,3,0.0528,1,,1.0
+soft,W1,inside,adaptive MPC,1.0,4,0.069,1,,1.0
+soft,W1,inside,adaptive MPC,1.0,5,0.0811,1,,1.0
+soft,W1,inside,adaptive MPC,1.0,6,0.0661,1,,1.0
+soft,W1,inside,adaptive MPC,1.0,7,0.081,1,,1.0
+soft,W1,inside,adaptive MPC,1.0,8,0.0907,1,,1.0
+soft,W1,inside,adaptive MPC,1.0,9,0.0761,1,,1.0
+soft,W1,inside,adaptive MPC,1.0,10,0.1223,1,,1.0
+soft,W1,inside,adaptive MPC,1.0,11,0.123,1,,1.0
+soft,W1,inside,adaptive MPC,1.0,12,0.1194,1,,1.0
+soft,W1,inside,adaptive MPC,1.0,13,0.0695,1,,1.0
+soft,W1,inside,adaptive MPC,1.0,14,0.0778,1,,1.0
+soft,W1,inside,adaptive MPC,1.0,15,0.0848,1,,1.0
+soft,W1,inside,adaptive MPC,2.5,0,0.0559,1,,2.5
+soft,W1,inside,adaptive MPC,2.5,1,0.0954,1,,2.5
+soft,W1,inside,adaptive MPC,2.5,2,0.1123,1,,2.5
+soft,W1,inside,adaptive MPC,2.5,3,0.0592,1,,2.5
+soft,W1,inside,adaptive MPC,2.5,4,0.0731,1,,2.5
+soft,W1,inside,adaptive MPC,2.5,5,0.0971,1,,2.5
+soft,W1,inside,adaptive MPC,2.5,6,0.0605,1,,2.5
+soft,W1,inside,adaptive MPC,2.5,7,0.0945,1,,2.5
+soft,W1,inside,adaptive MPC,2.5,8,0.0848,1,,2.5
+soft,W1,inside,adaptive MPC,2.5,9,0.0713,1,,2.5
+soft,W1,inside,adaptive MPC,2.5,10,0.1296,1,,2.5
+soft,W1,inside,adaptive MPC,2.5,11,0.1436,1,,2.5
+soft,W1,inside,adaptive MPC,2.5,12,0.1238,1,,2.5
+soft,W1,inside,adaptive MPC,2.5,13,0.072,1,,2.5
+soft,W1,inside,adaptive MPC,2.5,14,0.0939,1,,2.5
+soft,W1,inside,adaptive MPC,2.5,15,0.0784,1,,2.5
+soft,W1,outside,adaptive MPC,0.0,0,0.0483,1,,0.0
+soft,W1,outside,adaptive MPC,0.0,1,0.0888,1,,0.0
+soft,W1,outside,adaptive MPC,0.0,2,0.1072,1,,0.0
+soft,W1,outside,adaptive MPC,0.0,3,0.0639,1,,0.0
+soft,W1,outside,adaptive MPC,0.0,4,0.0852,1,,0.0
+soft,W1,outside,adaptive MPC,0.0,5,0.0987,1,,0.0
+soft,W1,outside,adaptive MPC,0.0,6,0.0689,1,,0.0
+soft,W1,outside,adaptive MPC,0.0,7,0.0842,1,,0.0
+soft,W1,outside,adaptive MPC,0.0,8,0.0673,1,,0.0
+soft,W1,outside,adaptive MPC,0.0,9,0.0655,1,,0.0
+soft,W1,outside,adaptive MPC,0.0,10,0.0979,1,,0.0
+soft,W1,outside,adaptive MPC,0.0,11,0.1259,1,,0.0
+soft,W1,outside,adaptive MPC,0.0,12,0.1032,1,,0.0
+soft,W1,outside,adaptive MPC,0.0,13,0.1105,1,,0.0
+soft,W1,outside,adaptive MPC,0.0,14,0.1014,1,,0.0
+soft,W1,outside,adaptive MPC,0.0,15,0.0738,1,,0.0
+soft,W1,outside,adaptive MPC,2.5,0,0.0546,1,,2.5
+soft,W1,outside,adaptive MPC,2.5,1,0.1032,1,,2.5
+soft,W1,outside,adaptive MPC,2.5,2,0.1188,1,,2.5
+soft,W1,outside,adaptive MPC,2.5,3,0.0589,1,,2.5
+soft,W1,outside,adaptive MPC,2.5,4,0.0924,1,,2.5
+soft,W1,outside,adaptive MPC,2.5,5,0.1086,1,,2.5
+soft,W1,outside,adaptive MPC,2.5,6,0.069,1,,2.5
+soft,W1,outside,adaptive MPC,2.5,7,0.087,1,,2.5
+soft,W1,outside,adaptive MPC,2.5,8,0.0754,1,,2.5
+soft,W1,outside,adaptive MPC,2.5,9,0.0642,1,,2.5
+soft,W1,outside,adaptive MPC,2.5,10,0.1006,1,,2.5
+soft,W1,outside,adaptive MPC,2.5,11,0.163,1,,2.5
+soft,W1,outside,adaptive MPC,2.5,12,0.1214,1,,2.5
+soft,W1,outside,adaptive MPC,2.5,13,0.1089,1,,2.5
+soft,W1,outside,adaptive MPC,2.5,14,0.1459,1,,2.5
+soft,W1,outside,adaptive MPC,2.5,15,0.0739,1,,2.5
+soft,W1,inside,reference,0.0,0,0.0554,1,,
+soft,W1,inside,reference,0.0,1,0.0915,1,,
+soft,W1,inside,reference,0.0,2,0.1011,1,,
+soft,W1,inside,reference,0.0,3,0.0515,1,,
+soft,W1,inside,reference,0.0,4,0.0725,1,,
+soft,W1,inside,reference,0.0,5,0.0825,1,,
+soft,W1,inside,reference,0.0,6,0.0682,1,,
+soft,W1,inside,reference,0.0,7,0.0771,1,,
+soft,W1,inside,reference,0.0,8,0.0971,1,,
+soft,W1,inside,reference,0.0,9,0.0773,1,,
+soft,W1,inside,reference,0.0,10,0.1165,1,,
+soft,W1,inside,reference,0.0,11,0.1087,1,,
+soft,W1,inside,reference,0.0,12,0.1052,1,,
+soft,W1,inside,reference,0.0,13,0.0724,1,,
+soft,W1,inside,reference,0.0,14,0.0744,1,,
+soft,W1,inside,reference,0.0,15,0.086,1,,
+soft,W1,inside,reference,1.0,0,0.0567,1,,
+soft,W1,inside,reference,1.0,1,0.0949,1,,
+soft,W1,inside,reference,1.0,2,0.104,1,,
+soft,W1,inside,reference,1.0,3,0.0528,1,,
+soft,W1,inside,reference,1.0,4,0.0711,1,,
+soft,W1,inside,reference,1.0,5,0.0837,1,,
+soft,W1,inside,reference,1.0,6,0.0682,1,,
+soft,W1,inside,reference,1.0,7,0.0856,1,,
+soft,W1,inside,reference,1.0,8,0.0918,1,,
+soft,W1,inside,reference,1.0,9,0.0759,1,,
+soft,W1,inside,reference,1.0,10,0.1208,1,,
+soft,W1,inside,reference,1.0,11,0.124,1,,
+soft,W1,inside,reference,1.0,12,0.1171,1,,
+soft,W1,inside,reference,1.0,13,0.0717,1,,
+soft,W1,inside,reference,1.0,14,0.0758,1,,
+soft,W1,inside,reference,1.0,15,0.0839,1,,
+soft,W1,inside,reference,2.5,0,0.0572,1,,
+soft,W1,inside,reference,2.5,1,0.0957,1,,
+soft,W1,inside,reference,2.5,2,0.1146,1,,
+soft,W1,inside,reference,2.5,3,0.0593,1,,
+soft,W1,inside,reference,2.5,4,0.0719,1,,
+soft,W1,inside,reference,2.5,5,0.0998,1,,
+soft,W1,inside,reference,2.5,6,0.0621,1,,
+soft,W1,inside,reference,2.5,7,0.0939,1,,
+soft,W1,inside,reference,2.5,8,0.0841,1,,
+soft,W1,inside,reference,2.5,9,0.0723,1,,
+soft,W1,inside,reference,2.5,10,0.132,1,,
+soft,W1,inside,reference,2.5,11,0.1411,1,,
+soft,W1,inside,reference,2.5,12,0.1243,1,,
+soft,W1,inside,reference,2.5,13,0.0731,1,,
+soft,W1,inside,reference,2.5,14,0.0955,1,,
+soft,W1,inside,reference,2.5,15,0.0761,1,,
+soft,W1,outside,reference,0.0,0,0.0483,1,,
+soft,W1,outside,reference,0.0,1,0.0888,1,,
+soft,W1,outside,reference,0.0,2,0.1072,1,,
+soft,W1,outside,reference,0.0,3,0.0639,1,,
+soft,W1,outside,reference,0.0,4,0.0852,1,,
+soft,W1,outside,reference,0.0,5,0.0987,1,,
+soft,W1,outside,reference,0.0,6,0.0689,1,,
+soft,W1,outside,reference,0.0,7,0.0842,1,,
+soft,W1,outside,reference,0.0,8,0.0673,1,,
+soft,W1,outside,reference,0.0,9,0.0655,1,,
+soft,W1,outside,reference,0.0,10,0.0979,1,,
+soft,W1,outside,reference,0.0,11,0.1259,1,,
+soft,W1,outside,reference,0.0,12,0.1032,1,,
+soft,W1,outside,reference,0.0,13,0.1105,1,,
+soft,W1,outside,reference,0.0,14,0.1014,1,,
+soft,W1,outside,reference,0.0,15,0.0738,1,,
+soft,W1,outside,reference,2.5,0,0.0513,1,,
+soft,W1,outside,reference,2.5,1,0.1015,1,,
+soft,W1,outside,reference,2.5,2,0.1248,1,,
+soft,W1,outside,reference,2.5,3,0.0602,1,,
+soft,W1,outside,reference,2.5,4,0.0935,1,,
+soft,W1,outside,reference,2.5,5,0.1027,1,,
+soft,W1,outside,reference,2.5,6,0.0618,1,,
+soft,W1,outside,reference,2.5,7,0.0845,1,,
+soft,W1,outside,reference,2.5,8,0.0745,1,,
+soft,W1,outside,reference,2.5,9,0.065,1,,
+soft,W1,outside,reference,2.5,10,0.0871,1,,
+soft,W1,outside,reference,2.5,11,0.1634,1,,
+soft,W1,outside,reference,2.5,12,0.1338,1,,
+soft,W1,outside,reference,2.5,13,0.1073,1,,
+soft,W1,outside,reference,2.5,14,0.1392,1,,
+soft,W1,outside,reference,2.5,15,0.0716,1,,
+soft,W1,inside,handover-physics,0.0,0,0.1005,1,,
+soft,W1,inside,handover-physics,0.0,1,0.4776,1,,
+soft,W1,inside,handover-physics,0.0,2,0.2373,1,,
+soft,W1,inside,handover-physics,0.0,3,0.129,1,,
+soft,W1,inside,handover-physics,0.0,4,0.1449,1,,
+soft,W1,inside,handover-physics,0.0,5,0.7909,1,,
+soft,W1,inside,handover-physics,0.0,6,0.2968,1,,
+soft,W1,inside,handover-physics,0.0,7,0.0764,1,,
+soft,W1,inside,handover-physics,0.0,8,0.4872,1,,
+soft,W1,inside,handover-physics,0.0,9,0.2075,1,,
+soft,W1,inside,handover-physics,0.0,10,0.1004,1,,
+soft,W1,inside,handover-physics,0.0,11,0.108,1,,
+soft,W1,inside,handover-physics,0.0,12,0.2131,1,,
+soft,W1,inside,handover-physics,0.0,13,0.3978,1,,
+soft,W1,inside,handover-physics,0.0,14,0.1995,1,,
+soft,W1,inside,handover-physics,0.0,15,0.1246,1,,
+soft,W1,inside,handover-physics,1.0,0,0.0612,1,0.08,1.0
+soft,W1,inside,handover-physics,1.0,1,0.0975,1,0.08,1.0
+soft,W1,inside,handover-physics,1.0,2,0.0925,1,0.08,1.0
+soft,W1,inside,handover-physics,1.0,3,0.0535,1,0.08,1.0
+soft,W1,inside,handover-physics,1.0,4,0.0702,1,0.08,1.0
+soft,W1,inside,handover-physics,1.0,5,0.0782,1,0.08,1.0
+soft,W1,inside,handover-physics,1.0,6,0.0771,1,0.08,1.0
+soft,W1,inside,handover-physics,1.0,7,0.1013,1,0.08,1.0
+soft,W1,inside,handover-physics,1.0,8,0.0932,1,0.08,1.0
+soft,W1,inside,handover-physics,1.0,9,0.083,1,0.08,1.0
+soft,W1,inside,handover-physics,1.0,10,0.1168,1,0.08,1.0
+soft,W1,inside,handover-physics,1.0,11,0.1318,1,0.08,1.0
+soft,W1,inside,handover-physics,1.0,12,0.1119,1,0.08,1.0
+soft,W1,inside,handover-physics,1.0,13,0.0683,1,0.08,1.0
+soft,W1,inside,handover-physics,1.0,14,0.0836,1,0.08,1.0
+soft,W1,inside,handover-physics,1.0,15,0.0733,1,0.08,1.0
+soft,W1,inside,handover-physics,2.5,0,0.0627,1,0.08,2.5
+soft,W1,inside,handover-physics,2.5,1,0.0908,1,0.08,2.5
+soft,W1,inside,handover-physics,2.5,2,0.101,1,0.08,2.5
+soft,W1,inside,handover-physics,2.5,3,0.0639,1,0.08,2.5
+soft,W1,inside,handover-physics,2.5,4,0.0711,1,0.08,2.5
+soft,W1,inside,handover-physics,2.5,5,0.0931,1,0.08,2.5
+soft,W1,inside,handover-physics,2.5,6,0.0658,1,0.08,2.5
+soft,W1,inside,handover-physics,2.5,7,0.1164,1,0.08,2.5
+soft,W1,inside,handover-physics,2.5,8,0.0894,1,0.08,2.5
+soft,W1,inside,handover-physics,2.5,9,0.0779,1,0.08,2.5
+soft,W1,inside,handover-physics,2.5,10,0.1183,1,0.08,2.5
+soft,W1,inside,handover-physics,2.5,11,0.1451,1,0.08,2.5
+soft,W1,inside,handover-physics,2.5,12,0.1179,1,0.08,2.5
+soft,W1,inside,handover-physics,2.5,13,0.0689,1,0.08,2.5
+soft,W1,inside,handover-physics,2.5,14,0.0923,1,0.08,2.5
+soft,W1,inside,handover-physics,2.5,15,0.074,1,0.08,2.5
+soft,W1,outside,handover-physics,0.0,0,11.6901,0,,
+soft,W1,outside,handover-physics,0.0,1,49.2047,0,,
+soft,W1,outside,handover-physics,0.0,2,1.5215,1,,
+soft,W1,outside,handover-physics,0.0,3,3.9052,0,,
+soft,W1,outside,handover-physics,0.0,4,13.1186,0,,
+soft,W1,outside,handover-physics,0.0,5,23.6227,0,,
+soft,W1,outside,handover-physics,0.0,6,5.8518,0,,
+soft,W1,outside,handover-physics,0.0,7,42.8979,0,,
+soft,W1,outside,handover-physics,0.0,8,16.4317,0,,
+soft,W1,outside,handover-physics,0.0,9,2.1998,0,,
+soft,W1,outside,handover-physics,0.0,10,27.2962,0,,
+soft,W1,outside,handover-physics,0.0,11,5.7457,0,,
+soft,W1,outside,handover-physics,0.0,12,5.7117,0,,
+soft,W1,outside,handover-physics,0.0,13,3.1002,0,,
+soft,W1,outside,handover-physics,0.0,14,9.6177,0,,
+soft,W1,outside,handover-physics,0.0,15,46.7244,0,,
+soft,W1,outside,handover-physics,2.5,0,0.0637,1,0.08,2.5
+soft,W1,outside,handover-physics,2.5,1,0.106,1,0.08,2.5
+soft,W1,outside,handover-physics,2.5,2,0.1082,1,0.08,2.5
+soft,W1,outside,handover-physics,2.5,3,0.0682,1,0.08,2.5
+soft,W1,outside,handover-physics,2.5,4,0.1021,1,0.08,2.5
+soft,W1,outside,handover-physics,2.5,5,0.0979,1,0.08,2.5
+soft,W1,outside,handover-physics,2.5,6,0.0597,1,0.08,2.5
+soft,W1,outside,handover-physics,2.5,7,0.0992,1,0.08,2.5
+soft,W1,outside,handover-physics,2.5,8,0.0732,1,0.08,2.5
+soft,W1,outside,handover-physics,2.5,9,0.0713,1,0.08,2.5
+soft,W1,outside,handover-physics,2.5,10,0.0919,1,0.08,2.5
+soft,W1,outside,handover-physics,2.5,11,0.1612,1,0.08,2.5
+soft,W1,outside,handover-physics,2.5,12,0.1241,1,0.08,2.5
+soft,W1,outside,handover-physics,2.5,13,0.094,1,0.08,2.5
+soft,W1,outside,handover-physics,2.5,14,0.1414,1,0.08,2.5
+soft,W1,outside,handover-physics,2.5,15,0.0647,1,0.08,2.5
+soft,W1,inside,handover-learned,0.0,0,0.1005,1,,
+soft,W1,inside,handover-learned,0.0,1,0.4776,1,,
+soft,W1,inside,handover-learned,0.0,2,0.2373,1,,
+soft,W1,inside,handover-learned,0.0,3,0.129,1,,
+soft,W1,inside,handover-learned,0.0,4,0.1449,1,,
+soft,W1,inside,handover-learned,0.0,5,0.7909,1,,
+soft,W1,inside,handover-learned,0.0,6,0.2968,1,,
+soft,W1,inside,handover-learned,0.0,7,0.0764,1,,
+soft,W1,inside,handover-learned,0.0,8,0.4872,1,,
+soft,W1,inside,handover-learned,0.0,9,0.2075,1,,
+soft,W1,inside,handover-learned,0.0,10,0.1004,1,,
+soft,W1,inside,handover-learned,0.0,11,0.108,1,,
+soft,W1,inside,handover-learned,0.0,12,0.2131,1,,
+soft,W1,inside,handover-learned,0.0,13,0.3978,1,,
+soft,W1,inside,handover-learned,0.0,14,0.1995,1,,
+soft,W1,inside,handover-learned,0.0,15,0.1246,1,,
+soft,W1,inside,handover-learned,1.0,0,0.0612,1,0.08,1.0
+soft,W1,inside,handover-learned,1.0,1,0.0975,1,0.08,1.0
+soft,W1,inside,handover-learned,1.0,2,0.0925,1,0.08,1.0
+soft,W1,inside,handover-learned,1.0,3,0.0535,1,0.08,1.0
+soft,W1,inside,handover-learned,1.0,4,0.0702,1,0.08,1.0
+soft,W1,inside,handover-learned,1.0,5,0.0782,1,0.08,1.0
+soft,W1,inside,handover-learned,1.0,6,0.0771,1,0.08,1.0
+soft,W1,inside,handover-learned,1.0,7,0.1013,1,0.08,1.0
+soft,W1,inside,handover-learned,1.0,8,0.0932,1,0.08,1.0
+soft,W1,inside,handover-learned,1.0,9,0.083,1,0.08,1.0
+soft,W1,inside,handover-learned,1.0,10,0.1168,1,0.08,1.0
+soft,W1,inside,handover-learned,1.0,11,0.1318,1,0.08,1.0
+soft,W1,inside,handover-learned,1.0,12,0.1119,1,0.08,1.0
+soft,W1,inside,handover-learned,1.0,13,0.0683,1,0.08,1.0
+soft,W1,inside,handover-learned,1.0,14,0.0836,1,0.08,1.0
+soft,W1,inside,handover-learned,1.0,15,0.0733,1,0.08,1.0
+soft,W1,inside,handover-learned,2.5,0,0.0627,1,0.08,2.5
+soft,W1,inside,handover-learned,2.5,1,0.0908,1,0.08,2.5
+soft,W1,inside,handover-learned,2.5,2,0.101,1,0.08,2.5
+soft,W1,inside,handover-learned,2.5,3,0.0639,1,0.08,2.5
+soft,W1,inside,handover-learned,2.5,4,0.0711,1,0.08,2.5
+soft,W1,inside,handover-learned,2.5,5,0.0931,1,0.08,2.5
+soft,W1,inside,handover-learned,2.5,6,0.0658,1,0.08,2.5
+soft,W1,inside,handover-learned,2.5,7,0.1164,1,0.08,2.5
+soft,W1,inside,handover-learned,2.5,8,0.0894,1,0.08,2.5
+soft,W1,inside,handover-learned,2.5,9,0.0779,1,0.08,2.5
+soft,W1,inside,handover-learned,2.5,10,0.1183,1,0.08,2.5
+soft,W1,inside,handover-learned,2.5,11,0.1451,1,0.08,2.5
+soft,W1,inside,handover-learned,2.5,12,0.1179,1,0.08,2.5
+soft,W1,inside,handover-learned,2.5,13,0.0689,1,0.08,2.5
+soft,W1,inside,handover-learned,2.5,14,0.0923,1,0.08,2.5
+soft,W1,inside,handover-learned,2.5,15,0.074,1,0.08,2.5
+soft,W1,outside,handover-learned,0.0,0,11.6901,0,,
+soft,W1,outside,handover-learned,0.0,1,49.2047,0,,
+soft,W1,outside,handover-learned,0.0,2,1.5215,1,,
+soft,W1,outside,handover-learned,0.0,3,3.9052,0,,
+soft,W1,outside,handover-learned,0.0,4,13.1186,0,,
+soft,W1,outside,handover-learned,0.0,5,23.6227,0,,
+soft,W1,outside,handover-learned,0.0,6,5.8518,0,,
+soft,W1,outside,handover-learned,0.0,7,42.8979,0,,
+soft,W1,outside,handover-learned,0.0,8,16.4317,0,,
+soft,W1,outside,handover-learned,0.0,9,2.1998,0,,
+soft,W1,outside,handover-learned,0.0,10,27.2962,0,,
+soft,W1,outside,handover-learned,0.0,11,5.7457,0,,
+soft,W1,outside,handover-learned,0.0,12,5.7117,0,,
+soft,W1,outside,handover-learned,0.0,13,3.1002,0,,
+soft,W1,outside,handover-learned,0.0,14,9.6177,0,,
+soft,W1,outside,handover-learned,0.0,15,46.7244,0,,
+soft,W1,outside,handover-learned,2.5,0,0.0637,1,0.08,2.5
+soft,W1,outside,handover-learned,2.5,1,0.106,1,0.08,2.5
+soft,W1,outside,handover-learned,2.5,2,0.1082,1,0.08,2.5
+soft,W1,outside,handover-learned,2.5,3,0.0682,1,0.08,2.5
+soft,W1,outside,handover-learned,2.5,4,0.1021,1,0.08,2.5
+soft,W1,outside,handover-learned,2.5,5,0.0979,1,0.08,2.5
+soft,W1,outside,handover-learned,2.5,6,0.0597,1,0.08,2.5
+soft,W1,outside,handover-learned,2.5,7,0.0992,1,0.08,2.5
+soft,W1,outside,handover-learned,2.5,8,0.0732,1,0.08,2.5
+soft,W1,outside,handover-learned,2.5,9,0.0713,1,0.08,2.5
+soft,W1,outside,handover-learned,2.5,10,0.0919,1,0.08,2.5
+soft,W1,outside,handover-learned,2.5,11,0.1612,1,0.08,2.5
+soft,W1,outside,handover-learned,2.5,12,0.1241,1,0.08,2.5
+soft,W1,outside,handover-learned,2.5,13,0.094,1,0.08,2.5
+soft,W1,outside,handover-learned,2.5,14,0.1414,1,0.08,2.5
+soft,W1,outside,handover-learned,2.5,15,0.0647,1,0.08,2.5
+soft,W1,inside,handover-consistency,0.0,0,0.1005,1,,
+soft,W1,inside,handover-consistency,0.0,1,0.4776,1,,
+soft,W1,inside,handover-consistency,0.0,2,0.2373,1,,
+soft,W1,inside,handover-consistency,0.0,3,0.129,1,,
+soft,W1,inside,handover-consistency,0.0,4,0.1449,1,,
+soft,W1,inside,handover-consistency,0.0,5,0.7909,1,,
+soft,W1,inside,handover-consistency,0.0,6,0.2968,1,,
+soft,W1,inside,handover-consistency,0.0,7,0.0764,1,,
+soft,W1,inside,handover-consistency,0.0,8,0.4872,1,,
+soft,W1,inside,handover-consistency,0.0,9,0.2075,1,,
+soft,W1,inside,handover-consistency,0.0,10,0.1004,1,,
+soft,W1,inside,handover-consistency,0.0,11,0.0804,1,1.28,0.0
+soft,W1,inside,handover-consistency,0.0,12,0.2131,1,,
+soft,W1,inside,handover-consistency,0.0,13,0.3978,1,,
+soft,W1,inside,handover-consistency,0.0,14,0.1995,1,,
+soft,W1,inside,handover-consistency,0.0,15,0.1246,1,,
+soft,W1,inside,handover-consistency,1.0,0,0.1117,1,1.36,1.0
+soft,W1,inside,handover-consistency,1.0,1,0.0825,1,1.12,1.0
+soft,W1,inside,handover-consistency,1.0,2,0.0938,1,1.44,1.0
+soft,W1,inside,handover-consistency,1.0,3,0.1299,1,1.12,1.0
+soft,W1,inside,handover-consistency,1.0,4,0.0759,1,1.6,1.0
+soft,W1,inside,handover-consistency,1.0,5,0.095,1,1.6,1.0
+soft,W1,inside,handover-consistency,1.0,6,0.096,1,0.64,1.0
+soft,W1,inside,handover-consistency,1.0,7,0.1399,1,1.12,1.0
+soft,W1,inside,handover-consistency,1.0,8,0.0877,1,0.96,1.0
+soft,W1,inside,handover-consistency,1.0,9,0.0702,1,0.88,1.0
+soft,W1,inside,handover-consistency,1.0,10,0.0716,1,0.8,1.0
+soft,W1,inside,handover-consistency,1.0,11,0.0698,1,1.04,1.0
+soft,W1,inside,handover-consistency,1.0,12,0.0929,1,0.8,1.0
+soft,W1,inside,handover-consistency,1.0,13,0.4401,1,2.16,1.0
+soft,W1,inside,handover-consistency,1.0,14,0.078,1,1.28,1.0
+soft,W1,inside,handover-consistency,1.0,15,0.0874,1,0.96,1.0
+soft,W1,inside,handover-consistency,2.5,0,0.0872,1,0.64,2.5
+soft,W1,inside,handover-consistency,2.5,1,0.0715,1,0.72,2.5
+soft,W1,inside,handover-consistency,2.5,2,0.067,1,0.72,2.5
+soft,W1,inside,handover-consistency,2.5,3,0.1008,1,0.64,2.5
+soft,W1,inside,handover-consistency,2.5,4,0.1018,1,0.72,2.5
+soft,W1,inside,handover-consistency,2.5,5,0.0699,1,0.72,2.5
+soft,W1,inside,handover-consistency,2.5,6,0.0796,1,0.64,2.5
+soft,W1,inside,handover-consistency,2.5,7,0.1085,1,0.56,2.5
+soft,W1,inside,handover-consistency,2.5,8,0.1017,1,0.8,2.5
+soft,W1,inside,handover-consistency,2.5,9,0.1049,1,0.72,2.5
+soft,W1,inside,handover-consistency,2.5,10,0.0585,1,0.72,2.5
+soft,W1,inside,handover-consistency,2.5,11,0.1044,1,0.56,2.5
+soft,W1,inside,handover-consistency,2.5,12,0.1236,1,0.64,2.5
+soft,W1,inside,handover-consistency,2.5,13,0.0917,1,0.8,2.5
+soft,W1,inside,handover-consistency,2.5,14,0.0614,1,0.64,2.5
+soft,W1,inside,handover-consistency,2.5,15,0.1002,1,0.72,2.5
+soft,W1,outside,handover-consistency,0.0,0,0.1071,1,0.56,0.0
+soft,W1,outside,handover-consistency,0.0,1,0.0633,1,0.64,0.0
+soft,W1,outside,handover-consistency,0.0,2,0.0672,1,1.12,0.0
+soft,W1,outside,handover-consistency,0.0,3,0.096,1,0.72,0.0
+soft,W1,outside,handover-consistency,0.0,4,0.0749,1,0.4,0.0
+soft,W1,outside,handover-consistency,0.0,5,0.0972,1,0.56,0.0
+soft,W1,outside,handover-consistency,0.0,6,0.11,1,0.48,0.0
+soft,W1,outside,handover-consistency,0.0,7,0.0649,1,0.88,0.0
+soft,W1,outside,handover-consistency,0.0,8,0.0741,1,0.48,0.0
+soft,W1,outside,handover-consistency,0.0,9,0.0757,1,0.72,0.0
+soft,W1,outside,handover-consistency,0.0,10,27.2962,0,,
+soft,W1,outside,handover-consistency,0.0,11,0.0807,1,0.8,0.0
+soft,W1,outside,handover-consistency,0.0,12,0.0918,1,0.64,0.0
+soft,W1,outside,handover-consistency,0.0,13,0.1058,1,0.72,0.0
+soft,W1,outside,handover-consistency,0.0,14,0.094,1,0.56,0.0
+soft,W1,outside,handover-consistency,0.0,15,0.0813,1,0.4,0.0
+soft,W1,outside,handover-consistency,2.5,0,0.114,1,0.56,2.5
+soft,W1,outside,handover-consistency,2.5,1,0.0596,1,0.56,2.5
+soft,W1,outside,handover-consistency,2.5,2,0.0774,1,0.72,2.5
+soft,W1,outside,handover-consistency,2.5,3,0.0774,1,0.56,2.5
+soft,W1,outside,handover-consistency,2.5,4,0.0835,1,0.4,2.5
+soft,W1,outside,handover-consistency,2.5,5,0.0741,1,0.48,2.5
+soft,W1,outside,handover-consistency,2.5,6,0.0823,1,0.4,2.5
+soft,W1,outside,handover-consistency,2.5,7,0.1442,1,1.6,2.5
+soft,W1,outside,handover-consistency,2.5,8,0.0803,1,0.4,2.5
+soft,W1,outside,handover-consistency,2.5,9,0.1047,1,0.56,2.5
+soft,W1,outside,handover-consistency,2.5,10,0.1361,1,0.88,2.501
+soft,W1,outside,handover-consistency,2.5,11,0.1042,1,0.56,2.5
+soft,W1,outside,handover-consistency,2.5,12,0.1291,1,0.48,2.5
+soft,W1,outside,handover-consistency,2.5,13,0.1093,1,0.64,2.5
+soft,W1,outside,handover-consistency,2.5,14,0.0707,1,0.64,2.5
+soft,W1,outside,handover-consistency,2.5,15,0.094,1,0.4,2.5
+soft,W2,inside,adaptive MPC,0.0,0,0.0554,1,,0.0
+soft,W2,inside,adaptive MPC,0.0,1,0.0915,1,,0.0
+soft,W2,inside,adaptive MPC,0.0,2,0.1011,1,,0.0
+soft,W2,inside,adaptive MPC,0.0,3,0.0515,1,,0.0
+soft,W2,inside,adaptive MPC,0.0,4,0.0725,1,,0.0
+soft,W2,inside,adaptive MPC,0.0,5,0.0825,1,,0.0
+soft,W2,inside,adaptive MPC,0.0,6,0.0682,1,,0.0
+soft,W2,inside,adaptive MPC,0.0,7,0.0771,1,,0.0
+soft,W2,inside,adaptive MPC,0.0,8,0.0971,1,,0.0
+soft,W2,inside,adaptive MPC,0.0,9,0.0773,1,,0.0
+soft,W2,inside,adaptive MPC,0.0,10,0.1165,1,,0.0
+soft,W2,inside,adaptive MPC,0.0,11,0.1087,1,,0.0
+soft,W2,inside,adaptive MPC,0.0,12,0.1052,1,,0.0
+soft,W2,inside,adaptive MPC,0.0,13,0.0724,1,,0.0
+soft,W2,inside,adaptive MPC,0.0,14,0.0744,1,,0.0
+soft,W2,inside,adaptive MPC,0.0,15,0.086,1,,0.0
+soft,W2,inside,adaptive MPC,1.0,0,0.0567,1,,0.937
+soft,W2,inside,adaptive MPC,1.0,1,0.1974,1,,0.922
+soft,W2,inside,adaptive MPC,1.0,2,0.2014,1,,0.885
+soft,W2,inside,adaptive MPC,1.0,3,0.0677,1,,0.924
+soft,W2,inside,adaptive MPC,1.0,4,0.0974,1,,0.885
+soft,W2,inside,adaptive MPC,1.0,5,0.2935,1,,0.862
+soft,W2,inside,adaptive MPC,1.0,6,0.1238,1,,0.933
+soft,W2,inside,adaptive MPC,1.0,7,0.1283,1,,0.895
+soft,W2,inside,adaptive MPC,1.0,8,0.1367,1,,0.97
+soft,W2,inside,adaptive MPC,1.0,9,0.1233,1,,0.91
+soft,W2,inside,adaptive MPC,1.0,10,0.1709,1,,0.881
+soft,W2,inside,adaptive MPC,1.0,11,0.1731,1,,0.946
+soft,W2,inside,adaptive MPC,1.0,12,0.1407,1,,0.865
+soft,W2,inside,adaptive MPC,1.0,13,0.1187,1,,0.867
+soft,W2,inside,adaptive MPC,1.0,14,0.3114,1,,0.856
+soft,W2,inside,adaptive MPC,1.0,15,0.1203,1,,0.909
+soft,W2,inside,adaptive MPC,2.5,0,0.0865,1,,2.334
+soft,W2,inside,adaptive MPC,2.5,1,0.3237,1,,2.281
+soft,W2,inside,adaptive MPC,2.5,2,0.3922,1,,2.132
+soft,W2,inside,adaptive MPC,2.5,3,0.1859,1,,2.247
+soft,W2,inside,adaptive MPC,2.5,4,0.1765,1,,2.236
+soft,W2,inside,adaptive MPC,2.5,5,0.5347,1,,2.092
+soft,W2,inside,adaptive MPC,2.5,6,0.1391,1,,2.306
+soft,W2,inside,adaptive MPC,2.5,7,0.2719,1,,2.215
+soft,W2,inside,adaptive MPC,2.5,8,0.3527,1,,2.403
+soft,W2,inside,adaptive MPC,2.5,9,0.2242,1,,2.259
+soft,W2,inside,adaptive MPC,2.5,10,0.2557,1,,2.202
+soft,W2,inside,adaptive MPC,2.5,11,0.2696,1,,2.304
+soft,W2,inside,adaptive MPC,2.5,12,0.3269,1,,2.146
+soft,W2,inside,adaptive MPC,2.5,13,0.256,1,,2.101
+soft,W2,inside,adaptive MPC,2.5,14,0.5532,1,,2.021
+soft,W2,inside,adaptive MPC,2.5,15,0.205,1,,2.268
+soft,W2,outside,adaptive MPC,0.0,0,0.0483,1,,0.0
+soft,W2,outside,adaptive MPC,0.0,1,0.0888,1,,0.0
+soft,W2,outside,adaptive MPC,0.0,2,0.1072,1,,0.0
+soft,W2,outside,adaptive MPC,0.0,3,0.0639,1,,0.0
+soft,W2,outside,adaptive MPC,0.0,4,0.0852,1,,0.0
+soft,W2,outside,adaptive MPC,0.0,5,0.0987,1,,0.0
+soft,W2,outside,adaptive MPC,0.0,6,0.0689,1,,0.0
+soft,W2,outside,adaptive MPC,0.0,7,0.0842,1,,0.0
+soft,W2,outside,adaptive MPC,0.0,8,0.0673,1,,0.0
+soft,W2,outside,adaptive MPC,0.0,9,0.0655,1,,0.0
+soft,W2,outside,adaptive MPC,0.0,10,0.0979,1,,0.0
+soft,W2,outside,adaptive MPC,0.0,11,0.1259,1,,0.0
+soft,W2,outside,adaptive MPC,0.0,12,0.1032,1,,0.0
+soft,W2,outside,adaptive MPC,0.0,13,0.1105,1,,0.0
+soft,W2,outside,adaptive MPC,0.0,14,0.1014,1,,0.0
+soft,W2,outside,adaptive MPC,0.0,15,0.0738,1,,0.0
+soft,W2,outside,adaptive MPC,2.5,0,0.2311,1,,2.078
+soft,W2,outside,adaptive MPC,2.5,1,0.2497,1,,2.256
+soft,W2,outside,adaptive MPC,2.5,2,0.3094,1,,2.408
+soft,W2,outside,adaptive MPC,2.5,3,0.4024,1,,1.921
+soft,W2,outside,adaptive MPC,2.5,4,0.2294,1,,2.409
+soft,W2,outside,adaptive MPC,2.5,5,0.122,1,,2.409
+soft,W2,outside,adaptive MPC,2.5,6,0.2629,1,,2.051
+soft,W2,outside,adaptive MPC,2.5,7,0.4295,1,,2.146
+soft,W2,outside,adaptive MPC,2.5,8,0.2447,1,,2.251
+soft,W2,outside,adaptive MPC,2.5,9,0.6749,1,,2.051
+soft,W2,outside,adaptive MPC,2.5,10,0.581,1,,2.146
+soft,W2,outside,adaptive MPC,2.5,11,0.1501,1,,2.316
+soft,W2,outside,adaptive MPC,2.5,12,0.1572,1,,2.331
+soft,W2,outside,adaptive MPC,2.5,13,0.3018,1,,2.127
+soft,W2,outside,adaptive MPC,2.5,14,0.2776,1,,2.215
+soft,W2,outside,adaptive MPC,2.5,15,0.2529,1,,2.404
+soft,W2,inside,reference,0.0,0,0.0554,1,,
+soft,W2,inside,reference,0.0,1,0.0915,1,,
+soft,W2,inside,reference,0.0,2,0.1011,1,,
+soft,W2,inside,reference,0.0,3,0.0515,1,,
+soft,W2,inside,reference,0.0,4,0.0725,1,,
+soft,W2,inside,reference,0.0,5,0.0825,1,,
+soft,W2,inside,reference,0.0,6,0.0682,1,,
+soft,W2,inside,reference,0.0,7,0.0771,1,,
+soft,W2,inside,reference,0.0,8,0.0971,1,,
+soft,W2,inside,reference,0.0,9,0.0773,1,,
+soft,W2,inside,reference,0.0,10,0.1165,1,,
+soft,W2,inside,reference,0.0,11,0.1087,1,,
+soft,W2,inside,reference,0.0,12,0.1052,1,,
+soft,W2,inside,reference,0.0,13,0.0724,1,,
+soft,W2,inside,reference,0.0,14,0.0744,1,,
+soft,W2,inside,reference,0.0,15,0.086,1,,
+soft,W2,inside,reference,1.0,0,0.0557,1,,
+soft,W2,inside,reference,1.0,1,0.0971,1,,
+soft,W2,inside,reference,1.0,2,0.1052,1,,
+soft,W2,inside,reference,1.0,3,0.0522,1,,
+soft,W2,inside,reference,1.0,4,0.0697,1,,
+soft,W2,inside,reference,1.0,5,0.0844,1,,
+soft,W2,inside,reference,1.0,6,0.0658,1,,
+soft,W2,inside,reference,1.0,7,0.0849,1,,
+soft,W2,inside,reference,1.0,8,0.0854,1,,
+soft,W2,inside,reference,1.0,9,0.0762,1,,
+soft,W2,inside,reference,1.0,10,0.1233,1,,
+soft,W2,inside,reference,1.0,11,0.1222,1,,
+soft,W2,inside,reference,1.0,12,0.1187,1,,
+soft,W2,inside,reference,1.0,13,0.0717,1,,
+soft,W2,inside,reference,1.0,14,0.0731,1,,
+soft,W2,inside,reference,1.0,15,0.0834,1,,
+soft,W2,inside,reference,2.5,0,0.0542,1,,
+soft,W2,inside,reference,2.5,1,0.1001,1,,
+soft,W2,inside,reference,2.5,2,0.1169,1,,
+soft,W2,inside,reference,2.5,3,0.0589,1,,
+soft,W2,inside,reference,2.5,4,0.0733,1,,
+soft,W2,inside,reference,2.5,5,0.1049,1,,
+soft,W2,inside,reference,2.5,6,0.059,1,,
+soft,W2,inside,reference,2.5,7,0.0937,1,,
+soft,W2,inside,reference,2.5,8,0.0823,1,,
+soft,W2,inside,reference,2.5,9,0.0718,1,,
+soft,W2,inside,reference,2.5,10,0.1298,1,,
+soft,W2,inside,reference,2.5,11,0.1357,1,,
+soft,W2,inside,reference,2.5,12,0.1264,1,,
+soft,W2,inside,reference,2.5,13,0.0727,1,,
+soft,W2,inside,reference,2.5,14,0.0979,1,,
+soft,W2,inside,reference,2.5,15,0.0753,1,,
+soft,W2,outside,reference,0.0,0,0.0483,1,,
+soft,W2,outside,reference,0.0,1,0.0888,1,,
+soft,W2,outside,reference,0.0,2,0.1072,1,,
+soft,W2,outside,reference,0.0,3,0.0639,1,,
+soft,W2,outside,reference,0.0,4,0.0852,1,,
+soft,W2,outside,reference,0.0,5,0.0987,1,,
+soft,W2,outside,reference,0.0,6,0.0689,1,,
+soft,W2,outside,reference,0.0,7,0.0842,1,,
+soft,W2,outside,reference,0.0,8,0.0673,1,,
+soft,W2,outside,reference,0.0,9,0.0655,1,,
+soft,W2,outside,reference,0.0,10,0.0979,1,,
+soft,W2,outside,reference,0.0,11,0.1259,1,,
+soft,W2,outside,reference,0.0,12,0.1032,1,,
+soft,W2,outside,reference,0.0,13,0.1105,1,,
+soft,W2,outside,reference,0.0,14,0.1014,1,,
+soft,W2,outside,reference,0.0,15,0.0738,1,,
+soft,W2,outside,reference,2.5,0,0.0512,1,,
+soft,W2,outside,reference,2.5,1,0.1094,1,,
+soft,W2,outside,reference,2.5,2,0.1182,1,,
+soft,W2,outside,reference,2.5,3,0.067,1,,
+soft,W2,outside,reference,2.5,4,0.0939,1,,
+soft,W2,outside,reference,2.5,5,0.1096,1,,
+soft,W2,outside,reference,2.5,6,0.0651,1,,
+soft,W2,outside,reference,2.5,7,0.0818,1,,
+soft,W2,outside,reference,2.5,8,0.0739,1,,
+soft,W2,outside,reference,2.5,9,0.0655,1,,
+soft,W2,outside,reference,2.5,10,0.0822,1,,
+soft,W2,outside,reference,2.5,11,0.1561,1,,
+soft,W2,outside,reference,2.5,12,0.1328,1,,
+soft,W2,outside,reference,2.5,13,0.1065,1,,
+soft,W2,outside,reference,2.5,14,0.1473,1,,
+soft,W2,outside,reference,2.5,15,0.0691,1,,
+soft,W2,inside,handover-physics,0.0,0,0.1084,1,1.92,0.0
+soft,W2,inside,handover-physics,0.0,1,0.0774,1,2.16,0.0
+soft,W2,inside,handover-physics,0.0,2,0.2373,1,,
+soft,W2,inside,handover-physics,0.0,3,0.129,1,,
+soft,W2,inside,handover-physics,0.0,4,0.1449,1,,
+soft,W2,inside,handover-physics,0.0,5,0.0818,1,1.12,0.0
+soft,W2,inside,handover-physics,0.0,6,0.2968,1,,
+soft,W2,inside,handover-physics,0.0,7,0.0764,1,,
+soft,W2,inside,handover-physics,0.0,8,0.4872,1,,
+soft,W2,inside,handover-physics,0.0,9,0.2075,1,,
+soft,W2,inside,handover-physics,0.0,10,0.1004,1,,
+soft,W2,inside,handover-physics,0.0,11,0.1088,1,1.92,0.0
+soft,W2,inside,handover-physics,0.0,12,0.2131,1,,
+soft,W2,inside,handover-physics,0.0,13,0.3978,1,,
+soft,W2,inside,handover-physics,0.0,14,0.1995,1,,
+soft,W2,inside,handover-physics,0.0,15,0.1246,1,,
+soft,W2,inside,handover-physics,1.0,0,0.0596,1,0.08,0.962
+soft,W2,inside,handover-physics,1.0,1,0.2267,1,0.08,0.915
+soft,W2,inside,handover-physics,1.0,2,0.1717,1,0.08,0.853
+soft,W2,inside,handover-physics,1.0,3,0.0458,1,0.08,0.929
+soft,W2,inside,handover-physics,1.0,4,0.0996,1,0.08,0.885
+soft,W2,inside,handover-physics,1.0,5,0.2842,1,0.08,0.82
+soft,W2,inside,handover-physics,1.0,6,0.1741,1,0.08,0.924
+soft,W2,inside,handover-physics,1.0,7,0.1974,1,0.08,0.886
+soft,W2,inside,handover-physics,1.0,8,0.1346,1,0.08,0.943
+soft,W2,inside,handover-physics,1.0,9,0.159,1,0.08,0.891
+soft,W2,inside,handover-physics,1.0,10,0.2183,1,0.08,0.863
+soft,W2,inside,handover-physics,1.0,11,0.1856,1,0.08,0.927
+soft,W2,inside,handover-physics,1.0,12,0.125,1,0.08,0.859
+soft,W2,inside,handover-physics,1.0,13,0.1304,1,0.08,0.829
+soft,W2,inside,handover-physics,1.0,14,0.2798,1,0.08,0.867
+soft,W2,inside,handover-physics,1.0,15,0.113,1,0.08,0.907
+soft,W2,inside,handover-physics,2.5,0,0.0993,1,0.08,2.373
+soft,W2,inside,handover-physics,2.5,1,0.3358,1,0.08,2.21
+soft,W2,inside,handover-physics,2.5,2,0.2951,1,0.08,2.124
+soft,W2,inside,handover-physics,2.5,3,0.0892,1,0.08,2.337
+soft,W2,inside,handover-physics,2.5,4,0.1632,1,0.08,2.261
+soft,W2,inside,handover-physics,2.5,5,0.3426,1,0.08,2.085
+soft,W2,inside,handover-physics,2.5,6,0.1334,1,0.08,2.321
+soft,W2,inside,handover-physics,2.5,7,0.3346,1,0.08,2.202
+soft,W2,inside,handover-physics,2.5,8,0.181,1,0.08,2.347
+soft,W2,inside,handover-physics,2.5,9,0.2029,1,0.08,2.273
+soft,W2,inside,handover-physics,2.5,10,0.3782,1,0.08,2.1
+soft,W2,inside,handover-physics,2.5,11,0.26,1,0.08,2.266
+soft,W2,inside,handover-physics,2.5,12,0.2677,1,0.08,2.143
+soft,W2,inside,handover-physics,2.5,13,0.2972,1,0.08,2.04
+soft,W2,inside,handover-physics,2.5,14,0.4426,1,0.08,2.061
+soft,W2,inside,handover-physics,2.5,15,0.1421,1,0.08,2.288
+soft,W2,outside,handover-physics,0.0,0,11.6901,0,,
+soft,W2,outside,handover-physics,0.0,1,49.2047,0,,
+soft,W2,outside,handover-physics,0.0,2,1.5215,1,,
+soft,W2,outside,handover-physics,0.0,3,3.9052,0,,
+soft,W2,outside,handover-physics,0.0,4,13.1186,0,,
+soft,W2,outside,handover-physics,0.0,5,23.6227,0,,
+soft,W2,outside,handover-physics,0.0,6,5.8518,0,,
+soft,W2,outside,handover-physics,0.0,7,42.8979,0,,
+soft,W2,outside,handover-physics,0.0,8,16.4317,0,,
+soft,W2,outside,handover-physics,0.0,9,2.1998,0,,
+soft,W2,outside,handover-physics,0.0,10,27.2962,0,,
+soft,W2,outside,handover-physics,0.0,11,5.7457,0,,
+soft,W2,outside,handover-physics,0.0,12,5.7117,0,,
+soft,W2,outside,handover-physics,0.0,13,3.1002,0,,
+soft,W2,outside,handover-physics,0.0,14,9.6177,0,,
+soft,W2,outside,handover-physics,0.0,15,46.7244,0,,
+soft,W2,outside,handover-physics,2.5,0,0.1214,1,0.08,2.184
+soft,W2,outside,handover-physics,2.5,1,0.2085,1,0.08,2.187
+soft,W2,outside,handover-physics,2.5,2,0.236,1,0.08,2.459
+soft,W2,outside,handover-physics,2.5,3,0.5041,1,0.08,2.013
+soft,W2,outside,handover-physics,2.5,4,0.2009,1,0.08,2.278
+soft,W2,outside,handover-physics,2.5,5,0.2269,1,0.08,2.42
+soft,W2,outside,handover-physics,2.5,6,0.3485,1,0.08,2.041
+soft,W2,outside,handover-physics,2.5,7,0.3417,1,0.08,2.073
+soft,W2,outside,handover-physics,2.5,8,0.3244,1,0.08,2.222
+soft,W2,outside,handover-physics,2.5,9,0.8595,1,0.08,2.035
+soft,W2,outside,handover-physics,2.5,10,0.2473,1,0.08,1.945
+soft,W2,outside,handover-physics,2.5,11,0.1984,1,0.08,2.332
+soft,W2,outside,handover-physics,2.5,12,0.1471,1,0.08,2.364
+soft,W2,outside,handover-physics,2.5,13,0.2311,1,0.08,2.173
+soft,W2,outside,handover-physics,2.5,14,0.3271,1,0.08,2.171
+soft,W2,outside,handover-physics,2.5,15,0.2046,1,0.08,2.276
+soft,W2,inside,handover-learned,0.0,0,0.1084,1,1.92,0.0
+soft,W2,inside,handover-learned,0.0,1,0.0774,1,2.16,0.0
+soft,W2,inside,handover-learned,0.0,2,0.2373,1,,
+soft,W2,inside,handover-learned,0.0,3,0.129,1,,
+soft,W2,inside,handover-learned,0.0,4,0.1449,1,,
+soft,W2,inside,handover-learned,0.0,5,0.0818,1,1.12,0.0
+soft,W2,inside,handover-learned,0.0,6,0.2968,1,,
+soft,W2,inside,handover-learned,0.0,7,0.0764,1,,
+soft,W2,inside,handover-learned,0.0,8,0.4872,1,,
+soft,W2,inside,handover-learned,0.0,9,0.2075,1,,
+soft,W2,inside,handover-learned,0.0,10,0.1004,1,,
+soft,W2,inside,handover-learned,0.0,11,0.1088,1,1.92,0.0
+soft,W2,inside,handover-learned,0.0,12,0.2131,1,,
+soft,W2,inside,handover-learned,0.0,13,0.3978,1,,
+soft,W2,inside,handover-learned,0.0,14,0.1995,1,,
+soft,W2,inside,handover-learned,0.0,15,0.1246,1,,
+soft,W2,inside,handover-learned,1.0,0,0.0596,1,0.08,0.962
+soft,W2,inside,handover-learned,1.0,1,0.2267,1,0.08,0.915
+soft,W2,inside,handover-learned,1.0,2,0.1717,1,0.08,0.853
+soft,W2,inside,handover-learned,1.0,3,0.0458,1,0.08,0.929
+soft,W2,inside,handover-learned,1.0,4,0.0996,1,0.08,0.885
+soft,W2,inside,handover-learned,1.0,5,0.2842,1,0.08,0.82
+soft,W2,inside,handover-learned,1.0,6,0.1741,1,0.08,0.924
+soft,W2,inside,handover-learned,1.0,7,0.1974,1,0.08,0.886
+soft,W2,inside,handover-learned,1.0,8,0.1346,1,0.08,0.943
+soft,W2,inside,handover-learned,1.0,9,0.159,1,0.08,0.891
+soft,W2,inside,handover-learned,1.0,10,0.2183,1,0.08,0.863
+soft,W2,inside,handover-learned,1.0,11,0.1856,1,0.08,0.927
+soft,W2,inside,handover-learned,1.0,12,0.125,1,0.08,0.859
+soft,W2,inside,handover-learned,1.0,13,0.1304,1,0.08,0.829
+soft,W2,inside,handover-learned,1.0,14,0.2798,1,0.08,0.867
+soft,W2,inside,handover-learned,1.0,15,0.113,1,0.08,0.907
+soft,W2,inside,handover-learned,2.5,0,0.0993,1,0.08,2.373
+soft,W2,inside,handover-learned,2.5,1,0.3358,1,0.08,2.21
+soft,W2,inside,handover-learned,2.5,2,0.2951,1,0.08,2.124
+soft,W2,inside,handover-learned,2.5,3,0.0892,1,0.08,2.337
+soft,W2,inside,handover-learned,2.5,4,0.1632,1,0.08,2.261
+soft,W2,inside,handover-learned,2.5,5,0.3426,1,0.08,2.085
+soft,W2,inside,handover-learned,2.5,6,0.1334,1,0.08,2.321
+soft,W2,inside,handover-learned,2.5,7,0.3346,1,0.08,2.202
+soft,W2,inside,handover-learned,2.5,8,0.181,1,0.08,2.347
+soft,W2,inside,handover-learned,2.5,9,0.2029,1,0.08,2.273
+soft,W2,inside,handover-learned,2.5,10,0.3782,1,0.08,2.1
+soft,W2,inside,handover-learned,2.5,11,0.26,1,0.08,2.266
+soft,W2,inside,handover-learned,2.5,12,0.2677,1,0.08,2.143
+soft,W2,inside,handover-learned,2.5,13,0.2972,1,0.08,2.04
+soft,W2,inside,handover-learned,2.5,14,0.4426,1,0.08,2.061
+soft,W2,inside,handover-learned,2.5,15,0.1421,1,0.08,2.288
+soft,W2,outside,handover-learned,0.0,0,11.6901,0,,
+soft,W2,outside,handover-learned,0.0,1,49.2047,0,,
+soft,W2,outside,handover-learned,0.0,2,1.5215,1,,
+soft,W2,outside,handover-learned,0.0,3,3.9052,0,,
+soft,W2,outside,handover-learned,0.0,4,13.1186,0,,
+soft,W2,outside,handover-learned,0.0,5,23.6227,0,,
+soft,W2,outside,handover-learned,0.0,6,5.8518,0,,
+soft,W2,outside,handover-learned,0.0,7,42.8979,0,,
+soft,W2,outside,handover-learned,0.0,8,16.4317,0,,
+soft,W2,outside,handover-learned,0.0,9,2.1998,0,,
+soft,W2,outside,handover-learned,0.0,10,27.2962,0,,
+soft,W2,outside,handover-learned,0.0,11,5.7457,0,,
+soft,W2,outside,handover-learned,0.0,12,5.7117,0,,
+soft,W2,outside,handover-learned,0.0,13,3.1002,0,,
+soft,W2,outside,handover-learned,0.0,14,9.6177,0,,
+soft,W2,outside,handover-learned,0.0,15,46.7244,0,,
+soft,W2,outside,handover-learned,2.5,0,0.1214,1,0.08,2.184
+soft,W2,outside,handover-learned,2.5,1,0.2085,1,0.08,2.187
+soft,W2,outside,handover-learned,2.5,2,0.236,1,0.08,2.459
+soft,W2,outside,handover-learned,2.5,3,0.5041,1,0.08,2.013
+soft,W2,outside,handover-learned,2.5,4,0.2009,1,0.08,2.278
+soft,W2,outside,handover-learned,2.5,5,0.2269,1,0.08,2.42
+soft,W2,outside,handover-learned,2.5,6,0.3485,1,0.08,2.041
+soft,W2,outside,handover-learned,2.5,7,0.3417,1,0.08,2.073
+soft,W2,outside,handover-learned,2.5,8,0.3244,1,0.08,2.222
+soft,W2,outside,handover-learned,2.5,9,0.8595,1,0.08,2.035
+soft,W2,outside,handover-learned,2.5,10,0.2473,1,0.08,1.945
+soft,W2,outside,handover-learned,2.5,11,0.1984,1,0.08,2.332
+soft,W2,outside,handover-learned,2.5,12,0.1471,1,0.08,2.364
+soft,W2,outside,handover-learned,2.5,13,0.2311,1,0.08,2.173
+soft,W2,outside,handover-learned,2.5,14,0.3271,1,0.08,2.171
+soft,W2,outside,handover-learned,2.5,15,0.2046,1,0.08,2.276
+soft,W2,inside,handover-consistency,0.0,0,0.1005,1,,
+soft,W2,inside,handover-consistency,0.0,1,0.4776,1,,
+soft,W2,inside,handover-consistency,0.0,2,0.2373,1,,
+soft,W2,inside,handover-consistency,0.0,3,0.129,1,,
+soft,W2,inside,handover-consistency,0.0,4,0.1449,1,,
+soft,W2,inside,handover-consistency,0.0,5,0.7909,1,,
+soft,W2,inside,handover-consistency,0.0,6,0.2968,1,,
+soft,W2,inside,handover-consistency,0.0,7,0.0764,1,,
+soft,W2,inside,handover-consistency,0.0,8,0.4872,1,,
+soft,W2,inside,handover-consistency,0.0,9,0.2075,1,,
+soft,W2,inside,handover-consistency,0.0,10,0.1004,1,,
+soft,W2,inside,handover-consistency,0.0,11,0.0804,1,1.28,0.0
+soft,W2,inside,handover-consistency,0.0,12,0.2131,1,,
+soft,W2,inside,handover-consistency,0.0,13,0.3978,1,,
+soft,W2,inside,handover-consistency,0.0,14,0.1995,1,,
+soft,W2,inside,handover-consistency,0.0,15,0.1246,1,,
+soft,W2,inside,handover-consistency,1.0,0,0.1685,1,1.36,0.94
+soft,W2,inside,handover-consistency,1.0,1,0.1828,1,1.2,0.913
+soft,W2,inside,handover-consistency,1.0,2,0.1289,1,1.28,0.851
+soft,W2,inside,handover-consistency,1.0,3,0.118,1,1.12,0.903
+soft,W2,inside,handover-consistency,1.0,4,0.2799,1,0.88,0.859
+soft,W2,inside,handover-consistency,1.0,5,0.3344,1,1.84,0.852
+soft,W2,inside,handover-consistency,1.0,6,0.165,1,0.64,0.939
+soft,W2,inside,handover-consistency,1.0,7,0.1424,1,1.28,0.926
+soft,W2,inside,handover-consistency,1.0,8,0.1855,1,0.8,0.944
+soft,W2,inside,handover-consistency,1.0,9,0.1383,1,1.04,0.913
+soft,W2,inside,handover-consistency,1.0,10,0.1961,1,1.04,0.864
+soft,W2,inside,handover-consistency,1.0,11,0.1445,1,0.88,0.883
+soft,W2,inside,handover-consistency,1.0,12,0.1522,1,1.36,0.854
+soft,W2,inside,handover-consistency,1.0,13,2.7602,0,2.8,0.813
+soft,W2,inside,handover-consistency,1.0,14,0.3103,1,1.28,0.874
+soft,W2,inside,handover-consistency,1.0,15,0.1133,1,1.2,0.916
+soft,W2,inside,handover-consistency,2.5,0,0.155,1,0.56,2.307
+soft,W2,inside,handover-consistency,2.5,1,0.283,1,0.72,2.21
+soft,W2,inside,handover-consistency,2.5,2,0.2405,1,0.8,2.115
+soft,W2,inside,handover-consistency,2.5,3,0.2736,1,0.72,2.198
+soft,W2,inside,handover-consistency,2.5,4,0.2603,1,0.72,2.19
+soft,W2,inside,handover-consistency,2.5,5,0.3486,1,0.8,2.066
+soft,W2,inside,handover-consistency,2.5,6,0.1787,1,0.64,2.324
+soft,W2,inside,handover-consistency,2.5,7,0.1694,1,0.56,2.31
+soft,W2,inside,handover-consistency,2.5,8,0.1388,1,0.8,2.345
+soft,W2,inside,handover-consistency,2.5,9,0.2292,1,0.64,2.262
+soft,W2,inside,handover-consistency,2.5,10,0.3147,1,0.64,2.171
+soft,W2,inside,handover-consistency,2.5,11,0.1964,1,0.64,2.223
+soft,W2,inside,handover-consistency,2.5,12,0.2984,1,0.88,2.097
+soft,W2,inside,handover-consistency,2.5,13,0.4625,1,0.8,1.993
+soft,W2,inside,handover-consistency,2.5,14,0.2871,1,0.72,2.108
+soft,W2,inside,handover-consistency,2.5,15,0.1977,1,0.8,2.218
+soft,W2,outside,handover-consistency,0.0,0,0.1071,1,0.56,0.0
+soft,W2,outside,handover-consistency,0.0,1,0.0633,1,0.64,0.0
+soft,W2,outside,handover-consistency,0.0,2,0.0672,1,1.12,0.0
+soft,W2,outside,handover-consistency,0.0,3,0.096,1,0.72,0.0
+soft,W2,outside,handover-consistency,0.0,4,0.0749,1,0.4,0.0
+soft,W2,outside,handover-consistency,0.0,5,0.0972,1,0.56,0.0
+soft,W2,outside,handover-consistency,0.0,6,0.11,1,0.48,0.0
+soft,W2,outside,handover-consistency,0.0,7,0.0649,1,0.88,0.0
+soft,W2,outside,handover-consistency,0.0,8,0.0741,1,0.48,0.0
+soft,W2,outside,handover-consistency,0.0,9,0.0757,1,0.72,0.0
+soft,W2,outside,handover-consistency,0.0,10,27.2962,0,,
+soft,W2,outside,handover-consistency,0.0,11,0.0807,1,0.8,0.0
+soft,W2,outside,handover-consistency,0.0,12,0.0918,1,0.64,0.0
+soft,W2,outside,handover-consistency,0.0,13,0.1058,1,0.72,0.0
+soft,W2,outside,handover-consistency,0.0,14,0.094,1,0.56,0.0
+soft,W2,outside,handover-consistency,0.0,15,0.0813,1,0.4,0.0
+soft,W2,outside,handover-consistency,2.5,0,0.1467,1,0.48,2.196
+soft,W2,outside,handover-consistency,2.5,1,0.1141,1,0.56,2.188
+soft,W2,outside,handover-consistency,2.5,2,0.1736,1,0.64,2.261
+soft,W2,outside,handover-consistency,2.5,3,0.6138,1,0.56,2.048
+soft,W2,outside,handover-consistency,2.5,4,0.3302,1,0.4,2.214
+soft,W2,outside,handover-consistency,2.5,5,0.212,1,0.48,2.424
+soft,W2,outside,handover-consistency,2.5,6,0.3181,1,0.4,2.065
+soft,W2,outside,handover-consistency,2.5,7,0.249,1,0.56,2.145
+soft,W2,outside,handover-consistency,2.5,8,0.3031,1,0.4,2.218
+soft,W2,outside,handover-consistency,2.5,9,0.4548,1,0.64,2.074
+soft,W2,outside,handover-consistency,2.5,10,0.1275,1,0.96,2.129
+soft,W2,outside,handover-consistency,2.5,11,0.1244,1,0.56,2.339
+soft,W2,outside,handover-consistency,2.5,12,0.2709,1,0.48,2.239
+soft,W2,outside,handover-consistency,2.5,13,0.2296,1,0.48,2.164
+soft,W2,outside,handover-consistency,2.5,14,0.3587,1,0.48,2.312
+soft,W2,outside,handover-consistency,2.5,15,0.328,1,0.4,2.418
+soft,W3,inside,adaptive MPC,0.0,0,0.1543,1,,0.0
+soft,W3,inside,adaptive MPC,0.0,1,0.0874,1,,0.0
+soft,W3,inside,adaptive MPC,0.0,2,0.0451,1,,0.0
+soft,W3,inside,adaptive MPC,0.0,3,0.1835,1,,0.073
+soft,W3,inside,adaptive MPC,0.0,4,0.1994,1,,0.035
+soft,W3,inside,adaptive MPC,0.0,5,0.09,1,,0.0
+soft,W3,inside,adaptive MPC,0.0,6,0.053,1,,0.0
+soft,W3,inside,adaptive MPC,0.0,7,0.1203,1,,0.041
+soft,W3,inside,adaptive MPC,0.0,8,0.078,1,,0.0
+soft,W3,inside,adaptive MPC,0.0,9,0.1089,1,,0.0
+soft,W3,inside,adaptive MPC,0.0,10,0.0787,1,,0.0
+soft,W3,inside,adaptive MPC,0.0,11,0.0932,1,,0.036
+soft,W3,inside,adaptive MPC,0.0,12,0.0688,1,,0.0
+soft,W3,inside,adaptive MPC,0.0,13,0.116,1,,0.0
+soft,W3,inside,adaptive MPC,0.0,14,0.1128,1,,0.0
+soft,W3,inside,adaptive MPC,0.0,15,0.075,1,,0.0
+soft,W3,inside,adaptive MPC,1.0,0,0.2434,1,,0.979
+soft,W3,inside,adaptive MPC,1.0,1,0.4483,1,,0.665
+soft,W3,inside,adaptive MPC,1.0,2,0.2088,1,,0.806
+soft,W3,inside,adaptive MPC,1.0,3,0.2553,1,,0.989
+soft,W3,inside,adaptive MPC,1.0,4,0.2951,1,,0.909
+soft,W3,inside,adaptive MPC,1.0,5,0.2402,1,,0.703
+soft,W3,inside,adaptive MPC,1.0,6,0.109,1,,0.861
+soft,W3,inside,adaptive MPC,1.0,7,0.0549,1,,0.895
+soft,W3,inside,adaptive MPC,1.0,8,0.2582,1,,0.878
+soft,W3,inside,adaptive MPC,1.0,9,0.2344,1,,0.828
+soft,W3,inside,adaptive MPC,1.0,10,0.1952,1,,0.756
+soft,W3,inside,adaptive MPC,1.0,11,0.1247,1,,0.974
+soft,W3,inside,adaptive MPC,1.0,12,0.236,1,,0.828
+soft,W3,inside,adaptive MPC,1.0,13,0.1885,1,,0.793
+soft,W3,inside,adaptive MPC,1.0,14,0.2291,1,,0.74
+soft,W3,inside,adaptive MPC,1.0,15,0.1622,1,,0.914
+soft,W3,inside,adaptive MPC,2.5,0,0.2117,1,,2.381
+soft,W3,inside,adaptive MPC,2.5,1,0.3785,1,,1.997
+soft,W3,inside,adaptive MPC,2.5,2,0.52,1,,2.089
+soft,W3,inside,adaptive MPC,2.5,3,0.2226,1,,2.347
+soft,W3,inside,adaptive MPC,2.5,4,0.3226,1,,2.228
+soft,W3,inside,adaptive MPC,2.5,5,0.6792,1,,2.016
+soft,W3,inside,adaptive MPC,2.5,6,0.2221,1,,2.24
+soft,W3,inside,adaptive MPC,2.5,7,0.3523,1,,2.26
+soft,W3,inside,adaptive MPC,2.5,8,0.334,1,,2.225
+soft,W3,inside,adaptive MPC,2.5,9,0.301,1,,2.194
+soft,W3,inside,adaptive MPC,2.5,10,0.4338,1,,2.0
+soft,W3,inside,adaptive MPC,2.5,11,0.2534,1,,2.317
+soft,W3,inside,adaptive MPC,2.5,12,0.4717,1,,2.132
+soft,W3,inside,adaptive MPC,2.5,13,0.3837,1,,2.036
+soft,W3,inside,adaptive MPC,2.5,14,0.4556,1,,1.964
+soft,W3,inside,adaptive MPC,2.5,15,0.3081,1,,2.292
+soft,W3,outside,adaptive MPC,0.0,0,0.4193,1,,0.245
+soft,W3,outside,adaptive MPC,0.0,1,0.4018,1,,0.098
+soft,W3,outside,adaptive MPC,0.0,2,0.2674,1,,0.045
+soft,W3,outside,adaptive MPC,0.0,3,0.1737,1,,0.0
+soft,W3,outside,adaptive MPC,0.0,4,0.0559,1,,0.0
+soft,W3,outside,adaptive MPC,0.0,5,0.1249,1,,0.049
+soft,W3,outside,adaptive MPC,0.0,6,0.0719,1,,0.0
+soft,W3,outside,adaptive MPC,0.0,7,0.1931,1,,0.0
+soft,W3,outside,adaptive MPC,0.0,8,0.2306,1,,0.043
+soft,W3,outside,adaptive MPC,0.0,9,0.0892,1,,0.0
+soft,W3,outside,adaptive MPC,0.0,10,0.1684,1,,0.0
+soft,W3,outside,adaptive MPC,0.0,11,0.0813,1,,0.0
+soft,W3,outside,adaptive MPC,0.0,12,0.1332,1,,0.0
+soft,W3,outside,adaptive MPC,0.0,13,0.1572,1,,0.0
+soft,W3,outside,adaptive MPC,0.0,14,0.1203,1,,0.0
+soft,W3,outside,adaptive MPC,0.0,15,0.2001,1,,0.12
+soft,W3,outside,adaptive MPC,2.5,0,0.4842,1,,2.258
+soft,W3,outside,adaptive MPC,2.5,1,0.3408,1,,2.461
+soft,W3,outside,adaptive MPC,2.5,2,0.0501,1,,2.461
+soft,W3,outside,adaptive MPC,2.5,3,0.4885,1,,1.944
+soft,W3,outside,adaptive MPC,2.5,4,0.2853,1,,2.407
+soft,W3,outside,adaptive MPC,2.5,5,0.3518,1,,2.541
+soft,W3,outside,adaptive MPC,2.5,6,0.5516,1,,1.79
+soft,W3,outside,adaptive MPC,2.5,7,0.6815,1,,1.739
+soft,W3,outside,adaptive MPC,2.5,8,0.3333,1,,2.412
+soft,W3,outside,adaptive MPC,2.5,9,0.8597,1,,2.017
+soft,W3,outside,adaptive MPC,2.5,10,0.6243,1,,2.092
+soft,W3,outside,adaptive MPC,2.5,11,0.2136,1,,2.351
+soft,W3,outside,adaptive MPC,2.5,12,0.1929,1,,2.235
+soft,W3,outside,adaptive MPC,2.5,13,0.4736,1,,2.04
+soft,W3,outside,adaptive MPC,2.5,14,0.3974,1,,2.307
+soft,W3,outside,adaptive MPC,2.5,15,0.5494,1,,2.62
+soft,W3,inside,reference,0.0,0,0.1147,1,,
+soft,W3,inside,reference,0.0,1,0.1225,1,,
+soft,W3,inside,reference,0.0,2,0.0754,1,,
+soft,W3,inside,reference,0.0,3,0.0704,1,,
+soft,W3,inside,reference,0.0,4,0.133,1,,
+soft,W3,inside,reference,0.0,5,0.0476,1,,
+soft,W3,inside,reference,0.0,6,0.0162,1,,
+soft,W3,inside,reference,0.0,7,0.1419,1,,
+soft,W3,inside,reference,0.0,8,0.0815,1,,
+soft,W3,inside,reference,0.0,9,0.0809,1,,
+soft,W3,inside,reference,0.0,10,0.0711,1,,
+soft,W3,inside,reference,0.0,11,0.0676,1,,
+soft,W3,inside,reference,0.0,12,0.0696,1,,
+soft,W3,inside,reference,0.0,13,0.1847,1,,
+soft,W3,inside,reference,0.0,14,0.1121,1,,
+soft,W3,inside,reference,0.0,15,0.1143,1,,
+soft,W3,inside,reference,1.0,0,0.096,1,,
+soft,W3,inside,reference,1.0,1,0.0751,1,,
+soft,W3,inside,reference,1.0,2,0.0917,1,,
+soft,W3,inside,reference,1.0,3,0.1087,1,,
+soft,W3,inside,reference,1.0,4,0.0169,1,,
+soft,W3,inside,reference,1.0,5,0.0754,1,,
+soft,W3,inside,reference,1.0,6,0.054,1,,
+soft,W3,inside,reference,1.0,7,0.1252,1,,
+soft,W3,inside,reference,1.0,8,0.1132,1,,
+soft,W3,inside,reference,1.0,9,0.0923,1,,
+soft,W3,inside,reference,1.0,10,0.0497,1,,
+soft,W3,inside,reference,1.0,11,0.0693,1,,
+soft,W3,inside,reference,1.0,12,0.0673,1,,
+soft,W3,inside,reference,1.0,13,0.1957,1,,
+soft,W3,inside,reference,1.0,14,0.0708,1,,
+soft,W3,inside,reference,1.0,15,0.0609,1,,
+soft,W3,inside,reference,2.5,0,0.0955,1,,
+soft,W3,inside,reference,2.5,1,0.1395,1,,
+soft,W3,inside,reference,2.5,2,0.1238,1,,
+soft,W3,inside,reference,2.5,3,0.0832,1,,
+soft,W3,inside,reference,2.5,4,0.0337,1,,
+soft,W3,inside,reference,2.5,5,0.0574,1,,
+soft,W3,inside,reference,2.5,6,0.0514,1,,
+soft,W3,inside,reference,2.5,7,0.1286,1,,
+soft,W3,inside,reference,2.5,8,0.0947,1,,
+soft,W3,inside,reference,2.5,9,0.0805,1,,
+soft,W3,inside,reference,2.5,10,0.0367,1,,
+soft,W3,inside,reference,2.5,11,0.0544,1,,
+soft,W3,inside,reference,2.5,12,0.1188,1,,
+soft,W3,inside,reference,2.5,13,0.2153,1,,
+soft,W3,inside,reference,2.5,14,0.03,1,,
+soft,W3,inside,reference,2.5,15,0.0269,1,,
+soft,W3,outside,reference,0.0,0,0.0764,1,,
+soft,W3,outside,reference,0.0,1,0.078,1,,
+soft,W3,outside,reference,0.0,2,0.0793,1,,
+soft,W3,outside,reference,0.0,3,0.0863,1,,
+soft,W3,outside,reference,0.0,4,0.0641,1,,
+soft,W3,outside,reference,0.0,5,0.0663,1,,
+soft,W3,outside,reference,0.0,6,0.0435,1,,
+soft,W3,outside,reference,0.0,7,0.1275,1,,
+soft,W3,outside,reference,0.0,8,0.0666,1,,
+soft,W3,outside,reference,0.0,9,0.0727,1,,
+soft,W3,outside,reference,0.0,10,0.3166,1,,
+soft,W3,outside,reference,0.0,11,0.1481,1,,
+soft,W3,outside,reference,0.0,12,0.0933,1,,
+soft,W3,outside,reference,0.0,13,0.1357,1,,
+soft,W3,outside,reference,0.0,14,0.082,1,,
+soft,W3,outside,reference,0.0,15,0.0945,1,,
+soft,W3,outside,reference,2.5,0,0.1764,1,,
+soft,W3,outside,reference,2.5,1,0.0476,1,,
+soft,W3,outside,reference,2.5,2,0.0907,1,,
+soft,W3,outside,reference,2.5,3,0.1112,1,,
+soft,W3,outside,reference,2.5,4,0.0976,1,,
+soft,W3,outside,reference,2.5,5,0.1316,1,,
+soft,W3,outside,reference,2.5,6,0.0819,1,,
+soft,W3,outside,reference,2.5,7,0.3239,1,,
+soft,W3,outside,reference,2.5,8,0.0755,1,,
+soft,W3,outside,reference,2.5,9,0.0784,1,,
+soft,W3,outside,reference,2.5,10,0.2317,1,,
+soft,W3,outside,reference,2.5,11,0.0618,1,,
+soft,W3,outside,reference,2.5,12,0.0892,1,,
+soft,W3,outside,reference,2.5,13,0.144,1,,
+soft,W3,outside,reference,2.5,14,0.0656,1,,
+soft,W3,outside,reference,2.5,15,0.0388,1,,
+soft,W3,inside,handover-physics,0.0,0,0.9297,1,,
+soft,W3,inside,handover-physics,0.0,1,1.3617,1,,
+soft,W3,inside,handover-physics,0.0,2,1.19,0,,
+soft,W3,inside,handover-physics,0.0,3,0.8884,1,,
+soft,W3,inside,handover-physics,0.0,4,0.2217,1,,
+soft,W3,inside,handover-physics,0.0,5,0.9383,1,,
+soft,W3,inside,handover-physics,0.0,6,0.1629,1,,
+soft,W3,inside,handover-physics,0.0,7,0.2356,1,,
+soft,W3,inside,handover-physics,0.0,8,0.8878,1,,
+soft,W3,inside,handover-physics,0.0,9,0.4024,1,,
+soft,W3,inside,handover-physics,0.0,10,0.5392,1,,
+soft,W3,inside,handover-physics,0.0,11,0.3192,1,,
+soft,W3,inside,handover-physics,0.0,12,1.4368,0,,
+soft,W3,inside,handover-physics,0.0,13,0.4631,1,,
+soft,W3,inside,handover-physics,0.0,14,0.4829,1,,
+soft,W3,inside,handover-physics,0.0,15,0.3533,1,,
+soft,W3,inside,handover-physics,1.0,0,0.1656,1,1.44,1.001
+soft,W3,inside,handover-physics,1.0,1,1.0856,1,2.4,0.588
+soft,W3,inside,handover-physics,1.0,2,1.7014,0,,
+soft,W3,inside,handover-physics,1.0,3,0.0924,1,1.28,0.992
+soft,W3,inside,handover-physics,1.0,4,0.53,1,2.16,0.942
+soft,W3,inside,handover-physics,1.0,5,0.4602,1,1.84,0.718
+soft,W3,inside,handover-physics,1.0,6,1.6061,1,2.48,0.84
+soft,W3,inside,handover-physics,1.0,7,0.3421,1,1.6,0.964
+soft,W3,inside,handover-physics,1.0,8,0.2512,1,1.6,0.829
+soft,W3,inside,handover-physics,1.0,9,0.2489,1,1.6,0.805
+soft,W3,inside,handover-physics,1.0,10,3.0908,0,,
+soft,W3,inside,handover-physics,1.0,11,2.3841,1,2.64,0.945
+soft,W3,inside,handover-physics,1.0,12,0.2308,1,1.04,0.89
+soft,W3,inside,handover-physics,1.0,13,0.8784,1,2.24,0.817
+soft,W3,inside,handover-physics,1.0,14,2.2483,0,,
+soft,W3,inside,handover-physics,1.0,15,0.3545,1,1.36,0.937
+soft,W3,inside,handover-physics,2.5,0,0.1646,1,0.8,2.339
+soft,W3,inside,handover-physics,2.5,1,0.4434,1,0.8,1.905
+soft,W3,inside,handover-physics,2.5,2,0.3457,1,0.88,2.135
+soft,W3,inside,handover-physics,2.5,3,0.2794,1,0.8,2.343
+soft,W3,inside,handover-physics,2.5,4,0.1167,1,1.12,2.262
+soft,W3,inside,handover-physics,2.5,5,0.4906,1,1.04,1.906
+soft,W3,inside,handover-physics,2.5,6,0.3063,1,0.64,2.16
+soft,W3,inside,handover-physics,2.5,7,0.4076,1,0.88,2.355
+soft,W3,inside,handover-physics,2.5,8,0.075,1,1.04,2.196
+soft,W3,inside,handover-physics,2.5,9,0.3817,1,1.04,2.124
+soft,W3,inside,handover-physics,2.5,10,0.3359,1,0.88,2.047
+soft,W3,inside,handover-physics,2.5,11,0.3354,1,0.8,2.342
+soft,W3,inside,handover-physics,2.5,12,0.1178,1,0.96,2.196
+soft,W3,inside,handover-physics,2.5,13,0.2691,1,0.88,2.019
+soft,W3,inside,handover-physics,2.5,14,0.3498,1,0.72,1.924
+soft,W3,inside,handover-physics,2.5,15,0.2355,1,0.96,2.27
+soft,W3,outside,handover-physics,0.0,0,0.2899,1,1.36,0.082
+soft,W3,outside,handover-physics,0.0,1,0.1508,1,0.96,0.088
+soft,W3,outside,handover-physics,0.0,2,0.1432,1,1.28,0.086
+soft,W3,outside,handover-physics,0.0,3,0.1218,1,1.12,0.01
+soft,W3,outside,handover-physics,0.0,4,21.8853,0,,
+soft,W3,outside,handover-physics,0.0,5,28.7869,0,,
+soft,W3,outside,handover-physics,0.0,6,0.3159,1,1.04,0.0
+soft,W3,outside,handover-physics,0.0,7,0.224,1,1.04,0.0
+soft,W3,outside,handover-physics,0.0,8,0.5034,1,1.12,0.125
+soft,W3,outside,handover-physics,0.0,9,0.12,1,0.88,0.0
+soft,W3,outside,handover-physics,0.0,10,0.5814,1,1.04,0.0
+soft,W3,outside,handover-physics,0.0,11,0.0818,1,1.04,0.0
+soft,W3,outside,handover-physics,0.0,12,0.537,1,2.08,0.01
+soft,W3,outside,handover-physics,0.0,13,0.1575,1,0.96,0.0
+soft,W3,outside,handover-physics,0.0,14,0.2972,1,1.52,0.0
+soft,W3,outside,handover-physics,0.0,15,0.4828,1,1.2,0.178
+soft,W3,outside,handover-physics,2.5,0,0.3725,1,0.64,2.29
+soft,W3,outside,handover-physics,2.5,1,0.3267,1,0.64,2.459
+soft,W3,outside,handover-physics,2.5,2,0.154,1,0.64,2.322
+soft,W3,outside,handover-physics,2.5,3,0.3464,1,0.8,2.058
+soft,W3,outside,handover-physics,2.5,4,0.4041,1,0.96,2.256
+soft,W3,outside,handover-physics,2.5,5,0.2106,1,0.8,2.425
+soft,W3,outside,handover-physics,2.5,6,0.2502,1,0.8,2.014
+soft,W3,outside,handover-physics,2.5,7,0.2129,1,0.8,1.972
+soft,W3,outside,handover-physics,2.5,8,0.2681,1,0.88,2.444
+soft,W3,outside,handover-physics,2.5,9,0.5891,1,0.64,2.081
+soft,W3,outside,handover-physics,2.5,10,0.3311,1,0.88,1.989
+soft,W3,outside,handover-physics,2.5,11,0.1844,1,1.04,2.2
+soft,W3,outside,handover-physics,2.5,12,0.0677,1,0.88,2.331
+soft,W3,outside,handover-physics,2.5,13,0.2389,1,0.64,2.117
+soft,W3,outside,handover-physics,2.5,14,0.3718,1,0.72,2.162
+soft,W3,outside,handover-physics,2.5,15,0.2318,1,0.96,2.559
+soft,W3,inside,handover-learned,0.0,0,0.9297,1,,
+soft,W3,inside,handover-learned,0.0,1,1.3617,1,,
+soft,W3,inside,handover-learned,0.0,2,1.19,0,,
+soft,W3,inside,handover-learned,0.0,3,0.8884,1,,
+soft,W3,inside,handover-learned,0.0,4,0.2217,1,,
+soft,W3,inside,handover-learned,0.0,5,0.9383,1,,
+soft,W3,inside,handover-learned,0.0,6,0.1629,1,,
+soft,W3,inside,handover-learned,0.0,7,0.2356,1,,
+soft,W3,inside,handover-learned,0.0,8,0.8878,1,,
+soft,W3,inside,handover-learned,0.0,9,0.4024,1,,
+soft,W3,inside,handover-learned,0.0,10,0.5392,1,,
+soft,W3,inside,handover-learned,0.0,11,0.3192,1,,
+soft,W3,inside,handover-learned,0.0,12,1.4368,0,,
+soft,W3,inside,handover-learned,0.0,13,0.4631,1,,
+soft,W3,inside,handover-learned,0.0,14,0.4829,1,,
+soft,W3,inside,handover-learned,0.0,15,0.3533,1,,
+soft,W3,inside,handover-learned,1.0,0,0.2032,1,0.16,0.999
+soft,W3,inside,handover-learned,1.0,1,0.4558,1,0.16,0.739
+soft,W3,inside,handover-learned,1.0,2,0.2099,1,0.16,0.809
+soft,W3,inside,handover-learned,1.0,3,0.1941,1,0.16,0.933
+soft,W3,inside,handover-learned,1.0,4,0.2377,1,0.16,0.945
+soft,W3,inside,handover-learned,1.0,5,0.1871,1,0.16,0.724
+soft,W3,inside,handover-learned,1.0,6,0.0522,1,0.16,0.884
+soft,W3,inside,handover-learned,1.0,7,0.1347,1,0.16,0.899
+soft,W3,inside,handover-learned,1.0,8,0.1247,1,0.16,0.942
+soft,W3,inside,handover-learned,1.0,9,0.1989,1,0.16,0.829
+soft,W3,inside,handover-learned,1.0,10,0.2739,1,0.16,0.746
+soft,W3,inside,handover-learned,1.0,11,0.0922,1,0.16,0.963
+soft,W3,inside,handover-learned,1.0,12,0.1137,1,0.16,0.862
+soft,W3,inside,handover-learned,1.0,13,0.1734,1,0.16,0.78
+soft,W3,inside,handover-learned,1.0,14,0.2138,1,0.16,0.725
+soft,W3,inside,handover-learned,1.0,15,0.1529,1,0.16,0.928
+soft,W3,inside,handover-learned,2.5,0,0.0817,1,0.08,2.357
+soft,W3,inside,handover-learned,2.5,1,0.3804,1,0.16,2.049
+soft,W3,inside,handover-learned,2.5,2,0.58,1,0.16,2.038
+soft,W3,inside,handover-learned,2.5,3,0.154,1,0.16,2.312
+soft,W3,inside,handover-learned,2.5,4,0.3197,1,0.16,2.26
+soft,W3,inside,handover-learned,2.5,5,0.3681,1,0.08,1.953
+soft,W3,inside,handover-learned,2.5,6,0.199,1,0.08,2.284
+soft,W3,inside,handover-learned,2.5,7,0.1296,1,0.16,2.301
+soft,W3,inside,handover-learned,2.5,8,0.3099,1,0.16,2.288
+soft,W3,inside,handover-learned,2.5,9,0.3296,1,0.16,2.158
+soft,W3,inside,handover-learned,2.5,10,0.4285,1,0.16,1.999
+soft,W3,inside,handover-learned,2.5,11,0.1733,1,0.16,2.337
+soft,W3,inside,handover-learned,2.5,12,0.4327,1,0.08,2.165
+soft,W3,inside,handover-learned,2.5,13,0.2719,1,0.16,2.041
+soft,W3,inside,handover-learned,2.5,14,0.3895,1,0.08,1.907
+soft,W3,inside,handover-learned,2.5,15,0.2034,1,0.08,2.316
+soft,W3,outside,handover-learned,0.0,0,0.1238,1,0.4,0.033
+soft,W3,outside,handover-learned,0.0,1,0.0646,1,0.4,0.076
+soft,W3,outside,handover-learned,0.0,2,0.2672,1,0.32,0.089
+soft,W3,outside,handover-learned,0.0,3,0.0827,1,0.72,0.0
+soft,W3,outside,handover-learned,0.0,4,0.329,1,1.2,0.006
+soft,W3,outside,handover-learned,0.0,5,28.7869,0,,
+soft,W3,outside,handover-learned,0.0,6,0.2177,1,0.72,0.0
+soft,W3,outside,handover-learned,0.0,7,0.2084,1,0.24,0.0
+soft,W3,outside,handover-learned,0.0,8,0.3262,1,0.56,0.149
+soft,W3,outside,handover-learned,0.0,9,0.0847,1,0.48,0.0
+soft,W3,outside,handover-learned,0.0,10,0.2378,1,0.4,0.0
+soft,W3,outside,handover-learned,0.0,11,0.1527,1,0.4,0.0
+soft,W3,outside,handover-learned,0.0,12,0.1801,1,0.8,0.0
+soft,W3,outside,handover-learned,0.0,13,0.1384,1,0.24,0.0
+soft,W3,outside,handover-learned,0.0,14,0.0744,1,0.56,0.0
+soft,W3,outside,handover-learned,0.0,15,0.4394,1,0.8,0.168
+soft,W3,outside,handover-learned,2.5,0,0.4192,1,0.08,2.227
+soft,W3,outside,handover-learned,2.5,1,0.3363,1,0.08,2.316
+soft,W3,outside,handover-learned,2.5,2,0.1961,1,0.08,2.48
+soft,W3,outside,handover-learned,2.5,3,0.4028,1,0.08,1.898
+soft,W3,outside,handover-learned,2.5,4,0.2009,1,0.08,2.264
+soft,W3,outside,handover-learned,2.5,5,0.2369,1,0.16,2.376
+soft,W3,outside,handover-learned,2.5,6,0.5116,1,0.08,1.881
+soft,W3,outside,handover-learned,2.5,7,0.2688,1,0.08,1.945
+soft,W3,outside,handover-learned,2.5,8,0.3707,1,0.16,2.41
+soft,W3,outside,handover-learned,2.5,9,0.8897,1,0.16,1.978
+soft,W3,outside,handover-learned,2.5,10,0.5612,1,0.08,2.027
+soft,W3,outside,handover-learned,2.5,11,0.1393,1,0.08,2.276
+soft,W3,outside,handover-learned,2.5,12,0.122,1,0.16,2.353
+soft,W3,outside,handover-learned,2.5,13,0.5406,1,0.08,2.046
+soft,W3,outside,handover-learned,2.5,14,0.3759,1,0.08,2.305
+soft,W3,outside,handover-learned,2.5,15,0.2123,1,0.16,2.469
+soft,W3,inside,handover-consistency,0.0,0,0.9297,1,,
+soft,W3,inside,handover-consistency,0.0,1,0.2723,1,1.52,0.0
+soft,W3,inside,handover-consistency,0.0,2,1.19,0,,
+soft,W3,inside,handover-consistency,0.0,3,0.8884,1,,
+soft,W3,inside,handover-consistency,0.0,4,0.2217,1,,
+soft,W3,inside,handover-consistency,0.0,5,0.9383,1,,
+soft,W3,inside,handover-consistency,0.0,6,0.1629,1,,
+soft,W3,inside,handover-consistency,0.0,7,0.2356,1,,
+soft,W3,inside,handover-consistency,0.0,8,0.138,1,0.8,0.0
+soft,W3,inside,handover-consistency,0.0,9,0.4024,1,,
+soft,W3,inside,handover-consistency,0.0,10,0.5392,1,,
+soft,W3,inside,handover-consistency,0.0,11,0.3192,1,,
+soft,W3,inside,handover-consistency,0.0,12,1.4368,0,,
+soft,W3,inside,handover-consistency,0.0,13,0.4631,1,,
+soft,W3,inside,handover-consistency,0.0,14,0.124,1,1.12,0.0
+soft,W3,inside,handover-consistency,0.0,15,0.3533,1,,
+soft,W3,inside,handover-consistency,1.0,0,0.3667,1,0.88,0.985
+soft,W3,inside,handover-consistency,1.0,1,0.4174,1,0.8,0.669
+soft,W3,inside,handover-consistency,1.0,2,0.105,1,0.72,0.787
+soft,W3,inside,handover-consistency,1.0,3,0.1084,1,0.88,0.984
+soft,W3,inside,handover-consistency,1.0,4,0.3705,1,1.28,0.948
+soft,W3,inside,handover-consistency,1.0,5,0.2781,1,1.2,0.72
+soft,W3,inside,handover-consistency,1.0,6,0.1742,1,0.64,0.844
+soft,W3,inside,handover-consistency,1.0,7,0.1483,1,0.88,0.904
+soft,W3,inside,handover-consistency,1.0,8,0.2983,1,0.96,0.844
+soft,W3,inside,handover-consistency,1.0,9,0.1757,1,0.72,0.839
+soft,W3,inside,handover-consistency,1.0,10,0.3737,1,1.36,0.733
+soft,W3,inside,handover-consistency,1.0,11,0.3793,1,1.12,0.981
+soft,W3,inside,handover-consistency,1.0,12,0.2548,1,0.96,0.893
+soft,W3,inside,handover-consistency,1.0,13,0.2654,1,1.28,0.774
+soft,W3,inside,handover-consistency,1.0,14,2.2483,0,,
+soft,W3,inside,handover-consistency,1.0,15,0.2742,1,0.8,0.945
+soft,W3,inside,handover-consistency,2.5,0,0.1317,1,0.56,2.36
+soft,W3,inside,handover-consistency,2.5,1,0.4523,1,0.56,1.928
+soft,W3,inside,handover-consistency,2.5,2,0.3333,1,0.8,2.13
+soft,W3,inside,handover-consistency,2.5,3,0.2609,1,0.64,2.337
+soft,W3,inside,handover-consistency,2.5,4,0.4893,1,0.72,2.267
+soft,W3,inside,handover-consistency,2.5,5,0.4679,1,0.88,1.858
+soft,W3,inside,handover-consistency,2.5,6,0.3154,1,0.48,2.161
+soft,W3,inside,handover-consistency,2.5,7,0.4436,1,0.72,2.357
+soft,W3,inside,handover-consistency,2.5,8,0.2041,1,0.88,2.25
+soft,W3,inside,handover-consistency,2.5,9,0.2988,1,0.64,2.155
+soft,W3,inside,handover-consistency,2.5,10,0.3581,1,0.64,2.025
+soft,W3,inside,handover-consistency,2.5,11,0.3443,1,0.56,2.325
+soft,W3,inside,handover-consistency,2.5,12,0.2562,1,0.56,2.244
+soft,W3,inside,handover-consistency,2.5,13,0.3523,1,0.8,1.993
+soft,W3,inside,handover-consistency,2.5,14,0.3531,1,0.48,1.904
+soft,W3,inside,handover-consistency,2.5,15,0.1015,1,0.48,2.285
+soft,W3,outside,handover-consistency,0.0,0,0.1238,1,0.4,0.033
+soft,W3,outside,handover-consistency,0.0,1,0.0646,1,0.4,0.076
+soft,W3,outside,handover-consistency,0.0,2,0.2741,1,1.04,0.071
+soft,W3,outside,handover-consistency,0.0,3,0.1274,1,0.4,0.0
+soft,W3,outside,handover-consistency,0.0,4,0.1252,1,0.4,0.0
+soft,W3,outside,handover-consistency,0.0,5,28.7869,0,,
+soft,W3,outside,handover-consistency,0.0,6,0.0667,1,0.4,0.0
+soft,W3,outside,handover-consistency,0.0,7,0.2331,1,0.72,0.0
+soft,W3,outside,handover-consistency,0.0,8,0.1369,1,0.48,0.097
+soft,W3,outside,handover-consistency,0.0,9,0.0847,1,0.48,0.0
+soft,W3,outside,handover-consistency,0.0,10,0.2644,1,0.48,0.0
+soft,W3,outside,handover-consistency,0.0,11,0.1496,1,0.8,0.0
+soft,W3,outside,handover-consistency,0.0,12,0.1538,1,0.4,0.0
+soft,W3,outside,handover-consistency,0.0,13,0.1618,1,0.56,0.0
+soft,W3,outside,handover-consistency,0.0,14,0.0475,1,0.4,0.0
+soft,W3,outside,handover-consistency,0.0,15,0.1259,1,0.4,0.088
+soft,W3,outside,handover-consistency,2.5,0,0.2308,1,0.4,2.318
+soft,W3,outside,handover-consistency,2.5,1,0.2749,1,0.48,2.379
+soft,W3,outside,handover-consistency,2.5,2,0.154,1,0.64,2.322
+soft,W3,outside,handover-consistency,2.5,3,0.3747,1,0.4,2.03
+soft,W3,outside,handover-consistency,2.5,4,0.1418,1,0.4,2.244
+soft,W3,outside,handover-consistency,2.5,5,0.172,1,0.48,2.47
+soft,W3,outside,handover-consistency,2.5,6,0.5293,1,0.4,1.933
+soft,W3,outside,handover-consistency,2.5,7,0.4436,1,0.48,1.915
+soft,W3,outside,handover-consistency,2.5,8,0.3151,1,0.4,2.499
+soft,W3,outside,handover-consistency,2.5,9,0.6874,1,0.4,1.971
+soft,W3,outside,handover-consistency,2.5,10,0.1628,1,0.72,1.986
+soft,W3,outside,handover-consistency,2.5,11,0.2354,1,0.88,2.189
+soft,W3,outside,handover-consistency,2.5,12,0.1695,1,0.4,2.365
+soft,W3,outside,handover-consistency,2.5,13,0.2746,1,0.56,2.165
+soft,W3,outside,handover-consistency,2.5,14,0.419,1,0.48,2.223
+soft,W3,outside,handover-consistency,2.5,15,0.3048,1,0.4,2.569
+stiff,W1,inside,policy,0.0,0,0.2053,1,,
+stiff,W1,inside,policy,0.0,1,0.3126,1,,
+stiff,W1,inside,policy,0.0,2,0.179,1,,
+stiff,W1,inside,policy,0.0,3,0.5806,1,,
+stiff,W1,inside,policy,0.0,4,0.1448,1,,
+stiff,W1,inside,policy,0.0,5,0.2141,1,,
+stiff,W1,inside,policy,0.0,6,0.1507,1,,
+stiff,W1,inside,policy,0.0,7,0.4526,1,,
+stiff,W1,inside,policy,0.0,8,5.971,0,,
+stiff,W1,inside,policy,0.0,9,0.2234,1,,
+stiff,W1,inside,policy,0.0,10,0.2822,1,,
+stiff,W1,inside,policy,0.0,11,0.2016,1,,
+stiff,W1,inside,policy,0.0,12,0.2646,1,,
+stiff,W1,inside,policy,0.0,13,0.1908,1,,
+stiff,W1,inside,policy,0.0,14,0.2697,1,,
+stiff,W1,inside,policy,0.0,15,0.1758,1,,
+stiff,W1,inside,policy,1.0,0,2.5032,0,,
+stiff,W1,inside,policy,1.0,1,1.9511,0,,
+stiff,W1,inside,policy,1.0,2,1.0127,0,,
+stiff,W1,inside,policy,1.0,3,1.8141,0,,
+stiff,W1,inside,policy,1.0,4,1.3244,1,,
+stiff,W1,inside,policy,1.0,5,1.9725,0,,
+stiff,W1,inside,policy,1.0,6,2.8734,0,,
+stiff,W1,inside,policy,1.0,7,3.0375,0,,
+stiff,W1,inside,policy,1.0,8,17.0241,0,,
+stiff,W1,inside,policy,1.0,9,1.7311,0,,
+stiff,W1,inside,policy,1.0,10,2.3131,0,,
+stiff,W1,inside,policy,1.0,11,2.7421,0,,
+stiff,W1,inside,policy,1.0,12,1.9466,0,,
+stiff,W1,inside,policy,1.0,13,1.9335,1,,
+stiff,W1,inside,policy,1.0,14,1.4903,0,,
+stiff,W1,inside,policy,1.0,15,1.8619,0,,
+stiff,W1,inside,policy,2.5,0,7.296,0,,
+stiff,W1,inside,policy,2.5,1,3.6943,0,,
+stiff,W1,inside,policy,2.5,2,3.6559,0,,
+stiff,W1,inside,policy,2.5,3,3.2215,0,,
+stiff,W1,inside,policy,2.5,4,4.9358,0,,
+stiff,W1,inside,policy,2.5,5,2.7168,0,,
+stiff,W1,inside,policy,2.5,6,4.5623,0,,
+stiff,W1,inside,policy,2.5,7,5.4097,0,,
+stiff,W1,inside,policy,2.5,8,6.4548,0,,
+stiff,W1,inside,policy,2.5,9,4.0433,0,,
+stiff,W1,inside,policy,2.5,10,2.3653,0,,
+stiff,W1,inside,policy,2.5,11,4.8292,0,,
+stiff,W1,inside,policy,2.5,12,3.5547,0,,
+stiff,W1,inside,policy,2.5,13,3.6555,0,,
+stiff,W1,inside,policy,2.5,14,3.3306,0,,
+stiff,W1,inside,policy,2.5,15,3.1023,0,,
+stiff,W1,outside,policy,0.0,0,29.8686,0,,
+stiff,W1,outside,policy,0.0,1,1.639,0,,
+stiff,W1,outside,policy,0.0,2,1.7505,0,,
+stiff,W1,outside,policy,0.0,3,29.0327,0,,
+stiff,W1,outside,policy,0.0,4,5.9917,0,,
+stiff,W1,outside,policy,0.0,5,1.0246,0,,
+stiff,W1,outside,policy,0.0,6,3.7401,0,,
+stiff,W1,outside,policy,0.0,7,20.6931,0,,
+stiff,W1,outside,policy,0.0,8,3.1291,0,,
+stiff,W1,outside,policy,0.0,9,28.4931,0,,
+stiff,W1,outside,policy,0.0,10,29.0282,0,,
+stiff,W1,outside,policy,0.0,11,0.691,1,,
+stiff,W1,outside,policy,0.0,12,20.9561,0,,
+stiff,W1,outside,policy,0.0,13,0.2092,1,,
+stiff,W1,outside,policy,0.0,14,26.1866,0,,
+stiff,W1,outside,policy,0.0,15,19.0649,0,,
+stiff,W1,outside,policy,2.5,0,25.1771,0,,
+stiff,W1,outside,policy,2.5,1,53.6749,0,,
+stiff,W1,outside,policy,2.5,2,12.0644,0,,
+stiff,W1,outside,policy,2.5,3,18.3588,0,,
+stiff,W1,outside,policy,2.5,4,8.3742,0,,
+stiff,W1,outside,policy,2.5,5,33.7388,0,,
+stiff,W1,outside,policy,2.5,6,11.4498,0,,
+stiff,W1,outside,policy,2.5,7,13.34,0,,
+stiff,W1,outside,policy,2.5,8,20.3082,0,,
+stiff,W1,outside,policy,2.5,9,4.0896,0,,
+stiff,W1,outside,policy,2.5,10,34.7006,0,,
+stiff,W1,outside,policy,2.5,11,41.0874,0,,
+stiff,W1,outside,policy,2.5,12,29.8723,0,,
+stiff,W1,outside,policy,2.5,13,2.841,0,,
+stiff,W1,outside,policy,2.5,14,41.9492,0,,
+stiff,W1,outside,policy,2.5,15,29.0597,0,,
+stiff,W2,inside,policy,0.0,0,0.2053,1,,
+stiff,W2,inside,policy,0.0,1,0.3126,1,,
+stiff,W2,inside,policy,0.0,2,0.179,1,,
+stiff,W2,inside,policy,0.0,3,0.5806,1,,
+stiff,W2,inside,policy,0.0,4,0.1448,1,,
+stiff,W2,inside,policy,0.0,5,0.2141,1,,
+stiff,W2,inside,policy,0.0,6,0.1507,1,,
+stiff,W2,inside,policy,0.0,7,0.4526,1,,
+stiff,W2,inside,policy,0.0,8,5.971,0,,
+stiff,W2,inside,policy,0.0,9,0.2234,1,,
+stiff,W2,inside,policy,0.0,10,0.2822,1,,
+stiff,W2,inside,policy,0.0,11,0.2016,1,,
+stiff,W2,inside,policy,0.0,12,0.2646,1,,
+stiff,W2,inside,policy,0.0,13,0.1908,1,,
+stiff,W2,inside,policy,0.0,14,0.2697,1,,
+stiff,W2,inside,policy,0.0,15,0.1758,1,,
+stiff,W2,inside,policy,1.0,0,3.3257,0,,
+stiff,W2,inside,policy,1.0,1,1.8412,0,,
+stiff,W2,inside,policy,1.0,2,1.928,0,,
+stiff,W2,inside,policy,1.0,3,1.8486,0,,
+stiff,W2,inside,policy,1.0,4,1.5323,1,,
+stiff,W2,inside,policy,1.0,5,1.6871,0,,
+stiff,W2,inside,policy,1.0,6,2.1406,0,,
+stiff,W2,inside,policy,1.0,7,2.7439,0,,
+stiff,W2,inside,policy,1.0,8,17.9347,0,,
+stiff,W2,inside,policy,1.0,9,1.6355,0,,
+stiff,W2,inside,policy,1.0,10,1.0822,0,,
+stiff,W2,inside,policy,1.0,11,1.8808,0,,
+stiff,W2,inside,policy,1.0,12,1.8773,0,,
+stiff,W2,inside,policy,1.0,13,2.2048,0,,
+stiff,W2,inside,policy,1.0,14,1.4656,0,,
+stiff,W2,inside,policy,1.0,15,2.4134,0,,
+stiff,W2,inside,policy,2.5,0,4.699,0,,
+stiff,W2,inside,policy,2.5,1,3.5527,0,,
+stiff,W2,inside,policy,2.5,2,4.1459,0,,
+stiff,W2,inside,policy,2.5,3,3.553,0,,
+stiff,W2,inside,policy,2.5,4,6.8129,0,,
+stiff,W2,inside,policy,2.5,5,2.7011,0,,
+stiff,W2,inside,policy,2.5,6,2.9305,0,,
+stiff,W2,inside,policy,2.5,7,3.0974,0,,
+stiff,W2,inside,policy,2.5,8,5.1658,0,,
+stiff,W2,inside,policy,2.5,9,2.8498,0,,
+stiff,W2,inside,policy,2.5,10,3.2841,0,,
+stiff,W2,inside,policy,2.5,11,4.2999,0,,
+stiff,W2,inside,policy,2.5,12,3.9675,0,,
+stiff,W2,inside,policy,2.5,13,3.2583,0,,
+stiff,W2,inside,policy,2.5,14,2.2958,0,,
+stiff,W2,inside,policy,2.5,15,6.9727,0,,
+stiff,W2,outside,policy,0.0,0,29.8686,0,,
+stiff,W2,outside,policy,0.0,1,1.639,0,,
+stiff,W2,outside,policy,0.0,2,1.7505,0,,
+stiff,W2,outside,policy,0.0,3,29.0327,0,,
+stiff,W2,outside,policy,0.0,4,5.9917,0,,
+stiff,W2,outside,policy,0.0,5,1.0246,0,,
+stiff,W2,outside,policy,0.0,6,3.7401,0,,
+stiff,W2,outside,policy,0.0,7,20.6931,0,,
+stiff,W2,outside,policy,0.0,8,3.1291,0,,
+stiff,W2,outside,policy,0.0,9,28.4931,0,,
+stiff,W2,outside,policy,0.0,10,29.0282,0,,
+stiff,W2,outside,policy,0.0,11,0.691,1,,
+stiff,W2,outside,policy,0.0,12,20.9561,0,,
+stiff,W2,outside,policy,0.0,13,0.2092,1,,
+stiff,W2,outside,policy,0.0,14,26.1866,0,,
+stiff,W2,outside,policy,0.0,15,19.0649,0,,
+stiff,W2,outside,policy,2.5,0,29.2412,0,,
+stiff,W2,outside,policy,2.5,1,11.8538,0,,
+stiff,W2,outside,policy,2.5,2,5.66,0,,
+stiff,W2,outside,policy,2.5,3,2.6733,0,,
+stiff,W2,outside,policy,2.5,4,7.8732,0,,
+stiff,W2,outside,policy,2.5,5,3.4271,0,,
+stiff,W2,outside,policy,2.5,6,21.2769,0,,
+stiff,W2,outside,policy,2.5,7,10.3924,0,,
+stiff,W2,outside,policy,2.5,8,30.2851,0,,
+stiff,W2,outside,policy,2.5,9,4.3019,0,,
+stiff,W2,outside,policy,2.5,10,24.3689,0,,
+stiff,W2,outside,policy,2.5,11,34.3953,0,,
+stiff,W2,outside,policy,2.5,12,24.9784,0,,
+stiff,W2,outside,policy,2.5,13,3.503,0,,
+stiff,W2,outside,policy,2.5,14,10.135,0,,
+stiff,W2,outside,policy,2.5,15,32.0347,0,,
+stiff,W3,inside,policy,0.0,0,0.1377,1,,
+stiff,W3,inside,policy,0.0,1,0.1041,1,,
+stiff,W3,inside,policy,0.0,2,0.3519,1,,
+stiff,W3,inside,policy,0.0,3,0.0981,1,,
+stiff,W3,inside,policy,0.0,4,0.3773,1,,
+stiff,W3,inside,policy,0.0,5,0.0831,1,,
+stiff,W3,inside,policy,0.0,6,0.1087,1,,
+stiff,W3,inside,policy,0.0,7,0.899,1,,
+stiff,W3,inside,policy,0.0,8,0.143,1,,
+stiff,W3,inside,policy,0.0,9,0.0733,1,,
+stiff,W3,inside,policy,0.0,10,0.2527,1,,
+stiff,W3,inside,policy,0.0,11,0.101,1,,
+stiff,W3,inside,policy,0.0,12,0.3978,1,,
+stiff,W3,inside,policy,0.0,13,0.2898,1,,
+stiff,W3,inside,policy,0.0,14,0.1753,1,,
+stiff,W3,inside,policy,0.0,15,0.2407,1,,
+stiff,W3,inside,policy,1.0,0,2.9793,0,,
+stiff,W3,inside,policy,1.0,1,1.3955,0,,
+stiff,W3,inside,policy,1.0,2,1.8251,0,,
+stiff,W3,inside,policy,1.0,3,1.4385,0,,
+stiff,W3,inside,policy,1.0,4,1.641,0,,
+stiff,W3,inside,policy,1.0,5,1.0082,0,,
+stiff,W3,inside,policy,1.0,6,1.4187,0,,
+stiff,W3,inside,policy,1.0,7,2.1496,0,,
+stiff,W3,inside,policy,1.0,8,1.4119,0,,
+stiff,W3,inside,policy,1.0,9,1.017,0,,
+stiff,W3,inside,policy,1.0,10,1.2392,0,,
+stiff,W3,inside,policy,1.0,11,1.5525,0,,
+stiff,W3,inside,policy,1.0,12,1.6193,0,,
+stiff,W3,inside,policy,1.0,13,1.528,0,,
+stiff,W3,inside,policy,1.0,14,1.2017,0,,
+stiff,W3,inside,policy,1.0,15,1.8108,0,,
+stiff,W3,inside,policy,2.5,0,4.0929,0,,
+stiff,W3,inside,policy,2.5,1,3.1493,0,,
+stiff,W3,inside,policy,2.5,2,2.3578,0,,
+stiff,W3,inside,policy,2.5,3,3.6467,0,,
+stiff,W3,inside,policy,2.5,4,4.4331,0,,
+stiff,W3,inside,policy,2.5,5,2.9877,0,,
+stiff,W3,inside,policy,2.5,6,3.7963,0,,
+stiff,W3,inside,policy,2.5,7,2.6768,0,,
+stiff,W3,inside,policy,2.5,8,5.7121,0,,
+stiff,W3,inside,policy,2.5,9,2.5078,0,,
+stiff,W3,inside,policy,2.5,10,2.681,0,,
+stiff,W3,inside,policy,2.5,11,4.2855,0,,
+stiff,W3,inside,policy,2.5,12,2.1064,0,,
+stiff,W3,inside,policy,2.5,13,1.9771,0,,
+stiff,W3,inside,policy,2.5,14,2.6648,0,,
+stiff,W3,inside,policy,2.5,15,5.2951,0,,
+stiff,W3,outside,policy,0.0,0,26.4065,0,,
+stiff,W3,outside,policy,0.0,1,17.4327,0,,
+stiff,W3,outside,policy,0.0,2,1.3475,0,,
+stiff,W3,outside,policy,0.0,3,62.5635,0,,
+stiff,W3,outside,policy,0.0,4,21.1993,0,,
+stiff,W3,outside,policy,0.0,5,2.1481,0,,
+stiff,W3,outside,policy,0.0,6,14.8087,0,,
+stiff,W3,outside,policy,0.0,7,25.046,0,,
+stiff,W3,outside,policy,0.0,8,57.1838,0,,
+stiff,W3,outside,policy,0.0,9,1.6169,1,,
+stiff,W3,outside,policy,0.0,10,45.3745,0,,
+stiff,W3,outside,policy,0.0,11,0.9712,1,,
+stiff,W3,outside,policy,0.0,12,46.1788,0,,
+stiff,W3,outside,policy,0.0,13,2.9573,0,,
+stiff,W3,outside,policy,0.0,14,24.7456,0,,
+stiff,W3,outside,policy,0.0,15,54.1075,0,,
+stiff,W3,outside,policy,2.5,0,27.4832,0,,
+stiff,W3,outside,policy,2.5,1,26.0017,0,,
+stiff,W3,outside,policy,2.5,2,7.424,0,,
+stiff,W3,outside,policy,2.5,3,35.19,0,,
+stiff,W3,outside,policy,2.5,4,51.7526,0,,
+stiff,W3,outside,policy,2.5,5,47.7064,0,,
+stiff,W3,outside,policy,2.5,6,50.202,0,,
+stiff,W3,outside,policy,2.5,7,20.7882,0,,
+stiff,W3,outside,policy,2.5,8,48.1054,0,,
+stiff,W3,outside,policy,2.5,9,9.5603,0,,
+stiff,W3,outside,policy,2.5,10,26.132,0,,
+stiff,W3,outside,policy,2.5,11,29.7976,0,,
+stiff,W3,outside,policy,2.5,12,41.1157,0,,
+stiff,W3,outside,policy,2.5,13,4.016,0,,
+stiff,W3,outside,policy,2.5,14,34.7508,0,,
+stiff,W3,outside,policy,2.5,15,50.128,0,,
+soft,W1,inside,policy,0.0,0,0.1005,1,,
+soft,W1,inside,policy,0.0,1,0.4776,1,,
+soft,W1,inside,policy,0.0,2,0.2373,1,,
+soft,W1,inside,policy,0.0,3,0.129,1,,
+soft,W1,inside,policy,0.0,4,0.1449,1,,
+soft,W1,inside,policy,0.0,5,0.7909,1,,
+soft,W1,inside,policy,0.0,6,0.2968,1,,
+soft,W1,inside,policy,0.0,7,0.0764,1,,
+soft,W1,inside,policy,0.0,8,0.4872,1,,
+soft,W1,inside,policy,0.0,9,0.2075,1,,
+soft,W1,inside,policy,0.0,10,0.1004,1,,
+soft,W1,inside,policy,0.0,11,0.108,1,,
+soft,W1,inside,policy,0.0,12,0.2131,1,,
+soft,W1,inside,policy,0.0,13,0.3978,1,,
+soft,W1,inside,policy,0.0,14,0.1995,1,,
+soft,W1,inside,policy,0.0,15,0.1246,1,,
+soft,W1,inside,policy,1.0,0,5.5801,0,,
+soft,W1,inside,policy,1.0,1,3.1812,0,,
+soft,W1,inside,policy,1.0,2,3.0116,0,,
+soft,W1,inside,policy,1.0,3,2.8635,0,,
+soft,W1,inside,policy,1.0,4,4.8057,0,,
+soft,W1,inside,policy,1.0,5,2.7169,0,,
+soft,W1,inside,policy,1.0,6,3.9237,0,,
+soft,W1,inside,policy,1.0,7,4.6661,0,,
+soft,W1,inside,policy,1.0,8,2.1313,0,,
+soft,W1,inside,policy,1.0,9,3.2944,0,,
+soft,W1,inside,policy,1.0,10,2.3128,0,,
+soft,W1,inside,policy,1.0,11,3.9807,0,,
+soft,W1,inside,policy,1.0,12,3.4247,0,,
+soft,W1,inside,policy,1.0,13,3.6276,0,,
+soft,W1,inside,policy,1.0,14,3.909,0,,
+soft,W1,inside,policy,1.0,15,3.2206,0,,
+soft,W1,inside,policy,2.5,0,7.7777,0,,
+soft,W1,inside,policy,2.5,1,4.0424,0,,
+soft,W1,inside,policy,2.5,2,8.2487,0,,
+soft,W1,inside,policy,2.5,3,6.8628,0,,
+soft,W1,inside,policy,2.5,4,6.1117,0,,
+soft,W1,inside,policy,2.5,5,7.2516,0,,
+soft,W1,inside,policy,2.5,6,9.8397,0,,
+soft,W1,inside,policy,2.5,7,6.4371,0,,
+soft,W1,inside,policy,2.5,8,55.4938,0,,
+soft,W1,inside,policy,2.5,9,7.9574,0,,
+soft,W1,inside,policy,2.5,10,8.5412,0,,
+soft,W1,inside,policy,2.5,11,7.7411,0,,
+soft,W1,inside,policy,2.5,12,4.9211,0,,
+soft,W1,inside,policy,2.5,13,6.6607,0,,
+soft,W1,inside,policy,2.5,14,6.2595,0,,
+soft,W1,inside,policy,2.5,15,7.6114,0,,
+soft,W1,outside,policy,0.0,0,11.6901,0,,
+soft,W1,outside,policy,0.0,1,49.2047,0,,
+soft,W1,outside,policy,0.0,2,1.5215,1,,
+soft,W1,outside,policy,0.0,3,3.9052,0,,
+soft,W1,outside,policy,0.0,4,13.1186,0,,
+soft,W1,outside,policy,0.0,5,23.6227,0,,
+soft,W1,outside,policy,0.0,6,5.8518,0,,
+soft,W1,outside,policy,0.0,7,42.8979,0,,
+soft,W1,outside,policy,0.0,8,16.4317,0,,
+soft,W1,outside,policy,0.0,9,2.1998,0,,
+soft,W1,outside,policy,0.0,10,27.2962,0,,
+soft,W1,outside,policy,0.0,11,5.7457,0,,
+soft,W1,outside,policy,0.0,12,5.7117,0,,
+soft,W1,outside,policy,0.0,13,3.1002,0,,
+soft,W1,outside,policy,0.0,14,9.6177,0,,
+soft,W1,outside,policy,0.0,15,46.7244,0,,
+soft,W1,outside,policy,2.5,0,32.7212,0,,
+soft,W1,outside,policy,2.5,1,45.6791,0,,
+soft,W1,outside,policy,2.5,2,13.3107,0,,
+soft,W1,outside,policy,2.5,3,16.2292,0,,
+soft,W1,outside,policy,2.5,4,42.0756,0,,
+soft,W1,outside,policy,2.5,5,31.3085,0,,
+soft,W1,outside,policy,2.5,6,12.3383,0,,
+soft,W1,outside,policy,2.5,7,31.3448,0,,
+soft,W1,outside,policy,2.5,8,79.3327,0,,
+soft,W1,outside,policy,2.5,9,12.2493,0,,
+soft,W1,outside,policy,2.5,10,32.266,0,,
+soft,W1,outside,policy,2.5,11,12.2739,0,,
+soft,W1,outside,policy,2.5,12,31.8801,0,,
+soft,W1,outside,policy,2.5,13,4.907,0,,
+soft,W1,outside,policy,2.5,14,65.6678,0,,
+soft,W1,outside,policy,2.5,15,44.3673,0,,
+soft,W2,inside,policy,0.0,0,0.1005,1,,
+soft,W2,inside,policy,0.0,1,0.4776,1,,
+soft,W2,inside,policy,0.0,2,0.2373,1,,
+soft,W2,inside,policy,0.0,3,0.129,1,,
+soft,W2,inside,policy,0.0,4,0.1449,1,,
+soft,W2,inside,policy,0.0,5,0.7909,1,,
+soft,W2,inside,policy,0.0,6,0.2968,1,,
+soft,W2,inside,policy,0.0,7,0.0764,1,,
+soft,W2,inside,policy,0.0,8,0.4872,1,,
+soft,W2,inside,policy,0.0,9,0.2075,1,,
+soft,W2,inside,policy,0.0,10,0.1004,1,,
+soft,W2,inside,policy,0.0,11,0.108,1,,
+soft,W2,inside,policy,0.0,12,0.2131,1,,
+soft,W2,inside,policy,0.0,13,0.3978,1,,
+soft,W2,inside,policy,0.0,14,0.1995,1,,
+soft,W2,inside,policy,0.0,15,0.1246,1,,
+soft,W2,inside,policy,1.0,0,3.6996,0,,
+soft,W2,inside,policy,1.0,1,3.8925,0,,
+soft,W2,inside,policy,1.0,2,3.2453,0,,
+soft,W2,inside,policy,1.0,3,3.4628,1,,
+soft,W2,inside,policy,1.0,4,2.9858,0,,
+soft,W2,inside,policy,1.0,5,2.6454,0,,
+soft,W2,inside,policy,1.0,6,4.46,0,,
+soft,W2,inside,policy,1.0,7,3.6022,0,,
+soft,W2,inside,policy,1.0,8,6.1529,0,,
+soft,W2,inside,policy,1.0,9,4.0405,0,,
+soft,W2,inside,policy,1.0,10,3.2559,0,,
+soft,W2,inside,policy,1.0,11,3.2235,0,,
+soft,W2,inside,policy,1.0,12,3.4646,0,,
+soft,W2,inside,policy,1.0,13,3.0373,0,,
+soft,W2,inside,policy,1.0,14,2.8169,0,,
+soft,W2,inside,policy,1.0,15,3.8947,0,,
+soft,W2,inside,policy,2.5,0,8.8685,0,,
+soft,W2,inside,policy,2.5,1,4.643,0,,
+soft,W2,inside,policy,2.5,2,5.2536,0,,
+soft,W2,inside,policy,2.5,3,4.8138,0,,
+soft,W2,inside,policy,2.5,4,4.8313,0,,
+soft,W2,inside,policy,2.5,5,5.8526,0,,
+soft,W2,inside,policy,2.5,6,9.0458,0,,
+soft,W2,inside,policy,2.5,7,7.0897,0,,
+soft,W2,inside,policy,2.5,8,65.2521,0,,
+soft,W2,inside,policy,2.5,9,6.002,0,,
+soft,W2,inside,policy,2.5,10,6.3216,0,,
+soft,W2,inside,policy,2.5,11,5.8091,0,,
+soft,W2,inside,policy,2.5,12,5.3281,0,,
+soft,W2,inside,policy,2.5,13,8.5934,0,,
+soft,W2,inside,policy,2.5,14,5.0546,0,,
+soft,W2,inside,policy,2.5,15,7.1018,0,,
+soft,W2,outside,policy,0.0,0,11.6901,0,,
+soft,W2,outside,policy,0.0,1,49.2047,0,,
+soft,W2,outside,policy,0.0,2,1.5215,1,,
+soft,W2,outside,policy,0.0,3,3.9052,0,,
+soft,W2,outside,policy,0.0,4,13.1186,0,,
+soft,W2,outside,policy,0.0,5,23.6227,0,,
+soft,W2,outside,policy,0.0,6,5.8518,0,,
+soft,W2,outside,policy,0.0,7,42.8979,0,,
+soft,W2,outside,policy,0.0,8,16.4317,0,,
+soft,W2,outside,policy,0.0,9,2.1998,0,,
+soft,W2,outside,policy,0.0,10,27.2962,0,,
+soft,W2,outside,policy,0.0,11,5.7457,0,,
+soft,W2,outside,policy,0.0,12,5.7117,0,,
+soft,W2,outside,policy,0.0,13,3.1002,0,,
+soft,W2,outside,policy,0.0,14,9.6177,0,,
+soft,W2,outside,policy,0.0,15,46.7244,0,,
+soft,W2,outside,policy,2.5,0,38.1542,0,,
+soft,W2,outside,policy,2.5,1,43.5926,0,,
+soft,W2,outside,policy,2.5,2,7.0666,0,,
+soft,W2,outside,policy,2.5,3,21.3936,0,,
+soft,W2,outside,policy,2.5,4,18.4677,0,,
+soft,W2,outside,policy,2.5,5,47.1431,0,,
+soft,W2,outside,policy,2.5,6,9.989,0,,
+soft,W2,outside,policy,2.5,7,14.4572,0,,
+soft,W2,outside,policy,2.5,8,80.2935,0,,
+soft,W2,outside,policy,2.5,9,21.4387,0,,
+soft,W2,outside,policy,2.5,10,30.2336,0,,
+soft,W2,outside,policy,2.5,11,16.4366,0,,
+soft,W2,outside,policy,2.5,12,45.4552,0,,
+soft,W2,outside,policy,2.5,13,7.716,0,,
+soft,W2,outside,policy,2.5,14,47.9341,0,,
+soft,W2,outside,policy,2.5,15,77.4504,0,,
+soft,W3,inside,policy,0.0,0,0.9297,1,,
+soft,W3,inside,policy,0.0,1,1.3617,1,,
+soft,W3,inside,policy,0.0,2,1.19,0,,
+soft,W3,inside,policy,0.0,3,0.8884,1,,
+soft,W3,inside,policy,0.0,4,0.2217,1,,
+soft,W3,inside,policy,0.0,5,0.9383,1,,
+soft,W3,inside,policy,0.0,6,0.1629,1,,
+soft,W3,inside,policy,0.0,7,0.2356,1,,
+soft,W3,inside,policy,0.0,8,0.8878,1,,
+soft,W3,inside,policy,0.0,9,0.4024,1,,
+soft,W3,inside,policy,0.0,10,0.5392,1,,
+soft,W3,inside,policy,0.0,11,0.3192,1,,
+soft,W3,inside,policy,0.0,12,1.4368,0,,
+soft,W3,inside,policy,0.0,13,0.4631,1,,
+soft,W3,inside,policy,0.0,14,0.4829,1,,
+soft,W3,inside,policy,0.0,15,0.3533,1,,
+soft,W3,inside,policy,1.0,0,3.3002,0,,
+soft,W3,inside,policy,1.0,1,2.8934,0,,
+soft,W3,inside,policy,1.0,2,1.7014,0,,
+soft,W3,inside,policy,1.0,3,2.9315,0,,
+soft,W3,inside,policy,1.0,4,2.6317,0,,
+soft,W3,inside,policy,1.0,5,2.3355,0,,
+soft,W3,inside,policy,1.0,6,2.1584,0,,
+soft,W3,inside,policy,1.0,7,3.159,0,,
+soft,W3,inside,policy,1.0,8,2.7808,0,,
+soft,W3,inside,policy,1.0,9,3.6999,0,,
+soft,W3,inside,policy,1.0,10,3.0908,0,,
+soft,W3,inside,policy,1.0,11,3.4177,0,,
+soft,W3,inside,policy,1.0,12,3.1351,0,,
+soft,W3,inside,policy,1.0,13,2.4799,0,,
+soft,W3,inside,policy,1.0,14,2.2483,0,,
+soft,W3,inside,policy,1.0,15,2.8288,0,,
+soft,W3,inside,policy,2.5,0,6.3481,0,,
+soft,W3,inside,policy,2.5,1,4.3957,0,,
+soft,W3,inside,policy,2.5,2,5.1965,0,,
+soft,W3,inside,policy,2.5,3,4.8157,0,,
+soft,W3,inside,policy,2.5,4,5.3645,0,,
+soft,W3,inside,policy,2.5,5,5.3317,0,,
+soft,W3,inside,policy,2.5,6,4.9102,0,,
+soft,W3,inside,policy,2.5,7,7.0776,0,,
+soft,W3,inside,policy,2.5,8,21.408,0,,
+soft,W3,inside,policy,2.5,9,6.3702,0,,
+soft,W3,inside,policy,2.5,10,6.0467,0,,
+soft,W3,inside,policy,2.5,11,4.4731,0,,
+soft,W3,inside,policy,2.5,12,4.8209,0,,
+soft,W3,inside,policy,2.5,13,4.1131,0,,
+soft,W3,inside,policy,2.5,14,4.8917,0,,
+soft,W3,inside,policy,2.5,15,7.5089,0,,
+soft,W3,outside,policy,0.0,0,48.4685,0,,
+soft,W3,outside,policy,0.0,1,32.5531,0,,
+soft,W3,outside,policy,0.0,2,2.5715,0,,
+soft,W3,outside,policy,0.0,3,15.9675,0,,
+soft,W3,outside,policy,0.0,4,21.8853,0,,
+soft,W3,outside,policy,0.0,5,28.7869,0,,
+soft,W3,outside,policy,0.0,6,38.2001,0,,
+soft,W3,outside,policy,0.0,7,3.5215,0,,
+soft,W3,outside,policy,0.0,8,45.9774,0,,
+soft,W3,outside,policy,0.0,9,2.3588,0,,
+soft,W3,outside,policy,0.0,10,44.7092,0,,
+soft,W3,outside,policy,0.0,11,1.5858,0,,
+soft,W3,outside,policy,0.0,12,47.9416,0,,
+soft,W3,outside,policy,0.0,13,1.0606,0,,
+soft,W3,outside,policy,0.0,14,14.9148,0,,
+soft,W3,outside,policy,0.0,15,44.0629,0,,
+soft,W3,outside,policy,2.5,0,44.96,0,,
+soft,W3,outside,policy,2.5,1,41.8577,0,,
+soft,W3,outside,policy,2.5,2,26.7197,0,,
+soft,W3,outside,policy,2.5,3,31.0864,0,,
+soft,W3,outside,policy,2.5,4,51.9227,0,,
+soft,W3,outside,policy,2.5,5,42.0049,0,,
+soft,W3,outside,policy,2.5,6,36.5075,0,,
+soft,W3,outside,policy,2.5,7,5.3322,0,,
+soft,W3,outside,policy,2.5,8,45.6787,0,,
+soft,W3,outside,policy,2.5,9,37.0086,0,,
+soft,W3,outside,policy,2.5,10,33.8569,0,,
+soft,W3,outside,policy,2.5,11,28.297,0,,
+soft,W3,outside,policy,2.5,12,44.6756,0,,
+soft,W3,outside,policy,2.5,13,5.4475,0,,
+soft,W3,outside,policy,2.5,14,29.5278,0,,
+soft,W3,outside,policy,2.5,15,39.4494,0,,

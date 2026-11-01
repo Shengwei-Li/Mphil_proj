@@ -1,0 +1,181 @@
+split,gains,world,payload_kg,controller,runs,median_final_error_cm,worst_final_error_cm,runs_not_settled,handover_rate,median_handover_s
+inside,stiff,W1,0.0,policy,16,0.219,5.971,1,,
+inside,stiff,W1,0.0,adaptive MPC,16,0.103,0.147,0,,
+inside,stiff,W1,0.0,reference,16,0.103,0.147,0,,
+inside,stiff,W1,0.0,handover-physics,16,0.219,5.971,1,0.0,
+inside,stiff,W1,0.0,handover-learned,16,0.219,5.971,1,0.0,
+inside,stiff,W1,0.0,handover-consistency,16,0.219,5.971,1,0.0,
+inside,stiff,W1,1.0,policy,16,1.949,17.024,14,,
+inside,stiff,W1,1.0,adaptive MPC,16,0.105,0.138,0,,
+inside,stiff,W1,1.0,reference,16,0.102,0.138,0,,
+inside,stiff,W1,1.0,handover-physics,16,0.1,0.142,0,1.0,0.08
+inside,stiff,W1,1.0,handover-learned,16,0.1,0.142,0,1.0,0.08
+inside,stiff,W1,1.0,handover-consistency,16,1.252,8.773,6,0.562,1.04
+inside,stiff,W1,2.5,policy,16,3.675,7.296,16,,
+inside,stiff,W1,2.5,adaptive MPC,16,0.1,0.124,0,,
+inside,stiff,W1,2.5,reference,16,0.097,0.123,0,,
+inside,stiff,W1,2.5,handover-physics,16,0.094,0.126,0,1.0,0.08
+inside,stiff,W1,2.5,handover-learned,16,0.094,0.126,0,1.0,0.08
+inside,stiff,W1,2.5,handover-consistency,16,0.103,0.14,0,1.0,0.68
+inside,stiff,W2,0.0,policy,16,0.219,5.971,1,,
+inside,stiff,W2,0.0,adaptive MPC,16,0.103,0.147,0,,
+inside,stiff,W2,0.0,reference,16,0.103,0.147,0,,
+inside,stiff,W2,0.0,handover-physics,16,0.203,5.971,1,0.125,0.8
+inside,stiff,W2,0.0,handover-learned,16,0.203,5.971,1,0.125,0.8
+inside,stiff,W2,0.0,handover-consistency,16,0.219,5.971,1,0.0,
+inside,stiff,W2,1.0,policy,16,1.879,17.935,15,,
+inside,stiff,W2,1.0,adaptive MPC,16,0.108,0.219,0,,
+inside,stiff,W2,1.0,reference,16,0.102,0.136,0,,
+inside,stiff,W2,1.0,handover-physics,16,0.105,0.171,0,1.0,0.08
+inside,stiff,W2,1.0,handover-learned,16,0.105,0.171,0,1.0,0.08
+inside,stiff,W2,1.0,handover-consistency,16,1.274,17.935,9,0.438,1.28
+inside,stiff,W2,2.5,policy,16,3.553,6.973,16,,
+inside,stiff,W2,2.5,adaptive MPC,16,0.133,0.377,0,,
+inside,stiff,W2,2.5,reference,16,0.097,0.126,0,,
+inside,stiff,W2,2.5,handover-physics,16,0.147,0.237,0,1.0,0.08
+inside,stiff,W2,2.5,handover-learned,16,0.147,0.237,0,1.0,0.08
+inside,stiff,W2,2.5,handover-consistency,16,0.157,0.207,0,1.0,0.68
+inside,stiff,W3,0.0,policy,16,0.159,0.899,0,,
+inside,stiff,W3,0.0,adaptive MPC,16,0.084,0.129,0,,
+inside,stiff,W3,0.0,reference,16,0.084,0.121,0,,
+inside,stiff,W3,0.0,handover-physics,16,0.159,0.899,0,0.0,
+inside,stiff,W3,0.0,handover-learned,16,0.159,0.899,0,0.0,
+inside,stiff,W3,0.0,handover-consistency,16,0.159,0.899,0,0.062,0.64
+inside,stiff,W3,1.0,policy,16,1.483,2.979,16,,
+inside,stiff,W3,1.0,adaptive MPC,16,0.082,0.198,0,,
+inside,stiff,W3,1.0,reference,16,0.081,0.111,0,,
+inside,stiff,W3,1.0,handover-physics,16,0.156,1.528,2,0.938,1.76
+inside,stiff,W3,1.0,handover-learned,16,0.109,0.191,0,1.0,0.24
+inside,stiff,W3,1.0,handover-consistency,16,1.429,2.979,14,0.125,1.48
+inside,stiff,W3,2.5,policy,16,3.069,5.712,16,,
+inside,stiff,W3,2.5,adaptive MPC,16,0.117,0.373,0,,
+inside,stiff,W3,2.5,reference,16,0.079,0.099,0,,
+inside,stiff,W3,2.5,handover-physics,16,0.162,0.286,0,1.0,0.68
+inside,stiff,W3,2.5,handover-learned,16,0.129,0.279,0,1.0,0.16
+inside,stiff,W3,2.5,handover-consistency,16,0.127,0.275,0,1.0,0.72
+inside,soft,W1,0.0,policy,16,0.204,0.791,0,,
+inside,soft,W1,0.0,adaptive MPC,16,0.08,0.117,0,,
+inside,soft,W1,0.0,reference,16,0.08,0.117,0,,
+inside,soft,W1,0.0,handover-physics,16,0.204,0.791,0,0.0,
+inside,soft,W1,0.0,handover-learned,16,0.204,0.791,0,0.0,
+inside,soft,W1,0.0,handover-consistency,16,0.204,0.791,0,0.062,1.28
+inside,soft,W1,1.0,policy,16,3.36,5.58,16,,
+inside,soft,W1,1.0,adaptive MPC,16,0.081,0.123,0,,
+inside,soft,W1,1.0,reference,16,0.084,0.124,0,,
+inside,soft,W1,1.0,handover-physics,16,0.083,0.132,0,1.0,0.08
+inside,soft,W1,1.0,handover-learned,16,0.083,0.132,0,1.0,0.08
+inside,soft,W1,1.0,handover-consistency,16,0.09,0.44,0,1.0,1.12
+inside,soft,W1,2.5,policy,16,7.431,55.494,16,,
+inside,soft,W1,2.5,adaptive MPC,16,0.089,0.144,0,,
+inside,soft,W1,2.5,reference,16,0.089,0.141,0,,
+inside,soft,W1,2.5,handover-physics,16,0.09,0.145,0,1.0,0.08
+inside,soft,W1,2.5,handover-learned,16,0.09,0.145,0,1.0,0.08
+inside,soft,W1,2.5,handover-consistency,16,0.096,0.124,0,1.0,0.72
+inside,soft,W2,0.0,policy,16,0.204,0.791,0,,
+inside,soft,W2,0.0,adaptive MPC,16,0.08,0.117,0,,
+inside,soft,W2,0.0,reference,16,0.08,0.117,0,,
+inside,soft,W2,0.0,handover-physics,16,0.137,0.487,0,0.25,1.92
+inside,soft,W2,0.0,handover-learned,16,0.137,0.487,0,0.25,1.92
+inside,soft,W2,0.0,handover-consistency,16,0.204,0.791,0,0.062,1.28
+inside,soft,W2,1.0,policy,16,3.464,6.153,15,,
+inside,soft,W2,1.0,adaptive MPC,16,0.133,0.311,0,,
+inside,soft,W2,1.0,reference,16,0.084,0.123,0,,
+inside,soft,W2,1.0,handover-physics,16,0.165,0.284,0,1.0,0.08
+inside,soft,W2,1.0,handover-learned,16,0.165,0.284,0,1.0,0.08
+inside,soft,W2,1.0,handover-consistency,16,0.167,2.76,1,1.0,1.2
+inside,soft,W2,2.5,policy,16,5.927,65.252,16,,
+inside,soft,W2,2.5,adaptive MPC,16,0.263,0.553,0,,
+inside,soft,W2,2.5,reference,16,0.088,0.136,0,,
+inside,soft,W2,2.5,handover-physics,16,0.264,0.443,0,1.0,0.08
+inside,soft,W2,2.5,handover-learned,16,0.264,0.443,0,1.0,0.08
+inside,soft,W2,2.5,handover-consistency,16,0.25,0.463,0,1.0,0.72
+inside,soft,W3,0.0,policy,16,0.511,1.437,2,,
+inside,soft,W3,0.0,adaptive MPC,16,0.092,0.199,0,,
+inside,soft,W3,0.0,reference,16,0.081,0.185,0,,
+inside,soft,W3,0.0,handover-physics,16,0.511,1.437,2,0.0,
+inside,soft,W3,0.0,handover-learned,16,0.511,1.437,2,0.0,
+inside,soft,W3,0.0,handover-consistency,16,0.378,1.437,2,0.188,1.12
+inside,soft,W3,1.0,policy,16,2.861,3.7,16,,
+inside,soft,W3,1.0,adaptive MPC,16,0.232,0.448,0,,
+inside,soft,W3,1.0,reference,16,0.075,0.196,0,,
+inside,soft,W3,1.0,handover-physics,16,0.495,3.091,3,0.812,1.6
+inside,soft,W3,1.0,handover-learned,16,0.191,0.456,0,1.0,0.16
+inside,soft,W3,1.0,handover-consistency,16,0.276,2.248,1,0.938,0.88
+inside,soft,W3,2.5,policy,16,5.264,21.408,16,,
+inside,soft,W3,2.5,adaptive MPC,16,0.343,0.679,0,,
+inside,soft,W3,2.5,reference,16,0.082,0.215,0,,
+inside,soft,W3,2.5,handover-physics,16,0.321,0.491,0,1.0,0.88
+inside,soft,W3,2.5,handover-learned,16,0.315,0.58,0,1.0,0.16
+inside,soft,W3,2.5,handover-consistency,16,0.339,0.489,0,1.0,0.64
+outside,stiff,W1,0.0,policy,16,12.528,29.869,14,,
+outside,stiff,W1,0.0,adaptive MPC,16,0.099,0.132,0,,
+outside,stiff,W1,0.0,reference,16,0.099,0.132,0,,
+outside,stiff,W1,0.0,handover-physics,16,4.866,29.869,12,0.125,1.12
+outside,stiff,W1,0.0,handover-learned,16,4.866,29.869,12,0.125,1.12
+outside,stiff,W1,0.0,handover-consistency,16,0.121,20.956,1,0.938,0.32
+outside,stiff,W1,2.5,policy,16,22.743,53.675,16,,
+outside,stiff,W1,2.5,adaptive MPC,16,0.097,0.129,0,,
+outside,stiff,W1,2.5,reference,16,0.099,0.136,0,,
+outside,stiff,W1,2.5,handover-physics,16,0.099,0.134,0,1.0,0.08
+outside,stiff,W1,2.5,handover-learned,16,0.099,0.134,0,1.0,0.08
+outside,stiff,W1,2.5,handover-consistency,16,0.101,0.126,0,1.0,0.32
+outside,stiff,W2,0.0,policy,16,12.528,29.869,14,,
+outside,stiff,W2,0.0,adaptive MPC,16,0.099,0.132,0,,
+outside,stiff,W2,0.0,reference,16,0.099,0.132,0,,
+outside,stiff,W2,0.0,handover-physics,16,4.866,29.869,11,0.188,1.52
+outside,stiff,W2,0.0,handover-learned,16,4.866,29.869,11,0.188,1.52
+outside,stiff,W2,0.0,handover-consistency,16,0.121,20.956,1,0.938,0.32
+outside,stiff,W2,2.5,policy,16,11.123,34.395,16,,
+outside,stiff,W2,2.5,adaptive MPC,16,0.165,0.378,0,,
+outside,stiff,W2,2.5,reference,16,0.1,0.128,0,,
+outside,stiff,W2,2.5,handover-physics,16,0.169,0.321,0,1.0,0.08
+outside,stiff,W2,2.5,handover-learned,16,0.169,0.321,0,1.0,0.08
+outside,stiff,W2,2.5,handover-consistency,16,0.145,0.357,0,1.0,0.32
+outside,stiff,W3,0.0,policy,16,22.972,62.563,14,,
+outside,stiff,W3,0.0,adaptive MPC,16,0.079,0.198,0,,
+outside,stiff,W3,0.0,reference,16,0.076,0.126,0,,
+outside,stiff,W3,0.0,handover-physics,16,0.1,24.746,2,0.875,0.64
+outside,stiff,W3,0.0,handover-learned,16,0.087,0.141,0,1.0,0.32
+outside,stiff,W3,0.0,handover-consistency,16,0.093,23.157,1,1.0,0.36
+outside,stiff,W3,2.5,policy,16,32.274,51.753,16,,
+outside,stiff,W3,2.5,adaptive MPC,16,0.173,0.429,0,,
+outside,stiff,W3,2.5,reference,16,0.079,0.126,0,,
+outside,stiff,W3,2.5,handover-physics,16,0.151,0.286,0,1.0,0.56
+outside,stiff,W3,2.5,handover-learned,16,0.177,0.256,0,1.0,0.16
+outside,stiff,W3,2.5,handover-consistency,16,0.146,20.788,1,0.938,0.32
+outside,soft,W1,0.0,policy,16,10.654,49.205,15,,
+outside,soft,W1,0.0,adaptive MPC,16,0.087,0.126,0,,
+outside,soft,W1,0.0,reference,16,0.087,0.126,0,,
+outside,soft,W1,0.0,handover-physics,16,10.654,49.205,15,0.0,
+outside,soft,W1,0.0,handover-learned,16,10.654,49.205,15,0.0,
+outside,soft,W1,0.0,handover-consistency,16,0.087,27.296,1,0.938,0.64
+outside,soft,W1,2.5,policy,16,31.612,79.333,16,,
+outside,soft,W1,2.5,adaptive MPC,16,0.097,0.163,0,,
+outside,soft,W1,2.5,reference,16,0.09,0.163,0,,
+outside,soft,W1,2.5,handover-physics,16,0.096,0.161,0,1.0,0.08
+outside,soft,W1,2.5,handover-learned,16,0.096,0.161,0,1.0,0.08
+outside,soft,W1,2.5,handover-consistency,16,0.089,0.144,0,1.0,0.56
+outside,soft,W2,0.0,policy,16,10.654,49.205,15,,
+outside,soft,W2,0.0,adaptive MPC,16,0.087,0.126,0,,
+outside,soft,W2,0.0,reference,16,0.087,0.126,0,,
+outside,soft,W2,0.0,handover-physics,16,10.654,49.205,15,0.0,
+outside,soft,W2,0.0,handover-learned,16,10.654,49.205,15,0.0,
+outside,soft,W2,0.0,handover-consistency,16,0.087,27.296,1,0.938,0.64
+outside,soft,W2,2.5,policy,16,25.836,80.293,16,,
+outside,soft,W2,2.5,adaptive MPC,16,0.258,0.675,0,,
+outside,soft,W2,2.5,reference,16,0.088,0.156,0,,
+outside,soft,W2,2.5,handover-physics,16,0.234,0.86,0,1.0,0.08
+outside,soft,W2,2.5,handover-learned,16,0.234,0.86,0,1.0,0.08
+outside,soft,W2,2.5,handover-consistency,16,0.26,0.614,0,1.0,0.48
+outside,soft,W3,0.0,policy,16,25.336,48.468,16,,
+outside,soft,W3,0.0,adaptive MPC,16,0.163,0.419,0,,
+outside,soft,W3,0.0,reference,16,0.081,0.317,0,,
+outside,soft,W3,0.0,handover-physics,16,0.294,28.787,2,0.875,1.08
+outside,soft,W3,0.0,handover-learned,16,0.194,28.787,1,0.938,0.48
+outside,soft,W3,0.0,handover-consistency,16,0.132,28.787,1,0.938,0.4
+outside,soft,W3,2.5,policy,16,36.758,51.923,16,,
+outside,soft,W3,2.5,adaptive MPC,16,0.435,0.86,0,,
+outside,soft,W3,2.5,reference,16,0.09,0.324,0,,
+outside,soft,W3,2.5,handover-physics,16,0.259,0.589,0,1.0,0.8
+outside,soft,W3,2.5,handover-learned,16,0.353,0.89,0,1.0,0.08
+outside,soft,W3,2.5,handover-consistency,16,0.275,0.687,0,1.0,0.44

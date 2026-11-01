@@ -96,6 +96,9 @@
 | M11a Panda 平台测量（约 15 秒） | `.venv\Scripts\python experiments\m11a_platform.py` |
 | M11c Panda 对比（并行，约 15 分钟） | `.venv\Scripts\python experiments\m11c_compare.py`（`--plot-only` 只重画图） |
 | M12a soft 刚度对比（并行，约 15 分钟） | `.venv\Scripts\python experiments\m11c_compare.py --gains soft` |
+| M12 录 Panda 示范（约 57 分钟） | `.venv\Scripts\python experiments\m12_demos.py` |
+| M12c 监测（开发检查约 2 分钟；测试约 15 分钟） | `.venv\Scripts\python experiments\m12c_monitors.py --dev`，然后不带参数运行 |
+| M12c 接管（约 40–60 分钟） | `.venv\Scripts\python experiments\m12c_handover.py`（`--plot-only` 只重画图） |
 | Panda 3D 查看器 | `.venv\Scripts\python -m lac.panda_view`（`--method C0/C1/reference`、`--world`、`--payload`、`--region outside`；`--snapshot 路径` 不开窗口存对比图） |
 | M9 监测器对比（并行，约 10 分钟，首次含训练 3 个空载残差网络） | `.venv\Scripts\python experiments\m9_monitors.py`（`--analyse-only` 只重新分析；`--analyse-only --noise-scale 3` 噪声放大 3 倍） |
 | 重画报告图（约 1 分钟） | `.venv\Scripts\python reportigures.py` |
