@@ -1,6 +1,6 @@
 # Project C 结构说明
 
-更新：2026-10-29（M9b）。每新增一个文件，就在这里补上它的职责。
+更新：2026-11-01（M12a）。每新增一个文件，就在这里补上它的职责。
 
 ## 目录树
 
@@ -58,7 +58,7 @@ projectC_learning_assisted_control/
 │   ├── m9b_diffusion.py         M9b 实验：开发检查；用 M9 的分析代码重跑整套监测对比
 │   ├── m10_handover.py          M10 实验：策略、自适应 MPC、参考上界和五种触发的接管
 │   ├── m11a_platform.py         M11a 测量：Panda 的下垂、预测是否精确、推演速度、场景截图
-│   └── m11c_compare.py          M11c 实验：Panda 上 C0、C1、参考上界，区域内外、三种世界、三档负载
+│   └── m11c_compare.py          M11c 实验：Panda 上 C0、C1、参考上界，区域内外、三种世界、三档负载；`--gains soft` 是 M12a
 ├── tests/
 │   ├── test_arm.py              仿真模型的几何和静力检查
 │   ├── test_model.py            手写模型逐项对仿真器
@@ -86,6 +86,7 @@ projectC_learning_assisted_control/
 │   ├── m9/                      M9 逐次报警表、汇总表、检出率图（含噪声放大 3 倍的版本）
 │   ├── m9b/                     M9b 训练损失、开发检查、逐次报警表、汇总表、DP 与 CFDP 对比图
 │   ├── m10/                     M10 逐次运行表、汇总表、接管对比图
+│   ├── m12a/                    M12a soft 刚度下的逐次运行表、汇总表和图
 │   └── m11/                     M11 平台测量表、场景截图、C0/C1 对比图、对比实验的逐次运行表、汇总表和图
 ├── report/
 │   ├── main.tex, main.pdf       技术报告（IEEE 双栏，5 页）
