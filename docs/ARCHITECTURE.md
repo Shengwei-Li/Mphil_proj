@@ -99,6 +99,7 @@ projectC_learning_assisted_control/
 │   ├── main.tex, main.pdf       技术报告（IEEE 双栏，5 页）
 │   ├── references.bib           参考文献（逐篇核对过）
 │   ├── figures.py               从保存的结果表生成报告用图
+│   ├── readme_figures.py        README 的横幅（真实运行的 Panda 渲染）和结果总览图
 │   ├── figures/                 报告图（PDF 和 PNG）
 │   ├── tables.py                从保存的结果表生成报告用表
 │   ├── generated/               生成的 LaTeX 表
