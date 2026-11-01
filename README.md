@@ -1,4 +1,9 @@
-# Learning-Assisted Control under Unknown Payloads
+![Learning-Assisted Control under Unknown Payloads. The Franka Panda at the end of a recorded test run; the dots show the path of the tool tip](report/figures/readme_banner.png)
+
+![Python 3.11](https://img.shields.io/badge/Python-3.11-4b5563?style=flat-square)
+![MuJoCo 3.14](https://img.shields.io/badge/MuJoCo-3.14-4b5563?style=flat-square)
+![PyTorch 2.x CPU](https://img.shields.io/badge/PyTorch-2.x%20CPU-4b5563?style=flat-square)
+![Tests: 131 passed](https://img.shields.io/badge/tests-131%20passed-4b5563?style=flat-square)
 
 A simulation study in MuJoCo. A robot arm holds a payload of unknown mass. The controller's model is then wrong, and an imitation policy that was trained on the empty arm does not reach its targets. This study measures what can correct the model, what can detect the failure, and what can recover from it.
 

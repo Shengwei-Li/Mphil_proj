@@ -1,4 +1,4 @@
-"""Images for the repository's README: two replays of real Panda runs and a results chart.
+"""Images for the repository's README: a banner, two replays of real Panda runs and a results chart.
 
 Run:  python report/readme_figures.py   (needs the m12c caches: python reproduce.py m12c first)
 
@@ -8,6 +8,7 @@ The runs are re-simulated with the same seeds as in that experiment, so the
 numbers on screen match results/m12c/handover_runs.csv. The tasks are typical
 ones: the policy's error is close to the median of its group.
 
+    readme_banner.png    title, and the last frame of the outside-region handover run with the tip's path
     readme_outside.gif   no payload, target outside the training region, consistency monitor
     readme_payload.gif   2.5 kg payload, target inside the region, physics-residual monitor
     readme_handover.png  share of runs not settled, pooled over all Panda test runs
@@ -100,6 +101,45 @@ def add_path(scene: mujoco.MjvScene, points) -> None:
         scene.ngeom += 1
 
 
+def studio(robot: panda.Robot, colour: tuple[int, int, int]) -> None:
+    """Sky in the banner's colour and no floor, so the render sits on the banner without a frame."""
+    m = robot.model
+    sky = m.texture("sky").id
+    size = m.tex_height[sky] * m.tex_width[sky] * m.tex_nchannel[sky]
+    m.tex_data[m.tex_adr[sky]: m.tex_adr[sky] + size] = np.tile(colour, size // 3)
+    floor = next(g for g in range(m.ngeom) if m.geom_type[g] == mujoco.mjtGeom.mjGEOM_PLANE)
+    m.geom_matid[floor] = -1
+    m.geom_rgba[floor, 3] = 0.0
+
+
+def banner() -> None:
+    """Title on the left; on the right, the last frame of the outside-region handover run with the tip's path."""
+    background = (243, 244, 246)
+    (gains, world, split, payload, task, monitor), _ = REPLAYS["outside"]
+    q_start, target, runs, _ = simulate(gains, world, split, payload, task, monitor)
+    robot = scene_model(payload, world, gains, target)
+    studio(robot, background)
+    robot.data.qpos[:] = runs[1].q[-1]
+    mujoco.mj_forward(robot.model, robot.data)
+    width, height = 1000, 460
+    with mujoco.Renderer(robot.model, height, width) as renderer:
+        renderer.update_scene(robot.data, camera([0.26, -0.28, 0.45], 1.02, 152, -14))
+        add_path(renderer.scene, runs[1].tip[::FRAME_EVERY])
+        render = Image.fromarray(renderer.render())
+    canvas = Image.new("RGB", (1600, height), background)
+    fade = np.clip(np.arange(width) / 160, 0, 1)  # blend the render's left edge into the background
+    mask = Image.fromarray((np.tile(fade, (height, 1)) * 255).astype(np.uint8))
+    canvas.paste(render, (600, 0), mask)
+    draw = ImageDraw.Draw(canvas)
+    title = ImageFont.truetype("seguisb.ttf", 54) if Path("C:/Windows/Fonts/seguisb.ttf").exists() else font(54)
+    draw.text((72, 120), "Learning-Assisted Control", fill="#16181d", font=title)
+    draw.text((72, 186), "under Unknown Payloads", fill="#16181d", font=title)
+    draw.text((74, 284), "Model correction, failure monitors and handover for a learned policy.", fill="#4b5563",
+              font=font(24))
+    draw.text((74, 318), "Simulation study in MuJoCo: two-link arm and Franka Panda.", fill="#4b5563", font=font(24))
+    canvas.save(OUT / "readme_banner.png", optimize=True)
+
+
 def caption(width: int, title: str, detail: str) -> Image.Image:
     strip = Image.new("RGB", (width, CAPTION), "white")
     draw = ImageDraw.Draw(strip)
@@ -177,6 +217,7 @@ def handover_chart() -> None:
 
 def main() -> None:
     OUT.mkdir(parents=True, exist_ok=True)
+    banner()
     for name in REPLAYS:
         replay(name)
         print("drew", name)

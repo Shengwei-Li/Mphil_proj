@@ -50,7 +50,7 @@ STEPS = [
     ("m12c", "CFDP and monitors on the Panda", "15 min", [PY, "experiments/m12c_monitors.py"]),
     ("m12ho", "handover on the Panda", "60 min", [PY, "experiments/m12c_handover.py"]),
     ("figures", "report figures", "1 min", [PY, "report/figures.py"]),
-    ("readme", "README replays and results chart", "<1 min", [PY, "report/readme_figures.py"]),
+    ("readme", "README banner, replays and results chart", "<1 min", [PY, "report/readme_figures.py"]),
     ("tables", "report tables", "<1 min", [PY, "report/tables.py"]),
     ("report", "compile the report (needs a LaTeX installation with latexmk)", "<1 min",
      ["latexmk", "-pdf", "-interaction=nonstopmode", "-halt-on-error", "-cd", "report/main.tex"]),
