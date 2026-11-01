@@ -1,0 +1,7 @@
+gains,world,median_final_error_cm,worst_final_error_cm,runs_not_settled,mean_solve_ms
+stiff,W1,0.193,1.611,1,141.6
+stiff,W2,0.193,1.611,1,142.3
+stiff,W3,0.205,3.453,1,141.6
+soft,W1,0.18,1.444,2,141.5
+soft,W2,0.18,1.444,2,141.6
+soft,W3,0.519,1.763,4,142.3

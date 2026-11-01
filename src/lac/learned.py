@@ -113,12 +113,19 @@ def train_residual(
     `validation` must be whole episodes not in `train`. The weights from the
     epoch with the lowest validation loss are kept.
     """
+    x_train, y_train = features(train.q, train.dq, train.tau), residual_targets(base, train)
+    x_val, y_val = features(validation.q, validation.dq, validation.tau), residual_targets(base, validation)
+    return fit_network(x_train, y_train, x_val, y_val, hidden, max_epochs, patience, learning_rate, weight_decay,
+                       seed, threads)
+
+
+def fit_network(x_train, y_train, x_val, y_val, hidden=(64, 64), max_epochs=3000, patience=300,
+                learning_rate=1e-3, weight_decay=0.0, seed=0, threads=1) -> ResidualNet:
+    """The training of train_residual on given inputs and targets (also used for the Panda, M12)."""
     import torch
 
     torch.manual_seed(seed)
     torch.set_num_threads(threads)  # small networks gain nothing from more threads; run trainings in parallel instead
-    x_train, y_train = features(train.q, train.dq, train.tau), residual_targets(base, train)
-    x_val, y_val = features(validation.q, validation.dq, validation.tau), residual_targets(base, validation)
     # Standardise with training statistics only; a tiny floor avoids dividing by zero
     # when an output never varies (e.g. W1 with the exact model).
     in_mean, in_std = x_train.mean(0), x_train.std(0) + 1e-8

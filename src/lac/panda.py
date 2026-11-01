@@ -247,17 +247,26 @@ class Predictor:
         """Predict from state (q, dq) under setpoint sequences of shape (n, periods, 7).
 
         Each setpoint is held for one period. Returns the tip (n, periods, 3) and
-        the joint speeds (n, periods, 7) at the end of every period.
+        the joint speeds (n, periods, 7) at the end of every period. ``q`` and ``dq``
+        may also be (n, 7): a different start for every sequence (used by the monitors).
         """
         d = self._datas[0]
         d.time = 0.0
-        d.qpos[:], d.qvel[:] = q, dq
-        mujoco.mj_getState(self.model, d, self._state, _FULL)
         n = len(setpoints)
+        q, dq = np.asarray(q, dtype=float), np.asarray(dq, dtype=float)
+        if q.ndim == 2:
+            d.qpos[:], d.qvel[:] = 0.0, 0.0
+            mujoco.mj_getState(self.model, d, self._state, _FULL)
+            start = np.tile(self._state, (n, 1))
+            start[:, 1 : 1 + JOINTS], start[:, 1 + JOINTS : 1 + 2 * JOINTS] = q, dq  # state = time, qpos, qvel, ...
+        else:
+            d.qpos[:], d.qvel[:] = q, dq
+            mujoco.mj_getState(self.model, d, self._state, _FULL)
+            start = np.tile(self._state, (n, 1))
         # Sensors are read at the start of each step, so one extra step (holding the last
         # setpoint) is appended to read the tip at the end of the last period.
         control = np.concatenate([np.repeat(setpoints, HOLD, axis=1), setpoints[:, -1:]], axis=1)
-        state, tip = mj_rollout.rollout(self.model, self._datas, np.tile(self._state, (n, 1)), control,
+        state, tip = mj_rollout.rollout(self.model, self._datas, start, control,
                                         persistent_pool=len(self._datas) > 1)
         return tip[:, HOLD::HOLD], state[:, HOLD - 1 : -1 : HOLD, 1 + JOINTS : 1 + 2 * JOINTS]
 

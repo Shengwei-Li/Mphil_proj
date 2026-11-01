@@ -111,7 +111,12 @@ class ChunkIndex:
 
     def fit(self, demos: Demos) -> "ChunkIndex":
         obs, act = training_pairs(demos, self.n_obs, self.n_act)
-        weight = np.tile(np.r_[np.ones(6), np.full(2, self.target_weight)], self.n_obs)
+        return self.fit_pairs(obs, act, target_dims=2)
+
+    def fit_pairs(self, obs: np.ndarray, act: np.ndarray, target_dims: int) -> "ChunkIndex":
+        """From prepared (window, chunk) pairs whose frames end with ``target_dims`` target-minus-tip numbers."""
+        frame_dims = obs.shape[1] // self.n_obs
+        weight = np.tile(np.r_[np.ones(frame_dims - target_dims), np.full(target_dims, self.target_weight)], self.n_obs)
         self.obs_norm, self.act_norm = Normalizer.fit(obs, weight), Normalizer.fit(act)
         self.obs, self.act = self.obs_norm(obs), self.act_norm(act)
         return self
@@ -146,12 +151,16 @@ class NearestNeighborPolicy:
         self.index = ChunkIndex(self.n_obs, self.n_act, self.k_nn, self.target_weight).fit(demos)
         return self
 
+    def fit_pairs(self, obs: np.ndarray, act: np.ndarray, target_dims: int) -> "NearestNeighborPolicy":
+        self.index = ChunkIndex(self.n_obs, self.n_act, self.k_nn, self.target_weight).fit_pairs(obs, act, target_dims)
+        return self
+
     def predict(self, window: np.ndarray, rng: np.random.Generator) -> np.ndarray:
         z = self.index.obs_norm(window)
         idx = self.index.query(z)
         delta = self.index.obs[idx] - z
         d2 = np.einsum("ij,jk,ik->i", delta, local_mahalanobis_metric(self.index.obs[idx]), delta)
-        return self.index.act_norm.inverse(self.index.act[idx[int(np.argmin(d2))]]).reshape(self.n_act, 2)
+        return self.index.act_norm.inverse(self.index.act[idx[int(np.argmin(d2))]]).reshape(self.n_act, -1)
 
 
 @dataclass
@@ -171,6 +180,11 @@ class CFDP:
 
     def fit(self, demos: Demos) -> "CFDP":
         self.index = ChunkIndex(self.n_obs, self.n_act, self.k_nn, self.target_weight).fit(demos)
+        return self
+
+    def fit_pairs(self, obs: np.ndarray, act: np.ndarray, target_dims: int) -> "CFDP":
+        """From prepared pairs, e.g. the Panda's (lac.panda_policy)."""
+        self.index = ChunkIndex(self.n_obs, self.n_act, self.k_nn, self.target_weight).fit_pairs(obs, act, target_dims)
         return self
 
     @property
@@ -206,7 +220,7 @@ class CFDP:
             denoised = (w @ scaled).mean(axis=0)  # where the data says a should be, at this noise level
             score = (denoised - a) / sigma**2
             a = a - ds * (-(a + s * score) / max(1.0 - s, ds))
-        return self.index.act_norm.inverse(a).reshape(self.n_act, 2)
+        return self.index.act_norm.inverse(a).reshape(self.n_act, -1)
 
 
 class PolicyController:

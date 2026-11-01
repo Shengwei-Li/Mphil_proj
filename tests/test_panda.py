@@ -134,3 +134,15 @@ def test_soft_gains_sag_about_four_times_more():
         drive(robot, np.tile(panda.HOME, (150, 1)))
         sag[gains] = tip[2] - robot.tip()[2]
     assert 3.0 < sag["soft"] / sag["stiff"] < 5.0
+
+
+def test_rollout_from_a_different_start_for_each_sequence_equals_one_at_a_time():
+    p = panda.Predictor(panda.world_belief("W3", 0.5), gains="soft")
+    rng = np.random.default_rng(5)
+    qs, dqs = panda.HOME + rng.normal(0, 0.2, (4, 7)), rng.normal(0, 0.5, (4, 7))
+    setpoints = qs[:, None, :] + rng.normal(0, 0.1, (4, 3, 7))
+    tips, speeds = p.rollout(qs, dqs, setpoints)
+    for i in range(4):
+        t, s = p.rollout(qs[i], dqs[i], setpoints[i : i + 1])
+        np.testing.assert_array_equal(tips[i], t[0])
+        np.testing.assert_array_equal(speeds[i], s[0])
