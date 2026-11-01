@@ -1,36 +1,24 @@
-<p align="center">
-  <img src="report/figures/readme_banner.png" alt="Learning-Assisted Control under Unknown Payloads" width="100%">
-</p>
+# Learning-Assisted Control under Unknown Payloads
 
-<p align="center">
-  <img src="https://img.shields.io/badge/python-3.11-3776AB?logo=python&logoColor=white" alt="Python 3.11">
-  <img src="https://img.shields.io/badge/MuJoCo-3.x-1f6feb" alt="MuJoCo 3.x">
-  <img src="https://img.shields.io/badge/PyTorch-CPU-EE4C2C?logo=pytorch&logoColor=white" alt="PyTorch CPU">
-  <img src="https://img.shields.io/badge/tests-131%20passing-2ea44f" alt="131 tests passing">
-  <img src="https://img.shields.io/badge/scope-simulation%20only-6e7781" alt="Simulation only">
-</p>
+A simulation study in MuJoCo. A robot arm holds a payload of unknown mass. The controller's model is then wrong, and an imitation policy that was trained on the empty arm does not reach its targets. This study measures what can correct the model, what can detect the failure, and what can recover from it.
 
-<p align="center">
-  <a href="#results-at-a-glance">Results</a> ·
-  <a href="#how-it-fits-together">Design</a> ·
-  <a href="#getting-started">Getting started</a> ·
-  <a href="report/main.pdf">Report (Part I)</a> ·
-  <a href="report/demo.mp4">Demo video</a>
-</p>
+![Two replays of one Panda test run: the policy alone stops 13 cm from the target; with the consistency monitor, the MPC takes control at 0.40 s and the tip stops 0.1 cm from the target](report/figures/readme_outside.gif)
 
----
+*A Franka Panda reaches for a target outside the region of its training data (green sphere). Left: the policy alone stops 13 cm from the target. Right: the consistency monitor gives an alarm at 0.40 s, the MPC takes control, and the tip stops 0.1 cm from the target. This is a typical test run, not the best one.*
 
-A robot arm picks up something of unknown weight. Its controller's model is now wrong, and an imitation policy trained on the empty arm no longer reaches its targets. This project is a controlled simulation study of what to do about it, in three parts:
+## Contents
 
-| | Question | Platform |
+The study has three parts. Each part uses the results of the part before it.
+
+| Part | Question | Platform |
 |---|---|---|
-| **I. Correct the model** | Estimate the payload, learn the model's error with a neural network, or both? What happens when the controller uses a learned model outside its data? | two-link arm, sampling-based MPC |
-| **II. Watch the policy** | Which model should a monitor use to notice that a diffusion policy is failing: a coarse but trusted physics model, or an accurate learned one? And when should it hand over? | two-link arm, closed-form diffusion policy |
-| **III. Scale it up** | Do the conclusions survive a 7-DoF Franka Panda with joint impedance control, at two joint stiffnesses? | Franka Panda (MuJoCo Menagerie) |
+| I | After the payload changes, how do we correct the controller's model: estimate the payload mass, train a neural network on the model error, or both? What occurs when the controller uses a learned model outside its training data? | Two-link arm, sampling-based MPC |
+| II | A diffusion policy controls the arm. Which model must a monitor use to detect a failure: a physics model, or a learned model? When must the monitor give control to the MPC? | Two-link arm, closed-form diffusion policy (CFDP) |
+| III | Are the results of Parts I and II also true for a 7-joint arm with joint impedance control, at two joint stiffnesses? | Franka Panda from MuJoCo Menagerie |
 
-## How it fits together
+## System
 
-> **A learned policy moves, a learned model watches, physics catches.**
+In Parts II and III, the policy controls the arm. Monitors look at the motion of the arm and at the policy's actions. When a monitor gives an alarm, the MPC takes control and estimates the payload mass from the data of the run.
 
 ```mermaid
 flowchart LR
@@ -41,88 +29,90 @@ flowchart LR
     H -- setpoints --> R
 ```
 
-Each monitor turns one signal into a score with CUSUM accumulation and sets its threshold by split-conformal calibration on clean runs, for a 5% false-alarm rate. The residual monitors ask whether the arm still moves the way a model of the *empty* arm predicts; the consistency monitor asks whether the policy agrees with itself from one action chunk to the next.
+There are three monitors:
 
-## Results at a glance
+- The **physics monitor** compares the measured motion with the motion that a model of the empty arm predicts.
+- The **learned monitor** does the same, but it adds a neural network that learned the model error from the training demonstrations.
+- The **consistency monitor** does not use a model. It compares two overlapping action chunks of the policy. A large difference shows that the policy is uncertain.
 
-<p align="center">
-  <img src="report/figures/readme_handover.png" alt="Share of Panda runs that fail to settle, policy alone and with each monitor handing over to the MPC" width="88%">
-</p>
+Each monitor adds its signal over time (CUSUM). Its alarm threshold comes from 100 calibration runs without a fault, for a false-alarm rate of 5% (split-conformal calibration).
 
-<p align="center"><sub>Franka Panda, 96 runs per bar (16 tasks × 3 worlds × 2 joint stiffnesses). Each monitor hands control to the MPC on its first alarm.</sub></p>
+## Results
 
-**Part I: correcting the model** (two-link arm)
+![Share of Panda runs not settled within 1 cm, for the policy alone and with each monitor](report/figures/readme_handover.png)
 
-1. **Data decides the winner.** With 9 s of motion, estimating the mass is more accurate than learning; with 30 s or more, physics plus a learned residual is best inside the training region: 0.07 cm final error, against 1.95 cm for the mass estimate alone.
-2. **Outside its data, the controller exploits the learned model's errors.** Along the paths the MPC chooses, one-step prediction error grows 8 to 13 times and the worst runs end 50 to 66 cm from the target. An ensemble of five networks cuts these worst failures.
+*Franka Panda. Each bar shows 96 runs: 16 tasks, 3 model errors, 2 joint stiffnesses. A run fails if the tip is not within 1 cm of the target after 3 s.*
 
-**Part II: watching the policy** (two-link arm)
+![Two replays of one Panda test run with a 2.5 kg payload: the policy alone stops 7.3 cm below the target; with the physics monitor, the MPC takes control at 0.08 s and the tip stops 0.1 cm from the target](report/figures/readme_payload.gif)
 
-3. **A policy taught on the empty arm fails under load,** and nothing inside the policy shows it: its action chunks stay consistent while the arm sags.
-4. **The two kinds of monitor see two kinds of failure.** Model residuals catch the payload (every run from 0.05 kg where the model has no friction error); action consistency is the only signal that catches the policy leaving its training region (94% of runs). Where the physics model misses friction, a residual network learned from the same demonstrations restores most of the lost sensitivity.
+*The same arm with a 2.5 kg payload, target inside the training region. Left: the policy alone stops 7.3 cm below the target. Right: the physics monitor gives an alarm at 0.08 s, and the MPC takes control.*
 
-**Part III: the Panda**
+### Part I: correct the model (two-link arm)
 
-5. **The conclusions hold in 3-D, with one twist.** With a 2.5 kg payload, residual-triggered handover rescues every run, ending within 0.04 cm of an adaptive MPC; only consistency rescues the policy outside its region. But the Panda's stiff joint loop absorbs most model error, so a learned model is barely worth having *for control* (at most 3.5 mm better). Its value is *for monitoring*: with friction in the model's blind spot, the learned residual triggers handover after 0.2 s instead of 1.6 s.
-6. **Detecting a failure is not the same as needing to hand over.** A policy can be confidently wrong (consistent, yet 20 cm away), which no monitor here sees; and handing over only helps when the controller taking over is better than the policy it replaces.
+1. The quantity of data decides the best method. With 9 s of motion data, the mass estimate is more accurate than a learned model. With 30 s or more, the physics model plus a learned correction is the most accurate inside the training region: the final error is 0.07 cm, and 1.95 cm with the mass estimate only.
+2. Outside the training region, the MPC finds and uses the errors of the learned model. Along the paths that the MPC selects, the one-step prediction error increases by 8 to 13 times. The worst runs stop 50 to 66 cm from the target. An ensemble of five networks decreases these failures.
 
-> [!NOTE]
-> On these reaching tasks, an adaptive MPC on its own is as good as the best handover everywhere. The policy is not needed here; the study asks whether monitoring and handover can catch a policy's failures once one is used.
+### Part II: monitor the policy (two-link arm)
 
-## How the comparison was kept fair
+3. A policy that was trained on the empty arm fails with a 1 kg payload: the median error increases from 0.4 cm to 2 cm. The policy itself shows little of the failure. Its action chunks mostly stay consistent while the arm moves down under the load: the consistency monitor detects only 25% to 44% of these runs.
+4. The two types of monitor detect two different failures. The residual monitors detect the payload: when the model has no friction error, they detect every run from 0.05 kg. Only the consistency monitor detects that the policy is outside its training region (94% of runs). When the physics model does not know the joint friction, the learned monitor detects smaller payloads than the physics monitor.
 
-- **Expectations first.** In Parts II and III, the expected outcomes were written down and committed before each test run (26 in all); the results were then reported against them, including the ones that turned out wrong.
-- **Attributable errors.** The controller's model reproduces the simulator step for step when told the truth (differences around 1e-16), so every remaining error comes from the deliberate mismatch: the payload's mass (W1), plus its centre-of-mass offset (W2), plus unmodelled joint friction (W3).
-- **Frozen settings.** MPC settings, network sizes, ensemble penalty and policy settings were chosen on development tasks only, then frozen for all test runs.
-- **Separate data.** Test tasks use their own seeds, inside and outside the training region; data are split by whole episodes, never by time step.
+### Part III: the Franka Panda
+
+5. The results of Part II are also true on the Panda. With a 2.5 kg payload, a handover from a residual monitor recovers all runs. The final error is within 0.04 cm of an MPC that estimates the payload from the start. Outside the training region, only the consistency monitor recovers the policy.
+6. On the Panda, a learned model is of little use for control. The joint impedance loop removes most of the model error, so a learned model can decrease the final error by 3.5 mm at most. But the learned model is useful for monitoring. When the physics model does not know the friction, the learned monitor gives the alarm after 0.2 s, and the physics monitor after 1.6 s.
+7. The monitors do not detect all failures. In one run outside the training region, the policy stops 20 cm from the target, but its action chunks stay consistent. No monitor gives an alarm. Also, a handover helps only when the MPC that takes control is better than the policy.
+
+## Method of the comparison
+
+- **Expected results first.** For Parts II and III, the expected results were written and committed before each test run (26 statements). The results are reported against these statements. Some statements were wrong, and the report shows this.
+- **Known model errors only.** When the controller's model knows the true payload and friction, it gives the same motion as the simulator, step by step (difference of approximately 1e-16). Thus each remaining error comes from one of three model errors that we set: payload mass only (W1), mass and centre-of-mass offset (W2), or mass, offset and joint friction (W3).
+- **Settings fixed before the tests.** The MPC, network, ensemble and policy settings were selected on development tasks. They did not change for the test runs.
+- **Separate data.** Test tasks have their own random seeds, inside and outside the training region. The data is divided by complete episodes, not by time steps.
 
 <details>
-<summary><b>Methods compared</b></summary>
+<summary>Methods</summary>
 
-<br>
-
-| Name | What the controller uses | Part |
+| Name | Model or policy that the controller uses | Part |
 |---|---|---|
-| C0 | physics, assuming no payload | I, III |
-| C1 | physics, with the payload mass estimated by least squares | I, III |
-| C2 / C3 | C0 / C1 physics plus a residual network | I |
-| C2-E / C3-E | as C2 / C3, averaging an ensemble of five networks | I |
-| Reference | physics told the true payload and world (an upper bound, not a method) | I, II, III |
-| CFDP | closed-form diffusion policy imitating the reference MPC on the empty arm | II, III |
-| Diffusion Policy | the standard CNN-based Diffusion Policy (Chi et al., 2023), as a second policy | II |
-| Physics / learned / oracle monitor | residual of a model of the empty arm: without friction / plus a residual network / told the friction | II, III |
-| Consistency monitor | disagreement between overlapping action chunks | II, III |
-| Handover | policy until a monitor alarms, then the MPC with the payload estimated from the run so far | II, III |
+| C0 | Physics model of the empty arm | I, III |
+| C1 | Physics model, with the payload mass from a least-squares estimate | I, III |
+| C2, C3 | C0, C1 plus a neural network that learned the model error | I |
+| C2-E, C3-E | C2, C3 with the mean of an ensemble of five networks | I |
+| Reference | Physics model that knows the true payload and friction. This is a limit, not a method | I, II, III |
+| CFDP | Closed-form diffusion policy. It copies the reference MPC on the empty arm | II, III |
+| Diffusion Policy | Standard CNN Diffusion Policy (Chi et al., 2023), as a second policy | II |
+| Physics, learned, oracle monitor | Residual of a model of the empty arm: without friction, with a learned correction, with the true friction | II, III |
+| Consistency monitor | Difference between overlapping action chunks | II, III |
+| Handover | The policy controls the arm until a monitor gives an alarm. Then the MPC controls the arm, with the payload estimated from the run | II, III |
 
 </details>
 
 <details>
-<summary><b>Repository layout</b></summary>
-
-<br>
+<summary>Repository</summary>
 
 ```
 src/lac/                 the package
-  arm.py, model.py         two-link arm (MuJoCo), its three worlds, hand-written dynamics
+  arm.py, model.py         two-link arm (MuJoCo), its three model errors, hand-written dynamics
   mpc.py, predictors.py    sampling-based MPC (path-integral weighting) and its predictors
   estimate.py, learned.py  least-squares payload estimate; residual networks and ensembles
   demos.py, policy.py      expert demonstrations; CFDP and nearest-neighbour policies
   diffusion.py             standard Diffusion Policy (1-D conditional U-Net, DDIM sampling)
   monitor.py, handover.py  residual and consistency monitors, CUSUM, conformal thresholds, handover
-  panda*.py                the same pieces on the Franka Panda, and its interactive viewer
-experiments/             one script per stage, each writing tables and figures to results/
-results/                 saved tables and figures for every stage
+  panda*.py                the same parts for the Franka Panda, and its interactive viewer
+experiments/             one script for each stage; each script writes tables and figures to results/
+results/                 tables and figures of each stage
 report/                  report source, figure and video scripts
 third_party/             Franka Panda model from MuJoCo Menagerie (Apache-2.0)
-tests/                   131 checks, including the models against the simulator term by term
-reproduce.py             re-runs everything in order
+tests/                   131 tests, including a term-by-term comparison of the models with the simulator
+reproduce.py             runs all stages in sequence
 ```
 
 </details>
 
-## Getting started
+## Installation and use
 
-Python 3.11 on Windows was used; other platforms should work but were not tested.
+We used Python 3.11 on Windows. Other platforms are possible, but we did not test them.
 
 ```bash
 python -m venv .venv
@@ -131,27 +121,34 @@ python -m venv .venv
 .venv\Scripts\python -m pytest -q
 ```
 
-Watch the Panda live: switch controllers (C0, C1, reference) with `[` `]`, change the payload with `,` `.`, next task with Enter.
+To see the Panda live, run the command below. Use `[` and `]` to change the controller (C0, C1, reference), `,` and `.` to change the payload, and Enter for the next task.
 
 ```bash
 .venv\Scripts\python -m lac.panda_view --world W2 --payload 2.5
 ```
 
-Interactive panel for the two-link arm:
+To see the two-link arm in an interactive panel:
 
 ```bash
 .venv\Scripts\python -m lac.view --world W2 --payload 1 --method 3
 ```
 
-Reproduce every result, figure and the report. This takes about 6 to 7 hours on an 8-core laptop CPU; `--list` shows the steps, and `--outputs-only` rebuilds only the figures, report and video from saved results.
+To make all results, figures, the report and the video again, run the command below. This takes 6 to 7 hours on an 8-core laptop CPU. `--list` shows the steps. `--outputs-only` makes only the figures, report and video from the saved results.
 
 ```bash
 .venv\Scripts\python reproduce.py
 ```
 
+The [report](report/main.pdf) (5 pages) and the [demo video](report/demo.mp4) cover Part I.
+
 ## Limitations
 
-Simulation only. Reaching tasks, where a hand-written cost already works, so a policy is not needed. One payload attached from the start of a run rather than picked up. "Outside" is one region of the workspace. The model mismatches in W2 and W3 were chosen by hand. The ensemble planner and CFDP do not run in real time as implemented (about 28 ms and 140 ms against 20 ms and 80 ms budgets).
+- All results come from simulation.
+- All tasks are reaching tasks. For these tasks, an MPC with an online payload estimate is as good as the best handover. Thus the policy is not necessary here. The study only asks if monitors and handover can recover a policy that fails.
+- The payload is on the arm from the start of each run. The arm does not pick it up.
+- "Outside the training region" is one region of the workspace.
+- We selected the model errors W2 and W3 by hand.
+- The ensemble MPC and CFDP are too slow for real-time use in this implementation: approximately 28 ms and 140 ms, against limits of 20 ms and 80 ms.
 
 ## Acknowledgements
 

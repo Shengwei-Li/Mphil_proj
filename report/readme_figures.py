@@ -1,84 +1,142 @@
-"""Images for the repository's README: a banner and a results-at-a-glance chart.
+"""Images for the repository's README: two replays of real Panda runs and a results chart.
 
-Run:  python report/readme_figures.py
+Run:  python report/readme_figures.py   (needs the m12c caches: python reproduce.py m12c first)
 
-The banner's robot is a real run, not a drawing: the Panda with a 2.5 kg payload
-reaching a target under the MPC told the true payload, rendered by MuJoCo, with
-the tip's path. The chart is drawn from results/m12c/handover_runs.csv; nothing
-else is re-run. Writes report/figures/readme_banner.png and readme_handover.png.
+Each replay shows one test task of experiments/m12c_handover.py twice, side by
+side: the policy alone, and the policy with a monitor that hands over to the MPC.
+The runs are re-simulated with the same seeds as in that experiment, so the
+numbers on screen match results/m12c/handover_runs.csv. The tasks are typical
+ones: the policy's error is close to the median of its group.
+
+    readme_outside.gif   no payload, target outside the training region, consistency monitor
+    readme_payload.gif   2.5 kg payload, target inside the region, physics-residual monitor
+    readme_handover.png  share of runs not settled, pooled over all Panda test runs
+
+Writes report/figures/.
 """
 
 from __future__ import annotations
 
 import csv
+import sys
 from pathlib import Path
 
+import imageio.v2 as imageio
 import matplotlib
 
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import mujoco
 import numpy as np
-from matplotlib.patches import FancyBboxPatch
-
-from lac import panda
-from lac.panda_control import make_controller
-from lac.panda_view import add_trail
+from PIL import Image, ImageDraw, ImageFont
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / "experiments"))
+
+import m12c_handover as ho  # noqa: E402
+import m12c_monitors as m12  # noqa: E402
+
+from lac import panda  # noqa: E402
+from lac import panda_monitor as pm  # noqa: E402
+from lac import panda_policy as pp  # noqa: E402
+
 OUT = ROOT / "report" / "figures"
-BACKGROUND, INK, MUTED, ACCENT = "#11161d", "#f2f4f7", "#9aa5b1", "#e0703a"
+PANEL = (440, 330)  # width, height of one rendered view
+CAPTION = 46  # height of the text strip above each view
+FRAME_EVERY = 25  # simulator steps (0.05 s)
 FONT = ["Segoe UI", "Arial", "DejaVu Sans"]
+REPLAYS = {
+    # name: (gains, world, split, payload, task, monitor), camera (look at, distance, azimuth, elevation)
+    "outside": (("soft", "W1", "outside", 0.0, 4, "consistency"), ([0.3, -0.3, 0.4], 1.45, 152, -20)),
+    "payload": (("soft", "W1", "inside", 2.5, 5, "physics"), ([0.38, 0.0, 0.3], 0.85, 105, -5)),
+}
 
 
-def render_reach(size=(760, 600)) -> np.ndarray:
-    q_start = np.array(panda.HOME) + np.array([0.5, 0.25, 0.0, 0.35, 0.0, -0.3, 0.0])
-    target = np.array([0.5, -0.12, 0.3])
-    payload = 2.5
-    controller = make_controller("reference", "W1", payload, seed=0)
-    robot = panda.Robot(payload, "W1", controller.load)
-    robot.place(q_start)
+def font(size: int) -> ImageFont.FreeTypeFont:
+    for name in ("segoeui.ttf", "arial.ttf", "DejaVuSans.ttf"):
+        try:
+            return ImageFont.truetype(name, size)
+        except OSError:
+            continue
+    return ImageFont.load_default()
+
+
+def simulate(gains, world, split, payload, task, monitor):
+    """The task under the policy alone and under the handover, as in m12c_handover.run_group."""
+    q_start, target = m12.TASKS[split][task]
+    seed = m12.noise_seed(gains, world, split, payload, task) + 500
+    alone = pp.PandaPolicyController(m12.policy(world, gains), seed=task, gains=gains)
+    detector = ho.detectors(gains, world)[monitor]
+    handover = pm.PandaHandover(pp.PandaPolicyController(m12.policy(world, gains), seed=task, gains=gains),
+                                (detector,), mpc_seed=task, noise_seed=seed, gains=gains)
+    runs = [panda.run_reach(c, payload, q_start, target, m12.DURATION, world) for c in (alone, handover)]
+    return q_start, target, runs, handover.handover_period
+
+
+def camera(look_at, distance, azimuth, elevation) -> mujoco.MjvCamera:
+    c = mujoco.MjvCamera()
+    c.lookat[:], c.distance, c.azimuth, c.elevation = look_at, distance, azimuth, elevation
+    return c
+
+
+def scene_model(payload, world, gains, target) -> panda.Robot:
+    """The robot for drawing only: softer light, a larger target marker, a fainter payload."""
+    robot = panda.Robot(payload, world, panda.Belief(), gains)
     robot.set_target(target)
-    controller.start(target, robot.q)
-    trail = []
-    for step in range(int(1.6 / panda.TIMESTEP)):
-        robot.configure_load(controller.load)
-        robot.step(controller.setpoint(robot.q, robot.dq))
-        if step % 20 == 0:
-            trail.append(robot.tip())
-    camera = mujoco.MjvCamera()
-    camera.lookat[:], camera.distance, camera.azimuth, camera.elevation = [0.3, -0.05, 0.42], 1.12, 142, -10
-    with mujoco.Renderer(robot.model, size[1], size[0]) as renderer:
-        renderer.update_scene(robot.data, camera)
-        add_trail(renderer.scene, trail)
-        return renderer.render()
+    m = robot.model
+    m.vis.headlight.diffuse[:], m.vis.headlight.ambient[:] = 0.25, 0.25
+    m.light_diffuse[:] *= 0.75
+    m.site_size[m.site("target_site").id] = 0.02
+    m.geom_rgba[m.geom("payload_geom").id, 3] = 0.2
+    return robot
 
 
-def banner() -> None:
-    image = render_reach()
-    fig = plt.figure(figsize=(16, 5), dpi=100, facecolor=BACKGROUND)
-    text = fig.add_axes((0, 0, 1, 1))
-    text.set_axis_off()
-    text.set_xlim(0, 16)
-    text.set_ylim(0, 5)
-    text.text(0.75, 3.55, "Learning-Assisted Control", color=INK, fontsize=40, fontweight="bold", family=FONT)
-    text.text(0.75, 2.85, "under Unknown Payloads", color=INK, fontsize=40, fontweight="bold", family=FONT)
-    text.plot([0.78, 1.9], [2.45, 2.45], color=ACCENT, linewidth=4, solid_capstyle="round")
-    text.text(0.75, 1.75, "A learned policy moves, a learned model watches, physics catches.", color=INK,
-              fontsize=17, family=FONT)
-    text.text(0.75, 1.05, "MuJoCo  ·  two-link arm and Franka Panda  ·  model correction, diffusion policy,"
-              "\nfailure monitors and handover  ·  simulation study", color=MUTED, fontsize=12.5, family=FONT,
-              linespacing=1.5, va="center")
-    left, bottom, width, height = 10.85, 0.35, 4.75, 4.3
-    card = fig.add_axes((left / 16, bottom / 5, width / 16, height / 5))
-    card.imshow(image, aspect="auto")
-    card.set_axis_off()
-    clip = FancyBboxPatch((0, 0), 1, 1, boxstyle="round,pad=0,rounding_size=0.035", transform=card.transAxes,
-                          facecolor="none", edgecolor="none")
-    card.add_patch(clip)
-    card.images[0].set_clip_path(clip)
-    fig.savefig(OUT / "readme_banner.png", facecolor=BACKGROUND)
-    plt.close(fig)
+def add_path(scene: mujoco.MjvScene, points) -> None:
+    for point in points:
+        if scene.ngeom >= scene.maxgeom:
+            break
+        mujoco.mjv_initGeom(scene.geoms[scene.ngeom], mujoco.mjtGeom.mjGEOM_SPHERE, [0.006, 0, 0], point,
+                            np.eye(3).ravel(), np.array([0.15, 0.15, 0.15, 0.8], dtype=np.float32))
+        scene.ngeom += 1
+
+
+def caption(width: int, title: str, detail: str) -> Image.Image:
+    strip = Image.new("RGB", (width, CAPTION), "white")
+    draw = ImageDraw.Draw(strip)
+    draw.text((12, 5), title, fill="#1f2328", font=font(16))
+    draw.text((12, 25), detail, fill="#59636e", font=font(13))
+    return strip
+
+
+def replay(name: str) -> None:
+    (gains, world, split, payload, task, monitor), view = REPLAYS[name]
+    q_start, target, runs, handed = simulate(gains, world, split, payload, task, monitor)
+    robot = scene_model(payload, world, gains, target)
+    cam = camera(*view)
+    titles = ["Policy alone", f"Policy with the {monitor} monitor"]
+    frames = []
+    with mujoco.Renderer(robot.model, PANEL[1], PANEL[0]) as renderer:
+        steps = list(range(0, len(runs[0].q), FRAME_EVERY)) + [len(runs[0].q) - 1] * 25  # hold the last frame
+        for step in steps:
+            views = []
+            for k, run in enumerate(runs):
+                robot.data.qpos[:] = run.q[step]
+                mujoco.mj_forward(robot.model, robot.data)
+                renderer.update_scene(robot.data, cam)
+                add_path(renderer.scene, run.tip[: step + 1 : FRAME_EVERY])
+                error = run.final_error() if step == len(run.q) - 1 else run.error[step]
+                detail = f"t = {step * panda.TIMESTEP:.2f} s    tip to target {error * 100:.1f} cm"
+                if k == 1 and handed is not None and step >= handed * panda.HOLD:
+                    detail += f"    MPC in control since {handed * panda.PERIOD:.2f} s"
+                panel = Image.new("RGB", (PANEL[0], PANEL[1] + CAPTION), "white")
+                panel.paste(caption(PANEL[0], titles[k], detail), (0, 0))
+                panel.paste(Image.fromarray(renderer.render()), (0, CAPTION))
+                views.append(panel)
+            frame = Image.new("RGB", (2 * PANEL[0] + 8, PANEL[1] + CAPTION), "white")
+            frame.paste(views[0], (0, 0))
+            frame.paste(views[1], (PANEL[0] + 8, 0))
+            frames.append(np.asarray(frame))
+    imageio.mimsave(OUT / f"readme_{name}.gif", frames, duration=FRAME_EVERY * panda.TIMESTEP * 1000 * 1.5, loop=0)
 
 
 def handover_chart() -> None:
@@ -88,10 +146,10 @@ def handover_chart() -> None:
     scenarios = [("inside", "2.5", "payload 2.5 kg\ninside the training region"),
                  ("inside", "1.0", "payload 1 kg\ninside the training region"),
                  ("outside", "0.0", "no payload\noutside the training region")]
-    controllers = [("policy", "diffusion policy alone", "#8d99a6"),
-                   ("handover-physics", "+ physics-model monitor", "#3b6ea8"),
-                   ("handover-learned", "+ learned-model monitor", "#2f9e73"),
-                   ("handover-consistency", "+ action-consistency monitor", ACCENT)]
+    controllers = [("policy", "policy alone", "#8d99a6"),
+                   ("handover-physics", "physics monitor", "#3b6ea8"),
+                   ("handover-learned", "learned monitor", "#2f9e73"),
+                   ("handover-consistency", "consistency monitor", "#e0703a")]
     plt.rcParams.update({"font.family": FONT})
     fig, ax = plt.subplots(figsize=(9, 3.6), dpi=150)
     width = 0.2
@@ -105,7 +163,7 @@ def handover_chart() -> None:
         for xi, s in zip(x, shares):
             ax.text(xi, s + 0.02, f"{s:.0%}", ha="center", va="bottom", fontsize=7.5, color="#333333")
     ax.set_xticks(range(len(scenarios)), [s[2] for s in scenarios], fontsize=9)
-    ax.set_ylabel("runs that fail to settle\nwithin 1 cm of the target", fontsize=9)
+    ax.set_ylabel("runs not settled\nwithin 1 cm of the target", fontsize=9)
     ax.set_ylim(0, 1.12)
     ax.yaxis.set_major_formatter(matplotlib.ticker.PercentFormatter(1.0))
     ax.spines[["top", "right"]].set_visible(False)
@@ -119,7 +177,9 @@ def handover_chart() -> None:
 
 def main() -> None:
     OUT.mkdir(parents=True, exist_ok=True)
-    banner()
+    for name in REPLAYS:
+        replay(name)
+        print("drew", name)
     handover_chart()
 
 
